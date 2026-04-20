@@ -1,0 +1,17 @@
+# Credentials — never commit
+.env
+*.pat
+*.token
+.github_pat
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+deploy-debug/

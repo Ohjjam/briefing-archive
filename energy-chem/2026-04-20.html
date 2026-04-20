@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Energy & Chemical Engineering Morning Brief — 2026-04-20</title>
+<style>
+  :root{
+    --bg:#0b0e13; --bg-2:#121722; --card:#161c28; --card-2:#1b2232;
+    --fg:#e6ebf2; --fg-dim:#a4adbb; --fg-muted:#7a8396;
+    --accent:#6ee7b7; --accent-2:#60a5fa; --accent-3:#f0abfc;
+    --border:#263049; --border-2:#334063;
+    --badge-bg:#22304a; --badge-fg:#cfe0ff;
+    --tag-bg:#1f3a2e; --tag-fg:#9ff2c7;
+    --shadow: 0 4px 20px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f6f7fb; --bg-2:#eceff6; --card:#ffffff; --card-2:#f2f4fa;
+      --fg:#10131a; --fg-dim:#3b4353; --fg-muted:#6b7385;
+      --accent:#047857; --accent-2:#1d4ed8; --accent-3:#a21caf;
+      --border:#dbe0ea; --border-2:#c4cbdb;
+      --badge-bg:#e4ecfb; --badge-fg:#1e3a8a;
+      --tag-bg:#dcfce7; --tag-fg:#065f46;
+      --shadow: 0 2px 12px rgba(18,30,60,.08);
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.55; font-size:16px;}
+  a{color:var(--accent-2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px; margin:0 auto; padding:28px 20px 64px}
+  header.hero{border-bottom:1px solid var(--border); padding-bottom:22px; margin-bottom:22px}
+  .eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--fg-muted)}
+  h1{font-size:clamp(22px,3.2vw,30px); margin:6px 0 4px; line-height:1.25}
+  .sub{color:var(--fg-dim); font-size:14px}
+  .tldr{
+    background:linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+    border:1px solid var(--border); border-radius:14px; padding:16px 18px;
+    margin:18px 0 28px; box-shadow:var(--shadow)
+  }
+  .tldr h2{margin:0 0 8px; font-size:14px; color:var(--accent);
+    letter-spacing:.14em; text-transform:uppercase}
+  .tldr ul{margin:0; padding-left:18px}
+  .tldr li{margin:4px 0; color:var(--fg)}
+  section.block{margin:28px 0}
+  section.block > h2{
+    font-size:18px; margin:0 0 12px; padding-left:10px;
+    border-left:3px solid var(--accent); color:var(--fg);
+  }
+  .grid{display:grid; gap:12px}
+  .card{
+    background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:14px 16px; box-shadow:var(--shadow);
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .card:hover{border-color:var(--border-2); transform:translateY(-1px)}
+  .card h3{margin:0 0 6px; font-size:16px; line-height:1.35}
+  .card h3 a{color:var(--fg)}
+  .meta{display:flex; flex-wrap:wrap; gap:6px 8px; margin:6px 0 8px;
+    font-size:12px; color:var(--fg-muted)}
+  .badge{background:var(--badge-bg); color:var(--badge-fg);
+    padding:2px 8px; border-radius:999px; font-size:11px; font-weight:600;
+    letter-spacing:.02em}
+  .date{color:var(--fg-muted); font-size:12px}
+  .tag{background:var(--tag-bg); color:var(--tag-fg);
+    padding:2px 8px; border-radius:6px; font-size:11px; font-weight:600}
+  .summary{color:var(--fg-dim); font-size:14px; margin:0}
+  footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--border);
+    color:var(--fg-muted); font-size:12px}
+  .empty{color:var(--fg-muted); font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Energy &amp; Chemical Engineering Morning Brief</div>
+  <h1>2026년 4월 20일 (월) — 에너지·화학공학 아침 브리핑</h1>
+  <div class="sub">전기화학 · 배터리 · CO₂RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>오늘의 한 줄 (TL;DR)</h2>
+  <ul>
+    <li>IEA가 <strong>Global Hydrogen Review 2025</strong>를 오늘 공식 발표 — 1,000여 건의 정책·프로젝트 트래커와 동남아 특별 장(章)이 포함, 저탄소 수소 시장 방향성의 기준점이 된다.</li>
+    <li>미 DOE가 <strong>ARCH2·MACH2 등 수소 허브 5곳에 $5B 전액 펀딩</strong>을 확정하며 허브 프로그램을 5개로 정리 — 블루수소 중심 재편 신호, 국내 기자재·EPC 업계에도 파급.</li>
+    <li>한국 3사(LG엔솔·삼성SDI·SK온) <strong>R&amp;D 3조 원 돌파</strong> 속 Samsung SDI–Mercedes 셀 공급 논의 — 전고체·Na-ion·Li-metal로 중국과의 격차를 기술로 좁히려는 움직임이 명확해졌다.</li>
+  </ul>
+</div>
+
+<section class="block">
+  <h2>1. 논문 — 최신 주요 저널</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><a href="https://www.uh.edu/news-events/stories/2026/april/04082026-lithium-battery-weakness.php" target="_blank" rel="noopener">UH Research Reveals Lithium Dendrites Cause Battery Safety Risks</a></h3>
+      <div class="meta">
+        <span class="badge">University of Houston / Nature Comm.</span>
+        <span class="date">2026-04-08</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">전고체 셀 내부 덴드라이트를 실시간 동영상으로 관찰한 결과, Li 덴드라이트가 '유연·연성'이 아니라 <strong>강하고 취성(brittle)</strong>이라는 반직관적 특성을 가짐을 확인. 기존 멘탈 모델에 기반한 단락·안전 설계 전제를 전면 재검토해야 할 근거.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.nature.com/articles/s41467-025-64358-2" target="_blank" rel="noopener">Cathode chemomechanics controls Li-metal solid-state battery performance under low stack pressures</a></h3>
+      <div class="meta">
+        <span class="badge">Nature Communications</span>
+        <span class="date">2026-04-15</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">상온·저압(1 MPa) 조건에서 실제 사용 가능한 면적용량을 유지하며 장수명 Li-metal 전고체 셀을 구현. <strong>고압 스택(수십 MPa)이 상용화의 걸림돌</strong>이라는 통념을 캐소드 chemomechanics 설계로 우회 — 팩 설계 난이도를 크게 낮춘다.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c00633" target="_blank" rel="noopener">A Pulsed Tandem Electrocatalysis Strategy for CO₂ Reduction</a></h3>
+      <div class="meta">
+        <span class="badge">JACS</span>
+        <span class="date">2026-04-10</span>
+        <span class="tag">CO2RR</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">FeN₄·FeO₄ 이중 활성점(DSAN)을 0 V ↔ −0.7 V로 <strong>펄스 교번</strong>해 활성점 기능을 동적으로 전환. 단일 고정 전위보다 중간체 피독을 줄여 다단계 CO₂→C₁/C₂ 경로의 선택성·내구성을 동시에 개선하는 설계 원리.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.nature.com/articles/s41929-025-01399-2" target="_blank" rel="noopener">Microenvironment effects in electrochemical CO₂ reduction from first-principles multiscale modelling</a></h3>
+      <div class="meta">
+        <span class="badge">Nature Catalysis</span>
+        <span class="date">2026-04-14</span>
+        <span class="tag">CO2RR</span>
+      </div>
+      <p class="summary">전해질까지 포함한 멀티스케일 ab initio 모델로 <strong>이중층·양이온·pH 국소환경</strong>의 효과를 정량화. CO₂RR 성능을 촉매 자체가 아닌 "촉매+전해질 계면"의 공동 최적화 문제로 다시 정의 — 실험 설계에 직접 적용 가능한 디자인 룰 제시.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.nature.com/articles/s41560-025-01946-y" target="_blank" rel="noopener">Embracing change in electrocatalysis</a></h3>
+      <div class="meta">
+        <span class="badge">Nature Energy (News &amp; Views)</span>
+        <span class="date">2026-04-08</span>
+        <span class="tag">전기화학</span>
+        <span class="tag">CO2RR</span>
+      </div>
+      <p class="summary">"정적 활성점" 프레임에서 벗어나 <strong>반응 중 재구성(restructuring)·동적 활성점</strong>을 설계 변수로 삼자는 관점. CO₂ 전환, 전기합성, 계면 솔베이션까지 아우르는 최근 1년치 흐름을 한 장으로 요약 — 연구 방향 점검에 유용.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="block">
+  <h2>2. 정책 / 규제</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA Global Hydrogen Review 2025 — 공식 발표</a></h3>
+      <div class="meta">
+        <span class="badge">IEA</span>
+        <span class="date">2026-04-20</span>
+        <span class="tag">수소</span>
+      </div>
+      <p class="summary">저탄소 수소 <strong>프로젝트·생산비·정책 1,000+건 트래커</strong>와 동남아 특별 장(章)을 동반 공개. 프로젝트 파이프라인의 실집행률과 지역별 생산단가 격차를 숫자로 확인할 수 있어, 국내 수소 전략·IRA 대응의 비교 기준으로 활용 가능.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://marcellusdrilling.com/2026/04/trump-doe-to-fully-fund-arch2-and-mach2-hydrogen-hub-projects/" target="_blank" rel="noopener">Trump DOE to Fully Fund ARCH2 and MACH2 Hydrogen Hub Projects</a></h3>
+      <div class="meta">
+        <span class="badge">US DOE</span>
+        <span class="date">2026-04-16</span>
+        <span class="tag">수소</span>
+      </div>
+      <p class="summary">7개 허브 중 <strong>5곳에 총 $5B 전액 펀딩 확정</strong>. ARCH2(WV, Marcellus 가스 기반 블루수소)에 최대 $925M. 그린→블루 중심 축 이동 신호로, 국내 전해조·컴프레서·튜브트레일러 업계의 수출 타깃과 제품 믹스에 직접 영향.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://eur-lex.europa.eu/EN/legal-content/summary/sustainability-rules-for-batteries-and-waste-batteries.html" target="_blank" rel="noopener">EU Battery Regulation — 2026 라벨링·CFP 단계 본격화</a></h3>
+      <div class="meta">
+        <span class="badge">EU Commission</span>
+        <span class="date">2026-04-16</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">2026-02부터 <strong>산업용 이차전지 CFP 신고 의무화</strong>, 2026-08-18부터 라벨링 의무, 2027년부터 CFP 클래스(A/B/C…)와 상한선 도입. LG엔솔·삼성SDI·SK온은 공급망 Scope 3 산정(특히 니켈·리튬 광산 단계)이 즉시 과제.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://data.consilium.europa.eu/doc/document/ST-8293-2026-INIT/en/pdf" target="_blank" rel="noopener">Council of the EU 8293/26 — Competitiveness Council Document</a></h3>
+      <div class="meta">
+        <span class="badge">Council of the EU</span>
+        <span class="date">2026-04-16</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">EU 이사회 8293/26 문서 회람. <strong>배터리·자동차 CO₂ 규제 개정안</strong> 논의의 공식 트랙이 진행 중임을 확인. 2026년 상반기 내 개정안 타임라인이 구체화될 경우 한국 OEM/셀 제조사 대유럽 납품 로드맵 재점검 필요.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.korea.kr/special/policyCurationView.do?newsId=148857966" target="_blank" rel="noopener">국민주권정부 에너지 대전환 추진 계획</a></h3>
+      <div class="meta">
+        <span class="badge">산업통상자원부 · 환경부</span>
+        <span class="date">2026-04-06</span>
+        <span class="tag">수소</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">2030년까지 <strong>재생에너지 100GW, 신차 40% 전기·수소차, 석탄 단계적 폐지</strong>, 녹색제조 세계 3강 목표. 사용후 배터리 실증센터(2026년 구축), 수소 상용차 플랫폼 경량화 과제가 예산·세제와 연동 — K-GX 공급망에 직접 신호.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="block">
+  <h2>3. 산업 뉴스</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><a href="https://www.ir.plugpower.com/press-releases/news-details/2026/Plug-Power-Selected-to-Supply-a-275-MW-GenEco-Electrolyzer-System-for-Hy2gens-Courant-Decarbonized-Ammonium-Nitrate-Project-in-Baie-Comeau-Qubec-Canada/default.aspx" target="_blank" rel="noopener">Plug Power Selected for 275 MW GenEco Electrolyzer — Hy2gen "Courant" (Québec)</a></h3>
+      <div class="meta">
+        <span class="badge">Plug Power · Hy2gen</span>
+        <span class="date">2026-04-02</span>
+        <span class="tag">수소</span>
+      </div>
+      <p class="summary">북미 최대급 <strong>탈탄소 암모늄 나이트레이트</strong> 프로젝트용 275 MW PEM 전해조 FEED 계약. 퀘벡 수력 기반 그린수소 → 광산용 폭약 원료까지의 Scope 3 대체는 "그린 화학 밸류체인"의 현실적 앵커 사례로 주목.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://fuelcellsworks.com/2026/04/14/electrolyzer/sunfire-launches-new-50-megawatt-electrolyzer-system-for-the-next-phase-of-industrial-green-hydrogen-scale-up" target="_blank" rel="noopener">Sunfire Launches 50-MW Electrolyzer System for Industrial Green Hydrogen Scale-Up</a></h3>
+      <div class="meta">
+        <span class="badge">Sunfire</span>
+        <span class="date">2026-04-14</span>
+        <span class="tag">수소</span>
+      </div>
+      <p class="summary">알칼라인 50 MW 모듈형 시스템 공개. <strong>BoP·기초공사·엔지니어링 비용</strong> 축소가 핵심 포인트 — GW급 스케일업에서 iridium 의존 PEM 대비 CAPEX 우위를 다시 강조. 한국 EPC의 Alkaline 라인 재검토 계기.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.electrive.com/2026/04/14/is-mercedes-set-to-source-battery-cells-from-samsung-sdi-soon/" target="_blank" rel="noopener">Is Mercedes Set to Source Battery Cells from Samsung SDI Soon?</a></h3>
+      <div class="meta">
+        <span class="badge">electrive.com</span>
+        <span class="date">2026-04-14</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">Mercedes가 CATL 일변도에서 <strong>Samsung SDI 셀</strong>을 신규 채택 논의 중이라는 보도. 성사 시 독일 프리미엄 OEM의 공급망 다각화 신호이며, 삼성 P6(각형) / 46-series 라인업이 유럽 VDA 포맷 전환을 얼마나 빨리 받아낼지가 관전 포인트.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://en.sedaily.com/finance/2026/04/03/koreas-big-3-battery-makers-push-rd-past-3-trillion-won" target="_blank" rel="noopener">Korea's Big 3 Battery Makers Push R&amp;D Past 3 Trillion Won Despite Losses</a></h3>
+      <div class="meta">
+        <span class="badge">Seoul Economic Daily</span>
+        <span class="date">2026-04-03</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">LGES 1.33조(+22%), SDI 1.42조(+9%), SK온 3,121억(+12%). 적자에도 <strong>R&amp;D 3조 원 돌파</strong>. 전고체·Na-ion·Li-metal에 집중 — 중국의 가격·캐파 공세에 "차세대 기술"로 2027~28년 반격 구도를 공개 선언.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.recycling-magazine.com/2026/04/16/food-grade-film-recycling/" target="_blank" rel="noopener">Nextek &amp; Coveris Commission COtooCLEAN — Food-Grade Film Recycling Pilot</a></h3>
+      <div class="meta">
+        <span class="badge">Nextek · Coveris</span>
+        <span class="date">2026-04-16</span>
+        <span class="tag">플라스틱</span>
+      </div>
+      <p class="summary">PP/PE 필름을 <strong>초임계 CO₂ 추출</strong>로 정제해 식품 접촉용 재생 수지로 재활용하는 산업용 파일럿을 영국에서 개시. 다층 연포장의 고부가 재활용 경로로, 국내 PET 중심 chemical recycling 포트폴리오의 폴리올레핀 확장 사례.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://fuelcellsworks.com/2026/04/02/electrolyzer/battolyser-and-vdl-hydrogen-complete-merger-to-form-alquion-for-flexible-alkaline-tech" target="_blank" rel="noopener">Battolyser &amp; VDL Hydrogen Merge to Form Alquion — Flexible Alkaline Tech</a></h3>
+      <div class="meta">
+        <span class="badge">Alquion (NL)</span>
+        <span class="date">2026-04-02</span>
+        <span class="tag">수소</span>
+      </div>
+      <p class="summary">네덜란드 2개사 합병으로 "Flexolyser" 상용화 가속. <strong>재생에너지 변동성에 최적화된 flexible alkaline</strong>은 한국형 해상풍력·태양광 연계 수전해 시나리오에 적합한 레퍼런스 — 수요반응 운전 모드와 BoP 설계가 차별화 포인트.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="block">
+  <h2>4. 프리프린트 — ChemRxiv / arXiv</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15000622/v1" target="_blank" rel="noopener">A Dual-hydride Channel Strategy for Water-mediated Lignin Depolymerization during Reductive Lignocellulose Fractionation</a></h3>
+      <div class="meta">
+        <span class="badge">ChemRxiv</span>
+        <span class="date">2026-03-04</span>
+        <span class="tag">바이오매스</span>
+      </div>
+      <p class="summary">170 °C / 3 MPa H₂ / 5 h 온화 조건에서 <strong>물을 촉매 참여자</strong>로 활용해 환원적 리그닌 분획(RCF)을 구현. 다양한 톱밥 피드에서 효율 유지 — 바이오리파이너리의 에너지·용매 비용을 낮출 수 있는 공정 단순화 경로.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://www.nmlett.org/index.php/nml/article/view/2478" target="_blank" rel="noopener">High-Entropy Catalysts for Biomass-Derived Chemicals Valorization</a></h3>
+      <div class="meta">
+        <span class="badge">Nano-Micro Letters (review)</span>
+        <span class="date">2026-04-16</span>
+        <span class="tag">바이오매스</span>
+      </div>
+      <p class="summary">HMF 산화·수소화, 푸르푸랄 축합, 리그닌 해중합까지 <strong>고엔트로피 합금/산화물 촉매</strong>의 응용을 종합. 단일 활성점 프레임을 벗어나 조성 공간 탐색(ML 기반)으로 선택성·안정성을 동시에 확보하는 최근 흐름을 한 번에 정리.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://chemrxiv.org/doi/10.26434/chemrxiv-2026-wp1rv" target="_blank" rel="noopener">Systematic Ligand Modification Tunes the Stability and Reactivity of Copper Complexes for Electrocatalytic CO₂ Reduction</a></h3>
+      <div class="meta">
+        <span class="badge">ChemRxiv</span>
+        <span class="date">2026-01-16</span>
+        <span class="tag">CO2RR</span>
+      </div>
+      <p class="summary">피리딘-2,6-디카복사마이드 Cu 복합체의 <strong>저원자가 중간체 불안정성</strong>을 체계적 리간드 치환으로 해결. 분자 촉매 설계 룰과 함께, Cu 복합체 유래 이종촉매(in-situ derived) 활성점 해석에도 적용 가능한 메커니즘 insight.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://arxiv.org/abs/2602.17722" target="_blank" rel="noopener">Identification of SEI Species by Joint Characterization of Li-ion Battery Chemistry — Mass Spectrometry + Electrochemical Reaction Networks</a></h3>
+      <div class="meta">
+        <span class="badge">arXiv cond-mat.mtrl-sci</span>
+        <span class="date">2026-02-23</span>
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">양자계산·반응네트워크·질량분석을 결합해 기존에 동정되지 않던 <strong>SEI 신규 성분</strong>과 생성 경로를 체계적으로 식별. 전해질·첨가제 스크리닝에 직접 활용 가능한 workflow로, 차세대 전해질(로컬 고농도·LiFSI계) 개발 속도에 기여.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://pubs.rsc.org/en/content/articlepdf/2026/ra/d6ra00055j?page=search" target="_blank" rel="noopener">Recent Advances in Lignin-Based Carbon Materials</a></h3>
+      <div class="meta">
+        <span class="badge">RSC Advances (review)</span>
+        <span class="date">2026-04-10</span>
+        <span class="tag">바이오매스</span>
+      </div>
+      <p class="summary">리그닌 추출·분획·개질 전략과 <strong>에너지 저장용 탄소 전구체</strong>로서의 활용을 종합. 하드카본 Na-ion 음극, 슈퍼커패시터 전극 등 응용별 공정 요구사항을 정리해 바이오매스↔배터리 밸류체인을 잇는 참고 자료로 유용.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  생성 시각: 2026-04-20 (월, KST) · 자동화 리서치 브리핑 — 각 아이템의 판단·요약은 공개된 2차 소스를 기반으로 하며, 투자·경영 결정 전 원문 교차확인 권고.
+</footer>
+
+</div>
+</body>
+</html>
