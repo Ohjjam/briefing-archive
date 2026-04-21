@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefing — 2026년 4월 21일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+KR:wght@700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #fafaf7;
+    --accent: #8b0000;
+    --muted: #666;
+    --rule: #1a1a1a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--paper);
+  }
+
+  /* Masthead */
+  .masthead {
+    text-align: center;
+    padding-bottom: 18px;
+    border-top: 3px double var(--rule);
+    border-bottom: 3px double var(--rule);
+    padding-top: 18px;
+    margin-bottom: 28px;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    font-weight: 900;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+  }
+  .masthead .date {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .masthead .tagline {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  /* Lead */
+  .lead {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+    margin: 0 0 36px 0;
+    font-style: italic;
+  }
+
+  /* Section */
+  section {
+    margin-bottom: 34px;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+  }
+  .section-bar {
+    display: inline-block;
+    width: 6px;
+    height: 18px;
+    background: var(--accent);
+  }
+  .section-head h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  /* Headlines */
+  article.headline {
+    padding: 14px 0;
+    border-bottom: 1px dotted #bbb;
+  }
+  article.headline:last-child { border-bottom: none; }
+  article.headline h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+  article.headline p.summary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.7;
+  }
+  article.headline .meta {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  article.headline .meta a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+  }
+  article.headline .meta a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  article.headline .source {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 6px;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 3px double var(--rule);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .paper { padding: 0; max-width: 100%; }
+    article.headline .meta a { color: #000; }
+    .section-bar { background: #000; }
+    .masthead h1 { color: #000; }
+    a { color: #000 !important; }
+  }
+
+  @media (max-width: 640px) {
+    .paper { padding: 24px; }
+    .masthead h1 { font-size: 32px; letter-spacing: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <header class="masthead">
+    <h1>Daily Briefing</h1>
+    <div class="date">2026년 4월 21일 · 화요일</div>
+    <div class="tagline">Global &amp; Korea · Morning Edition</div>
+  </header>
+
+  <p class="lead">중동발 긴장 속 유가와 증시가 출렁이는 가운데, 유럽에선 민주주의 지형이 흔들리고, 한국은 역대 가장 늦은 4월 한파를 맞는다.</p>
+
+  <!-- 국제·시사 -->
+  <section>
+    <div class="section-head">
+      <span class="section-bar"></span>
+      <h2>국제 · 시사</h2>
+    </div>
+
+    <article class="headline">
+      <h3>美, 호르무즈 해협서 이란 화물선 나포… "엔진실 발포 후 압류"</h3>
+      <p class="summary">트럼프 대통령이 소셜미디어를 통해 이란 국적 화물선을 오만해에서 나포했다고 밝혔다. 이란은 해당 조치가 이달 초 체결된 휴전을 위반했다며 강하게 반발, 호르무즈 해협을 다시 봉쇄한 상황이다.</p>
+      <div class="meta"><span class="source">ABC News</span><a href="https://abcnews.com/International" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>키이우 도심서 총기 난사… 6명 사망·14명 부상</h3>
+      <p class="summary">우크라이나 수도 키이우에서 무장 괴한이 민간인을 상대로 총격을 가해 최소 6명이 숨지고 14명이 다쳤다. 범인은 경찰과의 총격전 끝에 현장에서 사살됐다.</p>
+      <div class="meta"><span class="source">CBS News</span><a href="https://www.cbsnews.com/world/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>런던 유대인 시설 연쇄 방화… 英경찰 "이란 대리 세력 수사"</h3>
+      <p class="summary">영국 경찰은 런던 내 유대인 관련 시설을 겨냥한 연쇄 방화 사건이 이란의 대리 세력과 관련이 있는지 수사 중이라고 밝혔다. 토요일 밤 발생한 최근 사건에서도 경미한 피해가 확인됐다.</p>
+      <div class="meta"><span class="source">NPR</span><a href="https://www.npr.org/sections/world/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>美·필리핀, 최대 규모 연합훈련 돌입</h3>
+      <p class="summary">미국과 필리핀이 역대 최대 규모의 연합 전투훈련을 개시했다. 양국은 "침략 억제"를 훈련 목표로 내세웠으며, 남중국해 일대 긴장 국면에서 대중국 견제 메시지로 해석된다.</p>
+      <div class="meta"><span class="source">CNN</span><a href="https://www.cnn.com/world" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+  </section>
+
+  <!-- 정치·외교 -->
+  <section>
+    <div class="section-head">
+      <span class="section-bar"></span>
+      <h2>정치 · 외교</h2>
+    </div>
+
+    <article class="headline">
+      <h3>이스라엘·레바논, 1993년 이후 첫 고위급 직접 대면</h3>
+      <p class="summary">미 국무부가 워싱턴에서 주최한 회동에 이스라엘과 레바논 대사가 동시에 참석했다. 루비오 국무장관 주재로 이뤄진 이번 만남은 양국 간 32년 만의 직접적 고위급 접촉이다.</p>
+      <div class="meta"><span class="source">Democracy Now!</span><a href="https://www.democracynow.org/2026/4/20/headlines" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>헝가리 총선서 오르반 '참패'… 유럽 우파 포퓰리즘 지형 변동</h3>
+      <p class="summary">16년 집권한 빅토르 오르반 총리가 일요일 총선에서 대패했다. 전문가들은 "민주주의의 승리이자 트럼프식 정치에 대한 경고"라며, 유럽·미국 보수 진영에 모두 교훈이 될 사건이라고 분석했다.</p>
+      <div class="meta"><span class="source">Democracy Now!</span><a href="https://www.democracynow.org/2026/4/20/headlines" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>NATO 대표단 30개국, 日 방문… 美 동맹 신뢰도 우려 반영</h3>
+      <p class="summary">NATO 32개 회원국 중 30개국 대표단이 이번 주 일본을 방문해 안보 협력 확대를 논의한다. 미국의 동맹 공약 이행 여부에 대한 불신이 커지자 유럽과 아시아의 '우회 결속' 움직임이 본격화되고 있다는 평가다.</p>
+      <div class="meta"><span class="source">Foreign Policy</span><a href="https://foreignpolicy.com/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>北, 신포서 미사일 발사… 합참 "일요일 오전 포착"</h3>
+      <p class="summary">북한이 함경남도 신포 일대에서 미사일을 발사했다고 한국 합동참모본부가 밝혔다. 한·미·일은 발사체 종류와 궤적을 정밀 분석 중이다.</p>
+      <div class="meta"><span class="source">ABC News</span><a href="https://abcnews.com/International" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+  </section>
+
+  <!-- 경제·금융·시장 -->
+  <section>
+    <div class="section-head">
+      <span class="section-bar"></span>
+      <h2>경제 · 금융 · 시장</h2>
+    </div>
+
+    <article class="headline">
+      <h3>증시 3주 연속 상승… 이란 호르무즈 재개방에 유가 급락</h3>
+      <p class="summary">이란이 호르무즈 해협의 민간 선박 운항을 전면 재개한다고 발표하면서 주요 지수는 3주 연속 상승세를 이어갔다. 국제유가는 하락 전환했고, 레바논-이스라엘 휴전 기류가 위험자산 선호 심리를 끌어올렸다.</p>
+      <div class="meta"><span class="source">Schwab</span><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>넷플릭스 실적 호조에도 9.3% 급락… 가이던스 실망</h3>
+      <p class="summary">넷플릭스는 매출과 이익 모두 시장 예상을 넘겼지만 2분기 가이던스와 2026년 연간 전망을 상향하지 않으면서 장초반 9.3% 급락했다. 애플은 1분기 중국 아이폰 출하량 20% 증가 소식에 1.4% 상승했다.</p>
+      <div class="meta"><span class="source">Schwab</span><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>IMF, 2026년 세계성장률 3.1%로 하향… 신흥국 3.9%</h3>
+      <p class="summary">IMF는 4월 세계경제전망(WEO)에서 "전쟁 그림자 속의 세계경제"를 주제로 2026년 성장률 3.1%, 2027년 3.2%를 전망했다. 신흥국 성장률은 4.2%에서 3.9%로 하향 조정됐다.</p>
+      <div class="meta"><span class="source">IMF</span><a href="https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>한·미, "원화 변동성 과도한 수준 바람직하지 않다" 공동 인식</h3>
+      <p class="summary">4월 19일 한·미 재무당국은 원화의 급격한 변동이 바람직하지 않다는 데 의견을 같이 했다. 지정학 리스크와 자본 유출 우려가 맞물리면서 시장 안정화 공조 메시지를 강화한 것으로 풀이된다.</p>
+      <div class="meta"><span class="source">KED Global</span><a href="https://www.kedglobal.com/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+  </section>
+
+  <!-- 문화·과학·라이프 -->
+  <section>
+    <div class="section-head">
+      <span class="section-bar"></span>
+      <h2>문화 · 과학 · 라이프</h2>
+    </div>
+
+    <article class="headline">
+      <h3>중국 휴머노이드 로봇, 베이징 하프마라톤서 인간 세계기록 경신</h3>
+      <p class="summary">중국 스마트폰 업체 Honor의 휴머노이드 로봇이 베이징 이좡 하프마라톤을 50분 26초에 완주, 인간 세계기록을 앞섰다. 중국의 로보틱스 기술 역량을 과시한 이벤트로 국제적 주목을 받았다.</p>
+      <div class="meta"><span class="source">ABC News</span><a href="https://abcnews.com/International" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>그래핀 속 전자, '거의 마찰 없는 액체'처럼 흐른다</h3>
+      <p class="summary">그래핀 내부에서 전자가 사실상 마찰이 없는 유체 상태로 흐르는 현상이 관측됐다. 기존 전자기학 이론의 틀을 흔드는 결과로, 저전력 반도체·양자소자 연구에 새로운 방향을 제시할 것으로 기대된다.</p>
+      <div class="meta"><span class="source">ScienceDaily</span><a href="https://www.sciencedaily.com/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>양자컴퓨팅+AI, 혼돈계 예측 정확도 획기적 향상</h3>
+      <p class="summary">연구진은 양자컴퓨터가 데이터에서 숨겨진 패턴을 식별하고, 이를 AI 모델과 결합해 복잡계·혼돈계의 예측 성능을 크게 개선할 수 있음을 실증했다. 기후·금융 시뮬레이션에 활용될 잠재력이 크다.</p>
+      <div class="meta"><span class="source">ScienceDaily</span><a href="https://www.sciencedaily.com/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>WHO "과학과 함께, 건강을" — 세계보건의 날 테마 발표</h3>
+      <p class="summary">세계보건기구(WHO)는 4월 7일 창립 기념일을 맞아 "Together for health. Stand with science."를 2026 세계보건의 날 주제로 내걸었다. 팬데믹 이후 흔들린 과학 신뢰 회복이 핵심 메시지다.</p>
+      <div class="meta"><span class="source">WHO</span><a href="https://www.who.int/news/item/06-04-2026-who-calls-for-action---together-for-health.-stand-with-science.--to-mark-world-health-day" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+  </section>
+
+  <!-- 한국 주요 이슈 -->
+  <section>
+    <div class="section-head">
+      <span class="section-bar"></span>
+      <h2>한국 주요 이슈</h2>
+    </div>
+
+    <article class="headline">
+      <h3>역대 가장 늦은 '4월 한파특보'… 기온 5~10도 급락</h3>
+      <p class="summary">기상청은 강원 남부·충남·전북 곳곳에 한파주의보를 발효했다. 아침 최저기온이 2도까지 떨어지며, 4월 한파특보로는 역대 가장 늦은 기록이다. 수도권·충청·경북은 황사 영향으로 미세먼지 '매우나쁨'.</p>
+      <div class="meta"><span class="source">머니투데이</span><a href="https://www.mt.co.kr/society/2026/04/20/2026042017031827223" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>6·3 지방선거 앞두고 '보유세 논란' 뇌관화</h3>
+      <p class="summary">여당 우세로 흐르던 6·3 지방선거 판세가 보유세 개편 논란으로 출렁이고 있다. 국민의힘은 정부의 연쇄 부동산 규제 강화를 쟁점화하며 역공을 펼치는 모양새다.</p>
+      <div class="meta"><span class="source">KED Global</span><a href="https://www.kedglobal.com/" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>병역비리 혐의 송민호, 오늘 첫 공판</h3>
+      <p class="summary">병역비리 혐의로 기소된 가수 송민호의 첫 공판이 21일 열린다. 검찰은 사회복무요원 복무 과정의 부실 근무와 허위 진단 의혹을 중심으로 공소사실을 소명할 예정이다.</p>
+      <div class="meta"><span class="source">네이트 뉴스</span><a href="https://news.nate.com/view/20260420n35579" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>JTBC·KBS, 2026 북중미월드컵 공동중계 합의</h3>
+      <p class="summary">JTBC와 KBS가 오는 6월 개막하는 2026 북중미 월드컵을 공동 중계하기로 합의했다. 양사는 중계 경쟁 대신 송출권 분담과 스튜디오 협력을 통해 제작비를 절감하는 모델을 선택했다.</p>
+      <div class="meta"><span class="source">네이트 뉴스</span><a href="https://news.nate.com/view/20260420n35579" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+
+    <article class="headline">
+      <h3>호르무즈 봉쇄 뚫은 유조선, 한국행</h3>
+      <p class="summary">중동 긴장 속에서도 호르무즈 해협을 빠져나온 유조선이 한국으로 항행 중이다. 정유업계는 단기 수급 차질 우려는 제한적이라고 밝혔으나, 보험료 급등과 대체 항로 이용이 원가를 자극하고 있다.</p>
+      <div class="meta"><span class="source">네이트 뉴스</span><a href="https://news.nate.com/view/20260420n36984" target="_blank" rel="noopener">원문 보기</a></div>
+    </article>
+  </section>
+
+  <footer>
+    Daily Briefing · 2026.04.21 · Compiled at 09:10 KST
+  </footer>
+
+</div>
+</body>
+</html>

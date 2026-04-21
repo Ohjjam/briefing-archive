@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily Briefing · 2026-04-21</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #a0522d;
+    --border: #e4e1d9;
+    --card: #ffffff;
+    --warn: #b8860b;
+    --quiet: #9a9a9a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141412;
+      --fg: #ececec;
+      --muted: #9a9a9a;
+      --accent: #e8a87c;
+      --border: #2e2e2a;
+      --card: #1c1c1a;
+      --warn: #d9b463;
+      --quiet: #6a6a6a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header .meta {
+    color: var(--muted);
+    font-size: 0.9em;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.4em;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.1em;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  a:hover {
+    border-bottom-color: var(--accent);
+  }
+  .tldr {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-bottom: 32px;
+  }
+  .tldr h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 1.15em;
+  }
+  .tldr ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .tldr li {
+    margin-bottom: 6px;
+  }
+  article {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border);
+  }
+  article:last-child {
+    border-bottom: none;
+  }
+  .source {
+    color: var(--muted);
+    font-size: 0.85em;
+    margin: 0 0 10px;
+  }
+  blockquote {
+    margin: 12px 0;
+    padding: 8px 16px;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-style: italic;
+  }
+  code {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.88em;
+  }
+  em {
+    color: var(--fg);
+    font-style: italic;
+  }
+  .quiet {
+    color: var(--quiet);
+    font-style: italic;
+    padding: 8px 0;
+  }
+  .unverified {
+    background: var(--warn);
+    color: #fff;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+  .sources {
+    padding-left: 20px;
+    word-break: break-all;
+  }
+  .sources li {
+    margin-bottom: 4px;
+  }
+  @media (max-width: 500px) {
+    body { padding: 24px 16px 40px; }
+    header h1 { font-size: 1.5em; }
+    h2 { font-size: 1.2em; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AI 일일 브리핑</h1>
+  <p class="meta">2026-04-21 · 최근 24시간 (48시간 이내 발전 중 스토리 포함) · 6개사 커버</p>
+</header>
+
+<section class="tldr">
+  <h2>한눈에 보기 (TL;DR)</h2>
+  <ul>
+    <li><strong>OpenAI</strong>가 과학 연구용 프론티어 추론 모델 <code>GPT-Rosalind</code>를 ChatGPT·Codex·API 리서치 프리뷰로 공개했고, <code>GPT-5.3 Instant Mini</code>를 폴백 모델로 롤아웃.</li>
+    <li><strong>xAI</strong>가 Series E 펀딩에서 목표치 $15B를 초과한 <strong>$20B</strong>를 조달 (NVIDIA, Cisco 참여). Grok Speech API도 출시.</li>
+    <li><strong>Anthropic</strong>의 <code>Claude Opus 4.7</code>이 정식 출시되었고, 시각 산출물 협업 도구 <em>Claude Design</em>이 리서치 프리뷰로 오픈.</li>
+    <li><strong>Google DeepMind</strong>가 로보틱스 추론 모델 <code>Gemini Robotics-ER 1.6</code>을 Gemini API와 AI Studio에 공개.</li>
+    <li><strong>Meta</strong>와 <strong>Mistral</strong>은 최근 24시간 내 신규 발표 없음 — 각사의 직전 주요 업데이트 정리.</li>
+  </ul>
+</section>
+
+<section class="by-company">
+
+<h2>OpenAI</h2>
+
+<article>
+  <h3>과학 연구 특화 프론티어 추론 모델 <code>GPT-Rosalind</code> 공개</h3>
+  <p class="source"><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">Releasebot · OpenAI Release Notes</a> · 2026년 4월</p>
+  <p>OpenAI가 생물학·신약 개발·중개의학 연구를 지원하도록 설계된 프론티어 추론 모델 <code>GPT-Rosalind</code>를 발표. 화학, 단백질 공학, 유전체학 영역에서 <em>"improved tool use and deeper understanding"</em>을 제공하며, 적격 고객에게 ChatGPT, Codex, API의 <strong>리서치 프리뷰</strong> 형태로 제공된다.</p>
+</article>
+
+<article>
+  <h3><code>GPT-5.3 Instant Mini</code> 폴백 모델 출시 · Pro $100 티어 도입</h3>
+  <p class="source"><a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">Releasebot · ChatGPT Release Notes</a> · 2026년 4월</p>
+  <p>ChatGPT가 <code>GPT-5.3 Instant Mini</code>를 새 폴백 모델로 배포. <em>"more natural conversation, stronger writing, and better contextual awareness"</em>를 내세웠다. Pro·Plus 요금제에는 신규 Codex 사용량 옵션과 <strong>$100/월 Pro 티어</strong>가 추가됐다.</p>
+</article>
+
+<article>
+  <h3>ChatGPT 무료·Go 사용자 대상 광고 롤아웃 (호주·뉴질랜드·캐나다)</h3>
+  <p class="source"><a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">Releasebot · ChatGPT Release Notes</a> · 2026년 4월</p>
+  <p>ChatGPT가 호주·뉴질랜드·캐나다의 Free·Go 플랜 사용자를 대상으로 광고를 시범 도입. Plus, Pro, Business, Enterprise, Education 플랜은 광고 대상이 아니다.</p>
+</article>
+
+<article>
+  <h3>통합 데스크톱 슈퍼앱 — ChatGPT·Codex·Atlas 단일 세션 병합</h3>
+  <p class="source"><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI News</a> · 2026-04-16</p>
+  <p>OpenAI가 ChatGPT, Codex 코딩 에이전트, Atlas 브라우저 에이전트를 <strong>하나의 세션으로 통합한 데스크톱 슈퍼앱</strong>을 4월 16일 출시. 에이전트 간 컨텍스트 이관 없이 한 자리에서 작업하는 흐름을 겨냥한 움직임.</p>
+</article>
+
+<article>
+  <h3><span class="unverified">[미확인]</span>코드명 'Spud' 차세대 모델 프로덕션 규모 라이브 테스트 포착</h3>
+  <p class="source"><a href="https://medium.com/@adityakumarjha292004/openais-next-ai-model-was-caught-live-testing-and-it-could-change-everything-about-how-you-use-73f87883c813" target="_blank" rel="noopener">Medium · Aditya Kumar Jha</a> · 2026년 4월</p>
+  <p>API 모니터들이 OpenAI의 다음 주요 모델로 추정되는 코드명 <em>'Spud'</em>가 프로덕션 규모로 라이브 테스트되는 것을 포착했다고 보고. 2026-04-21 기준 <strong>공식 발표는 없음</strong>. 비공식 루머이므로 주의.</p>
+</article>
+
+<h2>Google / DeepMind</h2>
+
+<article>
+  <h3>로보틱스 추론 모델 <code>Gemini Robotics-ER 1.6</code> 출시</h3>
+  <p class="source"><a href="https://theaiinsider.tech/2026/04/15/google-deepmind-releases-newest-gemini-robotics-reasoning-model-designed-to-improve-how-robots-interpret-and-act-in-real-world/" target="_blank" rel="noopener">The AI Insider</a> · 2026-04-15</p>
+  <p>Google DeepMind가 로봇이 시각 입력을 해석하고 태스크를 계획·완수 여부를 판단하는 능력을 향상시키는 <code>Gemini Robotics-ER 1.6</code>을 공개. 공간 추론, 멀티뷰 지각, 계기 판독 능력이 추가되어 산업 환경에서 객체 식별과 장면 이해, 게이지 판독이 가능하다. <em>"better identification of potential hazards and more consistent decision-making"</em>으로 안전 제약 준수도 개선됐다. Gemini API와 Google AI Studio를 통해 배포.</p>
+</article>
+
+<article>
+  <h3><code>Gemini 3.1 Flash TTS</code> — "가장 제어 가능한 AI 음성 모델"</h3>
+  <p class="source"><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM Stats · AI Updates Today</a> · 2026-04-15</p>
+  <p>Google이 4월 15일 <code>Gemini 3.1 Flash TTS</code>를 출시. <em>"the most controllable AI voice model available"</em>을 표방하며, 자연어 프롬프트로 말하기 스타일·속도·음높이·강조를 세밀하게 제어할 수 있다.</p>
+</article>
+
+<article>
+  <h3><code>Gemini 3.1 Ultra</code>, Artificial Analysis Intelligence Index에서 GPT-5.4 Pro와 공동 1위</h3>
+  <p class="source"><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM Stats</a> · 2026-04-12</p>
+  <p>2026년 4월 12일 기준 <code>Gemini 3.1 Ultra</code>와 <code>GPT-5.4 Pro</code>가 Artificial Analysis Intelligence Index에서 <strong>57점 동점</strong>으로 공개 접근 가능한 모델 중 최고점을 기록.</p>
+</article>
+
+<h2>Anthropic</h2>
+
+<article>
+  <h3><code>Claude Opus 4.7</code> 정식 출시 (GA)</h3>
+  <p class="source"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a> · 2026년 4월</p>
+  <p><code>Claude Opus 4.7</code>이 정식 출시되었다. <em>"improvements in software engineering and complex, long-running coding tasks"</em>와 함께 고해상도 이미지 처리 등 비전 능력도 강화됐다. Claude Code에는 Max 구독자 대상 <strong>Opus 4.7 xhigh effort level</strong>과 Auto 모드가 추가.</p>
+</article>
+
+<article>
+  <h3>Claude Design 리서치 프리뷰 오픈</h3>
+  <p class="source"><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Releasebot · Claude Release Notes</a> · 2026년 4월</p>
+  <p>Anthropic Labs가 <strong>Claude Design</strong>을 공개. Claude와 협업해 디자인·프로토타입·슬라이드·원페이저 등 시각 산출물을 만드는 도구로, <code>Claude Opus 4.7</code> 기반이며 Pro·Max·Team·Enterprise 구독자에게 리서치 프리뷰로 순차 배포된다.</p>
+</article>
+
+<article>
+  <h3>대화 내 인터랙티브 차트·다이어그램 생성 기능</h3>
+  <p class="source"><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Releasebot · Claude Release Notes</a> · 2026년 4월</p>
+  <p>Claude가 응답 내에서 <em>"custom charts, diagrams and other visualizations"</em>을 인라인으로 렌더링. Claude 모바일 앱은 라이브 차트, 스케치 다이어그램, 공유 가능한 애셋을 대화창 내에서 바로 시각적으로 보여준다.</p>
+</article>
+
+<article>
+  <h3>Claude Sonnet 4·Opus 4 지원 종료 예고 (2026-06-15)</h3>
+  <p class="source"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a> · 2026년 4월</p>
+  <p>Anthropic이 Claude Sonnet 4와 Claude Opus 4의 <strong>지원 종료(deprecation)</strong>를 공식화. Claude API 기준 <strong>2026-06-15</strong> 은퇴 예정이며, 각각 <code>claude-sonnet-4-6</code>과 <code>claude-opus-4-6</code>으로의 마이그레이션을 권장.</p>
+</article>
+
+<article>
+  <h3>Claude Mythos 프리뷰 — 사이버보안 역량 탑재, 공개 접근은 제한</h3>
+  <p class="source"><a href="https://www.infoq.com/news/2026/04/anthropic-claude-mythos/" target="_blank" rel="noopener">InfoQ</a> · 2026년 4월</p>
+  <p>Anthropic이 사이버보안 역량을 갖춘 <em>Claude Mythos Preview</em>를 공개하되, <strong>일반 대중 접근은 보류</strong>. 보안 연구·방어 용도의 제한적 배포를 시사.</p>
+</article>
+
+<h2>Meta</h2>
+
+<p class="quiet">— 지난 24시간 주목할 만한 신규 업데이트 없음 —</p>
+<p class="source" style="margin-top:-8px;">참고: 최근 Meta의 주요 발표는 <a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/" target="_blank" rel="noopener">Llama 4 Scout·Maverick 공개</a>와 Superintelligence Labs의 첫 자체 모델 <a href="https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since" target="_blank" rel="noopener">Muse Spark</a>. Llama 4 Scout는 <em>"industry-leading context window of 10M"</em>을 내세우며 단일 NVIDIA H100에 적재 가능.</p>
+
+<h2>xAI</h2>
+
+<article>
+  <h3>Series E 펀딩 $20B 조달 — 목표 $15B 초과 달성 (NVIDIA·Cisco 참여)</h3>
+  <p class="source"><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a> · 2026년 4월</p>
+  <p>xAI가 <strong>Series E $20B</strong>를 마감. 목표액 $15B를 넘어서는 규모로, NVIDIA와 Cisco Investments가 전략적 투자자로 참여해 <em>"rapidly scaling our compute infrastructure and buildout of the largest GPU clusters in the world"</em>를 지원한다.</p>
+</article>
+
+<article>
+  <h3>Grok Speech API (STT/TTS) 출시</h3>
+  <p class="source"><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI Docs · Release Notes</a> · 2026년 4월</p>
+  <p>xAI가 Grok Speech to Text·Text to Speech API를 별도 상품으로 공개. 실시간·배치 엔드포인트, 다국어, 화자 분리(diarization), 타임스탬프, 표현적 스피치 태그를 지원. <strong>STT 가격: 배치 $0.10/시간, 스트리밍 $0.20/시간.</strong></p>
+</article>
+
+<article>
+  <h3>미 국방부(DOW) GenAI.mil 프론티어 AI 공급사 선정</h3>
+  <p class="source"><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a> · 2026년 4월</p>
+  <p>xAI의 미 국방 및 국가안보용 프론티어 AI 수트가 <strong>U.S. Department of War(DOW)의 GenAI.mil</strong>에 선정. DOW Impact Level 5(IL5)에서 <em>"3 million military and civilian employees"</em>가 xAI 기술에 접근 가능해진다.</p>
+</article>
+
+<article>
+  <h3><span class="unverified">[미확인]</span><code>Grok 4.3</code> 무공지 배포 — $300/월 페이월</h3>
+  <p class="source"><a href="https://dev.to/techsifted/grok-43-review-whats-new-in-xais-latest-model-april-2026-4l2l" target="_blank" rel="noopener">DEV Community · Grok 4.3 Review</a> · 2026-04-17</p>
+  <p>4월 17일 <code>Grok 4.3</code>이 공식 발표 없이 출시되어 <strong>$300/월 페이월</strong> 뒤에 배치. Musk는 이것이 <em>"only the 0.5T parameter version"</em>이며 1T 모델은 수일 내 공개될 것이라고 언급 — 비공식 소스 기반이므로 유의.</p>
+</article>
+
+<h2>Mistral AI</h2>
+
+<p class="quiet">— 지난 24시간 주목할 만한 신규 업데이트 없음 —</p>
+<p class="source" style="margin-top:-8px;">참고: Mistral은 <a href="https://mistral.ai/news" target="_blank" rel="noopener">3월에 6개 제품을 쏟아낸 뒤</a> 4월은 비교적 조용하다. 직전 주요 발표는 <code>Mistral Small 4</code>(Magistral 추론 + Pixtral 멀티모달 + Devstral 에이전틱 코딩 통합), <code>Voxtral TTS</code>(제로샷 보이스 클로닝), 그리고 Lean 4 증명 전용 오픈소스 에이전트 <code>Leanstral</code>. <a href="https://newsroom.accenture.com/news/2026/accenture-and-mistral-ai-accelerate-enterprise-reinvention-with-scalable-ai-that-delivers-strategic-autonomy-for-customers" target="_blank" rel="noopener">Accenture와의 엔터프라이즈 파트너십</a>도 공표됨.</p>
+
+</section>
+
+<section class="other">
+<h2>기타 주목할 만한 동향</h2>
+
+<article>
+  <h3>중국계 MiniMax <code>M2.7</code>, '자기진화(self-evolving)' 역량 내세움</h3>
+  <p class="source"><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">LLM Stats · LLM News Today</a> · 2026-04-13</p>
+  <p>MiniMax가 4월 13일 <code>M2.7</code>을 공개하며 <strong>프로덕션 피드백 루프 기반으로 자체 가중치를 업데이트</strong>하는 기능을 강조. 기사 표현에 따르면 <em>"no major Western lab has shipped at scale"</em>인 기능으로, 서구권 프론티어 연구소들과의 차별화 포인트로 제시된다.</p>
+</article>
+
+<article>
+  <h3>벤치마크 지형: GPT-5.4 Pro와 Gemini 3.1 Ultra 공동 선두</h3>
+  <p class="source"><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM Stats</a> · 2026-04-12</p>
+  <p>Artificial Analysis Intelligence Index에서 <code>GPT-5.4 Pro</code>와 <code>Gemini 3.1 Ultra</code>가 <strong>57점 공동 1위</strong>. OpenAI는 GPT-5.4를 Standard/Thinking/Pro 3종으로 제공하며 <em>"1.05 million token context window"</em>와 직전 버전 대비 오류 감소(개별 클레임 -33%, 전체 응답 -18%)를 내세운다.</p>
+</article>
+</section>
+
+<footer>
+  <p>Generated 2026-04-21 · 모든 주장에는 아래 출처 URL 근거.</p>
+  <ol class="sources">
+    <li><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">OpenAI Release Notes — Releasebot</a></li>
+    <li><a href="https://releasebot.io/updates/openai/chatgpt" target="_blank" rel="noopener">ChatGPT Release Notes — Releasebot</a></li>
+    <li><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI News</a></li>
+    <li><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">OpenAI API Changelog</a></li>
+    <li><a href="https://medium.com/@adityakumarjha292004/openais-next-ai-model-was-caught-live-testing-and-it-could-change-everything-about-how-you-use-73f87883c813" target="_blank" rel="noopener">OpenAI 'Spud' Live Testing — Medium</a></li>
+    <li><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Google DeepMind Blog</a></li>
+    <li><a href="https://theaiinsider.tech/2026/04/15/google-deepmind-releases-newest-gemini-robotics-reasoning-model-designed-to-improve-how-robots-interpret-and-act-in-real-world/" target="_blank" rel="noopener">Gemini Robotics-ER 1.6 — The AI Insider</a></li>
+    <li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API Release Notes</a></li>
+    <li><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM Stats — AI Updates Today (April 2026)</a></li>
+    <li><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">LLM Stats — LLM News Today</a></li>
+    <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a></li>
+    <li><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Claude Release Notes — Releasebot</a></li>
+    <li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a></li>
+    <li><a href="https://www.infoq.com/news/2026/04/anthropic-claude-mythos/" target="_blank" rel="noopener">Claude Mythos Preview — InfoQ</a></li>
+    <li><a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/" target="_blank" rel="noopener">Llama 4 Multimodal Intelligence — Meta AI</a></li>
+    <li><a href="https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since" target="_blank" rel="noopener">Meta Muse Spark — VentureBeat</a></li>
+    <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a></li>
+    <li><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI Docs Release Notes</a></li>
+    <li><a href="https://dev.to/techsifted/grok-43-review-whats-new-in-xais-latest-model-april-2026-4l2l" target="_blank" rel="noopener">Grok 4.3 Review — DEV Community</a></li>
+    <li><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral AI News</a></li>
+    <li><a href="https://newsroom.accenture.com/news/2026/accenture-and-mistral-ai-accelerate-enterprise-reinvention-with-scalable-ai-that-delivers-strategic-autonomy-for-customers" target="_blank" rel="noopener">Accenture × Mistral AI — Accenture Newsroom</a></li>
+  </ol>
+</footer>
+
+</body>
+</html>

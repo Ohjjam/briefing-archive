@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Energy &amp; Chemical Engineering Morning Brief — 2026-04-21</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c232d;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent-soft: rgba(88, 166, 255, 0.15);
+    --tag-paper: #3fb950;
+    --tag-policy: #d29922;
+    --tag-industry: #f778ba;
+    --tag-preprint: #a371f7;
+    --warning: #f85149;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                 "Noto Sans KR", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  header.top .date {
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  header.top h1 {
+    margin: 6px 0 0 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  header.top .sub {
+    margin-top: 4px;
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+  .tldr {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 36px;
+  }
+  .tldr h2 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+  }
+  .tldr ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .tldr li {
+    margin-bottom: 6px;
+    font-size: 14.5px;
+  }
+  section.section {
+    margin-bottom: 40px;
+  }
+  section.section > h2 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+    padding-left: 10px;
+    border-left: 4px solid var(--accent);
+  }
+  section.section > .section-meta {
+    color: var(--text-dim);
+    font-size: 12.5px;
+    margin: 0 0 16px 14px;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: #3d4754;
+  }
+  .card.empty {
+    border-style: dashed;
+    color: var(--text-dim);
+    text-align: center;
+    padding: 24px 18px;
+  }
+  .card-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+  .card-title a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-dim);
+  }
+  .card-title a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 11.5px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+  }
+  .badge.src {
+    background: rgba(139, 148, 158, 0.12);
+    color: var(--text-dim);
+    border-color: rgba(139, 148, 158, 0.3);
+  }
+  .badge.date {
+    background: rgba(139, 148, 158, 0.08);
+    color: var(--text-dim);
+    border: none;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+  }
+  .badge.tag-paper { color: var(--tag-paper); border-color: rgba(63, 185, 80, 0.35); background: rgba(63, 185, 80, 0.1); }
+  .badge.tag-policy { color: var(--tag-policy); border-color: rgba(210, 153, 34, 0.35); background: rgba(210, 153, 34, 0.1); }
+  .badge.tag-industry { color: var(--tag-industry); border-color: rgba(247, 120, 186, 0.35); background: rgba(247, 120, 186, 0.1); }
+  .badge.tag-preprint { color: var(--tag-preprint); border-color: rgba(163, 113, 247, 0.35); background: rgba(163, 113, 247, 0.1); }
+  .summary {
+    color: var(--text);
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.92;
+  }
+  footer {
+    margin-top: 60px;
+    color: var(--text-dim);
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 20px 14px 60px; }
+    header.top h1 { font-size: 22px; }
+    section.section > h2 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="date">2026-04-21 · Tuesday</div>
+    <h1>Energy &amp; Chemical Engineering Morning Brief</h1>
+    <div class="sub">전기화학 · 배터리 · CO2RR · 수전해/수소 · 바이오매스 · 플라스틱</div>
+  </header>
+
+  <div class="tldr">
+    <h2>오늘의 한 줄 (TL;DR)</h2>
+    <ul>
+      <li><strong>배터리 열폭주 근본 차단:</strong> Nature Energy에서 중합성 불연성 전해질로 Ah급 Na-ion 셀의 열폭주를 원천 봉쇄하는 연구 공개 — 대형 SIB 안전 설계의 축을 바꿀 수 있는 결과.</li>
+      <li><strong>수소 정책 유지 + 대형 프로젝트 확정:</strong> 미국은 수소 지원금 대부분 유지, Plug Power는 퀘벡에서 275 MW PEM 전해조 프로젝트 계약 — 북미 그린 수소 공급망이 정치 리스크를 넘어 속도를 내는 중.</li>
+      <li><strong>CO2RR 선택도 제어 도약:</strong> JACS에서 Fe4S4 배위 고분자 직접 CO 환원 + 펄스 탠덤 전기촉매 전략이 동시 공개 — 단일 활성점으로 다중 산물 제어가 가능하다는 실험적 근거 축적.</li>
+    </ul>
+  </div>
+
+  <!-- Section 1: 논문 -->
+  <section class="section">
+    <h2>1. 논문 (Peer-reviewed)</h2>
+    <p class="section-meta">Nature Energy · JACS · Nature Catalysis · Nature Communications</p>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.nature.com/articles/s41560-026-02032-7" target="_blank" rel="noopener">Thermal runaway-free ampere-hour-level Na-ion battery via polymerizable non-flammable electrolyte</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">Nature Energy</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-paper">배터리</span>
+        <span class="badge tag-paper">Na-ion</span>
+      </div>
+      <p class="summary">중합성 불연성 전해질이 충·방전 중 가교 보호막을 형성해 부반응을 억제하고 Ah급 대형 Na-ion 셀의 열폭주를 원천 차단. 셀 스케일에서 실증된 안전성 전략이라 ESS·상용 SIB 설계 기준을 흔들 가능성이 있다.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://pubs.acs.org/doi/abs/10.1021/jacs.5c23180" target="_blank" rel="noopener">Direct CO2 Reduction to CO with an Fe4S4-Based Coordination Polymer</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">JACS</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-paper">CO2RR</span>
+        <span class="badge tag-paper">전기화학</span>
+      </div>
+      <p class="summary">철–황 클러스터(Fe4S4) 기반 배위 고분자를 촉매로 사용해 CO2를 선택적으로 CO로 직접 전기환원. 희귀금속 비의존 분자 촉매 경로를 확장한 결과로, 생물무기화학(니트로게나제 유사) 설계의 실용화 가능성을 제시한다.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://pubs.acs.org/doi/10.1021/jacs.5c00633" target="_blank" rel="noopener">A Pulsed Tandem Electrocatalysis Strategy for CO2 Reduction</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">JACS</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-paper">CO2RR</span>
+        <span class="badge tag-paper">전기화학</span>
+      </div>
+      <p class="summary">FeN4·FeO4 이중 단원자 활성점에 0 V ↔ −0.7 V의 펄스 전위를 인가해 활성점 기능을 동적으로 전환하는 탠덤 전기촉매 전략. 동일 촉매에서 C1/C2 산물 선택도를 시간영역에서 프로그래밍할 수 있다는 새로운 설계 자유도를 제시.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://pubs.acs.org/doi/10.1021/jacs.5c21473" target="_blank" rel="noopener">Proton and Electron Transfer Control of Selectivity in Electrochemical CO2 Reduction: Selective Reduction of CO2 to CO, CH4, and C2H6 Catalyzed by the Same Iron Porphyrin</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">JACS</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-paper">CO2RR</span>
+        <span class="badge tag-paper">전기화학</span>
+      </div>
+      <p class="summary">단일 Fe-포르피린에서 프로톤/전자 전달 수(2e⁻/4e⁻/6e⁻/8e⁻)를 제어해 CO·CH4·C2H6를 선택적으로 생산. 촉매 구조 변경 없이 PCET 조건 자체가 선택도 결정인자라는 기계론적 원리를 실험으로 강화.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: 정책 -->
+  <section class="section">
+    <h2>2. 정책 / 규제</h2>
+    <p class="section-meta">IEA · DOE · EU Commission · 산업부 · 환경부</p>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.bloomberg.com/news/articles/2026-04-15/us-to-preserve-billions-in-hydrogen-funds-pegged-for-termination" target="_blank" rel="noopener">US to Preserve Billions in Hydrogen Funds Pegged for Termination</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">Bloomberg</span>
+        <span class="badge date">2026-04-15</span>
+        <span class="badge tag-policy">수소</span>
+        <span class="badge tag-policy">정책</span>
+      </div>
+      <p class="summary">트럼프 행정부가 종료 검토 대상이던 DOE 수소 프로젝트 수십억 달러 규모 자금을 유지·수정하기로 결정. 하원 세출위에 전달된 리스트에 약 2,000건의 자금 지원이 '유지 또는 수정'으로 분류 — IRA/IIJA 기반 수소 허브의 정치 리스크가 일부 완화됐다.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.bloomberg.com/news/articles/2026-04-17/china-lifts-green-push-with-plan-to-double-clean-energy-by-2035" target="_blank" rel="noopener">China Lifts Green Push With Plan to Double Clean Energy by 2035</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">Bloomberg</span>
+        <span class="badge date">2026-04-17</span>
+        <span class="badge tag-policy">재생에너지</span>
+        <span class="badge tag-policy">정책</span>
+      </div>
+      <p class="summary">중국이 2035년까지 비화석 에너지 공급을 2배로 늘리는 계획을 공개. 태양광·풍력 증설 가속과 전해조·배터리 국산화 수요 확대로 이어질 전망 — 글로벌 CAPEX·원자재(Li·Ni·리튬염) 수급에 구조적 영향.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.korea.kr/special/policyCurationView.do?newsId=148857966" target="_blank" rel="noopener">대한민국 정책브리핑 — 수소경제 정책뉴스 큐레이션</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">정책브리핑</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-policy">수소</span>
+        <span class="badge tag-policy">한국</span>
+      </div>
+      <p class="summary">환경부는 2026년 4월 초 '재생에너지 중심 에너지 대전환' 선언과 함께 30년 재생 100 GW, 전기·수소차 보급 확대, 그린 열산업 추진을 핵심 축으로 재확인. 국내 수소·전해조 서플라이어는 보조금·공공조달 확대를 전제로 포트폴리오 재점검 필요.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3151" target="_blank" rel="noopener">EU Circular Economy &amp; Plastic Recycling Package — 2026 enforcement timeline</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">EU Commission</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-policy">플라스틱</span>
+        <span class="badge tag-policy">순환경제</span>
+      </div>
+      <p class="summary">PPWR(Packaging and Packaging Waste Regulation 2025/40)이 2026-08-12부터 본격 적용. 비-OECD向 플라스틱 폐기물 수출은 2026-11부터 금지 — 국내외 화학·리사이클 기업은 재생원료 비율(rPE/rPET) 조달 계약을 2분기 내 마무리해야 규제 리스크를 줄일 수 있다.</p>
+    </div>
+  </section>
+
+  <!-- Section 3: 산업 뉴스 -->
+  <section class="section">
+    <h2>3. 산업 뉴스</h2>
+    <p class="section-meta">Reuters · Bloomberg · Green Car Congress · Industry Wires</p>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-4-2-plug-power-selected-for-massive-275-mw-green-hydrogen-project-in-qubec" target="_blank" rel="noopener">Plug Power Selected for Massive 275 MW Green Hydrogen Project in Québec</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">FinancialContent</span>
+        <span class="badge date">2026-04-02</span>
+        <span class="badge tag-industry">수소</span>
+        <span class="badge tag-industry">전해조</span>
+      </div>
+      <p class="summary">Plug Power가 Hy2gen Canada의 'Courant' 프로젝트에 275 MW GenEco PEM 전해조 공급 FEED 계약을 확보 — 단일 계약 기준 자사 최대 규모. 북미 PEM 전해조 단일 사이트 용량 기준을 한 단계 끌어올리는 레퍼런스가 될 가능성.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.ukpol.co.uk/press-release-business-secretary-champions-flagship-investment-in-uks-largest-gigafactory-april-2026/" target="_blank" rel="noopener">UK Business Secretary Champions Flagship Investment in UK's Largest Gigafactory</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">UK Gov (Press)</span>
+        <span class="badge date">2026-04-09</span>
+        <span class="badge tag-industry">배터리</span>
+        <span class="badge tag-industry">유럽</span>
+      </div>
+      <p class="summary">영국 정부가 Agratas의 영국 최대 기가팩토리 건설에 £380M 규모 보조금 지원을 확정. 유럽 배터리 제조 역량 재편 국면(ACC 이탈리아·독일 철수, Stellantis-CATL Zaragoza 착공)에서 영국이 LFP/NCM 이원화 거점을 노리는 시그널.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://markets.financialcontent.com/stocks/article/accwirecq-2026-4-6-global-advanced-recycled-polyolefin-resins-for-consumer-and-industrial-applications-market-set-to-hit-usd-102-billion-by-2036-growth-driven-by-borealis-sabic-exxonmobil-dow-and-ineos" target="_blank" rel="noopener">Global Advanced-Recycled Polyolefin Resins Market to Hit USD 10.2B by 2036 — Borealis, SABIC, ExxonMobil, Dow, INEOS 주도</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">Industry Wire</span>
+        <span class="badge date">2026-04-06</span>
+        <span class="badge tag-industry">플라스틱</span>
+        <span class="badge tag-industry">화학 리사이클</span>
+      </div>
+      <p class="summary">2026년 시장 규모 USD 4.7B → 2036년 10.2B로 연평균 두 자릿수 성장 전망. 1,500–3,500 kg/h급 고용량 라인이 투자 중심으로 이동 — 메이저 석화사들의 mechanical·chemical 하이브리드 라인 전환이 가속 국면.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://www.bloomberg.com/news/articles/2026-03-31/french-green-hydrogen-firm-lhyfe-plans-to-sell-stakes-in-projects-to-fund-growth" target="_blank" rel="noopener">French Green-Hydrogen Firm Lhyfe Plans to Sell Stakes in Projects to Fund Growth</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">Bloomberg</span>
+        <span class="badge date">2026-03-31</span>
+        <span class="badge tag-industry">수소</span>
+        <span class="badge tag-industry">자금조달</span>
+      </div>
+      <p class="summary">Lhyfe가 개별 프로젝트 지분 매각으로 성장 자금 확보 전략 전환. 유럽 그린 수소 사업자들이 CAPEX 부담을 외부 인프라 펀드·IRA 수혜 협력사로 분산시키는 흐름의 단면 — 프로젝트 금융 구조 변화를 지켜볼 필요.</p>
+    </div>
+  </section>
+
+  <!-- Section 4: 프리프린트 -->
+  <section class="section">
+    <h2>4. 프리프린트</h2>
+    <p class="section-meta">ChemRxiv · arXiv (cond-mat.mtrl-sci, physics.chem-ph)</p>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001562/v1" target="_blank" rel="noopener">Integrated Simulation of Grid and Solar PV-Powered Alkaline Water Electrolysis for Green Hydrogen Production from Seawater</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">ChemRxiv</span>
+        <span class="badge date">2026-04-02</span>
+        <span class="badge tag-preprint">수전해</span>
+        <span class="badge tag-preprint">수소</span>
+      </div>
+      <p class="summary">MATLAB/Simulink(전기 계통) + Aspen Plus(화공 프로세스) 연계 모델로 해수 RO-EDI 전처리 → KOH 80℃ 알칼리 전해 → 다단 압축의 229 kW 규모 그린 수소 공정을 시뮬. 전력·화공 모델이 결합된 실증 전 단계의 참조 토폴로지로 유용.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        <a href="https://arxiv.org/list/cond-mat.mtrl-sci/current" target="_blank" rel="noopener">arXiv cond-mat.mtrl-sci — April 2026 submission listing (274+ entries)</a>
+      </h3>
+      <div class="meta-row">
+        <span class="badge src">arXiv</span>
+        <span class="badge date">2026-04</span>
+        <span class="badge tag-preprint">배터리</span>
+        <span class="badge tag-preprint">ML 소재</span>
+      </div>
+      <p class="summary">4월 접수분에 AQVolt26 고온 r²SCAN 할라이드 데이터셋(Universal ML Potentials/SSB용) 등 SSB·SEI·전극 소재 ML 관련 연구 다수. 4월 배치에서 ML 인터원자 포텐셜과 실험 SEI 특성화의 결합이 주요 트렌드 — 구조·조성 단위 스크리닝 속도가 실질 개선되는 중.</p>
+    </div>
+
+    <div class="card empty">
+      <strong>CO2RR · 플라스틱 · 바이오매스 프리프린트 — 지난 1주 내 주요 업로드 없음.</strong><br/>
+      <span style="font-size:12.5px">최근 업로드는 대부분 2026-01 ~ 03 범위로, 오늘자 브리핑 창(7–14일)을 벗어나 제외. 다음 스캔에서 재확인.</span>
+    </div>
+  </section>
+
+  <footer>
+    Generated 2026-04-21 · Automated morning brief · Sources: Nature, JACS, Bloomberg, EU Commission, ChemRxiv, arXiv, 정책브리핑
+  </footer>
+</div>
+</body>
+</html>
