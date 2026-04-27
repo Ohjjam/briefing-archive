@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief — 2026-04-27</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c232c;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent-strong: #79c0ff;
+    --tldr: #f7b955;
+    --section-1: #ff7b72;
+    --section-2: #d2a8ff;
+    --section-3: #7ee787;
+    --section-4: #ffa657;
+    --tag-bg: #1f6feb1a;
+    --tag-border: #1f6feb55;
+    --badge-bg: #21262d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+  }
+  .date-line {
+    color: var(--text-dim);
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 6px 0 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .tldr {
+    background: linear-gradient(135deg, rgba(247,185,85,0.08), rgba(247,185,85,0.02));
+    border: 1px solid rgba(247,185,85,0.35);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+  }
+  .tldr-title {
+    color: var(--tldr);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .tldr ul {
+    margin: 0; padding-left: 18px;
+  }
+  .tldr li {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  .tldr li:last-child { margin-bottom: 0; }
+  section {
+    margin-bottom: 40px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-num {
+    display: inline-flex;
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+    color: var(--bg);
+  }
+  .s1 .section-num { background: var(--section-1); }
+  .s2 .section-num { background: var(--section-2); }
+  .s3 .section-num { background: var(--section-3); }
+  .s4 .section-num { background: var(--section-4); }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .section-subtitle {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-left: auto;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: #444c56;
+  }
+  .card-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .card-title a {
+    color: var(--accent-strong);
+    text-decoration: none;
+  }
+  .card-title a:hover {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--badge-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+  }
+  .badge.date {
+    color: var(--text);
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--accent-strong);
+    letter-spacing: 0.02em;
+  }
+  .summary {
+    color: var(--text);
+    font-size: 14.5px;
+    margin: 0;
+  }
+  footer {
+    color: var(--text-dim);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 600px) {
+    .container { padding: 24px 14px 60px; }
+    h1 { font-size: 22px; }
+    .card-title { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="date-line">2026-04-27 (월) · Energy &amp; Chemical Engineering</div>
+  <h1>Morning Brief — 에너지 &amp; 화학공학 아침 브리핑</h1>
+</header>
+
+<div class="tldr">
+  <div class="tldr-title">오늘의 한 줄 (TL;DR)</div>
+  <ul>
+    <li><strong>DOE, 수소 허브 $5B 유지</strong> — 4/21 미국 에너지부가 5개 수소허브(MACH2·ARCH2 등)에 대한 약 50억 달러 지원을 보존하기로 결정. 캘리포니아·태평양북서부 허브는 취소. 미 청정수소 정책의 우선순위가 동부·중서부로 재편되고 있다.</li>
+    <li><strong>CATL, 나트륨이온 EV 배터리 2026년 하반기 양산 확정</strong> — 4/21 테크데이에서 175 Wh/kg 1세대 Na-ion 셀 공개, 4가지 핵심 양산 장벽(수분 제어·하드카본 가스·Al 집전체·자가형성 음극) 해결을 발표. LFP 보완재가 아닌 대체재로 자리 잡을 가능성.</li>
+    <li><strong>EU, REMIT II 시행규정에 수소 정식 편입(4/9 발효 4/29)</strong> — 도매에너지상품(WEP) 정의에 수소 공급·운송·저장 계약 포함. 동시에 RFNBO 그린수소 규정 재검토를 Q2 2026으로 앞당김. EU 수소 시장이 가스·전력과 동일 규제 프레임으로 통합되는 분기점.</li>
+  </ul>
+</div>
+
+<!-- Section 1: Papers -->
+<section class="s1">
+  <div class="section-header">
+    <span class="section-num">1</span>
+    <h2 class="section-title">논문 (Top Journals)</h2>
+    <span class="section-subtitle">Nature · Nature Energy · Nature Catalysis · Nature Communications</span>
+  </div>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.nature.com/articles/s41560-026-02038-1" target="_blank" rel="noopener">Quantifying the self-discharge rate of solid-state batteries</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Nature Energy</span>
+      <span class="badge date">2026-04</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#solid-state</span>
+    </div>
+    <p class="summary">고체전해질 분리막의 미세 전자 누설이 가역적 자가방전을 일으킨다는 분석 모델을 제시. 화학퍼텐셜 차이로 이온·전자가 분리막을 횡단하는 메커니즘을 정량화해 셀·분리막 설계 가이드라인을 제시한다. 솔리드스테이트 배터리 상용화에서 낮은 우선순위였던 보존 성능 평가를 본격 의제화한 첫 정량 연구.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">Tuning selectivity in the direct hydrogenolysis of PET plastic over Co catalysts through interfacial hydrogen spillover</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Nature Communications</span>
+      <span class="badge date">2026-04</span>
+      <span class="tag">#플라스틱</span>
+      <span class="tag">#PET</span>
+    </div>
+    <p class="summary">Co@CoO 이종촉매의 계면 수소 스필오버를 제어해 PET 직접수소화를 단일 단계로 수행, p-자일렌 97% 또는 1,4-디메틸시클로헥산 90% 이상 선택성 달성. 기존 2단계(해중합→수소화) 공정을 단일 반응으로 통합해 PET 업사이클링 경제성을 끌어올린 사례.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.nature.com/articles/s41578-025-00875-2" target="_blank" rel="noopener">Scaling electrocatalysts for reduction of CO2 or CO to multicarbon products</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Nature Reviews Materials</span>
+      <span class="badge date">2026-01</span>
+      <span class="tag">#CO2RR</span>
+      <span class="tag">#전기화학</span>
+    </div>
+    <p class="summary">CO2/CO에서 C2+ 다탄소 생성물로 가는 전기화학적 경로의 스케일업 전략을 종합. 나노입자 합성→롤투롤 코팅→GW급 전해셀까지의 워크플로우를 제시하고 촉매-전극 통합의 실패 패턴을 분석. 산업계가 파일럿에서 commercial로 넘어갈 때 참조할 청사진.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.nature.com/articles/s41467-026-68358-8" target="_blank" rel="noopener">Bioadaptive Ni single atoms unlock high rate microbial electrosynthesis of isopropanol from CO2</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Nature Communications</span>
+      <span class="badge date">2026-01</span>
+      <span class="tag">#CO2RR</span>
+      <span class="tag">#바이오매스</span>
+    </div>
+    <p class="summary">유기물 피독에 강한 Ni 단일원자 촉매로 CO2→CO 단계의 전기화학 효율을 유지하면서 미생물이 CO를 받아 이소프로판올을 고속 생산하는 하이브리드 시스템. 무기촉매-미생물 연계의 전형적 병목인 촉매 피독 문제를 해결한 케이스로, 전기화학+합성생물학 융합의 가능성을 보여준다.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.nature.com/articles/s41560-025-01865-y" target="_blank" rel="noopener">Five-volt-class high-capacity all-solid-state lithium batteries</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Nature Energy</span>
+      <span class="badge date">2025-10</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#solid-state</span>
+    </div>
+    <p class="summary">LiCl–4Li2TiF6 고전압 안정 플루오라이드 고체전해질로 5V 동작·35.3 mAh/cm² 고면적용량 달성. 스피넬 옥사이드 양극을 차폐해 2C에서 106 mAh/g, 500사이클 75.2% 유지. 5V급 전고체 셀에서 전해질-양극 계면이 깨지는 만성 문제를 우회한 설계.</p>
+  </article>
+</section>
+
+<!-- Section 2: Policy / Regulation -->
+<section class="s2">
+  <div class="section-header">
+    <span class="section-num">2</span>
+    <h2 class="section-title">정책 / 규제</h2>
+    <span class="section-subtitle">DOE · EU Commission · IEA</span>
+  </div>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.mccormick.senate.gov/news/press-releases/energy-department-preserves-nearly-5-billion-for-hydrogen-hubs-including-two-hubs-critical-to-pennsylvania/" target="_blank" rel="noopener">Energy Department Preserves Nearly $5 Billion for Hydrogen Hubs — MACH2 &amp; ARCH2 Confirmed</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">U.S. DOE</span>
+      <span class="badge date">2026-04-21</span>
+      <span class="tag">#수소</span>
+    </div>
+    <p class="summary">DOE가 2,200개 에너지 프로젝트 검토 끝에 5개 수소허브에 대한 ~$5B 지원을 유지. MACH2(PA·DE·NJ, 2만+ 일자리), ARCH2(PA·OH·WV, 2.1만+ 일자리)를 단계적 지원 방식으로 확정. 반면 캘리포니아(ARCHES)·태평양북서부(PNW H2) 허브 자금은 취소되어 미 청정수소 지도가 동부·중서부로 재편됨.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.bakermckenzie.com/en/insight/publications/2026/04/european-union-remit-ii-explained" target="_blank" rel="noopener">EU REMIT II Implementing Regulation Brings Hydrogen Into Wholesale Energy Market Rules</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">EU Commission</span>
+      <span class="badge date">2026-04-09</span>
+      <span class="tag">#수소</span>
+      <span class="tag">#규제</span>
+    </div>
+    <p class="summary">2026-04-09 발효된 REMIT II 시행규정이 수소를 도매에너지상품(WEP) 정의에 정식 편입(공급·운송·저장 계약 포함). 4/29 본격 적용. 가스·전력과 동일 수준의 시장투명성·시장조작 금지 의무가 수소에도 부과되어 EU 내 수소 거래 인프라가 규제 프레임 안으로 들어옴.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://fuelcellsworks.com/2026/04/22/energy-development/eu-makes-it-official-rfnbo-green-hydrogen-rules-will-be-reviewed-this-quarter-hormuz-crisis-becomes-the-accelerant" target="_blank" rel="noopener">EU Officially Pulls Forward RFNBO Green Hydrogen Rules Review to Q2 2026 — Nuclear Eligibility on the Table</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">EU Commission</span>
+      <span class="badge date">2026-04-22</span>
+      <span class="tag">#수소</span>
+      <span class="tag">#규제</span>
+    </div>
+    <p class="summary">호르무즈 사태로 에너지 안보 압박이 커지자 EU가 RFNBO(재생연료) 그린수소 규정 검토를 Q2 2026으로 앞당김. 추가성·시간상관성 기준 완화 가능성과 원자력 유래 수소의 RFNBO 인정 여부가 핵심 의제. 통과 시 EU 수소 프로젝트 FID 가속 효과가 클 것.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.twobirds.com/en/insights/2026/europe-powers-up-the-eu's-bold-legislative-drive-for-a-homegrown-battery-industry" target="_blank" rel="noopener">Industrial Accelerator Act (COM(2026) 100) — EU's Battery &amp; Clean-Tech Manufacturing Push</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">EU Commission</span>
+      <span class="badge date">2026-03-04</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#규제</span>
+    </div>
+    <p class="summary">EU 집행위가 3/4 발의한 산업가속화법안. 인허가 단순화·기금 통합으로 배터리·청정기술 제조 capacity를 빠르게 끌어올리는 것이 목표. 중국 의존도 축소와 IRA 대응 양면 전략. 배터리가 전략 부문 최우선 카테고리에 명시되어 EU 내 셀·소재 투자 인센티브가 강화될 전망.</p>
+  </article>
+</section>
+
+<!-- Section 3: Industry News -->
+<section class="s3">
+  <div class="section-header">
+    <span class="section-num">3</span>
+    <h2 class="section-title">산업 뉴스</h2>
+    <span class="section-subtitle">기업 투자 · 공장 · 파트너십 · 제품 출시</span>
+  </div>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://electrek.co/2026/04/22/catl-launching-sodium-ion-batteries-evs-2026/" target="_blank" rel="noopener">CATL Confirms Sodium-Ion EV Battery Mass Production by End of 2026 at Tech Day</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Electrek / CATL</span>
+      <span class="badge date">2026-04-22</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#Na-ion</span>
+    </div>
+    <p class="summary">CATL이 4/21 슈퍼테크데이에서 175 Wh/kg 1세대 Na-ion 셀 공개. 4가지 양산 장벽(수분 제어·하드카본 가스 발생·Al 집전체 접착·자가형성 음극)을 해결했다고 발표. 향후 3년 내 LFP 동등 에너지밀도(~600 km CLTC) 목표. 동시 공개된 3세대 Shenxing 셀은 6분 27초에 10→98% 충전.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.hydrogeninsight.com/production/atome-takes-final-investment-decision-on-665m-subsidy-free-green-hydrogen-project-in-paraguay/2-1-1980119" target="_blank" rel="noopener">Atome Takes FID on $665M Subsidy-Free Green Hydrogen / Fertilizer Project in Paraguay</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Hydrogen Insight</span>
+      <span class="badge date">2026-04-24</span>
+      <span class="tag">#수소</span>
+      <span class="tag">#그린암모니아</span>
+    </div>
+    <p class="summary">Atome PLC가 파라과이 비예타 60,000 t/yr 그린수소 기반 비료 플랜트에 $665M FID 의결. 부채 $420M(국제개발금융기관) + 지분 $245M(Hy24 주도, IFC·KfW·Sudameris 등 참여). 보조금 없는 첫 산업 규모 그린수소 비료 FID라는 점에서 상징성. 2029년 가동 목표.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://fuelcellsworks.com/2026/04/14/electrolyzer/horizon-delivers-world-s-first-5mw-aem-electrolyser-system" target="_blank" rel="noopener">Horizon (HET Hydrogen) Delivers World's First 5MW AEM Electrolyser System</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Fuel Cells Works</span>
+      <span class="badge date">2026-04-14</span>
+      <span class="tag">#수전해</span>
+      <span class="tag">#AEM</span>
+    </div>
+    <p class="summary">Horizon 자회사 HET Hydrogen이 세계 최초 5 MW AEM 전해조 시스템 출하. AEM은 알칼라인의 비귀금속 촉매 강점과 PEM의 컴팩트·고응답성을 결합한 차세대 기술. 5 MW 단일 시스템 상용 인도는 AEM이 파일럿 단계를 벗어나 메가와트급 deployment 단계로 진입했다는 신호.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://fuelcellsworks.com/2026/04/16/electrolyzer/china-electrolyzer-capacity-report-april-16-2026" target="_blank" rel="noopener">China's Electrolyzer Capacity Report — April 2026</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Fuel Cells Works</span>
+      <span class="badge date">2026-04-16</span>
+      <span class="tag">#수전해</span>
+      <span class="tag">#수소</span>
+    </div>
+    <p class="summary">중국 전해조 제조 capacity가 글로벌 점유율을 빠르게 흡수하는 가운데, 4월 capacity 리포트는 단가 하락 폭과 수출 사이클을 점검. 중국 발 알칼라인·PEM 전해조 가격이 EU·NA 경쟁사 대비 30~50% 낮은 구간을 유지하면서, 글로벌 그린수소 LCOH 하락 압력으로 작용 중.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://www.bloomberg.com/news/newsletters/2026-04-13/microsoft-staff-say-carbon-removal-deals-paused-in-program-shakeup" target="_blank" rel="noopener">Microsoft Staff Tell Some Carbon Capture Companies It's Pausing Deals</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">Bloomberg</span>
+      <span class="badge date">2026-04-13</span>
+      <span class="tag">#CCUS</span>
+    </div>
+    <p class="summary">탄소제거(CDR) 최대 구매자였던 Microsoft가 일부 CCUS·DAC 업체와의 계약을 일시 중단. 프로그램 재편 신호. Frontier·Stripe 등 빅테크 주도 수요가 시장 가격 형성의 앵커였던 만큼, 단기 CDR 가격·FID 사이클에 직접적 충격 가능성. 대형 CCUS 허브 vs. 소규모 프로젝트의 양극화가 가속.</p>
+  </article>
+</section>
+
+<!-- Section 4: Preprints -->
+<section class="s4">
+  <div class="section-header">
+    <span class="section-num">4</span>
+    <h2 class="section-title">프리프린트</h2>
+    <span class="section-subtitle">ChemRxiv · arXiv (cond-mat.mtrl-sci, physics.chem-ph)</span>
+  </div>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001835/v1" target="_blank" rel="noopener">Crucial Impact of Dinuclearity and Linker Length on Electrochemical CO2 Reduction to Methanol</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">ChemRxiv</span>
+      <span class="badge date">2026-04-10</span>
+      <span class="tag">#CO2RR</span>
+      <span class="tag">#전기화학</span>
+    </div>
+    <p class="summary">동핵(dinuclear) Fe/Fe·Cu/Cu 분자촉매가 단핵 대비 CO2→메탄올 다중 수소화 단계를 가능하게 함을 입증. 균질 조건에서 Fe/Fe 22%, Cu/Cu 24% 패러데이 효율, 메탄올 선택성 ~85–90%. CO나 HCOOH로 멈추는 대부분의 분자촉매와 달리 6e⁻ CO2→MeOH 직접 경로를 분자 수준에서 합리적 설계로 달성.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">What if We Were to Design Transport in Aqueous Electrolytes Using Learnings from Lithium Battery Research?</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">ChemRxiv</span>
+      <span class="badge date">2026-01-14</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#aqueous</span>
+    </div>
+    <p class="summary">Li-ion 전해질 설계에서 축적된 솔베이션·SEI·이온수송 개념을 수계 그리드 배터리에 이식하자는 perspective. 수계는 안정성·비용 강점이 있지만 이온수송이 빈약했던 구간을 Li-ion 디자인 룰로 좁힐 수 있다는 주장. 차세대 LDES(redox flow·water-in-salt) 설계의 메타 가이드.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://chemrxiv.org/engage/chemrxiv/article-details/69660d28ff1c4bced4f43081" target="_blank" rel="noopener">Sodium Sulfate in the Li-ion Battery Industry: Challenges, Opportunities, and Emerging Valorization Strategies</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">ChemRxiv</span>
+      <span class="badge date">2026-01-14</span>
+      <span class="tag">#배터리</span>
+      <span class="tag">#재활용</span>
+    </div>
+    <p class="summary">Li-ion 가치사슬 전반(리튬 광석 처리·NMC 전구체 합성·습식제련 재활용)에서 발생하는 Na2SO4 부산물 문제를 정량화. 환경·경제 부담을 줄일 수 있는 valorization 경로(전기분해·전구체 재활용·시멘트 첨가) 비교. 배터리 산업 확대에 따라 무시 못 할 규모의 부산물 이슈를 제기.</p>
+  </article>
+
+  <article class="card">
+    <h3 class="card-title">
+      <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-n41q2" target="_blank" rel="noopener">Electrochemical Potential-Driven Water Dynamics Control CO2 Electroreduction at the Ag/H2O Interface</a>
+    </h3>
+    <div class="card-meta">
+      <span class="badge">ChemRxiv</span>
+      <span class="badge date">2025-12</span>
+      <span class="tag">#CO2RR</span>
+      <span class="tag">#계면</span>
+    </div>
+    <p class="summary">Ag/H2O 계면에서 인가 전위에 따른 물 분자 동역학 변화가 CO2 환원 활성·선택성을 좌우함을 분자동역학+전기화학 측정으로 입증. 전극 자체 구조보다 EDL의 물 네트워크 재편이 일차적 변수임을 보여, 촉매 설계의 초점을 표면 도핑에서 계면 용매 엔지니어링으로 이동시킴.</p>
+  </article>
+</section>
+
+<footer>
+  Generated 2026-04-27 · Sources: Nature, Nature Energy, Nature Communications, Nature Reviews Materials, ChemRxiv, U.S. DOE press / Senate releases, EU Commission analyses, Hydrogen Insight, Fuel Cells Works, Electrek, Bloomberg.
+</footer>
+
+</div>
+</body>
+</html>
