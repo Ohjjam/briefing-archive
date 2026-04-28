@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily Briefing · 2026-04-28</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #b8540a;
+    --border: #e6e3dc;
+    --quiet-bg: #f1efe9;
+    --code-bg: #efece4;
+    --warn-bg: #fff4d9;
+    --warn-fg: #8a5a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1b1a;
+      --fg: #ececec;
+      --muted: #a0a0a0;
+      --accent: #ff9d4a;
+      --border: #333;
+      --quiet-bg: #2a2a28;
+      --code-bg: #2c2a25;
+      --warn-bg: #3a2c08;
+      --warn-fg: #ffd07a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 1.9rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.3rem; margin: 40px 0 16px; letter-spacing: -0.01em; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 1.05rem; margin: 24px 0 6px; }
+  .meta { color: var(--muted); font-size: 0.92rem; margin: 0; }
+  .tldr ul { padding-left: 1.2rem; }
+  .tldr li { margin: 6px 0; }
+  article { margin: 18px 0 26px; }
+  article p { margin: 6px 0; }
+  .source { color: var(--muted); font-size: 0.88rem; margin-bottom: 4px !important; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  a:hover { border-bottom-color: var(--accent); }
+  blockquote {
+    margin: 8px 0;
+    padding: 6px 14px;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-style: italic;
+    background: var(--quiet-bg);
+  }
+  em { color: var(--muted); }
+  code {
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  .quiet {
+    color: var(--muted);
+    background: var(--quiet-bg);
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .unverified {
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+  .stale {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-left: 6px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  ol.sources { padding-left: 1.5rem; }
+  ol.sources li { margin: 4px 0; word-break: break-all; }
+  @media (max-width: 480px) {
+    .wrap { padding: 28px 16px 60px; }
+    h1 { font-size: 1.55rem; }
+    h2 { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI 일일 브리핑</h1>
+  <p class="meta">2026-04-28 · 최근 24~48시간 · 6개사 커버 (OpenAI · Google · Anthropic · Meta · xAI · Mistral)</p>
+</header>
+
+<section class="tldr">
+  <h2>한눈에 보기 (TL;DR)</h2>
+  <ul>
+    <li><strong>Anthropic</strong>이 4월 27일 시드니 오피스를 열고 호주·뉴질랜드 GM으로 Theo Hourmouzis를 선임 — APAC 확장 본격화.</li>
+    <li><strong>Meta LlamaCon</strong>이 내일(4/29) 개막 — Llama 신규 모델 공개 가능성 가장 큰 이벤트.</li>
+    <li><strong>Google</strong>이 Gemini 3.1 Pro 기반 <code>Deep Research</code> / <code>Deep Research Max</code>를 Gemini API로 출시 — MCP 지원 + 인라인 차트 생성.</li>
+    <li><strong>OpenAI</strong> <code>gpt-5.5</code> 및 <code>gpt-5.5-pro</code> 출시 후 Plus·Pro·Business·Enterprise로 롤아웃 진행 중 — agentic coding·computer use 강화.</li>
+    <li><strong>xAI</strong> Series E 200억 달러 마감(NVIDIA·Cisco 전략 투자) + Grok Speech API + 美 국방부(DOW) GenAI.mil 채택.</li>
+  </ul>
+</section>
+
+<section class="by-company">
+
+  <h2>OpenAI</h2>
+
+  <article>
+    <h3><code>gpt-5.5</code> / <code>gpt-5.5-pro</code> 롤아웃 진행 중<span class="stale"> · 4/23 발표, 24~48h 내 API·ChatGPT 확산 단계</span></h3>
+    <p class="source"><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">OpenAI Blog</a> · 2026-04-23 (롤아웃 지속 중)</p>
+    <p>OpenAI는 <em>"smartest frontier model yet for professional work"</em>로 묘사한 <code>gpt-5.5</code>를 ChatGPT Plus·Pro·Business·Enterprise 및 Codex에 점진 배포 중이며, <code>gpt-5.5-pro</code>는 Pro·Business·Enterprise 한정으로 풀린다. API에서는 4월 24일부터 사용 가능. 멀티스텝 추론, 도구 사용, 에이전틱 코딩, 컴퓨터 사용에서 큰 도약이 강조됐다.</p>
+    <blockquote>"You can give GPT-5.5 a messy, multi-part task and trust it to plan, use tools, check its work, navigate through ambiguity, and keep going."</blockquote>
+  </article>
+
+  <article>
+    <h3>벤치마크 — OSWorld-Verified 78.7%로 컴퓨터 사용 능력 부각</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-23</p>
+    <p>외신은 <code>gpt-5.5</code>가 OSWorld-Verified에서 78.7%를 기록하며 OpenAI가 추구하는 <em>"super app"</em> 비전(여러 도구를 횡단하는 단일 어시스턴트)에 한 발 더 가까워졌다고 평가했다. CNBC도 동일한 발표를 자체 보도했다.</p>
+  </article>
+
+  <h2>Google / DeepMind</h2>
+
+  <article>
+    <h3>Deep Research &amp; Deep Research Max — Gemini API 정식 출시</h3>
+    <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Google Blog</a> · 2026-04-22 (지속 확산)</p>
+    <p>Gemini 3.1 Pro 위에서 동작하는 두 종의 자율 리서치 에이전트 — 속도 최적화 <code>Deep Research</code>, 품질 최적화 <code>Deep Research Max</code> — 가 Gemini API에 추가됐다. <em>"native chart and infographic generation"</em>과 MCP 지원이 핵심 셀링 포인트.</p>
+  </article>
+
+  <article>
+    <h3>Gemma 4 출시 — <code>gemma-4-26b-a4b-it</code> &amp; <code>gemma-4-31b-it</code></h3>
+    <p class="source"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API Changelog</a> · 2026-04 (최근 수일)</p>
+    <p>AI Studio와 Gemini API에서 두 종의 Gemma 4 모델이 풀렸다. 한편 <code>gemini-robotics-er-1.5-preview</code>는 <strong>2026-04-30 09:00 PST</strong>에 셧다운 예정 — 의존하는 파이프라인이 있으면 마이그레이션 필요.</p>
+  </article>
+
+  <article>
+    <h3>Gemini 3.1 Flash TTS Preview &amp; <code>gemini-robotics-er-1.6-preview</code></h3>
+    <p class="source"><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">llm-stats.com</a> · 2026-04 후반</p>
+    <p>저비용·표현형 TTS 프리뷰와, 계기판 판독·공간/물리 추론이 강화된 로보틱스 모델 1.6 프리뷰가 공개됐다.</p>
+  </article>
+
+  <h2>Anthropic</h2>
+
+  <article>
+    <h3>호주 시드니 오피스 개소 + Theo Hourmouzis ANZ GM 선임 <strong>(24h 이내)</strong></h3>
+    <p class="source"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a> · 2026-04-27</p>
+    <p>Anthropic은 4월 27일 시드니 사무소를 공식 개소하고 Theo Hourmouzis를 호주·뉴질랜드 GM으로 발표했다. APAC 엔터프라이즈 영업과 정책 대응 거점을 마련한 행보.</p>
+  </article>
+
+  <article>
+    <h3><code>claude-opus-4-7</code> 출시 — 비전 해상도 3× &amp; xhigh effort<span class="stale"> · 4/16, 여전히 채널별 확산 진행</span></h3>
+    <p class="source"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Introducing Claude Opus 4.7</a> · 2026-04-16</p>
+    <p>Opus 4.6 대비 비전 입력 해상도 3배, 새로운 <em>xhigh</em> effort 레벨, task budget, 인스트럭션 추종 개선이 핵심. 하위 호환성은 유지되나 vision 토큰 회계는 영향이 있을 수 있어 코스트 모니터링 필요.</p>
+  </article>
+
+  <article>
+    <h3>Claude는 광고 없는 공간으로 유지 — 정책 재확인</h3>
+    <p class="source"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a> · 최근</p>
+    <p>Anthropic은 광고 모델이 <em>"genuinely helpful AI assistant"</em>의 인센티브와 양립할 수 없다고 명시하며, 신뢰를 훼손하지 않는 방식으로 액세스를 확장하겠다는 입장을 다시 공개했다.</p>
+  </article>
+
+  <article>
+    <h3>Managed Agents &amp; Rate Limits API <span class="stale">· 최근 수 주 내</span></h3>
+    <p class="source"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a></p>
+    <p>장시간 에이전트 워크로드용 hosted 서비스 <strong>Managed Agents</strong>(세션·하니스·샌드박스 안정 인터페이스)와, 조직/워크스페이스 단위 한도를 프로그래밍적으로 조회하는 <strong>Rate Limits API</strong>가 Developer Platform에 추가됐다.</p>
+  </article>
+
+  <h2>Meta</h2>
+
+  <article>
+    <h3>LlamaCon 2026 — 내일(4/29) 개막</h3>
+    <p class="source"><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">Meta AI Blog</a> · 2026-04-29 예정</p>
+    <p>Meta의 첫 개발자 컨퍼런스 LlamaCon이 내일 개막한다. 보도에 따르면 발표 예정 항목은 (1) 새 API의 fine-tuning·평가 도구 — Llama 3.3 8B 커스텀 튜닝 포함, (2) NVIDIA NeMo·IBM·Red Hat·Dell과의 Llama Stack 통합 확대, (3) 오픈소스용 안전 도구 Llama Guard 4 / LlamaFirewall / Llama Prompt Guard 2, (4) 두 번째 Llama Impact Grants 수상자 10팀(150만 달러+).</p>
+  </article>
+
+  <article>
+    <h3>지난 24시간 별도 발표 없음 — 4/29 행사 직전 정보 통제 국면</h3>
+    <p class="quiet">— 행사 발표 임박으로 지난 24시간 내 추가 공식 업데이트 없음 —</p>
+  </article>
+
+  <h2>xAI</h2>
+
+  <article>
+    <h3>Series E 200억 달러 마감 — NVIDIA·Cisco 전략 투자</h3>
+    <p class="source"><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a> · 최근</p>
+    <p>당초 목표 150억 달러를 넘어 200억 달러로 마감. Valor, Stepstone, Fidelity, Qatar Investment Authority, MGX, Baron Capital 외 NVIDIA와 Cisco Investments가 전략 투자자로 합류 — 인프라(컴퓨트) 빌드아웃이 명시적 사용처.</p>
+  </article>
+
+  <article>
+    <h3>Grok Speech API — Speech-to-Text / Text-to-Speech 독립 출시</h3>
+    <p class="source"><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI Docs Release Notes</a></p>
+    <p>실시간·배치 엔드포인트, 다국어, 화자 분리, 타임스탬프, 표현형 speech 태그 지원. <em>STT 가격: 배치 시간당 $0.10, 스트리밍 시간당 $0.20.</em></p>
+  </article>
+
+  <article>
+    <h3>美 국방부(DOW) GenAI.mil에 채택 — IL5 액세스</h3>
+    <p class="source"><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a></p>
+    <p>xAI의 군·국가안보 특화 Frontier AI 시스템이 Department of War의 GenAI.mil 스위트로 선정됨. <em>"3 million military and civilian employees"</em>가 IL5 보안 수준에서 사용 가능해진다.</p>
+  </article>
+
+  <h2>Mistral AI</h2>
+
+  <article>
+    <p class="quiet">— 지난 24시간 주목할 신규 발표 없음. 직전 분기 컨텍스트로 3월 한 달 동안 <code>Small 4</code>, <code>Voxtral TTS</code>, <code>Leanstral</code>, <code>Forge</code>, <code>Spaces CLI</code>, NVIDIA Nemotron Coalition 합류까지 6건의 출시가 있었음 (출처: <a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral News</a>). ARR이 1년 만에 ~$20M → $400M로 점프했다는 보도가 이어지는 중. —</p>
+  </article>
+
+</section>
+
+<section class="other">
+  <h2>기타 주목할 만한 동향</h2>
+
+  <article>
+    <h3>DeepSeek V4 프리뷰 공개 — 오픈소스 에이전틱 코딩 SOTA 주장</h3>
+    <p class="source"><a href="https://www.cnn.com/2026/04/24/tech/chinas-ai-deepseek-v4-intl-hnk" target="_blank" rel="noopener">CNN Business</a> · 2026-04-24</p>
+    <p>중국 DeepSeek가 V4 프리뷰를 공개. <em>"best agentic coding capability among open-source models"</em>와 <em>"world class reasoning"</em>을 자평. 프론티어 6사 외 가장 큰 변수로, GPT-5.5·Claude Opus 4.7과 동일 주차에 출시된 점이 주목된다.</p>
+  </article>
+
+  <article>
+    <h3>관전 포인트 — 4/29~30 이벤트 윈도</h3>
+    <p>① 4/29 Meta LlamaCon (Llama 신모델·Stack·Safety 도구) ② 4/30 09:00 PST <code>gemini-robotics-er-1.5-preview</code> 셧다운 ③ Mistral의 3월 cadence(2주에 6건)를 감안하면 4월 막판 출시 가능성 잔존.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Generated 2026-04-28 · 최근 24~48시간 기준, 진행 중 메이저 스토리는 일자 표기와 함께 포함</p>
+  <ol class="sources">
+    <li><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">OpenAI — Introducing GPT-5.5</a></li>
+    <li><a href="https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" target="_blank" rel="noopener">TechCrunch — OpenAI releases GPT-5.5</a></li>
+    <li><a href="https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" target="_blank" rel="noopener">CNBC — OpenAI announces GPT-5.5</a></li>
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">OpenAI API Changelog</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Google — Deep Research Max</a></li>
+    <li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API Changelog</a></li>
+    <li><a href="https://gemini.google/release-notes/" target="_blank" rel="noopener">Gemini Apps Release Notes</a></li>
+    <li><a href="https://siliconangle.com/2026/04/22/google-launches-ai-research-agents-powered-gemini-3-1-pro/" target="_blank" rel="noopener">SiliconANGLE — Gemini 3.1 Pro Research Agents</a></li>
+    <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic News</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Anthropic — Introducing Claude Opus 4.7</a></li>
+    <li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a></li>
+    <li><a href="https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/" target="_blank" rel="noopener">TechCrunch — Claude Design Launch</a></li>
+    <li><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">Meta AI — LlamaCon Announcements</a></li>
+    <li><a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/" target="_blank" rel="noopener">Meta AI — Llama 4 Multimodal</a></li>
+    <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a></li>
+    <li><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI Docs Release Notes</a></li>
+    <li><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral AI News</a></li>
+    <li><a href="https://docs.mistral.ai/getting-started/changelog" target="_blank" rel="noopener">Mistral Docs Changelog</a></li>
+    <li><a href="https://www.cnn.com/2026/04/24/tech/chinas-ai-deepseek-v4-intl-hnk" target="_blank" rel="noopener">CNN — DeepSeek V4 Preview</a></li>
+    <li><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">llm-stats — AI Updates April 2026</a></li>
+    <li><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">llm-stats — LLM News April 2026</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
