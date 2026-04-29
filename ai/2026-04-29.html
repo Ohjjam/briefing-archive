@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily Briefing · 2026-04-29</title>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #b54708;
+    --rule: #e5e2da;
+    --code-bg: #f1ede4;
+    --quiet-bg: #f5f3ee;
+    --warn-bg: #fff4e0;
+    --warn-fg: #8a4b00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14130f;
+      --fg: #ece9e0;
+      --muted: #9a9890;
+      --accent: #f59e3b;
+      --rule: #2a2823;
+      --code-bg: #22201b;
+      --quiet-bg: #1c1a16;
+      --warn-bg: #3a2a10;
+      --warn-fg: #f5c071;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 18px; margin-bottom: 32px; }
+  header h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .meta { color: var(--muted); margin: 0; font-size: 14px; }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    letter-spacing: -0.01em;
+  }
+  h3 { font-size: 17px; margin: 18px 0 6px; line-height: 1.4; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  blockquote {
+    margin: 10px 0;
+    padding: 8px 14px;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-style: italic;
+  }
+  em { color: var(--muted); }
+  article {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+  article:last-child { border-bottom: none; }
+  .source { font-size: 13px; color: var(--muted); margin: 2px 0 8px; }
+  .quiet {
+    background: var(--quiet-bg);
+    color: var(--muted);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 6px 0 4px;
+  }
+  .unverified {
+    background: var(--warn-bg);
+    color: var(--warn-fg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  ul, ol { padding-left: 22px; }
+  .tldr ul li { margin-bottom: 6px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  ol.sources { font-size: 13px; }
+  ol.sources li { margin-bottom: 4px; word-break: break-all; }
+  @media (max-width: 480px) {
+    .wrap { padding: 28px 16px 60px; }
+    header h1 { font-size: 22px; }
+    h2 { font-size: 17px; }
+    h3 { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI 일일 브리핑</h1>
+  <p class="meta">2026-04-29 · 최근 24시간 · 6개사 (OpenAI / Google / Anthropic / Meta / xAI / Mistral)</p>
+</header>
+
+<section class="tldr">
+  <h2>한눈에 보기 (TL;DR)</h2>
+  <ul>
+    <li><strong>OpenAI ↔ AWS 파트너십 발효</strong>: Microsoft 독점 종료 직후 <code>gpt-5.5</code>·<code>gpt-5.4</code>가 Amazon Bedrock에 들어가고, Codex와 Bedrock Managed Agents도 OpenAI 기반으로 출시.</li>
+    <li><strong>Google, Pentagon 접근권 확장</strong>: Anthropic이 국방부의 무제한 사용 요청을 거부하자, Google이 그 자리를 메우는 신규 계약 체결.</li>
+    <li><strong>OpenAI 매출·사용자 우려로 AI 주식 동반 하락</strong>: WSJ 보도 → Oracle·CoreWeave 등 OpenAI 연계주 약세, S&amp;P 0.49% 하락. OpenAI는 "사실과 다르다" 부인.</li>
+    <li><strong>Musk vs Altman 재판 개시</strong>: 캘리포니아 연방법원에서 시작된 본안 재판. AI 산업 지배구조에 영향 가능.</li>
+    <li><strong>Meta·xAI·Mistral</strong>: 최근 24시간 내 주목할 자체 발표는 없음 (직전 1~2주 내 Grok 4.3, Llama 4 Maverick, Mistral Large 3 등 출시는 이미 반영됨).</li>
+  </ul>
+</section>
+
+<section class="by-company">
+
+  <h2>OpenAI</h2>
+
+  <article>
+    <h3>OpenAI, Microsoft 독점 종료 후 AWS에서 모델 판매 시작 — Bedrock에 GPT-5.5 / Codex / Managed Agents 탑재</h3>
+    <p class="source"><a href="https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html" target="_blank" rel="noopener">CNBC</a> · 2026-04-28</p>
+    <p>Microsoft와 OpenAI가 독점 조항을 풀면서, AWS는 즉시 OpenAI 최신 모델을 Amazon Bedrock에서 limited preview로 제공하기 시작했다. <code>gpt-5.5</code>와 <code>gpt-5.4</code>가 동일한 Bedrock API/제어판으로 호출 가능하며, OpenAI Codex 역시 엔터프라이즈향으로 Bedrock에 올라간다. 또한 OpenAI 모델로 구동되는 <em>Amazon Bedrock Managed Agents</em>가 출시되어, 이전 상호작용에 대한 메모리를 가진 커스텀 에이전트 구성을 지원한다.</p>
+    <blockquote>"now serve all of its products to customers across any cloud provider"</blockquote>
+  </article>
+
+  <article>
+    <h3>WSJ "OpenAI 매출·사용자 목표 미달" 보도 → AI 주식 동반 하락, OpenAI는 부인</h3>
+    <p class="source"><a href="https://www.fool.com/coverage/stock-market-today/2026/04/28/stock-market-today-april-28-tech-stocks-slide-on-openai-fueled-jitters/" target="_blank" rel="noopener">The Motley Fool</a> · 2026-04-28</p>
+    <p>월스트리트저널이 "OpenAI가 매출·사용자 목표에 미달했다"고 보도하자, OpenAI 관련 인프라주(Oracle, CoreWeave 등)가 일제히 약세를 보였다. S&amp;P 500은 0.49%, Nasdaq Composite은 0.90% 하락. OpenAI 측은 보도 내용을 공식 부인했다. AI 인프라 자본지출에 대한 시장의 민감도가 다시 확인되는 사건.</p>
+  </article>
+
+  <article>
+    <h3>Musk vs Altman 본안 재판 캘리포니아 연방법원에서 개시</h3>
+    <p class="source"><a href="https://www.fool.com/coverage/stock-market-today/2026/04/28/stock-market-today-april-28-tech-stocks-slide-on-openai-fueled-jitters/" target="_blank" rel="noopener">The Motley Fool</a> · 2026-04-28</p>
+    <p>Elon Musk와 Sam Altman이 4/28 캘리포니아 연방법원에서 정면으로 맞붙었다. 보도에 따르면 본 재판은 <em>"could have far-reaching consequences for the AI industry"</em>이며, OpenAI의 지배구조·영리 전환·초창기 합의 해석이 쟁점이다.</p>
+  </article>
+
+  <h2>Google</h2>
+
+  <article>
+    <h3>Google, Anthropic 거부 자리 메우며 Pentagon 접근권 확장</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-28</p>
+    <p>Google이 미 국방부(DoD)에 자사 AI를 기밀 네트워크에서 사용할 수 있도록 접근권을 확장하는 계약을 체결했다. Anthropic이 "국내 대규모 감시"·"자율 무기" 용도의 무제한 활용을 거부한 직후 발표된 조치. Google 계약에는 같은 가드레일 문구가 포함되었다고 보도되며, OpenAI·xAI는 이미 DoD와 유사 계약을 체결한 상태다.</p>
+    <blockquote>"doesn't intend for its AI to be used for domestic mass surveillance or in autonomous weapons"</blockquote>
+  </article>
+
+  <h2>Anthropic</h2>
+
+  <article>
+    <h3>Anthropic, DoD 무제한 사용 거부 입장 유지 — 가드레일 명시 요구</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-28</p>
+    <p>Anthropic이 국내 대규모 감시 및 자율 무기 사용을 차단하는 가드레일 없이는 DoD에 무제한 접근을 허용할 수 없다는 기존 입장을 유지했다는 사실이 Google 계약 발표 보도로 재차 확인됐다. 정책 차별화가 단기 매출 기회 손실로 이어진 첫 사례 중 하나로 해석된다.</p>
+  </article>
+
+  <article>
+    <h3>[배경 / 48시간+] Google, Anthropic에 최대 400억 달러 투자 합의</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-24</p>
+    <p>4/24 발표된 합의로, Alphabet은 $350B 밸류에이션 기준 100억 달러를 즉시 투자하고, Anthropic이 성과 목표를 달성할 경우 추가 300억 달러를 투입한다. 본 24시간 윈도우보다 앞선 뉴스이지만, Google–Pentagon 계약과 맞물려 여전히 진행 중인 스토리이므로 컨텍스트로 포함.</p>
+  </article>
+
+  <h2>Meta</h2>
+  <p class="quiet">— 지난 24시간 주목할 자체 업데이트 없음. 직전 1~2주의 Llama 4 Scout/Maverick(4월 초), Meta Muse Spark(4/8) 출시 이후 추가 발표는 보고되지 않음. —</p>
+
+  <h2>xAI</h2>
+  <p class="quiet">— 지난 24시간 주목할 자체 업데이트 없음. 직전 1주 내의 Grok 4.3 정식 릴리스, Series E 200억 달러 마감, DoW IL5 계약은 본 윈도우 이전 이벤트. —</p>
+
+  <h2>Mistral AI</h2>
+  <p class="quiet">— 지난 24시간 주목할 자체 업데이트 없음. 직전 발표는 Mistral Large 3(EU 데이터 레지던시 포함) 및 3월의 Small 4 / Voxtral TTS / Forge 라인업. —</p>
+
+</section>
+
+<section class="other">
+  <h2>기타 주목할 만한 동향</h2>
+
+  <article>
+    <h3>AWS, OpenAI–Anthropic–Meta 동시 파트너십 체제로 전환</h3>
+    <p class="source"><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/" target="_blank" rel="noopener">AWS Blog (Weekly Roundup)</a> · 2026-04-27</p>
+    <p>같은 주 AWS 공식 블로그는 Anthropic·Meta와의 파트너십 강화, Bedrock AgentCore CLI, Lambda의 S3 Files 통합 등을 함께 묶어 발표했다. AWS가 단일 모델 공급자에 묶이지 않는 멀티-프론티어 모델 허브로 포지셔닝을 분명히 한 한 주.</p>
+  </article>
+
+  <article>
+    <h3>엔터프라이즈 AI 거버넌스 격차 — $665B 지출 대비 정책 보유율 43%</h3>
+    <p class="source"><a href="https://www.globenewswire.com/news-release/2026/04/28/3283133/0/en/ExcelMindCyber-Institute-Highlights-AI-Governance-Gap-as-2026-Enterprise-Spending-Surges.html" target="_blank" rel="noopener">GlobeNewswire / ExcelMindCyber Institute</a> · 2026-04-28</p>
+    <p>2026년 엔터프라이즈 AI 지출이 $665B에 달하는 가운데, 공식 거버넌스 정책을 갖춘 조직은 43%에 불과하다는 분석. Deloitte의 2026 State of AI 보고서는 "AI 성숙(AI-mature)" 단계의 기업이 1%뿐이라고 평가.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Generated 2026-04-29 · 본 브리핑은 자동화된 일일 리포트입니다. 출처는 아래 번호 매김 참조.</p>
+  <ol class="sources">
+    <li><a href="https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html" target="_blank" rel="noopener">CNBC — OpenAI brings models to AWS after ending exclusivity with Microsoft</a></li>
+    <li><a href="https://venturebeat.com/technology/microsoft-and-openai-gut-their-exclusive-deal-freeing-openai-to-sell-on-aws-and-google-cloud" target="_blank" rel="noopener">VentureBeat — Microsoft and OpenAI gut their exclusive deal</a></li>
+    <li><a href="https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/" target="_blank" rel="noopener">TechCrunch — OpenAI ends Microsoft legal peril over its $50B Amazon deal</a></li>
+    <li><a href="https://www.constellationr.com/insights/news/aws-launches-amazon-quick-connect-family-business-apps-openai-managed-agents" target="_blank" rel="noopener">Constellation Research — AWS launches OpenAI managed agents</a></li>
+    <li><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/" target="_blank" rel="noopener">AWS Blog — Weekly Roundup, Apr 27 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/" target="_blank" rel="noopener">TechCrunch — Google expands Pentagon's access to its AI</a></li>
+    <li><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener">TechCrunch — Google to invest up to $40B in Anthropic</a></li>
+    <li><a href="https://www.fool.com/coverage/stock-market-today/2026/04/28/stock-market-today-april-28-tech-stocks-slide-on-openai-fueled-jitters/" target="_blank" rel="noopener">The Motley Fool — Tech Stocks Slide on OpenAI-Fueled Jitters (Apr 28)</a></li>
+    <li><a href="https://www.globenewswire.com/news-release/2026/04/28/3283133/0/en/ExcelMindCyber-Institute-Highlights-AI-Governance-Gap-as-2026-Enterprise-Spending-Surges.html" target="_blank" rel="noopener">GlobeNewswire — ExcelMindCyber Institute on AI governance gap</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Energy &amp; Chemical Engineering Morning Brief — 2026-04-29</title>
+<style>
+:root {
+  --bg: #0f1115;
+  --bg-elev: #161922;
+  --bg-card: #1c2030;
+  --border: #2a2f42;
+  --text: #e6e8ee;
+  --text-dim: #9aa1b2;
+  --accent: #6ea8fe;
+  --accent-2: #8be9c9;
+  --warn: #f3b562;
+  --tag-bg: #232a3d;
+  --tag-text: #b9c2dc;
+  --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.25);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fb;
+    --bg-elev: #ffffff;
+    --bg-card: #ffffff;
+    --border: #e3e6ee;
+    --text: #1a1d24;
+    --text-dim: #4f5567;
+    --accent: #2563eb;
+    --accent-2: #0f9d6c;
+    --warn: #b8740b;
+    --tag-bg: #eef1f8;
+    --tag-text: #2b3146;
+    --shadow: 0 1px 2px rgba(20,24,40,0.06), 0 4px 14px rgba(20,24,40,0.05);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
+header.top {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+.eyebrow {
+  font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--text-dim); margin: 0 0 6px;
+}
+h1.title {
+  font-size: 26px; line-height: 1.2; margin: 0 0 6px; font-weight: 700;
+}
+.date {
+  font-size: 13px; color: var(--text-dim); margin: 0;
+}
+.tldr {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 18px 0 26px;
+  box-shadow: var(--shadow);
+}
+.tldr h2 { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+.tldr ul { margin: 0; padding-left: 18px; }
+.tldr li { margin: 6px 0; }
+section.section {
+  margin: 28px 0 8px;
+}
+h2.section-title {
+  font-size: 18px; margin: 0 0 4px; font-weight: 700;
+  display: flex; align-items: center; gap: 10px;
+}
+h2.section-title::before {
+  content: ""; display: inline-block;
+  width: 6px; height: 18px; border-radius: 3px;
+  background: var(--accent);
+}
+.section-sub { color: var(--text-dim); font-size: 13px; margin: 0 0 14px; }
+.cards { display: grid; gap: 12px; }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, border-color .12s ease;
+}
+.card:hover { border-color: var(--accent); }
+.card-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; margin-bottom: 6px; }
+.card-title {
+  font-size: 16px; font-weight: 600; line-height: 1.35;
+  flex: 1 1 auto; min-width: 0;
+}
+.card-title a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--text-dim); }
+.card-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 8px; align-items: center; }
+.badge {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 11px; font-weight: 600;
+  padding: 3px 8px; border-radius: 999px;
+  letter-spacing: 0.2px;
+}
+.badge.src { background: transparent; border: 1px solid var(--border); color: var(--text-dim); }
+.badge.date { background: transparent; color: var(--text-dim); padding: 3px 0; font-weight: 500; }
+.badge.topic { background: var(--tag-bg); color: var(--accent-2); }
+.summary { font-size: 14px; color: var(--text); margin: 6px 0 0; }
+.summary em { color: var(--text-dim); font-style: normal; font-size: 13px; display: block; margin-top: 4px; }
+footer.foot {
+  margin-top: 36px; padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px; color: var(--text-dim);
+}
+@media (max-width: 600px) {
+  .wrap { padding: 18px 14px 60px; }
+  h1.title { font-size: 22px; }
+  .card-title { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Energy &amp; Chemical Engineering Morning Brief</p>
+  <h1 class="title">에너지·화학공학 아침 브리핑</h1>
+  <p class="date">2026-04-29 (수) — 최근 1~2주 핵심 동향</p>
+</header>
+
+<div class="tldr">
+  <h2>오늘의 한 줄 (TL;DR)</h2>
+  <ul>
+    <li><strong>EU CBAM 첫 공식가 €75.36/tCO₂ 확정</strong> — 1분기 ETS 평균가 기반, 1월 1일 정식 가동 후 글로벌 첫 탄소 국경가가 산업 의사결정 변수에 본격 진입.</li>
+    <li><strong>CATL, 나트륨이온 배터리 4분기 양산 공식 선언</strong> — 4월 21일 Super Tech Day에서 4대 산업 난제 해결을 발표, 그리드/AI 데이터센터/장수명 시장 동시 공략.</li>
+    <li><strong>Nature Catalysis: 고플럭스 MEA로 고농도 포름산 CO₂ 전기환원</strong> — Cu/Bi 코어셸 나노와이어 기반 cathode가 selectivity·안정성 동시 확보, 산업 스케일업 병목 완화.</li>
+  </ul>
+</div>
+
+<section class="section">
+  <h2 class="section-title">논문 (Top Journals)</h2>
+  <p class="section-sub">Nature 계열 / JACS / Nature Catalysis / Nature Communications / Nature Sustainability</p>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41929-026-01533-8" target="_blank" rel="noopener">A CO₂ electrolyser with high flux for stable production of high-concentration formate</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Nature Catalysis</span>
+        <span class="badge date">2026-04-16</span>
+        <span class="badge topic">CO2RR</span>
+        <span class="badge topic">전기화학</span>
+      </div>
+      <p class="summary">3D Cu foam에 성장시킨 Cu/Bi 코어셸 나노와이어 cathode로 catholyte-free MEA의 액체 플럭스 한계를 돌파, 고농도 포름산 생성을 selectivity·안정성 모두 확보. <em>왜 중요한가 — CO2RR을 산업 스케일로 끌어올릴 때 가장 큰 병목인 production rate × concentration trade-off를 정면으로 푸는 결과.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41467-026-70103-0" target="_blank" rel="noopener">Condensed lignin depolymerization via C–C bond cleavage with a disordered crystalline mesoporous zeolite</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2026-02</span>
+        <span class="badge topic">바이오매스</span>
+      </div>
+      <p class="summary">Disordered crystalline mesoporous zeolite가 강산점과 mass transfer를 동시에 강화, condensed lignin oligomer로부터 aromatic monomer/dimer 수율을 기존 대비 3.7~7.9배(32~46 wt%) 향상. <em>왜 중요한가 — lignin valorization의 가장 어려운 분획인 condensed lignin을 정조준해 바이오리파이너리 경제성을 끌어올리는 촉매 디자인.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41893-026-01785-z" target="_blank" rel="noopener">Microbial upcycling of plastic waste to levodopa</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Nature Sustainability</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">플라스틱</span>
+      </div>
+      <p class="summary">엔지니어드 E. coli로 PET 폐기물을 파킨슨병 1차 치료제 levodopa(L-DOPA)로 직접 변환. <em>왜 중요한가 — 플라스틱 업사이클의 부가가치 천장을 commodity 화학에서 의약품 수준까지 끌어올린 사례, 화학적 재활용 경제성 논의의 패러다임 시프트.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41467-026-70104-z" target="_blank" rel="noopener">One-pot co-upcycling of mixed polyolefin waste</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">플라스틱</span>
+      </div>
+      <p class="summary">PE/PP 혼합물에 단일 촉매로 한 번에 처리해 액체 수율 95.02%, 가스 수율 0.62%. <em>왜 중요한가 — 분류 후 단일 폴리머만 처리해야 하는 화학적 재활용의 결정적 약점을 우회, mixed waste 그대로 처리 가능한 라우트의 실증.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.nature.com/articles/s44359-026-00155-4" target="_blank" rel="noopener">From depolymerization challenges to macro-scale applications of lignin</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Nature Reviews Clean Technology</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">바이오매스</span>
+      </div>
+      <p class="summary">Lignin을 monomer로 깨는 depolymerization 경로의 scalability 한계를 진단하고, polymeric form 그대로 macro-scale 소재로 활용하는 전략을 정리한 review. <em>왜 중요한가 — '쪼개서 분리'에서 '있는 그대로 쓰기'로 lignin valorization의 R&amp;D 무게중심이 이동 중임을 시사.</em></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">정책 / 규제</h2>
+  <p class="section-sub">EU Commission, US DOE, 한국 기후에너지환경부 등</p>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.homaio.com/post/cbam-europe-sets-its-first-carbon-border-price-at-eu75-36-tco2" target="_blank" rel="noopener">EU CBAM publishes first carbon border price at €75.36/tCO₂</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">European Commission</span>
+        <span class="badge date">2026-04-07</span>
+        <span class="badge topic">전체 (탄소가격)</span>
+      </div>
+      <p class="summary">2026 1분기 EU ETS 경매 평균가 기반의 첫 공식 CBAM 인증서 가격이 €75.36/tCO₂로 확정. 1월 1일 본격 가동 이후 6개 섹터 수입자에게 직접 적용. <em>왜 중요한가 — 철강·시멘트·수소·비료·전력·알루미늄 EU 수출 가격에 정량적인 탄소 비용이 첫 반영, 한국 산업의 탈탄소 ROI 계산이 더 이상 가설이 아님.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.mccormick.senate.gov/news/press-releases/energy-department-preserves-nearly-5-billion-for-hydrogen-hubs-including-two-hubs-critical-to-pennsylvania/" target="_blank" rel="noopener">DOE preserves nearly $5B for 5 regional hydrogen hubs</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">US DOE</span>
+        <span class="badge date">2026-04-21</span>
+        <span class="badge topic">수전해 / 수소</span>
+      </div>
+      <p class="summary">2,200개 에너지 프로젝트 재검토 후 7개 허브 중 5개에 약 $5B 자금을 유지(MACH2·ARCH2 포함), 캘리포니아·태평양북서부 2곳은 취소. <em>왜 중요한가 — 미국 청정수소 정책의 '축소 후 선택과 집중' 신호, 살아남은 허브 중심으로 수요·인프라가 재편될 가능성.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.kjob.news/news/480878" target="_blank" rel="noopener">한국, '국민주권정부 에너지 대전환 추진 계획' 발표 — 2030 재생에너지 100GW</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">기후에너지환경부</span>
+        <span class="badge date">2026-04-06</span>
+        <span class="badge topic">전체</span>
+      </div>
+      <p class="summary">2030년까지 재생에너지 100GW 보급, 그린/핑크수소 + CCUS로 철강·시멘트·화학 등 다배출 산업 탈탄소 추진. 수소환원제철 실증(30만톤, '26~30), 제주 50MW 그린수소 실증 예타, 10~20MW 핑크수소 실증 포함. <em>왜 중요한가 — 정책 우선순위가 수송→발전+산업 탈탄소로 옮겨가는 신호, 전기화학·수소·CCUS 국내 R&amp;D/실증 자금 흐름이 여기에 정렬될 것.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://energy.ec.europa.eu/topics/eus-energy-system/hydrogen_en" target="_blank" rel="noopener">EU 첫 Hydrogen Regulatory Forum (Rotterdam, 2026-03-19~20)</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">EU Commission · NL Ministry</span>
+        <span class="badge date">2026-03-19</span>
+        <span class="badge topic">수소</span>
+      </div>
+      <p class="summary">REPowerEU 목표(2030년 자체생산 10Mt + 수입 10Mt)의 규제 이행 점검을 위한 첫 정기 포럼 발족. 인증·delegated act·국경 간 인프라 연결이 핵심 의제. <em>왜 중요한가 — 유럽 그린수소 시장의 '운영 규칙'이 이 포럼을 통해 안정화 단계로 진입, 한국·일본 수출형 수소 프로젝트의 진입 장벽 윤곽 파악에 필수.</em></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">산업 뉴스</h2>
+  <p class="section-sub">기업 투자 · 공장 증설 · 파트너십 · 제품 출시</p>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.ess-news.com/2026/04/20/a-closer-look-at-catls-new-sodium-ion-battery/" target="_blank" rel="noopener">CATL: 나트륨이온 배터리 4분기 양산 — 4대 산업 난제 해결 발표</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">ESS News</span>
+        <span class="badge date">2026-04-21</span>
+        <span class="badge topic">배터리 (Na-ion)</span>
+      </div>
+      <p class="summary">Super Tech Day에서 CTO Gao Huan이 4분기 스케일 양산 공식화. 극저습도 제어, hard carbon 가스 발생, Al foil 본딩, self-generating anode 양산 4대 난제 해결 발표 — ESIE 2026에서 그리드/AI 데이터센터/장수명 플랫폼 제품 공개. <em>왜 중요한가 — Na-ion이 LFP를 ESS 시장에서 가격·안전성으로 본격 추격하는 변곡점, 국내 셀 메이커의 Na-ion 로드맵 재검토 압박.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://carnewschina.com/2026/04/14/gac-backed-company-targets-worlds-first-mass-producible-solid-state-battery-in-2026-report-says/" target="_blank" rel="noopener">GAC계열 Greater Bay Tech, A-sample 전고체 배터리 셀 양산 라인 통과</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">CarNewsChina</span>
+        <span class="badge date">2026-04-14</span>
+        <span class="badge topic">배터리 (전고체)</span>
+      </div>
+      <p class="summary">전해액 zero, 침수·압착·열충격 시험 무발화 통과. GWh급 양산과 차량 탑재 일정 제시 — 2026년 내 세계 최초 양산 가능 전고체 셀 타겟. <em>왜 중요한가 — Toyota·Samsung SDI·QuantumScape 외 중국발 전고체 양산 경쟁 가시화, 국내 3사(LG/삼성/SK)의 양산 일정 재조정 가능성.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.ir.plugpower.com/press-releases/news-details/2026/Plug-Power-Selected-to-Supply-a-275-MW-GenEco-Electrolyzer-System-for-Hy2gens-Courant-Decarbonized-Ammonium-Nitrate-Project-in-Baie-Comeau-Qubec-Canada/default.aspx" target="_blank" rel="noopener">Plug Power, Hy2gen Quebec 275 MW PEM 전해조 FEED 수주</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Plug Power IR</span>
+        <span class="badge date">2026-04-02</span>
+        <span class="badge topic">수전해 / 수소</span>
+      </div>
+      <p class="summary">Baie-Comeau, Quebec의 'Courant' 저탄소 ammonium nitrate 프로젝트에 GenEco PEM 전해조 시스템 공급 — Hydro-Québec 수력 전력 활용. <em>왜 중요한가 — 수백 MW급 PEM 단일 수주의 드문 사례, 그린암모니아·질산암모늄(농업/광산용 폭약) 가치사슬에 그린수소가 본격 진입.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://www.ess-news.com/2026/04/08/titanium-emerges-as-a-vanadium-alternative-for-redox-flow-batteries/" target="_blank" rel="noopener">Titanium molten-salt redox flow battery — 97%+ 효율 시연</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">ESS News</span>
+        <span class="badge date">2026-04-08</span>
+        <span class="badge topic">배터리 (Redox flow)</span>
+      </div>
+      <p class="summary">한·중·일 협업팀이 vanadium 대체 후보로 abundant titanium ion + molten salt 전해질 기반 RFB를 발표 — 97% 이상 효율, 우수한 cycling stability. <em>왜 중요한가 — vanadium 가격 변동성 리스크가 RFB 상업화 발목을 잡아온 만큼, 대체 chemistry 후보가 Tier-1 후보군으로 부상.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://fuelcellsworks.com/2026/04/03/electrolyzer/hydrogenera-to-supply-2mw-green-hydrogen-system-for-german-project-in-ukraine" target="_blank" rel="noopener">Hydrogenera, 우크라이나 독일 컨소시엄 프로젝트에 2 MW 그린수소 시스템 공급</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">Fuel Cells Works</span>
+        <span class="badge date">2026-04-03</span>
+        <span class="badge topic">수전해 / 수소</span>
+      </div>
+      <p class="summary">우크라이나 내 첫 독일 자금 그린수소 프로젝트로 2 MW 수전해 시스템을 공급, 전후 재건과 연계된 분산형 수소 인프라의 시발점. <em>왜 중요한가 — 분쟁 지역에서의 분산형 그린수소 수요 검증 사례, 메가와트급 모듈러 시스템의 deployment 사례 축적.</em></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">프리프린트</h2>
+  <p class="section-sub">ChemRxiv / arXiv 최신 업로드</p>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://chemrxiv.org/engage/chemrxiv/article-details/chemrxiv-2026-dvwc9" target="_blank" rel="noopener">Comprehensive Guidelines for Magnetoelectrocatalysis</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">ChemRxiv</span>
+        <span class="badge date">2026-01-03</span>
+        <span class="badge topic">전기화학</span>
+      </div>
+      <p class="summary">자기장이 인가된 전기촉매 반응(magnetoelectrocatalysis)의 측정 방법론·셀 디자인·아티팩트 식별을 표준화한 가이드라인. <em>왜 중요한가 — 자기장 의존성 보고가 급증하는 OER/HER 분야에서 재현성 위기가 잠재된 만큼, 이 가이드는 향후 논문 심사 기준이 될 가능성.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://chemrxiv.org/engage/chemrxiv/article-details/chemrxiv-2026-t8p83" target="_blank" rel="noopener">What if We Were to Design Transport in Aqueous Electrolytes Using Learnings from Lithium Battery Research?</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">ChemRxiv</span>
+        <span class="badge date">2026-01-14</span>
+        <span class="badge topic">배터리 (Aqueous)</span>
+      </div>
+      <p class="summary">리튬 비수계 전해질 연구에서 축적된 transport·solvation 통찰을 aqueous 전해질 디자인에 이식하자는 perspective. <em>왜 중요한가 — 그리드 ESS용 aqueous 배터리 부활기에서 '왜 lithium만큼 깊게 못 보고 있나'를 정조준한 문제 제기, 후속 메커니즘 연구의 좌표 제공.</em></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="https://arxiv.org/abs/2512.15440" target="_blank" rel="noopener">Lithium-ion battery degradation: Introducing the concept of reservoirs to design for lifetime</a></div>
+      </div>
+      <div class="meta">
+        <span class="badge src">arXiv (cond-mat.mtrl-sci)</span>
+        <span class="badge date">2025-12</span>
+        <span class="badge topic">배터리 (Li-ion)</span>
+      </div>
+      <p class="summary">Li-ion 셀의 SEI/Li 인벤토리를 '저수지(reservoir)' 개념으로 모델링, 수명 설계의 정량적 프레임워크 제안. <em>왜 중요한가 — 셀 설계 단계에서 lifetime을 spec-in 하는 접근이 ESS·EV 양 시장의 TCO 계산 방식을 바꿀 수 있음.</em></p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  <p>본 브리핑은 자동화된 일일 리서치로 작성됨 · WebSearch 결과 기반 · 1주 이내(부족 시 2주 이내) 출판물 우선. 링크는 클릭 시 새 탭으로 이동합니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
