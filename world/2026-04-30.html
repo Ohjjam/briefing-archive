@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefing — 2026-04-30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --ink: #1a1a1a;
+    --muted: #555;
+    --accent: #8b0000;
+    --rule: #1a1a1a;
+    --soft: #d8d3c4;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .paper {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  /* Masthead */
+  .masthead {
+    text-align: center;
+    border-top: 3px double var(--rule);
+    border-bottom: 3px double var(--rule);
+    padding: 20px 0 16px;
+    margin-bottom: 32px;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    font-weight: 900;
+    font-size: 44px;
+    letter-spacing: 6px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .masthead .subline {
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .masthead .date {
+    margin-top: 6px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  /* Lede */
+  .lede {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+  /* Section header */
+  section { margin-bottom: 36px; }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .section-bar {
+    width: 6px;
+    height: 22px;
+    background: var(--accent);
+    flex: none;
+  }
+  .section-head h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--ink);
+  }
+  .section-head .count {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+  /* Article */
+  article {
+    padding: 14px 0 16px;
+    border-bottom: 1px dotted #bbb;
+  }
+  article:last-child { border-bottom: none; }
+  article h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+  article p.summary {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 8px 0;
+  }
+  article .meta {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+  }
+  article .meta a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+  }
+  article .meta a:hover {
+    color: var(--accent);
+    border-bottom: 1px dotted var(--accent);
+  }
+  /* Footer */
+  footer.colophon {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--soft);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  /* Print */
+  @media print {
+    body { background: white; }
+    .paper { padding: 20px; max-width: 100%; }
+    article .meta a { color: #000; border-bottom: none; }
+    article { page-break-inside: avoid; }
+    .masthead h1 { font-size: 36px; }
+  }
+  @media (max-width: 640px) {
+    .paper { padding: 24px 20px; }
+    .masthead h1 { font-size: 30px; letter-spacing: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <header class="masthead">
+    <h1>Daily Briefing</h1>
+    <div class="subline">Global · Korea · Markets · Science</div>
+    <div class="date">2026년 4월 30일 (목) — Thursday, April 30, 2026</div>
+  </header>
+
+  <p class="lede">"오늘의 세상을 한 장의 신문으로." — 5개 카테고리·22건 헤드라인.</p>
+
+  <!-- 1. 국제·시사 -->
+  <section>
+    <div class="section-head">
+      <div class="section-bar"></div>
+      <h2>국제 · 시사</h2>
+      <span class="count">World</span>
+    </div>
+
+    <article>
+      <h3>트럼프, 이란의 호르무즈 개방 제안 거부… "핵 프로그램 보장 우선"</h3>
+      <p class="summary">미국이 이란 측의 봉쇄 해제·호르무즈 해협 개방 제안을 받았으나, 트럼프 대통령은 이란 핵 프로그램 통제 보장이 선결돼야 한다며 거부했다. 후속 협상은 보류됐다.</p>
+      <p class="meta">출처: <a href="https://www.cnn.com/2026/04/29/world/live-news/iran-war-peace-proposal-trump" target="_blank" rel="noopener">CNN</a> · <a href="https://www.washingtonpost.com/world/2026/04/27/iran-talks-putin-araghchi-trump-russia/" target="_blank" rel="noopener">The Washington Post</a></p>
+    </article>
+
+    <article>
+      <h3>EU, 메타에 "미성년자 SNS 접근 차단 실패" 디지털 규정 위반 통보</h3>
+      <p class="summary">유럽연합 집행위원회가 페이스북·인스타그램의 미성년 사용자 보호 의무 미이행을 이유로 메타에 디지털서비스법(DSA) 위반 예비결정을 통지했다. 과징금 부과 가능성이 거론된다.</p>
+      <p class="meta">출처: <a href="https://www.democracynow.org/2026/4/29/headlines" target="_blank" rel="noopener">Democracy Now! Headlines</a></p>
+    </article>
+
+    <article>
+      <h3>호주, 메타·구글·틱톡에 매출 비례 과세… 지역 저널리즘 재원으로</h3>
+      <p class="summary">호주 정부가 빅테크 매출 일정 비율을 부과해 지역 신문·기자 인건비를 지원하는 입법을 7월까지 의회에 제출하겠다고 밝혔다. 플랫폼-언론 가치 분배 논쟁의 새 모델로 주목된다.</p>
+      <p class="meta">출처: <a href="https://www.democracynow.org/2026/4/29/headlines" target="_blank" rel="noopener">Democracy Now! Headlines</a></p>
+    </article>
+
+    <article>
+      <h3>시리아 홈스 농촌, 14년 만의 올리브 수확… 평범한 일상의 귀환</h3>
+      <p class="summary">홈스 외곽 한 마을 주민들이 내전 14년 만에 올리브 수확에 나섰다. 농지 복귀가 본격화하면서 식량·경제 정상화의 신호로 해석된다.</p>
+      <p class="meta">출처: <a href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera</a></p>
+    </article>
+  </section>
+
+  <!-- 2. 정치·외교 -->
+  <section>
+    <div class="section-head">
+      <div class="section-bar"></div>
+      <h2>정치 · 외교</h2>
+      <span class="count">Politics &amp; Diplomacy</span>
+    </div>
+
+    <article>
+      <h3>미-이란 2주 휴전 합의, 파키스탄 중재로 충돌 회피</h3>
+      <p class="summary">미국·이란이 군사 충돌 직전 2주 휴전에 합의했다. 파키스탄이 막후 중재 역할을 한 것으로 알려졌으며, 이스라엘 변수 관리가 향후 협상의 관건으로 꼽힌다.</p>
+      <p class="meta">출처: <a href="https://www.nation.com.pk/29-Apr-2026/diplomacy-war" target="_blank" rel="noopener">The Nation</a> · <a href="https://thediplomat.com/2025/12/outlook-geopolitical-trends-and-global-diplomacy-in-2026/" target="_blank" rel="noopener">The Diplomat</a></p>
+    </article>
+
+    <article>
+      <h3>미-쿠바 관계, 수십 년 만의 최고 긴장… 아바나서 고위급 협상</h3>
+      <p class="summary">미 행정부가 쿠바에 군사 옵션을 거론하면서도 동시에 아바나에서 고위급 회담을 진행 중이다. 양국 관계가 "최근 수십 년래 가장 긴장된 국면"이라는 평가가 나온다.</p>
+      <p class="meta">출처: <a href="https://www.democracynow.org/2026/4/29/headlines" target="_blank" rel="noopener">Democracy Now!</a></p>
+    </article>
+
+    <article>
+      <h3>트럼프 "푸틴·젤렌스키 양쪽과 모두 통화"… 우크라 종전 외교 재가동</h3>
+      <p class="summary">트럼프 대통령이 폭스뉴스 인터뷰에서 푸틴·젤렌스키 두 정상과 모두 소통했다고 밝혔다. 백악관은 양측 휴전안 도출을 위한 셔틀 외교 가능성을 내비쳤다.</p>
+      <p class="meta">출처: <a href="https://brusselsmorning.com/trump-ukraine-war-diplomacy-2026/97385/" target="_blank" rel="noopener">Brussels Morning</a></p>
+    </article>
+
+    <article>
+      <h3>펜타곤 "최근 2개월 전쟁 비용 250억 달러"… 헤그세스 의회 증언</h3>
+      <p class="summary">피트 헤그세스 국방장관이 의회에서 최근 2개월 군사작전 비용을 250억 달러로 추산했다. 종전 시점에 대해서는 "언급한 바 없다"고 답했다.</p>
+      <p class="meta">출처: <a href="https://www.democracynow.org/2026/4/29/headlines" target="_blank" rel="noopener">Democracy Now!</a></p>
+    </article>
+
+    <article>
+      <h3>한국 윤석열 전 대통령, 항소심서 7년 실형… 체포 저항·국무회의 패싱</h3>
+      <p class="summary">서울 항소법원이 2024년 12월 비상계엄 선포 직전 국무회의를 우회하고 체포에 저항한 혐의로 윤석열 전 대통령에게 7년형을 선고했다. 1심 형량을 그대로 유지했다.</p>
+      <p class="meta">출처: <a href="https://www.democracynow.org/2026/4/29/headlines" target="_blank" rel="noopener">Democracy Now!</a></p>
+    </article>
+  </section>
+
+  <!-- 3. 경제·금융·시장 -->
+  <section>
+    <div class="section-head">
+      <div class="section-bar"></div>
+      <h2>경제 · 금융 · 시장</h2>
+      <span class="count">Markets &amp; Economy</span>
+    </div>
+
+    <article>
+      <h3>다우 5거래일 연속 하락… S&amp;P 7,135.95 · 나스닥 24,673.24</h3>
+      <p class="summary">전일 다우지수가 280.12p(-0.57%) 빠지며 5일 연속 하락했다. S&amp;P500은 -0.04%, 나스닥은 +0.04%로 횡보했다. 연준 결정과 빅테크 실적이 변동성 재료다.</p>
+      <p class="meta">출처: <a href="https://www.cnbc.com/2026/04/28/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-04-29/stock-market-today-dow-s-p-live-updates" target="_blank" rel="noopener">Bloomberg</a></p>
+    </article>
+
+    <article>
+      <h3>시게이트 +18% 급등에 메모리주 랠리… 스타벅스도 +5%</h3>
+      <p class="summary">시게이트가 호실적에 18% 급등하면서 WD·마이크론 등 메모리·AI 반도체주가 동반 강세를 보였다. 스타벅스는 컨센서스 상회 실적에 약 5% 올랐다.</p>
+      <p class="meta">출처: <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank" rel="noopener">Charles Schwab</a></p>
+    </article>
+
+    <article>
+      <h3>연준 금리 동결… 파월 의장 5월 15일 임기 만료, 마지막 기자회견</h3>
+      <p class="summary">FOMC가 기준금리를 동결한 가운데 파월 의장이 "마지막 기자회견"을 진행했다. 차기 의장 인선과 정치적 독립성 문제가 다음 변수로 떠올랐다.</p>
+      <p class="meta">출처: <a href="https://www.cnbc.com/2026/04/28/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a></p>
+    </article>
+
+    <article>
+      <h3>브렌트유 +2.8% 상승해 배럴당 $111.26… 이란 봉쇄 장기화 우려</h3>
+      <p class="summary">트럼프 행정부가 이란 봉쇄 장기화에 대비하라고 지시했다는 보도에 국제유가가 또 한 차례 급등했다. 브렌트유는 사흘째 강세를 이어갔다.</p>
+      <p class="meta">출처: <a href="https://www.jpmorgan.com/insights/markets-and-economy/top-market-takeaways/tmt-why-are-stocks-at-record-highs-with-no-iran-resolution" target="_blank" rel="noopener">J.P. Morgan</a></p>
+    </article>
+
+    <article>
+      <h3>4월 미 소비자신뢰지수 92.8 — 시장 전망(89.8) 상회</h3>
+      <p class="summary">컨퍼런스보드의 4월 소비자신뢰지수가 92.8로 발표돼 컨센서스를 웃돌았다. 고용·소득 평가 개선이 지수를 끌어올렸다.</p>
+      <p class="meta">출처: <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-apr-29-083500089.html" target="_blank" rel="noopener">Yahoo Finance</a></p>
+    </article>
+  </section>
+
+  <!-- 4. 문화·과학·라이프 -->
+  <section>
+    <div class="section-head">
+      <div class="section-bar"></div>
+      <h2>문화 · 과학 · 라이프</h2>
+      <span class="count">Science &amp; Culture</span>
+    </div>
+
+    <article>
+      <h3>역대 최대 3D 우주지도 완성… 4,700만 은하·퀘이사 데이터</h3>
+      <p class="summary">전 세계 천문학자들이 4,700만 개 이상의 은하·퀘이사 관측 데이터를 통합해 사상 최고 해상도의 3D 우주지도를 완성했다. 암흑에너지 연구의 새 기준점이 될 전망이다.</p>
+      <p class="meta">출처: <a href="https://www.sciencenews.org/sn-magazine/april-2026" target="_blank" rel="noopener">Science News</a></p>
+    </article>
+
+    <article>
+      <h3>티라노사우루스 화석에서 고대 혈관 발견… 공룡 생물학 재해석</h3>
+      <p class="summary">연구진이 T. 렉스 화석 뼈 안쪽에서 고대 혈관 구조를 발견했다. 공룡의 대사·연조직 보존에 관한 기존 가설을 재검토할 단서로 평가된다.</p>
+      <p class="meta">출처: <a href="https://www.sciencedaily.com/news/top/science/" target="_blank" rel="noopener">ScienceDaily</a></p>
+    </article>
+
+    <article>
+      <h3>모링가 씨앗으로 마이크로플라스틱 제거… 화학처리 수준 효과</h3>
+      <p class="summary">모링가 씨앗 추출물이 수질 내 미세플라스틱을 표준 화학처리에 필적하는 수준으로 제거할 수 있다는 연구 결과가 나왔다. 저비용·친환경 정수 기술로 주목된다.</p>
+      <p class="meta">출처: <a href="https://www.nature.com/news" target="_blank" rel="noopener">Nature News</a></p>
+    </article>
+
+    <article>
+      <h3>양자컴퓨팅+AI, 카오스 시스템 예측 정확도 끌어올려</h3>
+      <p class="summary">양자컴퓨팅과 AI를 결합한 새 알고리즘이 기상·난류 등 카오스 시스템 예측 정확도를 크게 향상시켰다는 결과가 보고됐다. 하이브리드 컴퓨팅의 실효성을 입증한 사례다.</p>
+      <p class="meta">출처: <a href="https://www.science.org/news" target="_blank" rel="noopener">Science (AAAS)</a></p>
+    </article>
+
+    <article>
+      <h3>美 트럼프 행정부, 과학자문위 100여 개 폐지… NSF 예산 반토막 추진</h3>
+      <p class="summary">트럼프 행정부가 100개 이상의 과학기관 자문위원회를 폐지했고, NSF는 1년 넘게 위원장이 공석이며 인력 1/3 감축, 예산 반토막 안이 제안됐다.</p>
+      <p class="meta">출처: <a href="https://www.aip.org/fyi/the-week-of-april-27-2026" target="_blank" rel="noopener">AIP FYI</a></p>
+    </article>
+  </section>
+
+  <!-- 5. 한국 주요 이슈 -->
+  <section>
+    <div class="section-head">
+      <div class="section-bar"></div>
+      <h2>한국 주요 이슈</h2>
+      <span class="count">Korea</span>
+    </div>
+
+    <article>
+      <h3>코스피 사상 첫 6,600 돌파… AI 반도체 대장주 랠리가 견인</h3>
+      <p class="summary">코스피가 사상 처음으로 6,600선을 넘어섰다. 삼성전자·SK하이닉스를 비롯한 AI 반도체주가 상승을 주도했고, AI 서버 수요 확대 기대가 매수 심리를 자극했다.</p>
+      <p class="meta">출처: <a href="https://www.cliktoday.com/2026/04/20260429-today-news.html" target="_blank" rel="noopener">오늘의 클릭</a> · <a href="https://www.hankyung.com/economy" target="_blank" rel="noopener">한국경제</a></p>
+    </article>
+
+    <article>
+      <h3>시도지사 출마로 현역 의원 9명 사퇴… 재보궐 선거구 14곳으로 확대</h3>
+      <p class="summary">지방선거 시도지사 후보로 나서기 위한 현역 의원 9명의 사퇴로 국회의원 재보궐 선거구가 14곳으로 늘었다. 여야 모두 당세 결집과 후보 공천에 비상이 걸렸다.</p>
+      <p class="meta">출처: <a href="https://www.newspim.com/news/view/20260429001402" target="_blank" rel="noopener">뉴스핌 — 4/30 국회일정</a></p>
+    </article>
+
+    <article>
+      <h3>공정위, 쿠팡 동일인 5년 만에 변경… "법인 → 김범석 의장"</h3>
+      <p class="summary">공정거래위원회가 쿠팡의 동일인(총수)을 쿠팡 법인에서 김범석 쿠팡Inc 의장으로 변경 지정했다. 대기업집단 지정 이후 5년간 유지됐던 판단을 뒤집은 결정이다.</p>
+      <p class="meta">출처: <a href="https://www.hankyung.com/all-news" target="_blank" rel="noopener">한국경제</a></p>
+    </article>
+
+    <article>
+      <h3>정동영 통일부장관 해임건의안 공방… "안보 숭미주의 지나치다"</h3>
+      <p class="summary">정동영 통일부장관이 자신에 대한 국민의힘의 해임건의안 발의에 대해 "안보 사안에 대한 숭미주의가 지나치다"며 야권을 강하게 비판했다. 외교 노선을 둘러싼 정쟁이 확대되고 있다.</p>
+      <p class="meta">출처: <a href="https://news.daum.net/politics" target="_blank" rel="noopener">다음 정치뉴스</a></p>
+    </article>
+
+    <article>
+      <h3>1분기 한국 GDP +1.7%… 5년 만의 최고 성장, 반도체 수출이 견인</h3>
+      <p class="summary">2026년 1분기 한국 경제가 전기 대비 1.7% 성장하며 5년 만에 가장 빠른 분기 성장률을 기록했다. 반도체 수출 호조와 설비투자 확대가 주된 동력으로 분석된다.</p>
+      <p class="meta">출처: <a href="https://www.pwc.com/kr/ko/insights/samil-insight/samilpwc_economic-outlook2026.pdf" target="_blank" rel="noopener">PwC 삼일 — 2026 경제전망</a> · <a href="https://biz.kebhana.com/cont/hanafx/file/2026FX.pdf" target="_blank" rel="noopener">하나은행 외환시장 전망</a></p>
+    </article>
+
+  </section>
+
+  <footer class="colophon">
+    Daily Briefing · Compiled 2026-04-30 · 5 categories · 22 headlines
+  </footer>
+
+</div>
+</body>
+</html>

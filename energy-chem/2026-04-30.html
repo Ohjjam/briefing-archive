@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief — 2026-04-30</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-elev: #161a22;
+    --bg-card: #1c2230;
+    --border: #2a3142;
+    --text: #e6e8ee;
+    --text-dim: #9aa3b2;
+    --accent: #6ee7b7;
+    --accent-2: #60a5fa;
+    --accent-3: #fbbf24;
+    --accent-4: #f472b6;
+    --accent-5: #a78bfa;
+    --tldr-bg: #122019;
+    --tldr-border: #1f3a2c;
+    --code-bg: #0b0d12;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --bg-elev: #ffffff;
+      --bg-card: #ffffff;
+      --border: #e1e4ea;
+      --text: #1a1d23;
+      --text-dim: #5a6478;
+      --accent: #059669;
+      --accent-2: #2563eb;
+      --accent-3: #d97706;
+      --accent-4: #db2777;
+      --accent-5: #7c3aed;
+      --tldr-bg: #ecfdf5;
+      --tldr-border: #a7f3d0;
+      --code-bg: #f1f3f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .eyebrow { color: var(--text-dim); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; }
+  h1 { font-size: 28px; margin: 0 0 6px 0; line-height: 1.25; }
+  .date { color: var(--text-dim); font-size: 14px; }
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 0 0 32px;
+  }
+  .tldr h2 { margin: 0 0 8px; font-size: 16px; color: var(--accent); letter-spacing: 0.02em; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 6px 0; }
+  section.section { margin: 32px 0 8px; }
+  section.section > h2 {
+    font-size: 20px;
+    margin: 0 0 14px;
+    padding: 8px 12px;
+    background: var(--bg-elev);
+    border-left: 4px solid var(--accent-2);
+    border-radius: 6px;
+  }
+  section.policy > h2 { border-left-color: var(--accent-3); }
+  section.industry > h2 { border-left-color: var(--accent-4); }
+  section.preprint > h2 { border-left-color: var(--accent-5); }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0 0 6px; line-height: 1.35; }
+  .card-title a { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--text-dim); }
+  .card-title a:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; align-items: center; }
+  .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+  }
+  .badge.src { color: var(--accent-2); border-color: var(--accent-2); }
+  .badge.date { color: var(--text-dim); }
+  .badge.tag { color: var(--accent); border-color: var(--accent); }
+  .summary { font-size: 14px; color: var(--text); margin: 0; }
+  .summary .why { color: var(--text-dim); font-size: 13px; margin-top: 6px; display: block; }
+  footer { margin-top: 40px; color: var(--text-dim); font-size: 12px; text-align: center; }
+  @media (max-width: 540px) {
+    h1 { font-size: 22px; }
+    section.section > h2 { font-size: 17px; }
+    .container { padding: 20px 14px 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="top">
+    <div class="eyebrow">Energy &amp; Chemical Engineering Morning Brief</div>
+    <h1>에너지·화학공학 아침 브리핑</h1>
+    <div class="date">2026-04-30 (목) · 시니어 리서치 애널리스트 큐레이션</div>
+  </header>
+
+  <div class="tldr">
+    <h2>오늘의 한 줄 (TL;DR)</h2>
+    <ul>
+      <li><strong>CATL이 Na-ion 배터리 양산 단계 진입</strong> — 4월 27일 HyperStrong과 60 GWh ESS용 공급계약 체결, Q4 양산 공식화. Li 의존도 완화의 실질적 변곡점.</li>
+      <li><strong>Plug Power, 4월 2일 Hy2gen 퀘벡 275 MW PEM 전해조 수주</strong> — 단일 프로젝트 기준 회사 사상 최대 규모, 수전해 산업의 GW급 규모 진입을 시사.</li>
+      <li><strong>Nature Catalysis (4/15) Co–Co 듀얼 원자 촉매로 Li–S 파우치셀 459 Wh/kg 달성</strong> — 전환형 배터리의 절연성 중간체(Li2S2/Li2O2) 문제를 촉매로 푸는 새 패러다임.</li>
+    </ul>
+  </div>
+
+  <section class="section paper">
+    <h2>1. 논문</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41929-026-01525-8" target="_blank" rel="noopener">Breaking insulating barriers in solid-phase conversion reactions with dual-atom catalysts for high-energy lithium batteries</a></div>
+        <div class="meta">
+          <span class="badge src">Nature Catalysis</span>
+          <span class="badge date">2026-04-15</span>
+          <span class="badge tag">배터리</span>
+          <span class="badge tag">전기화학</span>
+        </div>
+        <p class="summary">Co–Co 듀얼 원자 촉매로 Li2S2·Li2O2 같은 절연성 고체 중간체의 전환을 가속, Li–S 파우치셀에서 459 Wh/kg를 달성. 전환형 배터리의 율속 단계인 고체상 변환을 촉매적으로 우회하는 첫 실증 사례.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41929-026-01527-6" target="_blank" rel="noopener">Catalysing conductivity in solid-phase electroconversions</a></div>
+        <div class="meta">
+          <span class="badge src">Nature Catalysis (N&amp;V)</span>
+          <span class="badge date">2026-04-15</span>
+          <span class="badge tag">전기화학</span>
+        </div>
+        <p class="summary">위 논문에 대한 News &amp; Views. 듀얼 원자 촉매의 오비탈 대칭성이 절연체 → 금속화(metallization)를 유도해 연속 전환을 가능케 한다는 전자구조 기준을 제시. 차세대 촉매 설계 가이드라인.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">Tuning selectivity in the direct hydrogenolysis of PET plastic over Co catalysts through interfacial hydrogen spillover</a></div>
+        <div class="meta">
+          <span class="badge src">Nature Communications</span>
+          <span class="badge date">2026-04 (online)</span>
+          <span class="badge tag">플라스틱</span>
+        </div>
+        <p class="summary">Co@CoO 이종 촉매에서 계면 수소 스필오버를 제어해 PET를 p-자일렌(>97%) 또는 1,4-디메틸시클로헥산(>90%) 중 한쪽으로 선택적으로 직접 수소화분해. PET 업사이클을 두 단계가 아닌 1-step으로 압축하는 게 핵심.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.nature.com/articles/s41467-026-71862-6" target="_blank" rel="noopener">Sustainable recycling of polyester wastes using a coordinatively unsaturated Zn catalyst</a></div>
+        <div class="meta">
+          <span class="badge src">Nature Communications</span>
+          <span class="badge date">2026-04 (online)</span>
+          <span class="badge tag">플라스틱</span>
+        </div>
+        <p class="summary">결함이 있는 ZnO 나노시트 촉매로 중성 수상 조건에서 PET를 테레프탈산까지 가수분해. 기존 강산·강염기 공정 대비 에너지·폐수 부담을 크게 낮춤. 폐폴리에스터 재활용의 그린 케미스트리 트랙.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202504039" target="_blank" rel="noopener">Toward Energy-Efficient Alkaline Water Electrolysis: Advances in Mass Transport Optimization and Electrolyzer Design</a></div>
+        <div class="meta">
+          <span class="badge src">Advanced Energy Materials</span>
+          <span class="badge date">2026-04</span>
+          <span class="badge tag">수전해</span>
+        </div>
+        <p class="summary">알칼라인 수전해에서 기포 제거·물질전달이 셀 효율을 좌우한다는 관점으로, 다공성 전극·전해질 유동·세퍼레이터 구조의 최신 최적화 기법을 정리. AEMWE까지 이어지는 설계 인사이트.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section policy">
+    <h2>2. 정책 / 규제</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.bloomberg.com/news/articles/2026-04-14/germany-pushes-for-new-solar-farms-to-be-equipped-with-batteries" target="_blank" rel="noopener">Solar Farms in Germany to Face New Battery Requirement Under Proposed Rules</a></div>
+        <div class="meta">
+          <span class="badge src">Bloomberg / 독일 경제부</span>
+          <span class="badge date">2026-04-14</span>
+          <span class="badge tag">배터리</span>
+        </div>
+        <p class="summary">독일 경제부가 개정 EEG에서 신규 태양광 발전소에 배터리 병설을 사실상 의무화하는 방향을 제시. 부활절 기간 day-ahead 가격 마이너스 사례가 직접 트리거. 유럽 PV+ESS 동시설계 표준화 신호.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.todayenergy.kr/news/articleView.html?idxno=283588" target="_blank" rel="noopener">유럽, 핵수소 '저탄소' 인정 2028년 이후로 유예…산업계 반발</a></div>
+        <div class="meta">
+          <span class="badge src">투데이에너지 / EU Commission</span>
+          <span class="badge date">2026-04 (Reuters 입수)</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">EU 집행위가 핵 기반 수소의 저탄소 인증 분류 작업을 2026년 6월 의견수렴, 2028년 7월 본평가로 미루는 초안을 마련. 사실상 3년 유예 — 프랑스·체코의 핵수소 사업이 직격탄, 그린수소 가격 경쟁력에는 반사 이익.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.clean-hydrogen.europa.eu/call-proposals-2026-closed_en" target="_blank" rel="noopener">Clean Hydrogen Partnership: Call for proposals 2026 (€105M)</a></div>
+        <div class="meta">
+          <span class="badge src">EU / Clean Hydrogen JU</span>
+          <span class="badge date">2026-04 (마감)</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">EU 청정수소 파트너십이 2026년 €105M 규모 R&amp;I 공모를 4월에 마감. 수전해, 저장·운송, 산업 전환 영역에 걸친 다년 과제 — 한국 기관·기업의 컨소시엄 참여 모니터링 필요.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://en.sedaily.com/technology/2026/04/29/korea-can-become-energy-exporter-by-pairing-hydrogen-with" target="_blank" rel="noopener">Korea Can Become Energy Exporter by Pairing Hydrogen With Nuclear, Researcher Says</a></div>
+        <div class="meta">
+          <span class="badge src">Seoul Economic Daily / KIER</span>
+          <span class="badge date">2026-04-29</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">KIER 국가수소연구실 김선동 단장: "한국은 2030년까지 수소 글로벌 시장에 본격 진입해야 하며, 핵+수소 결합으로 에너지 수출국 전환이 가능". 차세대 SOEC 자립 기술 확보가 핵심 과제로 강조됨.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2792429-s-korea-to-spend-130mn-on-clean-shipping-tech-projects" target="_blank" rel="noopener">S Korea to spend $130mn on clean shipping tech projects</a></div>
+        <div class="meta">
+          <span class="badge src">Argus / 산업통상자원부</span>
+          <span class="badge date">2026-04</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">산업부가 올해 1,873억원(약 1.3억 달러)을 수소·암모니아 추진선 등 청정 조선 기술에 투입, 2026년 조선 혁신 지출 3,200억원의 핵심 축. 한화·KOMERI 수소선박 컨소시엄과 연계.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section industry">
+    <h2>3. 산업 뉴스</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-title"><a href="https://electrek.co/2026/04/27/catl-sodium-ion-battery-60gwh-energy-storage-deal/" target="_blank" rel="noopener">CATL says sodium batteries are mainstream-ready, signs massive 60 GWh deal</a></div>
+        <div class="meta">
+          <span class="badge src">Electrek / CATL</span>
+          <span class="badge date">2026-04-27</span>
+          <span class="badge tag">배터리</span>
+        </div>
+        <p class="summary">CATL이 ESS 통합사 HyperStrong과 60 GWh 규모 Na-ion 배터리 공급계약 체결. 회사는 에너지밀도·발포·수분 제어 등 양산 난제를 모두 해결했다고 공식화 — Na-ion이 LFP 보완재가 아닌 ESS 본진으로 진입하는 분기점.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://carnewschina.com/2026/04/22/catl-to-mass-produce-sodium-ion-batteries-in-2026-targeting-600-km-range-in-the-future/" target="_blank" rel="noopener">CATL resolved sodium-ion battery core manufacturing challenge, mass production to start in 2026</a></div>
+        <div class="meta">
+          <span class="badge src">CarNewsChina / CATL Tech Day</span>
+          <span class="badge date">2026-04-21</span>
+          <span class="badge tag">배터리</span>
+        </div>
+        <p class="summary">CATL Tech Day(4/21)에서 우카이 수석과학자가 "Q4부터 대량 양산"을 선언, EV용으로는 600 km 주행 거리를 중장기 목표로 제시. Changan과의 첫 양산형 Na-ion 승용 EV가 연중 출시 예정.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.ir.plugpower.com/press-releases/news-details/2026/Plug-Power-Selected-to-Supply-a-275-MW-GenEco-Electrolyzer-System-for-Hy2gens-Courant-Decarbonized-Ammonium-Nitrate-Project-in-Baie-Comeau-Qubec-Canada/default.aspx" target="_blank" rel="noopener">Plug Power Selected to Supply 275 MW GenEco Electrolyzer for Hy2gen's Courant Project, Québec</a></div>
+        <div class="meta">
+          <span class="badge src">Plug Power IR</span>
+          <span class="badge date">2026-04-02</span>
+          <span class="badge tag">수전해</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">Plug Power가 Hy2gen의 베콤코(Baie-Comeau) 프로젝트에 275 MW PEM 수전해기 단독 공급. 회사 사상 최대 단일 수주 — 수력 기반 저탄소 암모니아·암모늄나이트레이트(광산 폭약) 공급망 구축. PEM의 GW급 진입 트리거.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://fuelcellsworks.com/2026/04/24/green-investment/atome-plc-announces-final-investment-decision-for-the-world-s-first-industrial-scale-green-fertiliser-plant" target="_blank" rel="noopener">ATOME PLC Completes $665M Green Fertiliser Plant FID (Paraguay)</a></div>
+        <div class="meta">
+          <span class="badge src">Fuel Cells Works / ATOME</span>
+          <span class="badge date">2026-04-24</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">ATOME가 파라과이 비예타에 세계 최초 산업 스케일 그린 비료(연 6만톤) 플랜트 FID 확정. 개발금융기관·지분 파트너 합산 6.65억 달러 — 그린 수소→그린 암모니아→비료 풀체인의 첫 본격 상업 사례.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://fuelcellsworks.com/2026/04/29/electrolyzer/john-cockerill-installs-25mw-electrolysers-at-hyoffwind-green-hydrogen-project-in-zeebrugge" target="_blank" rel="noopener">John Cockerill Installs 25MW Electrolysers at HyOffWind, Zeebrugge</a></div>
+        <div class="meta">
+          <span class="badge src">Fuel Cells Works</span>
+          <span class="badge date">2026-04-29</span>
+          <span class="badge tag">수전해</span>
+        </div>
+        <p class="summary">존 코커릴이 HyOffWind 프로젝트(벨기에 첫 산업 스케일 수전해)에 25 MW 알칼라인 4기를 설치 완료. 합계 100 MW로 2026년 가동 예정 — 알칼라인 기술의 산업 신뢰성 재확인.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://fuelcellsworks.com/2026/04/13/clean-energy/south-korea-expands-hydrogen-fuel-cell-power-with-new-ulsan-plant" target="_blank" rel="noopener">South Korea Expands Hydrogen Fuel Cell Power With New Ulsan Plant</a></div>
+        <div class="meta">
+          <span class="badge src">Fuel Cells Works</span>
+          <span class="badge date">2026-04-13</span>
+          <span class="badge tag">수소</span>
+        </div>
+        <p class="summary">울산에 부생수소 기반 20 MW 연료전지 발전소가 상업 운전 개시. 석유화학 부생 H2의 발전 활용 모델 — 수소경제 완성형보다는 과도기 솔루션이지만, 수소 발전 단가 학습곡선 자료로 의미.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://www.bloomberg.com/news/features/2026-04-14/china-s-controls-on-battery-ev-tech-hurt-india-s-manufacturing-ambitions" target="_blank" rel="noopener">China's Controls on Battery, EV Tech Hurt India's Manufacturing Ambitions</a></div>
+        <div class="meta">
+          <span class="badge src">Bloomberg / Reliance</span>
+          <span class="badge date">2026-04-14</span>
+          <span class="badge tag">배터리</span>
+        </div>
+        <p class="summary">베이징의 배터리 기술·장비 수출 통제 강화로, 잠나가르 30 GWh 기가팩토리 가동을 준비 중인 Reliance가 11억 달러 규모 중국산 장비 반입에 차질. K배터리 입장에선 인도 진출 공백이 단기 기회 — 동시에 IRA·CRMA 같은 자국화 압력의 글로벌 버전.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section preprint">
+    <h2>4. 프리프린트</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-title"><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-dvwc9" target="_blank" rel="noopener">Comprehensive Guidelines for Magnetoelectrocatalysis</a></div>
+        <div class="meta">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2026-01-03</span>
+          <span class="badge tag">전기화학</span>
+          <span class="badge tag">수전해</span>
+          <span class="badge tag">CO2RR</span>
+        </div>
+        <p class="summary">전기·자기·전자기장 인가가 수전해, CO2RR, NOx→NH3 반응의 전하·물질전달에 미치는 영향을 통합 정리한 가이드라인. 자성장 보조 촉매(magnetoelectrocatalysis) 설계 시 필수 참고 — 측정 프로토콜·아티팩트 식별 체크리스트 포함.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">What if We Were to Design Transport in Aqueous Electrolytes Using Learnings from Lithium Battery Research?</a></div>
+        <div class="meta">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2026 (early)</span>
+          <span class="badge tag">배터리</span>
+          <span class="badge tag">수전해</span>
+        </div>
+        <p class="summary">Li 배터리 전해질 연구에서 정립된 이온수송·용매화 설계 원리를 수계 전해질(Zn, Mn, Fe, 수전해)에 역수입하자는 관점 논문. 전해질 엔지니어링 사일로를 깨는 시도 — 차세대 수전해/Zn-air 연구자에게 유용.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1lcxn" target="_blank" rel="noopener">Interfacial Cation Arrangement Governs Electrocatalytic Kinetics in CO2 Reduction</a></div>
+        <div class="meta">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2025 후반 (최근 갱신)</span>
+          <span class="badge tag">CO2RR</span>
+          <span class="badge tag">전기화학</span>
+        </div>
+        <p class="summary">포스포늄 기반 제미날 디케이션으로 Ag(111) 계면의 양이온 배열을 능동 제어, CO2→CO 반응 속도가 양이온 위치에 의해 결정됨을 제시. EDL(electrical double layer) 설계가 새 디자인 룰로 부상.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-fnmzq" target="_blank" rel="noopener">AI-Driven Design of High-Entropy Alloys for Efficient Hydrogen Electrocatalysis</a></div>
+        <div class="meta">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2025 후반 (최근 갱신)</span>
+          <span class="badge tag">수전해</span>
+          <span class="badge tag">전기화학</span>
+        </div>
+        <p class="summary">LLM 기반 1차원리 DB 구축 + ML 포텐셜 + 고처리 스크리닝으로 HER용 고엔트로피 합금(HEA)을 자동 발굴하는 워크플로 제안. PGM-free 촉매 탐색 가속화 — 데이터 기반 촉매 설계의 모범 케이스.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Generated 2026-04-30 · 자동화된 시니어 애널리스트 큐레이션 · 링크는 발행 시점 기준 검증 (수동 재확인 권장)
+  </footer>
+</div>
+</body>
+</html>
