@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Daily Briefing · 2026-05-04</title>
+<style>
+  :root{
+    --bg:#fafaf7;
+    --surface:#ffffff;
+    --text:#1a1a1a;
+    --muted:#5b6168;
+    --rule:#e6e3dc;
+    --accent:#b94a1a;
+    --accent-soft:#fbeee5;
+    --warn:#a8550c;
+    --code-bg:#f1efe9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#16181b;
+      --surface:#1f2125;
+      --text:#ececec;
+      --muted:#a3a8af;
+      --rule:#2f3338;
+      --accent:#ff8a4c;
+      --accent-soft:#2a1f17;
+      --warn:#ffb37a;
+      --code-bg:#262a2f;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+  header{border-bottom:1px solid var(--rule);padding-bottom:20px;margin-bottom:36px;}
+  header h1{margin:0 0 6px;font-size:1.85rem;letter-spacing:-0.01em;}
+  header .meta{margin:0;color:var(--muted);font-size:0.9rem;}
+  section{margin:40px 0;}
+  h2{font-size:1.25rem;letter-spacing:-0.005em;border-left:3px solid var(--accent);padding-left:10px;margin:0 0 16px;}
+  h3{font-size:1.02rem;margin:0 0 4px;line-height:1.45;}
+  article{padding:14px 0;border-bottom:1px dashed var(--rule);}
+  article:last-child{border-bottom:none;}
+  .source{font-size:0.82rem;color:var(--muted);margin:0 0 8px;}
+  .source a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
+  .source a:hover{border-bottom-color:var(--accent);}
+  p{margin:6px 0;}
+  blockquote{margin:10px 0;padding:8px 14px;background:var(--accent-soft);
+    border-left:3px solid var(--accent);font-style:italic;color:var(--text);border-radius:0 4px 4px 0;}
+  em{color:var(--text);font-style:italic;}
+  code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    background:var(--code-bg);padding:1px 6px;border-radius:3px;font-size:0.9em;}
+  .quiet{color:var(--muted);font-style:italic;padding:8px 0;}
+  .unverified{color:var(--warn);font-weight:600;font-size:0.82rem;}
+  .tldr ul{padding-left:22px;margin:0;}
+  .tldr li{margin:6px 0;}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--rule);
+    color:var(--muted);font-size:0.85rem;}
+  footer ol{padding-left:22px;}
+  footer ol a{color:var(--accent);text-decoration:none;word-break:break-all;}
+  footer ol a:hover{text-decoration:underline;}
+  @media (max-width:480px){
+    .wrap{padding:28px 16px 60px;}
+    header h1{font-size:1.5rem;}
+    h2{font-size:1.1rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI 일일 브리핑</h1>
+  <p class="meta">2026-05-04 · 최근 24~48시간 · 6개사 커버</p>
+</header>
+
+<section class="tldr">
+  <h2>한눈에 보기 (TL;DR)</h2>
+  <ul>
+    <li>Anthropic, <code>Claude Opus 4.7</code> Max·Team Premium 기본 모델로 전환 + 새로운 <em>xhigh</em> 추론 강도 추가</li>
+    <li>Google, Gemini의 <em>Workspace Intelligence</em> 출시 — Gmail·Calendar·Drive 컨텍스트를 실시간 활용</li>
+    <li>xAI, <code>Grok 4.3</code> API 전면 롤아웃 완료 (4/30) — 입력 토큰가 약 40% 인하 + 1M 컨텍스트 + 비디오 입력</li>
+    <li>Mistral, <code>Mistral Medium 3.5</code> 공개 + Le Chat의 <em>Work mode</em> & Vibe 원격 에이전트 출시</li>
+    <li>OpenAI–AWS 전략 파트너십 확장: <code>GPT-5.5</code> 등 프론티어 모델, Amazon Bedrock에 탑재</li>
+  </ul>
+</section>
+
+<section class="by-company">
+
+  <h2>OpenAI</h2>
+  <article>
+    <h3>OpenAI–AWS 파트너십 확장: GPT-5.5, Amazon Bedrock 탑재</h3>
+    <p class="source"><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">OpenAI 블로그</a> · 2026-05 초</p>
+    <p>OpenAI와 AWS가 전략적 파트너십을 확장해 기업 고객이 AWS 환경에서 OpenAI 기능을 사용할 수 있도록 했다. <code>GPT-5.5</code>를 포함한 프론티어 모델이 Amazon Bedrock을 통해 출시된다. <em>"GPT-5.5 and other frontier models launching on Amazon Bedrock"</em>는 멀티클라우드 채택을 가속하려는 행보로 해석된다.</p>
+  </article>
+  <article>
+    <h3>GPT-5.5 ChatGPT 전 플랜으로 롤아웃 지속</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-23 발표, 롤아웃 진행 중</p>
+    <p>4월 23일 발표된 <code>GPT-5.5</code>는 Plus·Pro·Business·Enterprise 사용자 대상 ChatGPT와 Codex로 계속 확산 중이다. <em>"matches GPT-5.4 per-token latency"</em>이면서 더 적은 토큰으로 동일 작업을 수행하도록 설계됐다. 장기 코딩 과제와 GitHub 이슈 해결, 터미널 워크플로우에서 성능 개선이 두드러진다.</p>
+  </article>
+
+  <h2>Google · DeepMind</h2>
+  <article>
+    <h3>Gemini Workspace Intelligence 출시 — 업무 컨텍스트 실시간 활용</h3>
+    <p class="source"><a href="https://releasebot.io/updates/google/gemini" target="_blank" rel="noopener">Google Workspace 업데이트</a> · 2026-05 초</p>
+    <p>Gemini가 Gmail·Chat·Calendar·Drive의 컨텍스트를 반복 프롬프트 없이 실시간으로 활용하는 <em>"Workspace Intelligence"</em> 레이어를 도입했다. 사용자는 별도 첨부나 인용 없이 업무 데이터에 기반한 응답을 받을 수 있다.</p>
+  </article>
+  <article>
+    <h3>Gemini Embedding 2, Gemini API·Vertex AI에 GA</h3>
+    <p class="source"><a href="https://releasebot.io/updates/google/gemini" target="_blank" rel="noopener">Google Releasebot</a> · 2026-05 초</p>
+    <p><code>Gemini Embedding 2</code>가 Gemini API와 Vertex AI에서 정식 출시됐다. 텍스트·이미지·비디오·오디오에 대한 안정화된 멀티모달 임베딩을 제공해 검색·추론 파이프라인의 프로덕션 이행을 지원한다.</p>
+  </article>
+  <article>
+    <h3>Gemini 차량 통합 본격화 — 수백만 대 차량 탑재</h3>
+    <p class="source"><a href="https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/" target="_blank" rel="noopener">TechCrunch</a> · 2026-04-30</p>
+    <p>Google의 Gemini 어시스턴트가 수백만 대의 차량에 탑재되며, 운전자가 더 자연스러운 대화형 상호작용으로 작업 수행·정보 조회·아이디어 탐색을 할 수 있게 됐다.</p>
+  </article>
+  <article>
+    <h3>Deep Research Max — Gemini API에 MCP 지원·차트 생성</h3>
+    <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Google 블로그</a> · 2026-05 초</p>
+    <p>Gemini API에서 Deep Research와 Deep Research Max가 업데이트됐다. 품질 향상과 함께 <em>MCP(Model Context Protocol) 지원</em>, 네이티브 차트·인포그래픽 생성이 추가됐다 (현재 Gemini 앱은 미적용).</p>
+  </article>
+
+  <h2>Anthropic</h2>
+  <article>
+    <h3>Claude Opus 4.7, Max·Team Premium 기본 모델로 전환</h3>
+    <p class="source"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Anthropic News</a> · 2026-05 초</p>
+    <p><code>Claude Opus 4.7</code>이 Max와 Team Premium의 기본 모델로 자리잡았으며, 새로운 <em>xhigh</em> 추론 강도(effort level)가 도입됐다. 대부분의 코딩 작업에 권장 설정으로 안내된다.</p>
+  </article>
+  <article>
+    <h3>Managed Agents 서비스 발표 — 장시간 에이전트 작업용 호스팅 플랫폼</h3>
+    <p class="source"><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener">Anthropic Releasebot</a> · 2026-05 초</p>
+    <p>Anthropic이 <em>Managed Agents</em>를 공개했다. 장기 에이전트 워크로드용 호스팅 서비스로, 세션·하네스·샌드박스에 대한 안정적 인터페이스를 제공한다. <em>"durable state, safer tool access, and faster startup for reliable long-running tasks"</em>가 핵심 가치 제안이다.</p>
+  </article>
+  <article>
+    <h3>Claude Code 광범위 업데이트</h3>
+    <p class="source"><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Claude Code Releasebot</a> · 2026-05 초</p>
+    <p>스마트한 모델 자동 선택, 프로젝트 정리(purge) 도구, 권한 처리 강화, OAuth 로그인 개선, Windows·PowerShell 호환성 수정, 텔레메트리 개선 등 세션·재시도·터미널 동작 전반에 걸친 안정성·UI·보안 개선이 반영됐다.</p>
+  </article>
+  <article>
+    <h3>1M 토큰 컨텍스트 베타 종료 — Sonnet/Opus 4.6으로 마이그레이션 권고</h3>
+    <p class="source"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a> · 2026-05 초</p>
+    <p><code>context-1m-2025-08-07</code> 베타가 종료됐다. Sonnet 4.5/4 사용자는 <code>Claude Sonnet 4.6</code> 또는 <code>Claude Opus 4.6</code>으로 이동해야 하며, 이들 모델에서는 표준 가격으로 GA되어 별도 베타 헤더가 필요 없다.</p>
+  </article>
+
+  <h2>Meta</h2>
+  <p class="quiet">— 지난 24시간 내 주목할 신규 발표 없음. 직전 주요 업데이트는 4월 8일 <code>Muse Spark</code>(Meta Superintelligence Labs의 첫 모델) 출시. 추가 동향은 다음 브리핑에서 추적. —</p>
+
+  <h2>xAI</h2>
+  <article>
+    <h3>Grok 4.3 API 전면 롤아웃 완료 — 가격 40% 인하, 1M 컨텍스트, 비디오 입력</h3>
+    <p class="source"><a href="https://venturebeat.com/technology/xai-launches-grok-4-3-at-an-aggressively-low-price-and-a-new-fast-powerful-voice-cloning-suite" target="_blank" rel="noopener">VentureBeat</a> · 2026-04-30</p>
+    <p>xAI가 4월 30일 <code>Grok 4.3</code> API의 전체 롤아웃을 완료했다. 표준 요율은 입력 100만 토큰당 $1.25, 출력 100만 토큰당 $2.50로 직전 4.20 대비 입력 약 40%, 출력 약 60% 인하다. 컨텍스트 윈도우가 1M 토큰으로 확장됐고, 처음으로 네이티브 비디오 입력을 지원한다.</p>
+    <blockquote>"Grok 4.3 currently ranks #1 on CaseLaw v2 (79.3% accuracy) and #1 on CorpFin, with a 25-point jump in legal reasoning over Grok 4.20."</blockquote>
+  </article>
+  <article>
+    <h3>웹용 음성 클로닝 스위트 동시 출시</h3>
+    <p class="source"><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a> · 2026-04-30</p>
+    <p>Grok 4.3 출시와 함께 웹에서 사용 가능한 새로운 음성 클로닝 스위트도 공개됐다. 베이스 LLM 교체와 음성 스택 강화가 같은 사이클에 묶였다.</p>
+  </article>
+
+  <h2>Mistral AI</h2>
+  <article>
+    <h3>Mistral Medium 3.5 공개 — Le Chat 기본 모델로 채택</h3>
+    <p class="source"><a href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener">Mistral AI News</a> · 2026-05 초</p>
+    <p>Mistral이 <code>Mistral Medium 3.5</code>를 공개하고 Le Chat의 기본 모델로 전환했다. SWE-Bench Verified에서 77.6%를 기록해 Devstral 2와 Qwen3.5 397B를 앞섰다는 자체 벤치마크를 제시했다.</p>
+  </article>
+  <article>
+    <h3>Vibe 원격 코딩 에이전트 + Le Chat의 Work mode 출시</h3>
+    <p class="source"><a href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener">Mistral AI News</a> · 2026-05 초</p>
+    <p>오늘부터 코딩 세션이 사용자가 자리를 비운 동안에도 장기 작업을 수행할 수 있다. <em>Mistral Vibe CLI</em> 또는 Le Chat을 통해 다수 작업을 병렬 실행할 수 있는 비동기 클라우드 코딩 환경이 제공된다. 복잡한 업무 워크플로우용 <em>Work mode</em>도 Le Chat에 추가됐다.</p>
+  </article>
+
+</section>
+
+<section class="other">
+  <h2>기타 주목할 만한 동향</h2>
+  <article>
+    <h3>“에이전트가 곧 제품” — 도구 레이어의 패러다임 전환 가속</h3>
+    <p class="source"><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">LLM Stats — AI News</a> · 2026-05 초</p>
+    <p>Microsoft Agent 365, Cursor의 Agents Window, Claude Code의 멀티 에이전트 협업까지, AI를 채팅 인터페이스가 아닌 자율 실행자로 보는 흐름이 주요 도구 단위에서 보편화됐다는 분석이다. 이번 주 Anthropic의 Managed Agents와 Mistral의 Vibe 원격 에이전트도 같은 흐름을 가리킨다.</p>
+  </article>
+  <article>
+    <h3>모델 리더보드 5월 스냅샷</h3>
+    <p class="source"><a href="https://www.buildfastwithai.com/blogs/best-ai-models-may-2026-leaderboard" target="_blank" rel="noopener">Build Fast with AI</a> · 2026-05 <span class="unverified">[참고용 — 비공식 집계]</span></p>
+    <p>5월 기준 비공식 리더보드는 <code>GPT-5.5</code>·<code>Claude Opus 4.7</code>·<code>DeepSeek V4</code>를 상위권으로 보고 있다. 평가 기준이 출처마다 다르므로 절대 순위보다 카테고리별 강점 비교에 활용할 것.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Generated 2026-05-04 · Sources below</p>
+  <ol class="sources">
+    <li><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">Introducing GPT-5.5 — OpenAI</a></li>
+    <li><a href="https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" target="_blank" rel="noopener">OpenAI releases GPT-5.5 — TechCrunch</a></li>
+    <li><a href="https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html" target="_blank" rel="noopener">OpenAI announces GPT-5.5 — CNBC</a></li>
+    <li><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">OpenAI Release Notes — Releasebot</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Deep Research Max — Google Blog</a></li>
+    <li><a href="https://releasebot.io/updates/google/gemini" target="_blank" rel="noopener">Gemini Updates — Releasebot</a></li>
+    <li><a href="https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/" target="_blank" rel="noopener">Gemini in vehicles — TechCrunch</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Claude Opus 4.7 — Anthropic</a></li>
+    <li><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener">Anthropic Release Notes — Releasebot</a></li>
+    <li><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Claude Code Updates — Releasebot</a></li>
+    <li><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Claude Platform Release Notes</a></li>
+    <li><a href="https://venturebeat.com/technology/xai-launches-grok-4-3-at-an-aggressively-low-price-and-a-new-fast-powerful-voice-cloning-suite" target="_blank" rel="noopener">xAI launches Grok 4.3 — VentureBeat</a></li>
+    <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a></li>
+    <li><a href="https://help.apiyi.com/en/grok-4-3-api-release-may-2026-news-en.html" target="_blank" rel="noopener">Grok 4.3 API Release Notes — Apiyi</a></li>
+    <li><a href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener">Vibe Remote Agents + Mistral Medium 3.5 — Mistral AI</a></li>
+    <li><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral AI News</a></li>
+    <li><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">AI Updates Today — LLM Stats</a></li>
+    <li><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">LLM News Today — LLM Stats</a></li>
+    <li><a href="https://www.buildfastwithai.com/blogs/best-ai-models-may-2026-leaderboard" target="_blank" rel="noopener">Best AI Models May 2026 Leaderboard — Build Fast with AI</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
