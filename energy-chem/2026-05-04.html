@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief — 2026-05-04</title>
+<style>
+:root {
+  --bg: #0f1115;
+  --bg-elev: #161922;
+  --bg-card: #1c2030;
+  --border: #2a2f42;
+  --text: #e6e8ee;
+  --text-mute: #9aa3b8;
+  --accent: #6ee7b7;
+  --accent-2: #60a5fa;
+  --accent-3: #f59e0b;
+  --accent-4: #f472b6;
+  --tag-bg: #232a3d;
+  --shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f7fb;
+    --bg-elev: #ffffff;
+    --bg-card: #ffffff;
+    --border: #e3e6ee;
+    --text: #1b1f2a;
+    --text-mute: #5b6478;
+    --accent: #047857;
+    --accent-2: #2563eb;
+    --accent-3: #b45309;
+    --accent-4: #be185d;
+    --tag-bg: #eef1f8;
+    --shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+               "Pretendard", "Noto Sans KR", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+header.brief {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+}
+header.brief .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+header.brief h1 {
+  margin: 6px 0 4px;
+  font-size: clamp(22px, 3.4vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.brief .date {
+  color: var(--text-mute);
+  font-size: 14px;
+}
+.tldr {
+  background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.06));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 22px 0 36px;
+  box-shadow: var(--shadow);
+}
+.tldr h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.tldr ul {
+  margin: 0; padding-left: 20px;
+}
+.tldr li {
+  margin: 6px 0;
+  font-size: 15px;
+}
+section.section {
+  margin: 38px 0;
+}
+section.section > h2 {
+  font-size: 18px;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-elev);
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+section.section.policy > h2 { border-left-color: var(--accent-2); }
+section.section.industry > h2 { border-left-color: var(--accent-3); }
+section.section.preprint > h2 { border-left-color: var(--accent-4); }
+.cards {
+  display: grid;
+  gap: 14px;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+.card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--text-mute);
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--tag-bg);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.badge.source { color: var(--accent-2); }
+.badge.date { color: var(--text-mute); }
+.tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: 8px;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  background: rgba(110,231,183,0.12);
+  color: var(--accent);
+  font-weight: 500;
+}
+.card h3 {
+  margin: 4px 0 6px;
+  font-size: 15.5px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.card h3 a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+}
+.card h3 a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.card p.summary {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--text-mute);
+}
+footer.foot {
+  margin-top: 56px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  font-size: 12px;
+  color: var(--text-mute);
+}
+.empty {
+  border: 1px dashed var(--border);
+  background: transparent;
+  color: var(--text-mute);
+  text-align: center;
+  padding: 22px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="brief">
+  <div class="eyebrow">Energy &amp; Chemical Engineering Morning Brief</div>
+  <h1>오늘의 에너지·화학공학 동향</h1>
+  <div class="date">2026-05-04 (월) · 자동 생성 브리핑</div>
+</header>
+
+<div class="tldr">
+  <h2>오늘의 한 줄 (TL;DR)</h2>
+  <ul>
+    <li><strong>EU의 CO₂ 인프라·수소 정책 재정비가 2026년 하반기로 임박</strong> — Q3 2026 Energy Union 패키지에 CO₂ 수송망 법안 포함, 수소전략도 Q2 컨설팅 시작.</li>
+    <li><strong>그린수소 전해조 산업화가 가속</strong> — Plug Power 275 MW PEM(캐나다 Hy2gen), John Cockerill 25 MW × 4(벨기에 HyOffWind), Sunfire 50 MW 신규 출시가 4월 안에 줄줄이 발표.</li>
+    <li><strong>CO₂RR-플라스틱 융합 전기화학</strong> — JACS·Angew·ChemRxiv에서 PET·CO₂ 동시 전환, 순수수 CO₂ 전해(93% FE@500 mA/cm²) 등 전류밀도·선택성 동시 달성 사례가 잇따름.</li>
+  </ul>
+</div>
+
+<!-- 1. 논문 -->
+<section class="section paper">
+  <h2>1. 논문 (Peer-reviewed Journals)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Nature Nanotechnology · Comment</span>
+        <span class="badge date">2026-04-20</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41565-026-02166-5" target="_blank" rel="noopener">Why electrodics is essential for future energy technologies</a></h3>
+      <div class="tags">
+        <span class="tag">전기화학</span>
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">Jelena Popovic-Neuber가 차세대 에너지 기술(전해·전지·CO₂ 전환)의 병목이 결국 전극-전해질 계면(electrodics)에 있음을 강조한 코멘트. 촉매 단독 최적화에서 벗어나 계면 솔베이션·이온 동역학을 1차 변수로 다뤄야 한다는 시각이 정책·산업 R&amp;D 우선순위 재편에 영향을 줄 만한 글이다.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">JACS</span>
+        <span class="badge date">2026 (in press)</span>
+      </div>
+      <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c11708" target="_blank" rel="noopener">Upcycling CO2 and PET Waste: Ampere-Level Formate Electrosynthesis in an Integrated Electrolyzer</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR</span>
+        <span class="tag">플라스틱</span>
+      </div>
+      <p class="summary">PET 분해·CO₂ 환원을 한 전해조에 통합해 암페어급 전류밀도에서 포름산염을 동시 합성. 단일 셀에서 폐플라스틱-탄소포집을 묶은 first-of-a-kind 시연으로, "두 폐기물 한 제품" 경제성을 끌어올린 점이 핵심.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Angew. Chem. Int. Ed.</span>
+        <span class="badge date">2026</span>
+      </div>
+      <h3><a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.202516321" target="_blank" rel="noopener">Cation Effect-Engineered Electrocatalytic Interfaces Boost Pure-Water CO2 Electrolysis with Optimized Ion Dynamics</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">전해질 첨가 없이 순수수에서 500 mA/cm²에서 CO 패러데이 효율 93%, 100시간 안정 운전을 달성. 100 cm² 스택으로 50 A·344 mL/min CO 생산까지 스케일업 — 막-전극 어셈블리(MEA) 시스템의 "물만 넣으면 되는" 경로가 열렸다는 점에서 상용화 의미가 큼.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">ACS Energy Letters</span>
+        <span class="badge date">2026</span>
+      </div>
+      <h3><a href="https://pubs.acs.org/doi/10.1021/acsenergylett.5c02853" target="_blank" rel="noopener">Tandem Nonoxidative Coupling of Methane and Carbon Dioxide Reduction via Pulsed Joule Thermochemistry</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">펄스 줄가열(Joule thermochemistry)로 CH₄ 비산화 커플링과 CO₂ 환원을 직렬화. 열적 비평형을 제어해 산화/환원 두 반응을 한 반응기에서 묶고, 전기화 산업에서 메탄·CO₂를 동시 활용하는 새 경로를 제시.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 2. 정책 / 규제 -->
+<section class="section policy">
+  <h2>2. 정책 / 규제 (Policy &amp; Regulation)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">European Commission · Climate Action</span>
+        <span class="badge date">2026 Work Programme</span>
+      </div>
+      <h3><a href="https://climate.ec.europa.eu/eu-action/industrial-carbon-management/legislative-framework_en" target="_blank" rel="noopener">EU Energy Union Package — CO₂ 수송 인프라 법안 포함 (2026 Q3 예정)</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR/CCUS</span>
+      </div>
+      <p class="summary">집행위가 Q3 2026 Energy Union 패키지에 CO₂ 수송망 계획·허가·접근·거버넌스 프레임워크 법안을 포함. ETS 개정(Q3)·Energy Union 거버넌스 개정(Q4)도 같은 흐름이라 EU 내 CCUS 사업의 "운영 자산화"를 위한 규제 정비기가 임박.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">EU · Delegated Act</span>
+        <span class="badge date">시행 단계 (2025-07 채택)</span>
+      </div>
+      <h3><a href="https://www.whitecase.com/insight-alert/eu-unveils-methodology-calculate-emissions-savings-low-carbon-fuels" target="_blank" rel="noopener">EU 저탄소 수소 정의 — 비재생 경로도 70% 감축 시 인정</a></h3>
+      <div class="tags">
+        <span class="tag">수전해/수소</span>
+        <span class="tag">CO2RR/CCUS</span>
+      </div>
+      <p class="summary">화석연료 대비 70% 온실가스 저감 시 "저탄소 수소"로 분류 — 천연가스+CCUS, 원자력 전기로 만든 수소도 자격을 얻는다. 2026년 수소 전략 재검토(Q2 컨설팅 예정)와 맞물려 그린/저탄소 경계 재설계의 출발점.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">UK Statutory Instruments</span>
+        <span class="badge date">2026</span>
+      </div>
+      <h3><a href="https://www.legislation.gov.uk/uksi/2026/185/regulation/7/made" target="_blank" rel="noopener">The Carbon Capture Utilisation and Storage and Offshore Hydrogen Production (Miscellaneous Amendments) Regulations 2026</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR/CCUS</span>
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">영국이 CCUS와 해상 수소 생산을 묶어 처리하는 미스셀러니어스 개정 규정을 2026년 발효. 해상 자원 개발-탄소저장-수소 생산을 동일 라이선스 체계에서 다루는 흐름으로, EU와 영국이 별도 트랙으로 인프라 법제화에 들어선 모습.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">IEA</span>
+        <span class="badge date">2026</span>
+      </div>
+      <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026/overview-dashboard" target="_blank" rel="noopener">State of Energy Policy 2026 — Overview Dashboard</a></h3>
+      <div class="tags">
+        <span class="tag">전기화학</span>
+        <span class="tag">배터리</span>
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">IEA가 2026년 글로벌 에너지 정책 변화를 한눈에 보는 대시보드 공개. 전 세계 200건 이상 저탄소 수소 투자, 유틸리티 배터리 보급 가속을 확인하는 표준 레퍼런스로 사용 가능.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3. 산업 뉴스 -->
+<section class="section industry">
+  <h2>3. 산업 뉴스 (Industry &amp; Investment)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Fuel Cells Works</span>
+        <span class="badge date">2026-04-29</span>
+      </div>
+      <h3><a href="https://fuelcellsworks.com/2026/04/29/electrolyzer/john-cockerill-installs-25mw-electrolysers-at-hyoffwind-green-hydrogen-project-in-zeebrugge" target="_blank" rel="noopener">John Cockerill Installs 25 MW Electrolysers at HyOffWind Green Hydrogen Project in Zeebrugge</a></h3>
+      <div class="tags">
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">벨기에 첫 산업규모 그린수소 프로젝트인 HyOffWind에 John Cockerill이 25 MW 알칼라인 전해조 4기를 설치. 유럽 해상풍력-수전해 연계 첫 100 MW급 사례로, 알칼라인 기술의 산업 표준화 진척을 상징.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Fuel Cells Works</span>
+        <span class="badge date">2026-04-14</span>
+      </div>
+      <h3><a href="https://fuelcellsworks.com/2026/04/14/electrolyzer/sunfire-launches-new-50-megawatt-electrolyzer-system-for-the-next-phase-of-industrial-green-hydrogen-scale-up" target="_blank" rel="noopener">Sunfire Launches New 50-MW Electrolyzer System for Industrial Green Hydrogen</a></h3>
+      <div class="tags">
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">독일 Sunfire가 산업 스케일업을 노린 50 MW급 표준화 전해조 시스템 출시. 단일 모듈 용량 확대로 정유·암모니아·철강용 그린수소 도입의 BoP·CAPEX 부담을 줄이는 방향.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Electrek</span>
+        <span class="badge date">2026-04-15</span>
+      </div>
+      <h3><a href="https://electrek.co/2026/04/15/solid-state-ev-batteries-coming-sooner-than-expected/" target="_blank" rel="noopener">Solid-state EV batteries are coming sooner than expected after another breakthrough</a></h3>
+      <div class="tags">
+        <span class="tag">배터리</span>
+      </div>
+      <p class="summary">전고체 EV 배터리 양산 일정이 앞당겨지고 있다는 보도. GBT(Greater Bay Technology) 등 중국 진영이 GWh급 라인을 2026년 안에 가동 목표로 잡으며, 셀 에너지밀도 260–500 Wh/kg 구간을 공식 거론.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">Fuel Cells Works</span>
+        <span class="badge date">2026-04-29</span>
+      </div>
+      <h3><a href="https://fuelcellsworks.com/2026/04/29/electrolyzer/hydrogenpro-bets-on-industry-giants-to-hit-1-20-kg-green-hydrogen-but-the-path-is-still-bumpy" target="_blank" rel="noopener">HydrogenPro Aims for 1.20 USD per kg Green Hydrogen</a></h3>
+      <div class="tags">
+        <span class="tag">수전해/수소</span>
+      </div>
+      <p class="summary">노르웨이 HydrogenPro가 산업 파트너십을 통해 그린수소 LCOH 1.20 USD/kg 목표를 제시. IEA 평균 추정치(2030년 1.5–2.0 USD/kg)보다 공격적이라 실현 시 파급력 크지만, 보고서는 자본조달·전력가격 변동성 리스크를 경고.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">IndexBox</span>
+        <span class="badge date">2026-04</span>
+      </div>
+      <h3><a href="https://www.indexbox.io/blog/wpu-to-build-major-80000-tonne-chemical-recycling-plant-in-rotterdam-port/" target="_blank" rel="noopener">WPU to Build 80,000-tonne Chemical Recycling Plant at Port of Rotterdam</a></h3>
+      <div class="tags">
+        <span class="tag">플라스틱</span>
+      </div>
+      <p class="summary">WPU가 로테르담 항에 연 8만 톤 규모 폐플라스틱 화학적 재활용 플랜트 건설 착수. EU의 PET 화학재활용 함량 인정(2026-02 비준)과 맞물려, 유럽 첫 대형 화학재활용 거점이 정유 클러스터 옆에 들어서는 모델.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 4. 프리프린트 -->
+<section class="section preprint">
+  <h2>4. 프리프린트 (ChemRxiv / arXiv)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">ChemRxiv</span>
+        <span class="badge date">2026-04-10</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15001835/v1" target="_blank" rel="noopener">Crucial Impact of Dinuclearity and Linker Length on Electrochemical CO2 Reduction to Methanol</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">동핵 이중활성점(Fe/Fe, Cu/Cu) 분자 촉매에서 링커 길이를 바꿔가며 균질 조건 CO₂→메탄올 변환 FE 22–24%, 메탄올 선택도 ~85–90% 보고. 멀티전자 환원에서 dinuclearity가 결정적 변수임을 시사.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">ChemRxiv</span>
+        <span class="badge date">2026-01-06</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-6bs5s" target="_blank" rel="noopener">Direct CO2 Reduction to CO with an Fe4S4-Based Coordination Polymer</a></h3>
+      <div class="tags">
+        <span class="tag">CO2RR</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">Fe₄S₄ 클러스터 기반 배위 고분자를 직접 CO₂ 환원 전극촉매로 활용. 천연 [Fe-S] 효소 모티프를 고체 촉매로 옮긴 첫 예 중 하나로, 2전자 CO 생성 메커니즘 분광학적 규명.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">ChemRxiv</span>
+        <span class="badge date">2025-04 (참고)</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-r7x16" target="_blank" rel="noopener">A Large Language Models-Guided Grand Canonical DFT Framework for Accelerating the Discovery of Efficient Electrocatalysts</a></h3>
+      <div class="tags">
+        <span class="tag">전기화학</span>
+        <span class="tag">CO2RR</span>
+      </div>
+      <p class="summary">LLM과 grand-canonical DFT(GCE-DFT)를 결합해 전극촉매 후보 탐색을 자동화한 프레임워크. 화학공학에서 LLM-시뮬레이션 통합 흐름의 대표 사례 — 1년 전 업로드지만 최근 후속 인용·확장이 잇따르는 중.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">
+        <span class="badge source">ChemRxiv</span>
+        <span class="badge date">2025-04 (참고)</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-396l8" target="_blank" rel="noopener">Unveiling Synergistic Elemental Roles in High-Entropy Spinel Oxides for Oxygen Evolution Electrocatalysis</a></h3>
+      <div class="tags">
+        <span class="tag">수전해/수소</span>
+        <span class="tag">전기화학</span>
+      </div>
+      <p class="summary">Mn-Fe-Co-Ni-Zn 5성분 고엔트로피 스피넬을 초임계 수열법으로 합성, OER 성능에서 원소별 시너지 역할을 분리·정량. AEM·알칼라인 전해조용 비귀금속 OER 촉매 설계 가이드라인으로 활용 가능.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  생성: 2026-05-04 · 4개 섹션 × 3–5건 · 최근 24~72시간 우선, 부족 시 1–2주 이내 항목 포함 · 자동 브리핑 (Energy & Chemical Engineering)
+</footer>
+
+</div>
+</body>
+</html>
