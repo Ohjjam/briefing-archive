@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief — 2026-05-06</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-elev: #161b22;
+    --bg-card: #1c2128;
+    --border: #30363d;
+    --border-strong: #484f58;
+    --text: #e6edf3;
+    --text-muted: #8d96a0;
+    --accent: #58a6ff;
+    --accent-2: #3fb950;
+    --accent-warn: #d29922;
+    --tag-bg: #21262d;
+    --tag-text: #a5d6ff;
+    --topic-electro: #f778ba;
+    --topic-battery: #3fb950;
+    --topic-co2: #d29922;
+    --topic-h2: #58a6ff;
+    --topic-biomass: #a371f7;
+    --topic-plastic: #ff7b72;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+                 "Noto Sans KR", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header.brief-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  header.brief-header .date {
+    color: var(--text-muted);
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  header.brief-header h1 {
+    margin: 6px 0 4px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  header.brief-header .sub {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .tldr {
+    background: linear-gradient(180deg, var(--bg-elev), var(--bg-card));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+  }
+  .tldr h2 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .tldr ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .tldr li {
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .tldr li:last-child { margin-bottom: 0; }
+  section.section {
+    margin-bottom: 44px;
+  }
+  section.section > h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  section.section > h2 .num {
+    display: inline-flex;
+    width: 28px; height: 28px;
+    align-items: center; justify-content: center;
+    background: var(--accent);
+    color: #0d1117;
+    font-weight: 800;
+    border-radius: 50%;
+    font-size: 13px;
+  }
+  section.section > h2 .en {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  section.section > p.section-desc {
+    margin: 0 0 16px 38px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .card:hover {
+    border-color: var(--border-strong);
+  }
+  .card .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .card .badge {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .card .date {
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+  .card .topic {
+    border: 1px solid transparent;
+    color: #0d1117;
+    font-weight: 700;
+  }
+  .topic-electro  { background: var(--topic-electro); }
+  .topic-battery  { background: var(--topic-battery); }
+  .topic-co2      { background: var(--topic-co2);      }
+  .topic-h2       { background: var(--topic-h2);       }
+  .topic-biomass  { background: var(--topic-biomass);  }
+  .topic-plastic  { background: var(--topic-plastic);  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card h3 a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+  }
+  .card h3 a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .card .summary {
+    margin: 0;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .placeholder {
+    border: 1px dashed var(--border-strong);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 22px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  footer.brief-footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  @media (min-width: 720px) {
+    .cards { grid-template-columns: 1fr 1fr; }
+    section.section.full .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brief-header">
+    <div class="date">2026-05-06 · 수요일</div>
+    <h1>Energy &amp; Chemical Engineering Morning Brief</h1>
+    <div class="sub">전기화학 · 배터리 · CO2RR · 수전해/수소 · 바이오매스 · 플라스틱</div>
+  </header>
+
+  <div class="tldr">
+    <h2>오늘의 한 줄 (TL;DR)</h2>
+    <ul>
+      <li>중국이 신장에 30,000 t/yr 규모 <strong>오프그리드 그린수소 프로젝트(USD 360M)</strong>를 5/1 승인 — 690 MW 풍·태양 직결로 전력망과 분리된 대형 수전해 모델 본격화.</li>
+      <li>Nature Energy가 비수계 아민 매개 <strong>반응성 CO2 포집-전환</strong>을 보고 — DMSO 매질에서 카르밤산 형태로 CO2 흡수량 3배 증가, Zn 촉매 위 CO 패러데이 효율 78%.</li>
+      <li>EU 집행위가 3/4 발표한 <strong>Industrial Accelerator Act</strong>가 배터리 기가팩토리·중요원자재 공급망 가속을 명문화 — 한국·일본 셀 메이커의 EU 투자 셈법 변동 압력.</li>
+    </ul>
+  </div>
+
+  <!-- Section 1: Papers -->
+  <section class="section">
+    <h2><span class="num">1</span>논문 <span class="en">Peer-reviewed papers</span></h2>
+    <p class="section-desc">Nature / Nature Energy / Nature Catalysis / JACS / Joule 등 최신 게재 논문</p>
+    <div class="cards">
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Nature Energy</span>
+          <span class="badge topic topic-co2">CO2RR</span>
+          <span class="badge topic topic-electro">Electrochem</span>
+          <span class="date">2026-04</span>
+        </div>
+        <h3><a href="https://www.nature.com/articles/s41560-026-02035-4" target="_blank" rel="noopener">Reactive CO2 capture via controlled amine speciation in non-aqueous electrolytes</a></h3>
+        <p class="summary">DMSO 매질에서 아민-CO2 부가체 화학종을 카르밤산 쪽으로 이동시켜 수계 대비 CO2 흡수량을 3배 끌어올림. 수소 발생을 억제해 저렴한 Zn 촉매 위에서 CO 패러데이 효율 78% 달성. <strong>포집-전환 통합공정의 비수계 설계 원칙</strong>을 제시한 논문.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Nature Catalysis</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="badge topic topic-electro">Electrochem</span>
+          <span class="date">2026-04-15</span>
+        </div>
+        <h3><a href="https://www.nature.com/articles/s41929-026-01525-8" target="_blank" rel="noopener">Breaking insulating barriers in solid-phase conversion reactions with dual-atom catalysts for high-energy lithium batteries</a></h3>
+        <p class="summary">CoCo 듀얼 원자 촉매로 절연성 Li2S2/Li2O2 중간체의 고체상 전환 속도를 가속, Ah급 Li-S 파우치 셀에서 비에너지 <strong>459 Wh/kg</strong> 시연. 궤도 대칭성 매칭이 고체상 금속화를 유도한다는 전자구조 기준을 제시.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Nature Communications</span>
+          <span class="badge topic topic-h2">H2/Electrolysis</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="date">2026-05-02</span>
+        </div>
+        <h3><a href="https://www.nature.com/subjects/electrochemistry" target="_blank" rel="noopener">Integrated electrochemical seawater Li extraction with in-situ energy storage and H2 production</a></h3>
+        <p class="summary">해수에서 리튬을 농축하며 동시에 전기 저장과 수소 생산을 수행하는 통합 셀. <strong>저전력 소비로 Li-rich 용액으로 업그레이드</strong>하는 멀티-아웃풋 시스템 — 자원 확보·H2 생산·ESS의 3중 결합이라는 점에서 시스템 통합 설계 사례로 주목.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">JACS</span>
+          <span class="badge topic topic-biomass">Biomass</span>
+          <span class="badge topic topic-electro">Electrochem</span>
+          <span class="date">2026</span>
+        </div>
+        <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c20836" target="_blank" rel="noopener">Biomass-Derived Sustainable Dual-Atom Catalysts Enabled Highly Efficient Electrochemical Reductive Ring-Opening of HMF to 2,5-Hexanediol</a></h3>
+        <p class="summary">바이오매스 유래 듀얼 원자 촉매로 HMF의 환원적 개환 반응을 구동, <strong>2,5-헥산디올 선택도 91.6%, FE 90.2%, 생산성 190.7 µmol·mg⁻¹·h⁻¹</strong>. 푸란계 플랫폼 분자의 전기촉매적 다운스트림 공정에 직접 활용 가능한 결과.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Policy -->
+  <section class="section">
+    <h2><span class="num">2</span>정책 / 규제 <span class="en">Policy &amp; Regulation</span></h2>
+    <p class="section-desc">IEA · DOE · EU Commission · MOTIE · METI · KIER 등 정책 동향</p>
+    <div class="cards">
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">IEA</span>
+          <span class="badge topic topic-h2">H2</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="date">2026 Q2</span>
+        </div>
+        <h3><a href="https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary" target="_blank" rel="noopener">Energy Technology Perspectives 2026 — Executive Summary</a></h3>
+        <p class="summary">청정에너지 기술 시장 누적 규모 USD 1.2T, 2015년 대비 연 20% 성장. 배터리 가격 2015 대비 -75%, EV 점유율 25% 도달. <strong>저배출 H2 시장은 NZE 시나리오 하 USD 560B 잠재(STEPS 55B)</strong> — 정책 강도에 따른 분기점 제시.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">European Commission</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="date">2026-03-04</span>
+        </div>
+        <h3><a href="https://commission.europa.eu/topics/competitiveness/green-deal-industrial-plan/european-critical-raw-materials-act_en" target="_blank" rel="noopener">EU Industrial Accelerator Act proposal — Battery &amp; CRM acceleration</a></h3>
+        <p class="summary">전략 부문 산업 캐파 확장과 탈탄소를 가속하는 신 프레임워크. <strong>Li/Co/Ni/Mn 공급망 안정화, 기가팩토리 배치 가속, 2nd-life·리사이클 경로</strong>를 명문화. EU 내 셀·수소 기반 부품 투자 인센티브 변화 — 한국·일본 메이커의 EU 진출 셈법 영향.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">European Court of Auditors</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="badge topic topic-h2">H2</span>
+          <span class="date">2026 Q1</span>
+        </div>
+        <h3><a href="https://www.eca.europa.eu/en/publications/SR-2026-04" target="_blank" rel="noopener">Special Report 04/2026 — Critical raw materials for the energy transition</a></h3>
+        <p class="summary">유럽 감사원이 EU의 CRM 전략 이행을 감사한 보고서. <strong>전해조·연료전지의 PGM(Pt, Ir) 의존도</strong>와 배터리 4대 광물(Li/Co/Ni/Mn) 외부 의존 리스크를 정량화. 13개 역외 전략 프로젝트 현황 점검 — 향후 정책 보정 압력의 근거.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Industry News -->
+  <section class="section">
+    <h2><span class="num">3</span>산업 뉴스 <span class="en">Industry News</span></h2>
+    <p class="section-desc">투자, 공장 증설, 파트너십, 제품 출시</p>
+    <div class="cards">
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Fuel Cells Works</span>
+          <span class="badge topic topic-h2">H2</span>
+          <span class="badge topic topic-electro">Electrolysis</span>
+          <span class="date">2026-05-01</span>
+        </div>
+        <h3><a href="https://fuelcellsworks.com/2026/05/01/electrolyzer/china-approves-360m-off-grid-green-hydrogen-project-in-xinjiang-producing-30-000-tonnes-annually" target="_blank" rel="noopener">China Approves $360M Off-Grid Green Hydrogen Project in Xinjiang (30,000 t/yr)</a></h3>
+        <p class="summary">신장에 690 MW 규모의 풍력·태양 직결 오프그리드 수전해 프로젝트가 승인됨. 연 3만 톤 그린수소 생산, <strong>CO2 1.35 Mt 감축 효과</strong>. 그리드를 거치지 않는 대규모 RE-to-H2 시스템의 상업적 검증 사례 — 중국 서부 잉여 재생을 H2로 흡수하는 모델 가속.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">CleanTechnica</span>
+          <span class="badge topic topic-h2">H2</span>
+          <span class="date">2026-05-03</span>
+        </div>
+        <h3><a href="https://cleantechnica.com/2026/05/03/eu-green-hydrogen-scheme-embraces-high-tech-solar-foods/" target="_blank" rel="noopener">EU Green Hydrogen Scheme Embraces High-Tech Solar Foods (BalticSeaH2)</a></h3>
+        <p class="summary">발틱해 권역의 EU H2 밸리 프로젝트 BalticSeaH2가 핀란드 솔라푸드 등 신산업과 결합. <strong>그린수소를 단순 연료가 아닌 단백질·소재 합성 원료로 통합</strong>하는 식량-에너지 결합형 다운스트림 모델 — 수소 수요처 다변화의 신호.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Fuel Cells Works</span>
+          <span class="badge topic topic-h2">H2</span>
+          <span class="date">2026-05-04</span>
+        </div>
+        <h3><a href="https://fuelcellsworks.com/2026/05/04/fuel-cells/hydrogen-pioneer-says-first-aircraft-will-be-in-service-by-2030" target="_blank" rel="noopener">H2Fly: First Hydrogen-Electric Aircraft to Enter Service by 2030</a></h3>
+        <p class="summary">H2Fly 공동창업자가 <strong>350-500 kW급 수소-전기 추진 시스템의 2030년 상용화</strong>를 공언. 단거리 지역 항공의 디카본 경로 중 액체수소 + 연료전지 노선이 제트 SAF 대비 가속되는 흐름 — 항공용 H2 인프라 수요 증가 시그널.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">Seoul Economic Daily</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="date">2026-04-03</span>
+        </div>
+        <h3><a href="https://en.sedaily.com/finance/2026/04/03/koreas-big-3-battery-makers-push-rd-past-3-trillion-won" target="_blank" rel="noopener">Korea's Big 3 Battery Makers Push R&amp;D Past 3 Trillion Won Despite Losses</a></h3>
+        <p class="summary">LG엔솔·삼성SDI·SK온이 손실 속에서도 <strong>전년 R&amp;D 3조원 돌파</strong>. 차세대 전고체·Na-ion·Li-metal 기술 확보가 골자. CATL 1Q 순익 49% 급증과 대비되며, 한국 셀 메이커의 기술 격차 방어 의지 명확.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Preprints -->
+  <section class="section">
+    <h2><span class="num">4</span>프리프린트 <span class="en">Preprints</span></h2>
+    <p class="section-desc">ChemRxiv · arXiv 최신 업로드</p>
+    <div class="cards">
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">arXiv (cond-mat.mtrl-sci)</span>
+          <span class="badge topic topic-battery">Battery</span>
+          <span class="date">2026-04-29</span>
+        </div>
+        <h3><a href="https://arxiv.org/abs/2605.00909" target="_blank" rel="noopener">Accelerating battery research with an AI interface between FINALES and Kadi4Mat</a></h3>
+        <p class="summary">Na-ion 코인셀의 시간 소모 큰 formation 공정을 표적으로, FINALES 실험 오케스트레이션과 Kadi4Mat RDM을 결합한 <strong>능동학습 베이지안 최적화 프레임워크</strong>. 공정 파라미터 자동 탐색의 표준 인터페이스 제안 — 연구실 자동화-데이터 관리 파이프라인 통합 사례.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">ChemRxiv</span>
+          <span class="badge topic topic-co2">CO2RR</span>
+          <span class="badge topic topic-electro">Electrochem</span>
+          <span class="date">2026-01-16</span>
+        </div>
+        <h3><a href="https://chemrxiv.org/doi/10.26434/chemrxiv-2026-wp1rv" target="_blank" rel="noopener">Systematic Ligand Modification Tunes the Stability and Reactivity of Copper Complexes for Electrocatalytic CO2 Reduction</a></h3>
+        <p class="summary">CO2 고정에는 좋지만 전기화학적으로 불안정한 피리딘-2,6-디카르복사미드 Cu 착물의 리간드를 체계적으로 변형. <strong>저원자가 Cu 중간체의 안정화 + 활성 동시 향상</strong>을 통해 분자 촉매 설계의 정량 가이드를 제공.</p>
+      </div>
+      <div class="card">
+        <div class="meta-row">
+          <span class="badge">ChemRxiv</span>
+          <span class="badge topic topic-biomass">Biomass</span>
+          <span class="date">2026-01</span>
+        </div>
+        <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-cwgpt" target="_blank" rel="noopener">A strategy for biomass revalorization through Newman-Kwart rearrangement — SRN1 reaction</a></h3>
+        <p class="summary">리그닌 모델 페놀과 농업 잔재물에서 <strong>O-아릴 티오카르바메이트 합성</strong>을 거쳐 황 함유 빌딩블록 확보. Newman-Kwart 재배열 + SRN1 라디칼 반응 조합으로 바이오리파이너리 다운스트림에 새로운 황화 경로 제시.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    Generated 2026-05-06 · 자동화된 아침 브리핑 · 출처 링크는 각 카드 제목 클릭. 1주일 이내 자료 우선, 미달 시 2주 이내까지 확장.
+  </footer>
+</div>
+</body>
+</html>
