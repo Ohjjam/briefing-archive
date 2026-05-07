@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief · 2026-05-07</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --card: #1c222c;
+    --border: #2a313d;
+    --fg: #e6e6e6;
+    --muted: #9aa3ad;
+    --accent: #4cc2ff;
+    --accent2: #ffb84c;
+    --tag-bg: #232b3a;
+    --tag-fg: #cdd6e0;
+    --section-bar: #4cc2ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    line-height: 1.6; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 36px 22px 80px; }
+  header.top { padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  .kicker { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { font-size: 13px; color: var(--muted); margin: 0; }
+  .tldr { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; margin-bottom: 32px; }
+  .tldr h2 { font-size: 12px; letter-spacing: 0.18em; color: var(--accent); margin: 0 0 12px; text-transform: uppercase; }
+  .tldr ol { margin: 0; padding-left: 20px; }
+  .tldr li { margin-bottom: 6px; font-size: 14px; color: var(--fg); }
+  .section { margin-bottom: 38px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-bar { width: 4px; height: 22px; background: var(--section-bar); border-radius: 2px; }
+  .section-title { font-size: 15px; font-weight: 700; letter-spacing: 0.05em; color: var(--fg); margin: 0; text-transform: uppercase; }
+  .section-meta { font-size: 12px; color: var(--muted); margin-left: auto; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; transition: border-color 0.15s ease; }
+  .card:hover { border-color: var(--accent); }
+  .card h3 { margin: 0 0 8px; font-size: 15.5px; line-height: 1.4; }
+  .card h3 a { color: var(--fg); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .badge { font-size: 10.5px; background: var(--tag-bg); color: var(--tag-fg); padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em; }
+  .badge.src { background: #1f3550; color: #9ed5ff; }
+  .badge.date { background: transparent; color: var(--muted); padding-left: 0; }
+  .topic { display: inline-block; font-size: 10.5px; color: var(--accent2); border: 1px solid var(--accent2); padding: 1px 7px; border-radius: 999px; margin-right: 4px; }
+  .summary { font-size: 13.5px; color: #d2d7dd; margin: 0; }
+  .empty { font-style: italic; color: var(--muted); padding: 14px; text-align: center; background: var(--card); border: 1px dashed var(--border); border-radius: 6px; }
+  footer.bottom { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); }
+  footer.bottom a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <p class="kicker">Energy & Chemical Engineering</p>
+    <h1>Morning Brief — 2026년 5월 7일</h1>
+    <p class="meta">전기화학 · 배터리 · CO2RR · 수전해/수소 · 바이오매스 · 플라스틱 · 최근 24~72시간</p>
+  </header>
+
+  <section class="tldr">
+    <h2>TL;DR — 오늘의 핵심 3가지</h2>
+    <ol>
+      <li>CATL 'Super Tech Day 2026'에서 3세대 Shenxing(10C 평균/15C 피크 충전, 10→80% 3분 44초)과 Naxtra 나트륨이온 배터리 양산 로드맵 공개 — Changan Nevo A06이 세계 첫 양산 Na-ion EV.</li>
+      <li>Nature Communications, 산성 매질 강전계 + 양성자 차단으로 금속양이온 없이 CO2 환원 활성화 / 333 K 이상 고온 CO2RR에서 PdCu2O/PTFE/Ag 텐덤 전극으로 C2+ 효율 확보.</li>
+      <li>DOE PEM 수전해 CapEx 목표 $300/kW(2026) → $150/kW(2031), 스택 수명 80,000h, 전력원단위 43 kWh/kgH2 — Hydrogen Shot 비용 트랙 진행 중.</li>
+    </ol>
+  </section>
+
+  <!-- 1. 논문 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-bar"></span>
+      <h2 class="section-title">1 · 논문 (Peer-reviewed)</h2>
+      <span class="section-meta">Nature · Nature Energy · Nature Communications · ACS · Wiley</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Nature Energy</span>
+          <span class="badge date">2026-05</span>
+        </div>
+        <span class="topic">#solid-state</span><span class="topic">#self-discharge</span>
+        <h3><a href="https://www.nature.com/articles/s41560-026-02038-1" target="_blank" rel="noopener">Quantifying the self-discharge rate of solid-state batteries</a></h3>
+        <p class="summary">고체전해질의 전자전도도뿐 아니라 전기화학적 안정성도 자가방전을 좌우함을 정량적으로 분석. 같은 호의 분석 모델 논문과 함께 SSB 보관수명 평가의 표준 프레임워크를 제시 — 양산 단계의 셸프 라이프 보장 근거가 된다.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Nature Materials News & Views</span>
+          <span class="badge date">2026-05-05</span>
+        </div>
+        <span class="topic">#solid-state</span><span class="topic">#shelf-life</span>
+        <h3><a href="https://www.nature.com/subjects/batteries/nmat" target="_blank" rel="noopener">Internal self-discharge can compromise the shelf life of solid-state batteries</a></h3>
+        <p class="summary">고체전해질 분리막의 내부 자가방전 손실 메커니즘을 물리화학적으로 해석. 분리막 전기화학 안정성이 핵심 변수임을 보여, 차세대 SSB 설계 시 성능뿐 아니라 안정성 메트릭을 함께 보고해야 한다는 메시지.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Nature Communications</span>
+          <span class="badge date">2026-05</span>
+        </div>
+        <span class="topic">#CO2RR</span><span class="topic">#strong-acid</span>
+        <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Electric-field-driven CO2 polarization and bioinspired proton blocking unlock CO2RR in strong acid without metal cations</a></h3>
+        <p class="summary">샤프-삼각 Au 나노구조 + 양이온층이 만든 강한 국소 전기장으로 CO2 분자 쌍극자모멘트를 증가시켜 흡착·활성화. 금속양이온 없는 강산성 매질에서 CO2 환원이 가능함을 입증 — 멤브레인·시스템 단순화에 의미.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Nature Communications</span>
+          <span class="badge date">2026-05</span>
+        </div>
+        <span class="topic">#CO2RR</span><span class="topic">#high-T</span><span class="topic">#tandem</span>
+        <h3><a href="https://www.nature.com/articles/s41467-026-69506-w" target="_blank" rel="noopener">Synergistic electrode design for CO2 electrolysis to multicarbon products at elevated temperatures</a></h3>
+        <p class="summary">333 K 이상 고온 운전은 반응속도 향상과 동시에 촉매 재구성·HER 경쟁이라는 양면성을 가진다. 소수성 강화 PdCu2O/PTFE/Ag 텐덤 전극으로 C2+ 생성 효율을 확보 — 산업용 CO2RR 셀의 운전온도 상향 가능성을 시사.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Nature Communications</span>
+          <span class="badge date">2026-05</span>
+        </div>
+        <span class="topic">#CO2RR</span><span class="topic">#kinetics</span>
+        <h3><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Elucidating the rate-limiting step of CO2 electroreduction on metal phthalocyanines</a></h3>
+        <p class="summary">Co-phthalocyanine 촉매에서 분산 정도에 따라 율속단계가 달라짐(분자분산: *CO2 양성자화, 응집: CO2 흡착)을 규명. 분자 촉매 설계 시 담지·분산 제어가 활성·선택성을 직접 결정함을 보임.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. 정책/규제 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-bar"></span>
+      <h2 class="section-title">2 · 정책 / 규제</h2>
+      <span class="section-meta">DOE · IEA · 국가연구소</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">U.S. DOE / HFTO</span>
+          <span class="badge date">2026 진행 중</span>
+        </div>
+        <span class="topic">#hydrogen</span><span class="topic">#PEM</span>
+        <h3><a href="https://www.energy.gov/eere/fuelcells/technical-targets-proton-exchange-membrane-electrolysis" target="_blank" rel="noopener">DOE PEM Electrolysis Technical Targets — $300/kW (2026) → $150/kW (2031)</a></h3>
+        <p class="summary">청정수소 $2/kg(2026)·$1/kg(2031) 비용 목표를 달성하려면 PEM 수전해기 CapEx가 2026년 $300/kW까지 내려와야 한다는 분석. 동시에 스택 수명 80,000h, 전력원단위 43 kWhel/kgH2(궁극 목표) 트랙이 운영된다.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">DOE Hydrogen Program</span>
+          <span class="badge date">2024-Record (2026 인용)</span>
+        </div>
+        <span class="topic">#hydrogen</span><span class="topic">#cost</span>
+        <h3><a href="https://www.hydrogen.energy.gov/docs/hydrogenprogramlibraries/pdfs/24005-clean-hydrogen-production-cost-pem-electrolyzer.pdf" target="_blank" rel="noopener">Clean Hydrogen Production Cost — PEM Electrolyzer (DOE Record #24005)</a></h3>
+        <p class="summary">PEM 수전해 LCOH 산정 표준 레코드. 2026년 미국 내 PEM 수전해 시스템 비용·성능 가정의 베이스라인을 제공하며, 신규 보조금 신청·민관 컨소시엄 입찰에서 그대로 인용된다.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">IEA</span>
+          <span class="badge date">Global Hydrogen Review 2025 → 2026 정책 시그널</span>
+        </div>
+        <span class="topic">#hydrogen</span><span class="topic">#deployment</span>
+        <h3><a href="https://iea.blob.core.windows.net/assets/12d92ecc-e960-40f3-aff5-b2de6690ab6b/GlobalHydrogenReview2025.pdf" target="_blank" rel="noopener">IEA Global Hydrogen Review — EU 40 GW(2030), 중국 500 MW 단일 프로젝트 가동</a></h3>
+        <p class="summary">2025년 Envision Energy가 중국에서 500 MW 단일 수전해 프로젝트를 가동, 사우디 NEOM Green Hydrogen은 2027년 2 GW 이상으로 확장 예정. EU는 2030년 40 GW 누적 수전해 용량 목표를 유지.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. 산업 뉴스 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-bar"></span>
+      <h2 class="section-title">3 · 산업 뉴스</h2>
+      <span class="section-meta">CnEVPost · Electrek · EVTech · evmagazine</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">CnEVPost</span>
+          <span class="badge date">2026-04-21</span>
+        </div>
+        <span class="topic">#battery</span><span class="topic">#CATL</span><span class="topic">#fast-charging</span>
+        <h3><a href="https://cnevpost.com/2026/04/21/catl-unveils-new-battery-products-2026-tech-day/" target="_blank" rel="noopener">CATL Super Tech Day 2026 — 6대 신제품 공개로 시장 우위 방어</a></h3>
+        <p class="summary">Beijing에서 열린 'Beyond the Pole' 행사에서 3세대 Shenxing(초고속 충전), 3세대 Qilin, Qilin condensed matter, 2세대 Freevoy 하이브리드, Naxtra 나트륨, Ultra-Swap 등 6종을 공개 — 충전·EV 보급의 비용·속도 한계를 동시에 끌어내리는 라인업.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Electrek</span>
+          <span class="badge date">2026-04-22</span>
+        </div>
+        <span class="topic">#Na-ion</span><span class="topic">#mass-production</span>
+        <h3><a href="https://electrek.co/2026/04/22/catl-launching-sodium-ion-batteries-evs-2026/" target="_blank" rel="noopener">CATL, 2026년 말부터 EV용 나트륨이온 배터리 양산 — 370+ 마일 목표</a></h3>
+        <p class="summary">Changan Nevo A06가 세계 최초의 양산형 Na-ion 패신저 EV가 될 전망. 시제품·콘셉트 단계를 넘어선 첫 상용화 사례로, Li 의존도 완화·자원 다변화 측면에서 화학공학 공급망 의제에 직접 영향.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">EV Magazine</span>
+          <span class="badge date">2026-04 ~ 05</span>
+        </div>
+        <span class="topic">#solid-state</span><span class="topic">#Toyota</span><span class="topic">#Samsung</span>
+        <h3><a href="https://evmagazine.com/top10/top-10-solid-state-ev-battery-manufacturers" target="_blank" rel="noopener">Toyota·Samsung SDI 전고체 로드맵 — 2027~28 양산 가시화</a></h3>
+        <p class="summary">Toyota는 10분 충전·항속 20~50% 향상의 전고체 배터리를 2027~28년 양산 목표로 추진, Samsung SDI의 'super-gap' 전고체는 2027년 양산 계획. SSB 양산 캘린더가 OEM 단위로 좁혀지는 단계.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">Electrek</span>
+          <span class="badge date">2026-04-15</span>
+        </div>
+        <span class="topic">#solid-state</span><span class="topic">#breakthrough</span>
+        <h3><a href="https://electrek.co/2026/04/15/solid-state-ev-batteries-coming-sooner-than-expected/" target="_blank" rel="noopener">전고체 EV 배터리, 새로운 돌파구로 상용화 예상보다 앞당겨질 듯</a></h3>
+        <p class="summary">최근 발표된 셀-스택 안정성 개선 결과를 근거로, 전고체 EV 배터리의 상용화 시점이 기존 컨센서스보다 빨라질 가능성이 보도됨. 양산 라인 캐파시티 확보·소재 공급망이 다음 병목으로 지목된다.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. 프리프린트 -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-bar"></span>
+      <h2 class="section-title">4 · 프리프린트 (ChemRxiv / arXiv / ECSarXiv)</h2>
+      <span class="section-meta">peer review 전 결과</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2026 공개</span>
+        </div>
+        <span class="topic">#solid-state</span><span class="topic">#operando</span>
+        <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.12468170.v2" target="_blank" rel="noopener">Linking Void and Interphase Evolution to Electrochemistry in Solid-State Batteries (Operando X-Ray Tomography)</a></h3>
+        <p class="summary">Operando 싱크로트론 X-선 마이크로 CT로 사이클링 중 Li/SSE 계면의 보이드·인터페이스 진화를 직접 관측. SSB 열화 메커니즘 가시화의 새로운 표준 — 측정과 모델링의 정합성을 끌어올린다.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">ChemRxiv</span>
+          <span class="badge date">2025-2026</span>
+        </div>
+        <span class="topic">#electrolyte</span><span class="topic">#Li-ion</span>
+        <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-ndqzk-v2" target="_blank" rel="noopener">Evidence for significant multi-Li+ clustering in common lithium-ion battery electrolytes</a></h3>
+        <p class="summary">상용 Li-ion 전해질 내 다중 Li+ 클러스터링의 정량적 증거 제시. 이온 수송·스크리닝·SEI 형성 모델 갱신이 필요함을 시사 — 차세대 전해질·첨가제 설계 가이드를 다시 쓰는 출발점이 될 수 있다.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">arXiv</span>
+          <span class="badge date">2025-12 (지속 업데이트)</span>
+        </div>
+        <span class="topic">#energy-storage</span><span class="topic">#review</span>
+        <h3><a href="https://arxiv.org/pdf/2512.22680" target="_blank" rel="noopener">From Electrochemical Energy Storage to Next-Generation … (review preprint)</a></h3>
+        <p class="summary">차세대 전기화학 에너지 저장 시스템 전반(Li/Na/K-ion, 레독스 플로우, 금속-공기)을 통합 리뷰한 프리프린트. 시스템·재료·제조 관점의 공통 병목과 KPI 비교에 유용한 참고.</p>
+      </div>
+
+      <div class="card">
+        <div class="badges">
+          <span class="badge src">RSC Sustainability</span>
+          <span class="badge date">2026</span>
+        </div>
+        <span class="topic">#plastics</span><span class="topic">#upcycling</span>
+        <h3><a href="https://pubs.rsc.org/en/content/articlehtml/2026/su/d5su00506j" target="_blank" rel="noopener">Recent advances in chemical recycling and upcycling of plastic waste — comprehensive review</a></h3>
+        <p class="summary">마이크로파 보조 해중합·텐덤 촉매·코프로세싱 등 마일드 조건 신기술 정리. PET 알코올분해는 DMT 505 g·gcat⁻¹·h⁻¹, BHET 957 g·gcat⁻¹·h⁻¹의 STY 보고. 800 kg/배치 파일럿 스케일까지 도달.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bottom">
+    Energy & Chemical Engineering Morning Brief · 2026-05-07 · 자동 수집·요약 · 1차 출처 직접 확인 권장.<br>
+    Topics: 전기화학 · 배터리 · CO2RR · 수전해/수소 · 바이오매스 · 플라스틱.
+  </footer>
+</div>
+</body>
+</html>
