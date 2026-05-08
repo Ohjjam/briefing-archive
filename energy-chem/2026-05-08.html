@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Chemical Engineering Morning Brief — 2026-05-08</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2330;
+  --fg:#e6edf3; --muted:#8b949e; --line:#30363d;
+  --accent:#58a6ff; --accent-2:#3fb950; --warn:#d29922; --paper:#bc8cff;
+  --tag-bg:#21262d; --tag-fg:#c9d1d9;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",
+    "Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  font-size:14.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 24px 60px}
+
+header.brief{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}
+header.brief .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+header.brief h1{margin:6px 0 4px;font-size:28px;letter-spacing:-.01em;font-weight:700}
+header.brief .sub{color:var(--muted);font-size:13px}
+
+.tldr{background:linear-gradient(135deg,var(--panel) 0%,var(--panel2) 100%);
+  border:1px solid var(--line);border-left:3px solid var(--accent);
+  padding:16px 20px;border-radius:6px;margin-bottom:30px}
+.tldr h2{margin:0 0 8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tldr ol{margin:0;padding-left:22px}
+.tldr li{margin:4px 0}
+
+section.bucket{margin-bottom:36px}
+section.bucket > h2{font-size:18px;margin:0 0 14px;padding:10px 14px;
+  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:4px;display:flex;align-items:center;gap:10px}
+section.bucket > h2 .icon{font-size:18px}
+section.bucket.policy > h2{border-left-color:var(--warn)}
+section.bucket.industry > h2{border-left-color:var(--accent-2)}
+section.bucket.preprint > h2{border-left-color:var(--paper)}
+
+.cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+  padding:14px 16px;display:flex;flex-direction:column}
+.card h3{margin:0 0 8px;font-size:15px;line-height:1.4}
+.card h3 a{color:var(--fg);text-decoration:none}
+.card h3 a:hover{color:var(--accent);text-decoration:underline}
+.card .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.badge{background:var(--tag-bg);color:var(--tag-fg);font-size:11px;
+  padding:2px 8px;border-radius:10px;border:1px solid var(--line)}
+.badge.src{color:var(--accent);border-color:var(--accent)}
+.badge.date{color:var(--muted)}
+.badge.topic{background:#0d2b1a;color:var(--accent-2);border-color:#1d4d2b}
+.card p.summary{margin:0;font-size:13.5px;color:var(--tag-fg)}
+.card p.summary em{color:var(--fg)}
+code{background:#0d1f33;color:#79c0ff;padding:1px 6px;border-radius:3px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:90%}
+
+.empty{padding:18px;background:var(--panel);border:1px dashed var(--line);
+  border-radius:6px;color:var(--muted);font-style:italic;text-align:center}
+
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--muted)}
+@media(max-width:520px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="brief">
+  <div class="eyebrow">Energy & Chemical Engineering · Morning Brief</div>
+  <h1>에너지·화학공학 데일리 브리프</h1>
+  <div class="sub">2026년 5월 8일 (금) · 최근 24~72시간 (확장: 최근 2주) 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR — 오늘의 3가지</h2>
+  <ol>
+    <li><strong>kW급 무알칼리 양이온 CO₂ 전해 1,000시간 안정 운전</strong> (Nat. Commun.) — 산업 전류밀도에서 CO·C₂H₂ 생산 가능, 시스템 안정성 새 기준점.</li>
+    <li><strong>리튬 배터리급 가격 Q1 2026에 두 배 — 톤당 $26,278</strong> (Bloomberg) — 동시에 팩 단가는 글로벌 평균 $105/kWh로 3% 하락 전망. 원자재·셀 가격이 디커플링.</li>
+    <li><strong>EU SUPREME — PFAS-free 전해, Ir 사용량 75% 절감 + 90% 재활용 목표</strong> (DOE/IEA 정책 큐와 호환) — 그린수소 비용곡선이 또 한번 꺾일 변곡점.</li>
+  </ol>
+</div>
+
+<!-- =================== 논문 =================== -->
+<section class="bucket">
+  <h2><span class="icon">📄</span>논문 (Peer-reviewed)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2026 (in press)</span>
+        <span class="badge topic">CO2RR</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-026-69175-9" target="_blank" rel="noopener">Kilowatt-scale alkali-cation-free CO₂ electrolysis via accelerating mass transfer</a></h3>
+      <p class="summary">알칼리 양이온 없이 산성 환경에서 작동하는 kW급 CO₂ 전해 셀. <em>"over 1000 hours of stability"</em>를 산업 전류밀도에서 달성, CO/C₂H₂ 직접 생산. 양이온 손실·물 관리 문제를 동시에 해소했다는 점에서 스케일업의 결정적 진전.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">CO2RR</span>
+        <span class="badge topic">Acidic media</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Electric-field-driven CO₂ polarization and bioinspired proton blocking unlock CO₂ reduction in strong acid without metal cations</a></h3>
+      <p class="summary">강산 환경에서 금속 양이온 없이 CO₂ 환원을 가능케 하는 '바이오 inspired sharp gold triangles' + 양성자 차단층. 수소 발생을 억제하고 CO₂를 표적 분극시켜 패러데이 효율 손실을 차단.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">Electrocatalysis</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Elucidating the rate-limiting step of CO₂ electroreduction on metal phthalocyanines</a></h3>
+      <p class="summary">코발트 프탈로시아닌 분산 상태에 따라 율속 단계가 달라진다. <em>분자 수준 분산</em>에서는 흡착 CO₂의 양성자화가, <em>응집 상태</em>에서는 CO₂ 흡착 자체가 율속. 분자 촉매 설계의 정량 지표 제공.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2025–2026</span>
+        <span class="badge topic">Solid-state battery</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-025-64726-y" target="_blank" rel="noopener">Mechanically robust halide electrolytes for high-performance all-solid-state batteries</a></h3>
+      <p class="summary">기계적으로 강건한 할라이드 고체전해질 — 충방전 사이클 중 균열·접촉 손실을 줄여 ASSB의 사이클 수명을 늘린다. 고분자·황화물 대비 가공성·전압 안정성의 균형 시사.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications</span>
+        <span class="badge date">2025–2026</span>
+        <span class="badge topic">Li-metal</span>
+        <span class="badge topic">AI/ML</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-025-66079-y" target="_blank" rel="noopener">Real-time artificial intelligence for solid-state lithium metal batteries</a></h3>
+      <p class="summary">실시간 ML 기반 셀 진단·제어로 Li-metal ASSB의 short circuit 위험과 dendrite 거동을 조기에 잡아내는 프레임워크. 차세대 BMS 설계의 단초.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== 정책/규제 =================== -->
+<section class="bucket policy">
+  <h2><span class="icon">🏛</span>정책 / 규제 (Policy)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">IEA</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">Hydrogen</span>
+      </div>
+      <h3><a href="https://www.iea.org/policies/28771-hydrogen-roadmap" target="_blank" rel="noopener">IEA Hydrogen Roadmap — 정책 개혁 촉구</a></h3>
+      <p class="summary">IEA가 저배출 수소 도입이 산업·정부 기대치를 밑돌고 있다고 진단. 2030년까지 총 수소 수요의 약 4% 점유 시나리오를 유지하려면 정책 인센티브 재설계가 필요하다는 메시지. <em>"policy reform to unlock next phase"</em>.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">U.S. DOE</span>
+        <span class="badge date">2026 target</span>
+        <span class="badge topic">Hydrogen</span>
+      </div>
+      <h3><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">Hydrogen Shot — $2/kg H₂ (2026), $1/kg H₂ (2031)</a></h3>
+      <p class="summary">DOE의 Hydrogen Shot 비용 목표. PEM·SOEC·AEM 전반의 셀·BoP 비용 절감 로드맵을 함께 발표. 2026년 목표 달성 여부가 차기 정책 사이클의 핵심 점검 항목.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">EU SUPREME (Horizon)</span>
+        <span class="badge date">2026 진행</span>
+        <span class="badge topic">PEM/AEM</span>
+      </div>
+      <h3><a href="https://www.sciencedaily.com/releases/2026/02/260226042452.htm" target="_blank" rel="noopener">PFAS-free 전해 시스템 — Ir 사용량 75% 감축, 90% 재활용</a></h3>
+      <p class="summary">University of Southern Denmark·Ceimig 등이 참여한 EU SUPREME 프로젝트. PFAS-free 멤브레인과 이리듐 절감·회수 기술을 동시 개발. 그린수소의 환경·지정학 리스크를 동시에 줄이는 패키지.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">IEA</span>
+        <span class="badge date">2026</span>
+        <span class="badge topic">Cross-sector</span>
+      </div>
+      <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026/overview-dashboard" target="_blank" rel="noopener">State of Energy Policy 2026 — 정책 트래커 대시보드</a></h3>
+      <p class="summary">에너지 위기 대응 정책 트래커가 2026 버전으로 업데이트. 보조금·세제·표준의 횡적 비교가 가능해 업체 입찰·R&D 우선순위 의사결정에 직접 활용 가능.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== 산업 =================== -->
+<section class="bucket industry">
+  <h2><span class="icon">🏭</span>산업 뉴스 (Industry)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Bloomberg</span>
+        <span class="badge date">2026-04~05</span>
+        <span class="badge topic">Lithium</span>
+      </div>
+      <h3><a href="https://investingnews.com/daily/resource-investing/battery-metals-investing/lithium-investing/lithium-forecast/" target="_blank" rel="noopener">Q1 2026 리튬 카보네이트 가격 두 배 — 톤당 $26,278</a></h3>
+      <p class="summary">공급 지연과 투기성 매수가 결합. 셀 단가는 LFP 확산·과잉 캐파시티로 하락 압력이 있지만, 전구체 단계의 가격 상승은 2H 2026 마진에 직접 부담. 양극재 업체 헤지 전략 재점검 필요.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Bloomberg</span>
+        <span class="badge date">2026-04-21</span>
+        <span class="badge topic">Sodium-ion</span>
+      </div>
+      <h3><a href="https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage" target="_blank" rel="noopener">Na-ion, EV·ESS의 진짜 대안으로 — CATL 첫 Na-ion EV 출시</a></h3>
+      <p class="summary">CATL이 Na-ion 셀 양산을 시작했고 자체 EV에 채택할 계획. 저온 성능과 비용에서 LFP 대비 장점이 분명해진 변곡점. 한국 셀 메이커의 Na-ion 로드맵 부재가 다시 변수.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Bloomberg / BNEF</span>
+        <span class="badge date">2025-12 → 2026</span>
+        <span class="badge topic">Battery price</span>
+      </div>
+      <h3><a href="https://www.bloomberg.com/news/articles/2025-12-09/bnef-why-global-battery-prices-are-expected-to-fall-in-2026" target="_blank" rel="noopener">BNEF: 2026 글로벌 배터리 팩 단가 $105/kWh 전망 (–3%)</a></h3>
+      <p class="summary">중국발 캐파시티 과잉, 경쟁 심화, LFP 비중 확대가 가격 하락의 3대 동인. EV 진영의 손익분기 시점이 한 계단 더 앞당겨질 가능성.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">MIT Tech Review</span>
+        <span class="badge date">2026-02</span>
+        <span class="badge topic">EV battery</span>
+      </div>
+      <h3><a href="https://www.technologyreview.com/2026/02/02/1132042/whats-next-for-ev-batteries-in-2026/" target="_blank" rel="noopener">What's next for EV batteries in 2026 — 4가지 키워드</a></h3>
+      <p class="summary">유럽 EV 신차 판매 3월 +33% YoY. LFP 점유 확대, Na-ion 본격 양산, ASSB 시범 차량 탑재, 중국 셀 가격 디플레이션이 2026의 4대 키워드.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Energy Planets / 산업 보도</span>
+        <span class="badge date">2026-05-05</span>
+        <span class="badge topic">Plastic recycling</span>
+      </div>
+      <h3><a href="https://www.energyplanets.org/a-chemical-breakthrough-that-could-fix/" target="_blank" rel="noopener">Denovia, PET 5분 화학적 해중합 공정 공개</a></h3>
+      <p class="summary">PET를 TPA·MEG로 5분 안에 분해하는 액상 공정 — 기존 30~180분(150°C+) 대비 에너지·시간 모두 단축. 폐기물 회수 인프라와 결합 시 EU PPWR·CBAM 시나리오에서 비용우위 가능.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== 프리프린트 =================== -->
+<section class="bucket preprint">
+  <h2><span class="icon">📝</span>프리프린트 (Preprints)</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">ChemRxiv</span>
+        <span class="badge date">2026-01-06</span>
+        <span class="badge topic">eDAC</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-gbd1r" target="_blank" rel="noopener">Electrochemical Direct Air Capture by Local Alkalinity Generation at 3D Interfaces</a></h3>
+      <p class="summary">3D 전극-공기 계면에서 국소 OH⁻를 생성해 흡수 동역학을 개선한 eDAC. 펄스 전류 프로토콜로 50시간 이상 안정 운전, 기존 eDAC 대비 한 자릿수 높은 전류밀도. 분산형 DAC의 가능성 확장.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">ChemRxiv</span>
+        <span class="badge date">2025–2026</span>
+        <span class="badge topic">Bioelectrochemistry</span>
+      </div>
+      <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-q3f4b/v2" target="_blank" rel="noopener">Direct electrochemistry of hydrogenase, FDH, CODH, and nitrogenase: solar fuels</a></h3>
+      <p class="summary">금속효소를 전극에 직접 와이어링해 수소·포름산·CO·NH₃ 생산을 검토. 솔라 연료 시나리오에서 효소-전기촉매 하이브리드의 메커니즘 인사이트 정리.</p>
+    </div>
+
+    <div class="card">
+      <div class="badges">
+        <span class="badge src">Nature Communications (preprint-level)</span>
+        <span class="badge date">2025</span>
+        <span class="badge topic">PET hydrolase</span>
+      </div>
+      <h3><a href="https://www.nature.com/articles/s41467-025-60016-9" target="_blank" rel="noopener">Standardization guidelines and future trends for PET hydrolase research</a></h3>
+      <p class="summary">PET 가수분해 효소의 활성·기질·반응 조건 보고 표준화 가이드라인. <em>Beyonce Rule</em> 관점에서 산업 데이터 비교 가능성을 끌어올리는 인프라성 작업.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>본 브리프는 자동화된 데일리 큐레이션이며, 인용된 1차 출처(저널 / IEA / Bloomberg 등)를 직접 확인하시기 바랍니다. 발행 1주를 초과한 자료는 후보 부족 시 2주까지 포함했습니다 (Nature 학술지 발행 사이클 특성 반영).</p>
+  <p>생성: 2026-05-08 · Energy & Chemical Engineering Morning Brief</p>
+</footer>
+
+</div>
+</body>
+</html>

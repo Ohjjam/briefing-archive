@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 — 2026-05-08</title>
+<style>
+  :root{
+    --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+    --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:1100px; margin:0 auto;}
+  header.top{
+    border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;
+  }
+  header.top h1{
+    font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;
+  }
+  header.top .meta{color:var(--muted); font-size:14px;}
+  h2.section{
+    font-size:18px; margin:32px 0 12px; padding:8px 12px;
+    border-left:4px solid var(--accent); background:var(--accent-soft);
+    letter-spacing:0.02em;
+  }
+  .tldr{
+    background:#fff; border:1px solid var(--line); border-radius:8px;
+    padding:16px 20px; margin-bottom:8px;
+  }
+  .tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+  .tldr ul{margin:0; padding-left:20px;}
+  .tldr li{margin-bottom:6px;}
+  .grid{display:grid; gap:14px; grid-template-columns:1fr;}
+  @media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:14px 16px;
+  }
+  .card h3{
+    font-size:15.5px; margin:0 0 6px; line-height:1.35;
+  }
+  .card .src{
+    font-size:12.5px; color:var(--muted); margin-bottom:8px;
+  }
+  .card p{margin:0; font-size:14px;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;
+  }
+  .quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+  .unverified{
+    color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+    border:1px solid var(--warn); padding:1px 4px; border-radius:3px;
+  }
+  blockquote{
+    border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+    color:var(--muted); font-size:13.5px; font-style:italic;
+  }
+  footer{
+    margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);
+  }
+  footer ol{padding-left:20px;}
+  footer li{margin-bottom:3px; word-break:break-all;}
+  @media(max-width:400px){
+    body{padding:16px 10px;}
+    header.top h1{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>AI 일일 브리핑</h1>
+    <div class="meta">2026년 5월 8일 (금) · 지난 24~72시간 주요 동향</div>
+  </header>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>Anthropic, <code>claude-opus-4-7</code> 공개 — 사이버보안 악용 자동 차단 가드 추가, 모든 채널(Bedrock·Vertex·Foundry) 동시 배포.</li>
+      <li>OpenAI, ChatGPT 기본 모델을 <code>gpt-5.5-instant</code>로 교체 (5/5) — 환각 52.5% 감소, 응답 길이 30% 단축. 5/7에는 음성 추론·번역·전사 신규 모델 API 출시.</li>
+      <li>Anthropic, SpaceX <em>Colossus 1</em>의 GPU 22만 장(300MW) 전량 임차 — Claude Pro/Max 캐파시티 직접 확대.</li>
+      <li>Mistral <code>Medium 3.5</code> (128B dense, 256k ctx) Le Chat 기본 모델 채택, SWE-Bench Verified 77.6%.</li>
+      <li>xAI는 SpaceXAI로 통합 — Grok·X·AI 제품군 SpaceX 산하로 이전, Grok 4.3 출시.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">OpenAI</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant — ChatGPT 신규 기본 모델</a></h3>
+      <div class="src">OpenAI 공식 블로그 · 2026-05-05</div>
+      <p>OpenAI가 <code>gpt-5.5-instant</code>를 ChatGPT 전체 사용자 기본 모델로 전환했다. <em>"52.5% fewer hallucinated claims"</em>, 응답 단어 수는 30.2%, 줄 수는 29.2% 감소. 불필요한 이모지·후속 질문 절감을 명시적 목표로 설정.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">음성 추론·번역·전사 신규 API 모델</a></h3>
+      <div class="src">OpenAI News · 2026-05-07</div>
+      <p>API에 추론·번역·전사 능력이 결합된 새 음성 모델군이 도입됐다. 멀티턴 음성 에이전트와 실시간 통역 워크플로우를 겨냥하며, 기존 Realtime/Voice 스택 후속.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/" target="_blank" rel="noopener">메모리 소스 컨트롤·연결 Gmail 개인화 확대</a></h3>
+      <div class="src">TechCrunch · 2026-05-05</div>
+      <p>과거 채팅·파일·연결된 Gmail 컨텍스트를 활용한 개인화가 Plus/Pro 웹에 우선 배포. "memory sources" 신규 컨트롤로 어떤 컨텍스트가 응답 생성에 쓰였는지 표시·삭제 가능.</p>
+    </div>
+  </div>
+
+  <h2 class="section">Google (Gemini / DeepMind)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/" target="_blank" rel="noopener">Workspace Intelligence — Gemini의 실시간 업무 컨텍스트 그라운딩</a></h3>
+      <div class="src">Google Blog · 2026-05 초</div>
+      <p>Gmail·Chat·Calendar·Drive 데이터를 Gemini가 사용자 지시 없이도 자동 인지하도록 하는 Workspace Intelligence 레이어 도입. "쿼리마다 컨텍스트 수동 제공" 부담 제거가 핵심 가치 제안.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://releasebot.io/updates/google/gemini" target="_blank" rel="noopener">Gemini Embedding 2 정식(GA) 출시</a></h3>
+      <div class="src">Releasebot / Google · 2026-05</div>
+      <p>텍스트·이미지·비디오·오디오를 동일 공간에 임베딩하는 <code>gemini-embedding-2</code>가 Gemini API/Vertex AI에서 GA. 멀티모달 검색·추론 파이프라인의 프로덕션 이행을 노린다.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://aistudio.google.com/" target="_blank" rel="noopener">AI Studio 사용량 한도 상향 — Pro/Ultra 가입자</a></h3>
+      <div class="src">Google AI Studio · 2026-05 <span class="unverified">[미확인]</span></div>
+      <p>Google AI Pro·Ultra 구독자 대상 AI Studio 한도가 상향 조정됐다는 보고. 정확한 변경 수치는 공식 발표문에서 확인 필요.</p>
+    </div>
+  </div>
+
+  <h2 class="section">Anthropic</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Claude Opus 4.7 출시 — 사이버보안 가드 강화</a></h3>
+      <div class="src">Anthropic News · 2026-05</div>
+      <p><code>claude-opus-4-7</code>이 <code>opus-4-6</code> 대비 다수 벤치마크에서 개선. 금지·고위험 사이버보안 요청을 자동 탐지·차단하는 안전 장치 신규 탑재. Claude 제품 전반·API·Bedrock·Vertex AI·Microsoft Foundry 동시 가용.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/" target="_blank" rel="noopener">Claude Managed Agents — Dreaming · 멀티에이전트 오케스트레이션</a></h3>
+      <div class="src">9to5Mac · 2026-05-07</div>
+      <p>"Dreaming"은 과거 세션을 복기해 패턴을 추출, 에이전트의 자기 개선을 돕는다. <em>"lets a lead agent break the job into pieces and delegate"</em> — 리드 에이전트가 작업을 쪼개 모델·프롬프트·툴이 다른 전문 에이전트에게 위임하는 멀티에이전트 오케스트레이션 도입.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener">월가 본격 진출 — Microsoft 365 풀 통합 + Moody's 임베디드</a></h3>
+      <div class="src">Fortune · 2026-05-05</div>
+      <p>Claude가 Excel·PowerPoint·Word·Outlook을 가로지르는 단일 에이전트로 동작. Moody's가 6억 개 이상 기업의 신용 등급·리스크 데이터를 Claude 네이티브 앱으로 임베드.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">SpaceX Colossus 1 컴퓨트 전량 임차 — 220k+ NVIDIA GPU</a></h3>
+      <div class="src">Anthropic · 2026-05</div>
+      <p>이번 달 내 300MW(220,000+ GPU) 신규 캐파시티 확보. Claude Pro/Max 사용자 한도 직접 개선이 명시 목표.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Claude Code 5시간 한도 2배 — 피크 시간 감산 폐지</a></h3>
+      <div class="src">Anthropic Release Notes · 2026-05</div>
+      <p>Pro·Max·Team·Seat 기반 Enterprise 플랜에서 Claude Code 5시간 단위 한도가 2배로 상향. Pro/Max는 피크 시간대 한도 감산도 제거.</p>
+    </div>
+  </div>
+
+  <h2 class="section">Meta</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://ai.meta.com/research/publications/the-llama-3-herd-of-models/" target="_blank" rel="noopener">Llama 3 Herd 논문 공개</a></h3>
+      <div class="src">Meta AI Research · 2026-05-06</div>
+      <p>Llama 팀이 다국어·코드·추론·툴 사용을 네이티브로 지원하는 파운데이션 모델군 "Llama 3 Herd"를 발표. 학술적 디테일 공개로 오픈웨이트 생태계 후속 빌드용 레퍼런스가 될 전망.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://seekingalpha.com/news/4490229-meta-pushes-to-release-new-llama-model-before-2026" target="_blank" rel="noopener">차세대 Llama 출시 가속화 보도</a></h3>
+      <div class="src">Seeking Alpha · 2026-05 <span class="unverified">[미확인]</span></div>
+      <p>Meta가 GPT-5.5·Claude Opus 4.7·Gemini 3.1 Ultra 경쟁 압력 속에 차기 Llama 출시를 앞당기고 있다는 보도. 공식 일정·모델명 미확인 상태.</p>
+    </div>
+  </div>
+
+  <h2 class="section">xAI</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://aitoolsrecap.com/Blog/xai-dissolved-spacexai-elon-musk-announcement-2026" target="_blank" rel="noopener">xAI 해체 → SpaceXAI로 통합</a></h3>
+      <div class="src">AI Tools Recap · 2026-05 <span class="unverified">[미확인]</span></div>
+      <p>Elon Musk 발표로 xAI가 별도 법인으로서 해체되고 Grok·X·AI 제품군이 SpaceX 산하 SpaceXAI 브랜드로 이전. SpaceXAI가 Anthropic과 Colossus 1 임대 계약을 직접 체결한 주체로 명시됨.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://medium.com/nlplanet/xai-releases-grok-4-3-weekly-ai-newsletter-may-4th-2026-4b7e8fea0f10" target="_blank" rel="noopener">Grok 4.3 — 1M 컨텍스트, 네이티브 비디오 입력</a></h3>
+      <div class="src">NLPlanet Weekly · 2026-05-04</div>
+      <p>비용 효율형 프론티어 모델로 추론 내장, 1M 토큰 컨텍스트, 네이티브 비디오 입력 지원. 롤아웃 초기 일부 지역 일시 장애 보고.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Voice Agent API · Grok Speech to Text/TTS</a></h3>
+      <div class="src">xAI Docs · 2026-05</div>
+      <p><code>grok-voice-think-fast-1.0</code> 출시 (저지연·25개 언어·툴 사용 정확도 강조). 독립 STT/TTS API도 신규 — 실시간·배치 엔드포인트, 화자 분리, 타임스탬프, 표현 태그 지원. 엔터프라이즈는 보장된 TPM 전용 캐파시티 구매 가능.</p>
+    </div>
+  </div>
+
+  <h2 class="section">Mistral AI</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://the-decoder.com/mistrals-new-flagship-medium-3-5-folds-chat-reasoning-and-code-into-one-model/" target="_blank" rel="noopener">Mistral Medium 3.5 — 128B dense, 256k 컨텍스트</a></h3>
+      <div class="src">the-decoder · 2026-05-02 (영향권 5/7)</div>
+      <p>Mistral 첫 "병합형" 플래그십. 채팅·추론·코드를 단일 모델에 통합, SWE-Bench Verified 77.6%. Le Chat 기본 모델 전환, 오픈웨이트로 Hugging Face 공개.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener">Vibe 원격 에이전트 — 비동기 코딩</a></h3>
+      <div class="src">Mistral AI News · 2026-05</div>
+      <p>CLI·Le Chat에서 스폰되는 클라우드 세션. 로컬 CLI 세션을 클라우드로 "텔레포트"해 격리 샌드박스에서 실행, 완료 시 PR 생성.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://www.infoq.com/news/2026/05/mistral-agents-lechat/" target="_blank" rel="noopener">Le Chat Work Mode — 다단계 에이전트 워크플로우</a></h3>
+      <div class="src">InfoQ · 2026-05</div>
+      <p>메일·캘린더·문서 등 커넥터가 기본 활성화된 Work Mode. 외부 데이터 접근·분석·메시지 초안·이슈 생성·리포트 생성을 다단계로 실행.</p>
+    </div>
+  </div>
+
+  <h2 class="section">기타 주목할 만한 동향</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens" target="_blank" rel="noopener">IBM Think 2026 — 엔터프라이즈 AI 풀스택</a></h3>
+      <div class="src">IBM Newsroom · 2026-05-05</div>
+      <p>watsonx Orchestrate 차세대(멀티 에이전트 오케스트레이션), IBM Confluent(실시간 데이터→AI), Concert(지능형 운영), Sovereign Core(주권 운영) 동시 발표. "AI Operating Model" 청사진 제시.</p>
+    </div>
+    <div class="card">
+      <h3><a href="https://venturebeat.com/technology/googles-new-deep-research-and-deep-research-max-agents-can-search-the-web-and-your-private-data" target="_blank" rel="noopener">Deep Research Max — 자율 리서치 에이전트 진화</a></h3>
+      <div class="src">VentureBeat · 2026-05 (선행 4월말)</div>
+      <p>웹 + 프라이빗 데이터 동시 탐색 가능한 자율 리서치 에이전트. Gemini 3.1 Pro 기반, 사내 자료까지 쿼리 범위 확장.</p>
+    </div>
+  </div>
+
+  <footer>
+    <strong>출처</strong>
+    <ol>
+      <li><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">openai.com — GPT-5.5 Instant</a></li>
+      <li><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/" target="_blank" rel="noopener">TechCrunch — GPT-5.5 Instant default</a></li>
+      <li><a href="https://openai.com/news/" target="_blank" rel="noopener">openai.com/news</a></li>
+      <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/" target="_blank" rel="noopener">blog.google — Gemini</a></li>
+      <li><a href="https://releasebot.io/updates/google/gemini" target="_blank" rel="noopener">Releasebot — Gemini May 2026</a></li>
+      <li><a href="https://venturebeat.com/technology/googles-new-deep-research-and-deep-research-max-agents-can-search-the-web-and-your-private-data" target="_blank" rel="noopener">VentureBeat — Deep Research Max</a></li>
+      <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">anthropic.com/news — Claude Opus 4.7</a></li>
+      <li><a href="https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/" target="_blank" rel="noopener">9to5Mac — Claude Managed Agents</a></li>
+      <li><a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" target="_blank" rel="noopener">Fortune — Anthropic × Wall Street</a></li>
+      <li><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Releasebot — Claude Code</a></li>
+      <li><a href="https://ai.meta.com/research/publications/the-llama-3-herd-of-models/" target="_blank" rel="noopener">Meta AI — Llama 3 Herd</a></li>
+      <li><a href="https://seekingalpha.com/news/4490229-meta-pushes-to-release-new-llama-model-before-2026" target="_blank" rel="noopener">Seeking Alpha — Meta Llama push</a></li>
+      <li><a href="https://aitoolsrecap.com/Blog/xai-dissolved-spacexai-elon-musk-announcement-2026" target="_blank" rel="noopener">AI Tools Recap — SpaceXAI</a></li>
+      <li><a href="https://medium.co
