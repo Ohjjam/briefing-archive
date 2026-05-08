@@ -6,242 +6,226 @@
 <title>Daily Briefing — 2026년 5월 8일</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+KR:wght@600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+KR:wght@600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#fafaf7; --fg:#1a1a1a; --body:#333; --muted:#777;
-  --accent:#8b0000; --line:#1a1a1a; --line-soft:#d8d4ca;
-  --col-int:#5a4a3a; --col-pol:#1f3a5f; --col-eco:#2e6b3e;
-  --col-cul:#7a3b6e; --col-kr:#8b0000;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font-family:"Noto Sans KR",-apple-system,sans-serif;font-weight:300;
-  font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased}
-.paper{max-width:780px;margin:0 auto;padding:40px;background:var(--bg)}
-.mast{text-align:center;border-top:3px double var(--line);border-bottom:1px solid var(--line);
-  padding:18px 0 14px;margin-bottom:8px}
-.mast .pub{font-family:"Playfair Display","Noto Serif KR",serif;font-weight:900;
-  font-size:42px;letter-spacing:.04em;line-height:1;margin:0 0 8px}
-.mast .pub-ko{font-family:"Noto Serif KR",serif;font-size:14px;color:var(--muted);
-  letter-spacing:.18em;margin:0 0 12px}
-.mast .date-row{display:flex;justify-content:space-between;
-  font-family:"Noto Serif KR",serif;font-size:12px;color:var(--muted);
-  text-transform:uppercase;letter-spacing:.1em;
-  border-top:1px solid var(--line-soft);padding-top:8px}
-.dek{text-align:center;font-family:"Noto Serif KR",serif;font-style:italic;
-  color:var(--muted);font-size:13px;margin:14px 0 32px}
-.cat{margin-bottom:34px}
-.cat-head{display:flex;align-items:center;gap:10px;
-  margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.cat-bar{width:5px;height:22px;background:var(--accent);flex-shrink:0}
-.cat-head h2{margin:0;font-family:"Noto Serif KR",serif;font-weight:700;
-  font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg)}
-.cat-head .cat-meta{margin-left:auto;font-size:11px;color:var(--muted);
-  letter-spacing:.1em}
-.cat-국제 .cat-bar{background:var(--col-int)}
-.cat-정치 .cat-bar{background:var(--col-pol)}
-.cat-경제 .cat-bar{background:var(--col-eco)}
-.cat-문화 .cat-bar{background:var(--col-cul)}
-.cat-한국 .cat-bar{background:var(--col-kr)}
-.story{margin-bottom:18px;padding-bottom:16px;border-bottom:1px dotted var(--line-soft)}
-.story:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
-.story h3{font-family:"Noto Serif KR",serif;font-weight:700;
-  font-size:18px;line-height:1.4;margin:0 0 6px;color:var(--fg)}
-.story .summary{margin:0 0 6px;font-size:14px;color:var(--body);font-weight:300}
-.story .src{font-size:11px;color:var(--muted);font-family:"Noto Serif KR",serif;
-  letter-spacing:.05em}
-.story .src a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-soft)}
-.story .src a:hover{color:var(--accent);border-color:var(--accent)}
-footer{margin-top:36px;padding-top:14px;border-top:3px double var(--line);
-  text-align:center;font-family:"Noto Serif KR",serif;font-size:11px;color:var(--muted);
-  letter-spacing:.12em}
-@media print{
-  body{background:#fff}
-  .paper{max-width:none;padding:20px;background:#fff}
-  .story h3{page-break-after:avoid}
-  .story{page-break-inside:avoid}
-}
-@media (max-width:520px){
-  .paper{padding:24px 16px}
-  .mast .pub{font-size:30px}
-  .story h3{font-size:16px}
-  .mast .date-row{flex-direction:column;gap:4px;text-align:center}
-}
+  :root{
+    --bg:#fafaf7; --fg:#1a1a1a; --muted:#666; --rule:#1a1a1a;
+    --accent:#8b0000; --soft:#e9e6dd;
+    --pol:#1f5d8c; --eco:#2d6a4f; --cul:#7a5b2e; --kor:#8b0000; --intl:#444;
+  }
+  *{box-sizing:border-box}
+  html,body{background:var(--bg); color:var(--fg);}
+  body{
+    margin:0; padding:40px 16px; line-height:1.6;
+    font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    font-weight:400;
+  }
+  .paper{
+    max-width:780px; margin:0 auto; padding:40px 32px;
+    background:var(--bg);
+  }
+  .masthead{
+    text-align:center; padding-bottom:16px;
+    border-top:1px solid var(--rule); border-bottom:3px double var(--rule);
+    padding-top:20px; margin-bottom:28px;
+  }
+  .masthead h1{
+    font-family:"Playfair Display","Noto Serif KR",serif;
+    font-weight:900; font-size:48px; margin:0 0 6px; letter-spacing:0.02em;
+  }
+  .masthead .date{
+    font-family:"Noto Serif KR",serif; font-style:italic; font-size:14px;
+    color:var(--muted); letter-spacing:0.05em;
+  }
+  .masthead .strap{
+    font-size:11px; letter-spacing:0.4em; text-transform:uppercase;
+    color:var(--muted); margin-top:8px;
+  }
+  section.cat{margin:36px 0 8px;}
+  .cat-header{
+    display:flex; align-items:center; gap:10px;
+    border-bottom:1px solid var(--rule); padding-bottom:6px; margin-bottom:14px;
+  }
+  .cat-bar{width:4px; height:18px; background:var(--accent);}
+  .cat-title{
+    font-family:"Noto Serif KR",serif; font-weight:700;
+    font-size:13px; letter-spacing:0.25em; text-transform:uppercase;
+  }
+  .cat[data-c="pol"] .cat-bar{background:var(--pol);}
+  .cat[data-c="eco"] .cat-bar{background:var(--eco);}
+  .cat[data-c="cul"] .cat-bar{background:var(--cul);}
+  .cat[data-c="kor"] .cat-bar{background:var(--kor);}
+  .cat[data-c="intl"] .cat-bar{background:var(--intl);}
+  article.hl{
+    padding:14px 0; border-bottom:1px solid #d8d6cf;
+  }
+  article.hl:last-child{border-bottom:none;}
+  article.hl h2{
+    font-family:"Noto Serif KR",serif; font-weight:700;
+    font-size:18px; line-height:1.4; margin:0 0 6px;
+  }
+  article.hl p.summary{
+    font-size:14px; color:#333; margin:0 0 6px;
+  }
+  article.hl .src{
+    font-size:12px; color:#777; font-style:italic;
+  }
+  article.hl .src a{color:var(--accent); text-decoration:none;}
+  article.hl .src a:hover{text-decoration:underline;}
+  @media print{
+    body{background:#fff; padding:0;}
+    .paper{padding:20px;}
+    a{color:inherit; text-decoration:none;}
+    article.hl{break-inside:avoid;}
+  }
+  @media (max-width:520px){
+    body{padding:20px 8px;}
+    .paper{padding:20px 14px;}
+    .masthead h1{font-size:36px;}
+    article.hl h2{font-size:16px;}
+  }
 </style>
 </head>
 <body>
 <div class="paper">
 
-  <header class="mast">
-    <div class="pub">DAILY BRIEFING</div>
-    <div class="pub-ko">데일리 브리핑</div>
-    <div class="date-row">
-      <span>Vol. 2026 · No. 128</span>
-      <span>금요일 · 2026년 5월 8일</span>
-      <span>오늘의 시사</span>
-    </div>
+  <header class="masthead">
+    <div class="strap">Established Daily</div>
+    <h1>Daily Briefing</h1>
+    <div class="date">2026년 5월 8일 · 금요일</div>
   </header>
 
-  <p class="dek">"오늘 세계가 무엇을 읽고 있는가" — 5개 카테고리, 18건의 헤드라인</p>
+  <section class="cat" data-c="intl">
+    <div class="cat-header"><div class="cat-bar"></div><div class="cat-title">국제 · 시사</div></div>
 
-  <!-- ============ 국제·시사 ============ -->
-  <section class="cat cat-국제">
-    <div class="cat-head">
-      <div class="cat-bar"></div>
-      <h2>WORLD · 국제 · 시사</h2>
-      <span class="cat-meta">4 stories</span>
-    </div>
-
-    <article class="story">
-      <h3>이란, 트럼프 행정부의 종전안 검토 — "30일 내 해결" 압박</h3>
-      <p class="summary">이란은 종전 14개항 제안을 파키스탄을 통해 미국에 전달했다. 비공격 보장, 미군 철수, 해상 봉쇄 해제를 핵심 조건으로 내걸며 휴전 연장이 아닌 '종전'으로 무게중심을 옮기겠다는 신호. 시장은 위험 선호로 반응했다.</p>
-      <p class="src">출처 · <a href="https://global.chinadaily.com.cn/a/202605/03/WS69f74c0ba310d6866eb46ca3.html" target="_blank" rel="noopener">China Daily</a> · 2026-05-03~07</p>
+    <article class="hl">
+      <h2>美, 호르무즈 해협서 이란 군시설 타격 — "확전 의도 없다" 단서</h2>
+      <p class="summary">미군이 7일 호르무즈 해협을 통과하던 미 군함을 향한 미사일·드론·소형 보트 공격에 대응해 이란 미사일·드론 발사 거점, 지휘통제 시설, 정보 노드를 타격했다. 호르무즈는 세계 원유·LNG의 1/5이 통과하는 요충지로, 이란은 자국 통제를 거부하는 선박 공격 의지를 재확인했다.</p>
+      <p class="src">출처: <a href="https://www.cnn.com/2026/05/07/world/live-news/trump-iran-war-news" target="_blank" rel="noopener">CNN Live Updates</a></p>
     </article>
 
-    <article class="story">
-      <h3>美 국무장관 루비오, 바티칸 방문 — 교황 레오 14세와 회동</h3>
-      <p class="summary">루비오는 5월 7일 로마 치암피노 공항에 도착해 이틀 일정을 시작했다. 트럼프 행정부와 바티칸 사이의 균열을 봉합하면서 동시에 미국 외교 의제를 끌어가겠다는 이중 포석.</p>
-      <p class="src">출처 · <a href="https://www.npr.org/sections/world/" target="_blank" rel="noopener">NPR World</a> · 2026-05-07</p>
+    <article class="hl">
+      <h2>이스라엘 vs. 헤즈볼라 — 레바논 사망자 2,727명, 야간 공습 20여 곳</h2>
+      <p class="summary">3월 2일 이래 이스라엘의 레바논 공습으로 사망자가 2,727명, 부상자가 8,438명으로 집계됐다. 이번 야간 공습으로는 남부 헤즈볼라 인프라 약 20개 지점을 추가 타격했다.</p>
+      <p class="src">출처: <a href="https://www.aljazeera.com/" target="_blank" rel="noopener">Al Jazeera</a></p>
     </article>
 
-    <article class="story">
-      <h3>한타바이러스 발생 크루즈선, 토요일 스페인 입항 예정</h3>
-      <p class="summary">먼저 하선한 약 40명에 대한 접촉자 추적이 진행 중이며, 보건당국은 추가 격리·역학 조사 체계를 가동했다. 코로나19 이후 크루즈산업이 가까스로 회복한 시점에 다시 등장한 감염병 변수.</p>
-      <p class="src">출처 · <a href="https://www.sciencedaily.com/" target="_blank" rel="noopener">ScienceDaily / 통신 종합</a> · 2026-05-07</p>
-    </article>
-
-    <article class="story">
-      <h3>인도네시아 니켈 광산 6개 지역, 환경·보건 위기 부각</h3>
-      <p class="summary">EV 배터리 수요가 견인한 니켈 채굴이 일자리는 만들었지만, 토양·수질 오염과 호흡기 질환 증가가 보고되고 있다. 글로벌 공급망의 친환경 라벨과 산지 주민 부담의 간극이 다시 도마에 오름.</p>
-      <p class="src">출처 · <a href="https://abcnews.go.com/International" target="_blank" rel="noopener">ABC News International</a> · 2026-05 첫째 주</p>
+    <article class="hl">
+      <h2>유람선 한타바이러스 집단 발병 — WHO "코로나급 팬데믹 신호 아냐"</h2>
+      <p class="summary">유람선 MV Hondius에서 한타바이러스(안데스 변종) 감염 사례가 누적 보고됐다. WHO 전문가는 코로나19 같은 팬데믹의 시작은 아니라고 선을 그었지만, 격리·역학 조사 정밀화가 진행 중이다.</p>
+      <p class="src">출처: <a href="https://www.npr.org/sections/world/" target="_blank" rel="noopener">NPR World</a></p>
     </article>
   </section>
 
-  <!-- ============ 정치·외교 ============ -->
-  <section class="cat cat-정치">
-    <div class="cat-head">
-      <div class="cat-bar"></div>
-      <h2>POLITICS · 정치 · 외교</h2>
-      <span class="cat-meta">3 stories</span>
-    </div>
+  <section class="cat" data-c="pol">
+    <div class="cat-header"><div class="cat-bar"></div><div class="cat-title">정치 · 외교</div></div>
 
-    <article class="story">
-      <h3>美, 독일 주둔 미군 5,000명 철수 — 약 14% 감축</h3>
-      <p class="summary">트럼프 행정부가 4년 전 우크라이나 침공 이후 증강된 주독 미군 병력을 되돌린다. NATO 동부 전선의 억지력 재배치 방향, 그리고 유럽 자체 방위비 지출 확대 압박이 동시에 작용한다.</p>
-      <p class="src">출처 · <a href="https://www.democracynow.org/2026/5/4/headlines" target="_blank" rel="noopener">Democracy Now!</a> · 2026-05 첫째 주</p>
+    <article class="hl">
+      <h2>美·우크라이나·러시아 — 마이애미 채널 재가동</h2>
+      <p class="summary">우크라이나 측 협상 대표 루스템 우메로프가 미 특사 스티브 위트코프, 재러드 쿠슈너와 마이애미에서 회동해 러시아·우크라이나 전쟁 종전 협상을 재시동한다. 이란 또한 트럼프 행정부의 최신 종전안을 검토 중인 것으로 알려졌다.</p>
+      <p class="src">출처: <a href="https://www.cnn.com/2026/05/07/world/live-news/trump-iran-war-news" target="_blank" rel="noopener">CNN</a></p>
     </article>
 
-    <article class="story">
-      <h3>RSF, 2026 세계언론자유지수 — 25년 만의 최저</h3>
-      <p class="summary">국경없는기자회(RSF)가 발표한 2026년 보고서에서 절반 이상의 국가가 처음으로 "어렵다(difficult)" 또는 "매우 심각(very serious)" 등급에 진입. 권위주의 강화, AI 시대의 가짜뉴스 가중, 분쟁 지역 취재 위협이 복합적으로 작용했다는 분석.</p>
-      <p class="src">출처 · <a href="https://www.democracynow.org/2026/5/5/headlines" target="_blank" rel="noopener">Democracy Now!</a> · 2026-05-05</p>
+    <article class="hl">
+      <h2>루비오 美 국무, 로마·바티칸 2일 방문 — 교황 레오 14세 회동</h2>
+      <p class="summary">마르코 루비오 미 국무장관이 7일 로마 챔피노 공항에 도착, 이탈리아·바티칸 2일 일정을 시작했다. 워싱턴-바티칸 간 긴장 완화와 트럼프 행정부 외교 어젠다 조율이 핵심 의제로 거론된다.</p>
+      <p class="src">출처: <a href="https://www.npr.org/sections/world/" target="_blank" rel="noopener">NPR / Reuters</a></p>
     </article>
 
-    <article class="story">
-      <h3>인도 모디 총리, 주의회 선거 승리로 3기 중반 정치 입지 강화</h3>
-      <p class="summary">최근 주(州) 선거 승리로 BJP의 지방 권력 기반이 두꺼워졌다. 임기 중반 누적되던 경제·인사 잡음을 잠재우는 효과로, 외교 측면에서도 모디의 의제 추진력이 한 단계 강해질 전망.</p>
-      <p class="src">출처 · <a href="https://thediplomat.com/2025/12/outlook-geopolitical-trends-and-global-diplomacy-in-2026/" target="_blank" rel="noopener">The Diplomat</a> · 2026-05 첫째 주</p>
-    </article>
-  </section>
-
-  <!-- ============ 경제·금융·시장 ============ -->
-  <section class="cat cat-경제">
-    <div class="cat-head">
-      <div class="cat-bar"></div>
-      <h2>ECONOMY · 경제 · 금융 · 시장</h2>
-      <span class="cat-meta">4 stories</span>
-    </div>
-
-    <article class="story">
-      <h3>이란 종전 기대에 글로벌 증시 급반등 — S&P 500 +1.5%</h3>
-      <p class="summary">미·이란 종전 협상 기대가 위험자산 매수를 자극, S&P 500은 사상 최고치 영역으로 복귀하고 유가는 후퇴했다. AMD를 필두로 반도체주가 랠리를 주도. 채권도 동반 상승하며 보기 드문 동반 강세.</p>
-      <p class="src">출처 · <a href="https://www.bloomberg.com/news/articles/2026-05-05/asian-stocks-to-track-us-gains-on-truce-optimism-markets-wrap" target="_blank" rel="noopener">Bloomberg Markets Wrap</a> · 2026-05-05</p>
+    <article class="hl">
+      <h2>美 국무부 베테랑 외교관 사실상 강제 퇴직 — "일방적 무장해제"</h2>
+      <p class="summary">미 국무부 시니어 직업외교관들이 사실상 강제 퇴직 절차에 직면하고 있다는 보도가 잇따른다. 한 전직 외교관은 이를 두고 "일방적 무장해제"라 지적했고, 협상력 약화 우려가 제기된다.</p>
+      <p class="src">출처: <a href="https://www.cfr.org/articles/visualizing-2026-five-foreign-policy-trends-watch" target="_blank" rel="noopener">CFR / Reuters</a></p>
     </article>
 
-    <article class="story">
-      <h3>골드만삭스, 2026 세계성장률 전망 2.8% — 컨센서스 상회</h3>
-      <p class="summary">컨센서스(2.5%)보다 30bp 높은 전망. AI 자본지출(CapEx) 슈퍼사이클과 미국 가계 소비의 복원력을 근거로 든다. 다만 무역·관세 변수와 중국 부동산 디레버리징은 하방 리스크.</p>
-      <p class="src">출처 · <a href="https://www.goldmansachs.com/insights/outlooks/2026-outlooks" target="_blank" rel="noopener">Goldman Sachs 2026 Outlooks</a></p>
-    </article>
-
-    <article class="story">
-      <h3>모건스탠리, S&P 500 목표가 약 7,500 — "강세장 4년차"</h3>
-      <p class="summary">글로벌투자위원회는 두 자릿수에 가까운 연간 수익률을 전망. 다만 정치 리스크(선거·관세)와 통화정책 분기점이 변동성을 키울 수 있다고 단서. 국제 주식은 상대적 밸류에이션 매력으로 재평가 가능성 제기.</p>
-      <p class="src">출처 · <a href="https://www.morganstanley.com/insights/articles/2026-market-optimism-and-risks" target="_blank" rel="noopener">Morgan Stanley Insights</a></p>
-    </article>
-
-    <article class="story">
-      <h3>한국 코스피, 사상 최고치 — "8000 간다" 반도체 주도</h3>
-      <p class="summary">반도체 슈퍼사이클이 본격화되며 코스피가 신고가를 갈아치웠다. AI 수요·메모리 공급 정상화·환율 안정의 3박자가 결합. 일부 증권사는 코스피 8,000 시나리오를 공식 목표로 제시.</p>
-      <p class="src">출처 · <a href="https://imnews.imbc.com/replay/2026/nwdesk/article/6816985_37004.html" target="_blank" rel="noopener">MBC 뉴스데스크</a> · 2026-05 첫째 주</p>
+    <article class="hl">
+      <h2>코스타리카, 5/8 대통령 이·취임 — 차베스 대통령 임기 종료</h2>
+      <p class="summary">5월 8일 코스타리카에서 로드리고 차베스 대통령이 후임에게 대통령 띠를 이양한다. 중미 정치 지형의 주요 전환점으로, 차기 정부의 미·중 외교 태도가 관전 포인트다.</p>
+      <p class="src">출처: <a href="https://www.controlrisks.com/our-thinking/geopolitical-calendar" target="_blank" rel="noopener">Control Risks</a></p>
     </article>
   </section>
 
-  <!-- ============ 문화·과학·라이프 ============ -->
-  <section class="cat cat-문화">
-    <div class="cat-head">
-      <div class="cat-bar"></div>
-      <h2>CULTURE · 과학 · 문화 · 라이프</h2>
-      <span class="cat-meta">4 stories</span>
-    </div>
+  <section class="cat" data-c="eco">
+    <div class="cat-header"><div class="cat-bar"></div><div class="cat-title">경제 · 금융 · 시장</div></div>
 
-    <article class="story">
-      <h3>차세대 비만 치료제 — '트로이의 목마' 방식 공개</h3>
-      <p class="summary">GLP-1/GIP 신호를 운반체로 활용해 강력한 대사 강화제를 표적 세포 안으로 직접 전달하는 신약 후보. 기존 GLP-1 계열 대비 효능을 한 단계 높이면서 부작용 프로파일은 완화하는 것이 목표.</p>
-      <p class="src">출처 · <a href="https://www.sciencedaily.com/" target="_blank" rel="noopener">ScienceDaily</a> · 2026-05 첫째 주</p>
+    <article class="hl">
+      <h2>S&amp;P 500 사상 최고치 — 칩 메이커 랠리, AMD 주도</h2>
+      <p class="summary">강한 위험 선호 회복으로 글로벌 주식이 사상 최고치에 근접, S&amp;P 500은 1.5% 상승했다. 견조한 기업 실적과 AI CapEx 사이클이 지지대로 작동했고, AMD가 반도체 랠리를 견인했다.</p>
+      <p class="src">출처: <a href="https://www.bloomberg.com/news/articles/2026-05-05/asian-stocks-to-track-us-gains-on-truce-optimism-markets-wrap" target="_blank" rel="noopener">Bloomberg Markets Wrap</a></p>
     </article>
 
-    <article class="story">
-      <h3>스웨덴 연구진, 인간 줄기세포로 인슐린 분비세포 안정 제작</h3>
-      <p class="summary">제1형 당뇨병 잠재 치료법으로 거론되는 줄기세포 분화 안정성 문제를 한 단계 해결. 임상으로 가는 길에서 면역 거부와 장기 생착이 다음 관문으로 남는다.</p>
-      <p class="src">출처 · <a href="https://www.nature.com/news" target="_blank" rel="noopener">Nature News</a> · 2026-05</p>
+    <article class="hl">
+      <h2>골드만, 2026 글로벌 성장률 2.8% — 美 2.6%로 상향</h2>
+      <p class="summary">골드만삭스 리서치는 2026년 글로벌 성장률을 컨센서스 2.5%보다 높은 2.8%로 전망한다. 관세 부담 완화·감세·완화적 금융 환경을 근거로 미국은 2.6%로 컨센서스(2.0%)를 상회할 것으로 봤다.</p>
+      <p class="src">출처: <a href="https://www.goldmansachs.com/insights/outlooks/2026-outlooks" target="_blank" rel="noopener">Goldman Sachs 2026 Outlook</a></p>
     </article>
 
-    <article class="story">
-      <h3>NASA TESS 데이터에서 AI 'RAVEN' — 외계행성 100여 개 신규 발견</h3>
-      <p class="summary">기존 파이프라인이 놓친 희귀·극단 행성을 포함. 천체 데이터에 LLM·딥러닝을 결합한 분석이 본격 단계에 진입했다는 신호. 차기 천문 미션의 데이터 처리 전략이 다시 짜여질 전망.</p>
-      <p class="src">출처 · <a href="https://www.sciencedaily.com/news/top/science/" target="_blank" rel="noopener">ScienceDaily</a> · 2026-05</p>
+    <article class="hl">
+      <h2>유가 하락 — 미 원유 95달러대로 진정, 이란 협상 기대 반영</h2>
+      <p class="summary">이란-미 협상 기대감이 부상하며 미 WTI는 95달러대로 후퇴, 인플레이션 압력 완화 신호로 받아들여진다. 다만 호르무즈 안보 리스크는 변동성 확대 요인으로 남는다.</p>
+      <p class="src">출처: <a href="https://www.bloomberg.com/news/articles/2026-05-05/asian-stocks-to-track-us-gains-on-truce-optimism-markets-wrap" target="_blank" rel="noopener">Bloomberg</a></p>
     </article>
 
-    <article class="story">
-      <h3>NASA JPL, 고에너지 전자기 추진기 시험 성공</h3>
-      <p class="summary">새로운 EM 추진기가 고전압 시험을 통과. 화학연료 대비 비추력 향상이 검증된다면 심우주 미션 타임라인이 단축될 수 있다. 상용화까지는 발사·복사 환경 검증이 더 필요.</p>
-      <p class="src">출처 · <a href="https://www.sciencedaily.com/news/" target="_blank" rel="noopener">ScienceDaily</a> · 2026-05</p>
+    <article class="hl">
+      <h2>코스피 사상 최고치 — "8,000 간다" 반도체 랠리</h2>
+      <p class="summary">반도체 업종을 중심으로 코스피가 사상 최고치를 경신했다는 보도가 나왔다. 시장 참여자들은 AI 사이클을 근거로 8,000선까지 가능성을 거론하지만, 단기 과열 경고도 동반 제기된다.</p>
+      <p class="src">출처: <a href="https://imnews.imbc.com/replay/2026/nwdesk/article/6816985_37004.html" target="_blank" rel="noopener">MBC 뉴스데스크</a></p>
     </article>
   </section>
 
-  <!-- ============ 한국 ============ -->
-  <section class="cat cat-한국">
-    <div class="cat-head">
-      <div class="cat-bar"></div>
-      <h2>KOREA · 한국 주요 이슈</h2>
-      <span class="cat-meta">3 stories</span>
-    </div>
+  <section class="cat" data-c="cul">
+    <div class="cat-header"><div class="cat-bar"></div><div class="cat-title">문화 · 과학 · 라이프</div></div>
 
-    <article class="story">
-      <h3>39년 만의 개헌 시도 무산 — 의결정족수 부족, 국민의힘 불참</h3>
-      <p class="summary">5·18민주화운동·부마항쟁 정신을 헌법 전문에 명시하고, 비상계엄에 대한 국회 통제권을 강화하는 개정안이 본회의 상정됐으나 투표 불성립. 국민의힘 불참이 결정적이었다.</p>
-      <p class="src">출처 · <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008551330" target="_blank" rel="noopener">SBS 나이트라인</a> · 2026-05-08</p>
+    <article class="hl">
+      <h2>스웨덴 연구진, 인간 줄기세포로 인슐린 생산 세포 안정 제조 — 1형 당뇨 치료 진전</h2>
+      <p class="summary">인간 줄기세포에서 인슐린 분비 세포를 보다 신뢰성 있게 만들어내는 새로운 방법이 보고됐다. 1형 당뇨 잠재 치료법으로 가는 큰 한 걸음이며, 이식 단계 임상 설계 가속화가 기대된다.</p>
+      <p class="src">출처: <a href="https://www.sciencedaily.com/" target="_blank" rel="noopener">ScienceDaily</a></p>
     </article>
 
-    <article class="story">
-      <h3>HMM 운용 화물선, UAE 두바이 도착 — 호르무즈 폭발 사고 본조사</h3>
-      <p class="summary">호르무즈 해협에서 정박 중 폭발·화재가 발생한 화물선이 두바이항에 입항하면서 본격적인 사고 원인 조사가 시작된다. 한국 해운·보험업계 영향과 글로벌 해상보험료 인상 가능성.</p>
-      <p class="src">출처 · <a href="https://www.mt.co.kr/economy/2026/05/08/2026050721551825436" target="_blank" rel="noopener">머니투데이</a> · 2026-05-08</p>
+    <article class="hl">
+      <h2>차세대 비만 치료제 — "트로이의 목마"형 GLP-1/GIP 약물</h2>
+      <p class="summary">GLP-1/GIP 신호를 매개로 강력한 대사 조절제를 표적 세포에 직접 전달하는 차세대 비만약 후보가 보고됐다. Ozempic계 약물 효과의 개인 차이를 설명하는 식이 행동 기전 연구도 함께 발표됐다.</p>
+      <p class="src">출처: <a href="https://www.sciencedaily.com/news/top/science/" target="_blank" rel="noopener">ScienceDaily Top</a></p>
     </article>
 
-    <article class="story">
-      <h3>정진석 전 비서실장, 충남 공주·부여·청양 보궐 출마 철회</h3>
-      <p class="summary">윤석열 전 대통령 비서실장을 지낸 정진석 전 의원이 보궐선거 출마를 거둬들였다. 당내 여론과 본인 거취 사이에서 정치적 부담을 줄이는 선택. 후임 후보 윤곽이 다음 변수.</p>
-      <p class="src">출처 · <a href="https://www.khan.co.kr/" target="_blank" rel="noopener">경향신문</a> · 2026-05-08</p>
+    <article class="hl">
+      <h2>NASA JPL, 고출력 전자기 추력기(EM Thruster) 핵심 시험 성공</h2>
+      <p class="summary">NASA 제트추진연구소(JPL)가 새로운 전자기 추력기의 고에너지 시험을 통과했다. 심우주 미션 추진계 옵션이 한 단계 진보했다는 평가가 나오며, 블루오리진은 무인 MK1 "Endurance" 착륙선 극한 시험을 병행 중이다.</p>
+      <p class="src">출처: <a href="https://www.livescience.com/" target="_blank" rel="noopener">Live Science</a></p>
     </article>
   </section>
 
-  <footer>
-    DAILY BRIEFING · 2026년 5월 8일 · 어버이날 · 자동 큐레이션 리포트
-  </footer>
+  <section class="cat" data-c="kor">
+    <div class="cat-header"><div class="cat-bar"></div><div class="cat-title">한국 주요 이슈</div></div>
+
+    <article class="hl">
+      <h2>5·18 헌법 전문 명시 개헌안 — 의결정족수 미달로 사실상 무산</h2>
+      <p class="summary">5·18민주화운동·부마항쟁 정신을 헌법 전문에 명시하고 비상계엄에 대한 국회 통제를 강화하는 개헌안이 7일 본회의에 상정됐으나 의결정족수 부족으로 투표가 불성립됐다. 우원식 국회의장은 8일 재상정 입장이지만 국민의힘 당론 변경 가능성이 낮아 39년 만의 개헌 시도는 사실상 좌초됐다.</p>
+      <p class="src">출처: <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008551330" target="_blank" rel="noopener">SBS 나이트라인</a></p>
+    </article>
+
+    <article class="hl">
+      <h2>정진석 전 비서실장, 6·3 보궐선거 출마 철회</h2>
+      <p class="summary">윤석열 전 대통령의 비서실장이었던 정진석 전 실장이 충남 공주·부여·청양 국회의원 보궐선거 출마를 접었다. 국민의힘 후보 신청도 함께 철회해 보궐선거 구도가 흔들리는 모습이다.</p>
+      <p class="src">출처: <a href="https://www.khan.co.kr/" target="_blank" rel="noopener">경향신문</a></p>
+    </article>
+
+    <article class="hl">
+      <h2>호르무즈 화재 HMM 화물선 — 두바이 입항, 사고 원인 조사 본격화</h2>
+      <p class="summary">호르무즈 해협 정박 중 폭발·화재가 발생한 HMM 운용 화물선이 UAE 두바이 항구에 도착했다. 본격 사고 원인 조사가 시작되며 한국 해운·보험업계는 호르무즈 리스크 재산정에 들어갔다.</p>
+      <p class="src">출처: <a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008551330" target="_blank" rel="noopener">SBS</a></p>
+    </article>
+
+    <article class="hl">
+      <h2>5월 8일 어버이날 — 가정의 달 절정</h2>
+      <p class="summary">오늘은 어버이날이다. 가정의 달 5월의 정점으로, 카네이션·외식·가족 모임 수요가 집중된다. 동시에 1인 가구·고령 1인 세대 증가에 따른 고독사 우려와 돌봄 사각지대 보도가 잇따랐다.</p>
+      <p class="src">출처: <a href="https://news.nate.com/view/20260507n38470" target="_blank" rel="noopener">네이트 뉴스</a></p>
+    </article>
+  </section>
+
+  <p style="text-align:center; font-size:11px; color:#999; margin-top:36px; letter-spacing:0.2em;">— END OF BRIEFING —</p>
 
 </div>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
