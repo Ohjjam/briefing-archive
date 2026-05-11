@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy &amp; Chemical Engineering Morning Brief · 2026-05-11</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-11 (월) · 최근 24~72시간 · 전기화학 · 배터리 · CO2RR · 수전해 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>해수 전해용 "슈퍼 스테인리스(SS-H2)"</strong> — 홍콩대(HKU) Mingxin Huang 팀이 부식 환경에 견디는 신규 SS를 보고. 10MW PEM 스택 구조재 비용(현재 ≈53%) 절감 잠재. <code>green hydrogen</code></li>
+    <li><strong>강산성 CO2RR을 금속양이온 없이</strong> — 끝이 뾰족한 Au 나노삼각구조에서 강한 국소 전기장이 CO2 흡착·활성화를 유도(Nature Communications). <code>CO2RR</code></li>
+    <li><strong>5V급 전고체 Li 배터리</strong> — 불화물 고체전해질로 35.3 mAh/cm² 면적용량 달성(Nature Energy). 동시에 EQS 프로토타입이 단일 충전 1,205km 주행 보고. <code>solid-state</code></li>
+    <li><strong>혼합 폐플라스틱에서 PET 선택적 해중합</strong> — 자기 회수 nZVI 촉매로 BHET 수율 90%+(Environ. Sci. Technol.). <code>PET</code></li>
+    <li><strong>IEA Global Hydrogen Review</strong> 흐름: 저배출 수소 약속 프로젝트 200건+ 누적. 정책 인센티브 재설계 권고. <code>policy</code></li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-69175-9" target="_blank" rel="noopener">Kilowatt-scale alkali-cation-free CO2 electrolysis via accelerating mass transfer</a></h3>
+    <div class="src">Nature Communications · 2026 · CO2RR</div>
+    <p>고확산 플럭스 가스확산전극(HDF-GDE)으로 알칼리 양이온 없는 시스템의 물질전달 한계를 극복. kW급 운전 영역에서 셀 전압·CO 선택도를 동시에 끌어올린 점이 산업 스케일업의 실마리. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Electric-field-driven CO2 polarization for strong-acid CO2RR without metal cations</a></h3>
+    <div class="src">Nature Communications · 2026 · CO2RR</div>
+    <p>샤프 삼각 Au 나노구조의 곡률 첨단이 만드는 강한 국소 전기장이 CO2를 분극시켜 흡착·활성화. 양이온 첨가 없이 강산성 매질에서 CO2 환원을 가능케 해 후속 분리·정제 부담을 줄일 수 있다. <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-025-01865-y" target="_blank" rel="noopener">Five-volt-class high-capacity all-solid-state lithium batteries</a></h3>
+    <div class="src">Nature Energy · 2025 말 게재, 2026 상반기 후속 인용 다수 · 배터리</div>
+    <p>전도도·내전압 모두 높은 불화물 고체전해질을 활용해 5V 작동, 35.3 mAh/cm² 초고면적용량을 보고. 5V급 화학으로 가는 핵심 셀 케미스트리 옵션. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Rate-limiting step of CO2 electroreduction on metal phthalocyanines</a></h3>
+    <div class="src">Nature Communications · 2026 · 분자 전극촉매</div>
+    <p>금속 프탈로시아닌 분자촉매에서 율속단계가 분산 정도에 따라 달라진다는 점을 정량화. 단분산일 때는 흡착 CO2의 프로토네이션, 응집체에서는 CO2 흡착 자체가 율속. 분산도 제어가 활성 설계의 핵심임을 명시. <code>molecular catalyst</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820" target="_blank" rel="noopener">Selective PET Depolymerization in Mixed Plastic Waste Using Magnetically Recoverable nZVI</a></h3>
+    <div class="src">Environmental Science &amp; Technology · 2026 · 플라스틱</div>
+    <p>나노 Zero-Valent Iron(nZVI) 촉매로 혼합 폐플라스틱 중 PET만 선택적으로 해중합. 자성 분리가 가능해 회수·재사용성이 우수하고, BHET 수율 90%+를 4사이클 이상 유지. <code>PET</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Heterogeneous catalysis for biomass-derived platform molecules</a></h3>
+    <div class="src">Advanced Energy &amp; Sustainability Research · 2026 · 바이오매스</div>
+    <p>HMF·푸르푸랄·레불린산 등 플랫폼 분자 전환을 위한 이종촉매 동향 리뷰. MW-DES 전처리(40초 수준), 단일 바이오리파이너리에서 HMF·바이오디젤·푸르푸랄 동시생산 시 MSP $4.54/kg(-75%) 등 경제성 향상 사례를 정리. <code>HMF</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA — Global Hydrogen Review</a></h3>
+    <div class="src">International Energy Agency · 2026-02 정책 권고 + 지속 추적</div>
+    <p>저배출 수소 약속 프로젝트가 200건 이상까지 누적된 반면 실제 FID 비중은 여전히 낮다는 진단. IEA는 수요 측 인센티브(공공 조달·CfD)와 인프라(저장·송수송) 정책 재설계를 권고. <code>policy</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/02/10/energy-policy/iea-urges-policy-reform-to-unlock-next-phase-of-global-hydrogen-growth" target="_blank" rel="noopener">"수소 성장 다음 단계 위해 정책 개혁 필요"</a></h3>
+    <div class="src">Fuel Cells Works · 2026-02-10 (계속 인용)</div>
+    <p>IEA가 발표한 정책 인사이트의 산업계 해석. 보조금 의존도를 낮추고 장기 PPA·녹색 조달·국경 탄소세 정합성으로 시장 안정성을 높여야 한다는 메시지가 강조됨. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">DOE Hydrogen Shot — Water Electrolysis Technology Assessment</a></h3>
+    <div class="src">U.S. DOE · 기준 문서, 2026 평가 사이클 진행 중</div>
+    <p>$1/kg 청정수소(1·1·1) 달성 경로를 PEM/AEM/SOEC별로 분해. 2026년 목표: PEM 3.0 A/cm²@1.8V/cell, 궁극 1.6V/cell. 셀 비용·내구성·재료(이리듐) 의존도가 핵심 변수. <code>PEM</code> <code>AEM</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.sciencedaily.com/releases/2026/05/260510030950.htm" target="_blank" rel="noopener">HKU "슈퍼 스테인리스" SS-H2 — 해수 전해 구조재 비용을 깨다</a></h3>
+    <div class="src">ScienceDaily / HKU · 2026-05-10</div>
+    <p>HKU Mingxin Huang 팀이 강산·고염 환경에서도 견디는 SS-H2를 발표. 10MW PEM 스택 기준 구조재 비중이 약 53%에 달하는데, Ti+귀금속 코팅 대비 SS-H2로 대체 시 자본비용이 크게 줄어들 가능성. 해수 직접 전해 상용화 시나리오에서 큰 변수. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://electrek.co/2026/04/15/solid-state-ev-batteries-coming-sooner-than-expected/" target="_blank" rel="noopener">전고체 EV 배터리, 일정이 앞당겨진다</a></h3>
+    <div class="src">Electrek · 2026-04-15 (추적)</div>
+    <p>Mercedes-Benz EQS 프로토타입이 Li 메탈 전고체 팩으로 1,205km 단일 충전 주행을 달성. BMW는 Solid Power의 셀을 i7 개발차에 장착해 차량 단위 시험에 돌입. 2027~2028 상용 시점에 가속 신호. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.dqindia.com/esdm/global-solid-state-battery-funding-exceeds-13bn-in-20251q26-advancing-toward-pre-commercialization-11809459" target="_blank" rel="noopener">전고체 배터리 글로벌 펀딩 $1.3B+ 돌파 (2025~1Q26)</a></h3>
+    <div class="src">DataQuest India · 2026 1분기</div>
+    <p>전고체 배터리 분야 글로벌 펀딩 누적이 13억 달러를 넘어서며 사전 상용화(pre-commercialization) 단계로 진입. Toyota·Samsung SDI·CATL·Solid Power 라인이 동시에 파일럿을 확장. <code>battery</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://evmagazine.com/top10/top-10-solid-state-ev-battery-manufacturers" target="_blank" rel="noopener">Toyota / Samsung SDI / CATL — 전고체 로드맵</a></h3>
+    <div class="src">EV Magazine · 2026 최신 정리</div>
+    <p>Toyota는 10분 충전·주행거리 +20~50%, 2027~28 양산 목표. Samsung SDI는 S-Line 파일럿 가동 중, 2027 양산 계획. CATL은 1,000명 이상 R&amp;D 인력으로 응축상(condensed-state) 셀 시제품 500 Wh/kg. <code>solid-state</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-r7x16" target="_blank" rel="noopener">LLM-guided grand-canonical DFT for electrocatalyst discovery</a></h3>
+    <div class="src">ChemRxiv · 2026 인용 확산 중 · 전기촉매 + ML</div>
+    <p>대형언어모델로 후보 물질 공간을 좁히고 grand-canonical DFT로 검증하는 프레임. 전극촉매 탐색에서 ML 우선·DFT 검증의 표준 워크플로가 자리잡는 신호. <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-t7g2f-v2" target="_blank" rel="noopener">Surface Charge Predicts Cation Effects in Electrocatalysis</a></h3>
+    <div class="src">ChemRxiv · 2026 인용 · 전극촉매</div>
+    <p>전극 표면 전하가 양이온 효과(cation effect) 발현 여부를 예측한다는 통합 모델. CO2RR·NRR에서 K⁺·Cs⁺ 의존성이 갈리는 이유를 일관되게 설명할 가능성. <code>CO2RR</code> <code>NRR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-396l8" target="_blank" rel="noopener">High-Entropy Spinel Oxides for OER</a></h3>
+    <div class="src">ChemRxiv · 2025-11 (계속 인용)</div>
+    <p>Mn-Fe-Co-Ni-Zn 5원소 고엔트로피 스피넬에서 OER 활성/안정성이 각 원소 역할의 시너지로 결정됨을 보고. AEM 수전해의 비귀금속 산화 측 후보로 의미. <code>AEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-02lvv/v2" target="_blank" rel="noopener">Quantum-chemical insight into electrochemical interfaces (v2)</a></h3>
+    <div class="src">ChemRxiv · 2026-02 v2</div>
+    <p>전기화학 계면의 양자화학적 기술 — 솔벤트·이온 분포·전위 의존성을 일관되게 다루는 방법론 정비. CO2RR·HER 메커니즘 비교의 토대. <code>electrochemistry</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://www.nature.com/articles/s41467-026-69175-9" target="_blank" rel="noopener">Nature Communications — kW-scale alkali-cation-free CO2 electrolysis</a></li>
+    <li><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Nature Communications — Strong-acid CO2RR via E-field polarization</a></li>
+    <li><a href="https://www.nature.com/articles/s41560-025-01865-y" target="_blank" rel="noopener">Nature Energy — 5V-class all-solid-state Li batteries</a></li>
+    <li><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Nature Communications — Rate-limiting step on metal phthalocyanines (CO2RR)</a></li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820" target="_blank" rel="noopener">ES&amp;T — Selective PET depolymerization with nZVI</a></li>
+    <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Adv. Energy &amp; Sustainability Research — Biomass platform molecules</a></li>
+    <li><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA — Global Hydrogen Review</a></li>
+    <li><a href="https://fuelcellsworks.com/2026/02/10/energy-policy/iea-urges-policy-reform-to-unlock-next-phase-of-global-hydrogen-growth" target="_blank" rel="noopener">Fuel Cells Works — IEA policy reform</a></li>
+    <li><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">U.S. DOE — Hydrogen Shot Water Electrolysis Assessment</a></li>
+    <li><a href="https://www.sciencedaily.com/releases/2026/05/260510030950.htm" target="_blank" rel="noopener">ScienceDaily — HKU "ultra stainless steel" SS-H2</a></li>
+    <li><a href="https://electrek.co/2026/04/15/solid-state-ev-batteries-coming-sooner-than-expected/" target="_blank" rel="noopener">Electrek — Solid-state EV batteries sooner than expected</a></li>
+    <li><a href="https://www.dqindia.com/esdm/global-solid-state-battery-funding-exceeds-13bn-in-20251q26-advancing-toward-pre-commercialization-11809459" target="_blank" rel="noopener">DataQuest — Global SSB funding $1.3B+</a></li>
+    <li><a href="https://evmagazine.com/top10/top-10-solid-state-ev-battery-manufacturers" target="_blank" rel="noopener">EV Magazine — Toyota / Samsung SDI / CATL roadmap</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-r7x16" target="_blank" rel="noopener">ChemRxiv — LLM-guided gc-DFT for electrocatalysts</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-t7g2f-v2" target="_blank" rel="noopener">ChemRxiv — Surface charge predicts cation effects</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-396l8" target="_blank" rel="noopener">ChemRxiv — High-entropy spinel oxides for OER</a></li>
+    <li><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-02lvv/v2" target="_blank" rel="noopener">ChemRxiv — Quantum-chemical insight into EC interfaces</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
