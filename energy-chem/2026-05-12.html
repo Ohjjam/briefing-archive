@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-05-12</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-12 (화) · 최근 24~72시간 · 전기화학·배터리·CO2RR·수전해·바이오매스·플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>강산성 CO2RR — 아이오다이드 표면 흡착으로 에틸렌 선택도 두 배.</strong> <em>Nature Energy</em> 2026년 vol.11 게재본이 비대칭 OC–COOH 결합 경로를 메커니즘으로 제시 (<code>CO2RR</code> · Cu 촉매).</li>
+    <li><strong>전고체 배터리 자가방전 정량화 모델.</strong> Janek 그룹이 분리막 내 미세 전자 누설이 가역 자가방전을 일으키는 분석 모델을 <em>Nature Energy</em>에 보고 — 장기 저장형 ESS 경제성 직격 (<code>solid-state</code>).</li>
+    <li><strong>IEA, 사상 최대 규모 비상 석유 비축 방출.</strong> 미-이란 분쟁발 호르무즈 봉쇄에 대응해 5/6 발표, 정부·기업·가계 수요측 조치 메뉴도 동시 공개.</li>
+    <li><strong>현대차, 5/10 한국남동발전과 수소 발전 사업 협약.</strong> 차량 외 발전 영역으로 수소 사업 확대; Saemangeum 200MW 수전해 단지가 후방 거점 (<code>green hydrogen</code>).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 / Papers</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-025-01924-4" target="_blank" rel="noopener">Enhanced CO2 electroreduction to multi-carbon products in strong acid induced by surface-adsorbed iodide ions</a></h3>
+    <div class="src">Nature Energy · vol. 11, 244–253 (2026)</div>
+    <p>강산성 환경에서 Cu 촉매 표면에 흡착된 아이오다이드 이온이 에틸렌 선택도를 2배로 끌어올리고 CO 형성과 과전압을 동시에 낮춘다. 메커니즘은 비대칭 OC–COOH 결합 경로. 산성 직접 공정의 카보네이트 형성 문제 회피와 결합되면 산업 셀 설계가 단순해진다. <code>CO2RR</code> <code>Cu</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02038-1" target="_blank" rel="noopener">Quantifying the self-discharge rate of solid-state batteries</a></h3>
+    <div class="src">Nature Energy · 2026 게재 (Alt &amp; Janek 그룹)</div>
+    <p>고체 분리막 내 미세 전자 누설이 가역 자가방전을 유발한다는 분석 모델을 제시. 화학 포텐셜 차이가 이온·전자 이동을 동시에 일으키는 메커니즘이 장기 보관형 ESS에서 손실 누적과 경제성에 직격탄. 셀 자체 표준화를 위한 정량적 잣대 제공. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-025-01387-6" target="_blank" rel="noopener">Morphological and chemical state effects in pulsed CO2 electroreduction on Cu(100) unveiled by correlated spectro-microscopy</a></h3>
+    <div class="src">Nature Catalysis · 2025/2026 온라인</div>
+    <p>펄스 CO2RR 조건에서 Cu(100) 표면의 형상·산화상태 변화를 실시간 상관 분광-현미경으로 추적. 다탄소 산물 선택도 향상의 본질이 표면 재구성에 있다는 동적 증거를 직접 제시한다. <code>CO2RR</code> <code>operando</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">Tuning selectivity in the direct hydrogenolysis of PET plastic over Co catalysts through interfacial hydrogen spillover</a></h3>
+    <div class="src">Nature Communications · 2026</div>
+    <p>Co@CoO 이종 촉매로 PET를 직접 수소분해하면 <em>p-xylene</em> 또는 1,4-디메틸사이클로헥산을 각각 &gt;97%, &gt;90% 수율로 선택 회수할 수 있다. 계면 수소 스필오버 제어가 핵심 — 효소·해당 공정 대비 단가/공정 단계 측면에서 산업 매력. <code>PET</code> <code>upcycling</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제 / Policy &amp; Regulation</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/data-and-statistics/data-tools/2026-energy-crisis-policy-response-tracker" target="_blank" rel="noopener">IEA, 사상 최대 비상 석유 비축 방출 — 수요측 조치 메뉴 동시 공개</a></h3>
+    <div class="src">IEA · 2026-05-06 (공식 트래커)</div>
+    <p>호르무즈 봉쇄로 글로벌 연료 시장이 전례 없는 충격을 받자 IEA가 최대 규모의 비상 비축 방출을 결정. 동시에 정부·기업·가계가 즉시 시행할 수 있는 수요측 조치 메뉴를 발표했고, 국가별 정책 채택 현황을 트래커로 갱신 중. <code>oil</code> <code>SPR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary" target="_blank" rel="noopener">IEA, State of Energy Policy 2026 — 정책 충격 시나리오 종합</a></h3>
+    <div class="src">IEA · 2026 (Executive Summary)</div>
+    <p>중동발 공급 위기 시나리오에서 회원국 정책 대응이 가장 유효했던 사례와 미흡한 영역을 비교 분석. 보조금·관세·발전믹스 셋업이 단기 변동성 흡수에 가장 결정적 변수로 지목됐다. <code>policy</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.congress.gov/crs-product/IF11861" target="_blank" rel="noopener">미 45Q 세액공제 재편 — DAC $130/t, 점원 포집 $85/t 효과</a></h3>
+    <div class="src">CRS / Congress.gov · 2026</div>
+    <p>DOE 보조금 다수가 축소·취소되는 가운데 45Q는 폐지 대신 재구조. 지질저장 기본 $50/t, DAC $36/t에 임금·견습 가산이 유지돼 실효율은 DAC $130/t, 점원 포집 $85/t를 초과할 수 있다. 그랜트 의존에서 세제 기반으로 인센티브 축이 이동. <code>CCUS</code> <code>45Q</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스 / Industry News</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/05/10/electrolyzer/hyundai-motor-to-sign-hydrogen-business-agreement-with-korea-south-east-power" target="_blank" rel="noopener">현대차 ↔ 한국남동발전, 수소 발전 사업 협약 체결</a></h3>
+    <div class="src">Fuel Cells Works · 2026-05-10</div>
+    <p>현대차그룹이 5월 10일 한국남동발전과 수소 발전 사업 협약을 맺으며 모빌리티 너머 발전 영역으로 수소 사업을 확장. Saemangeum 200MW 수전해 단지(2029년 1단계)와 PEM 전해조 제조라인이 후방 거점이 된다. <code>green hydrogen</code> <code>PEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.globenewswire.com/news-release/2026/05/08/3291203/0/en/Clarios-Provides-One-Year-Update-on-6B-U-S-Energy-Manufacturing-Strategy.html" target="_blank" rel="noopener">Clarios, $6B 미국 에너지 제조 전략 1주년 업데이트</a></h3>
+    <div class="src">GlobeNewswire (Clarios 보도자료) · 2026-05-08</div>
+    <p>Clarios가 60억 달러 미국 제조 투자 1년차 진척을 공개. 2026 회계연도 말까지 미국 다주(多州) 공장에 총 5억 달러 이상 투자 완료 예정으로 보고됐다. <code>battery manufacturing</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.constructionowners.com/news/u-s-battery-manufacturing-construction-reaches-45b-as-automakers-shift-toward-energy-storage" target="_blank" rel="noopener">미국 배터리 공장 건설 누적 $45B — ESS 전환 가속</a></h3>
+    <div class="src">Construction Owners · 2026-05 초</div>
+    <p>현재 건설 중인 미국 배터리 제조 프로젝트 규모가 450억 달러를 돌파. LG에너지솔루션의 Tesla ESS 대규모 LFP 셀 공급(43억 달러), 파나소닉 캔자스 De Soto 40억 달러 증설 등 차량용→ESS 라인 전환 흐름이 두드러진다. <code>LFP</code> <code>ESS</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 / Preprints</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002895/v1" target="_blank" rel="noopener">Machine Learning Potentials for Electrified Interfaces</a></h3>
+    <div class="src">ChemRxiv · 2026-05-08</div>
+    <p>전기화학 계면을 정확히 원자 단위로 모사하기 위한 MLIP(머신러닝 원자간 포텐셜)의 적용 한계와 보정 방법론을 정리. 전위 조건 하 분극·이온 분포를 재현하는 실용 워크플로를 제안한다. <code>MLIP</code> <code>operando</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">What if We Were to Design Transport in Aqueous Electrolytes Using Learnings from Lithium Battery Research?</a></h3>
+    <div class="src">ChemRxiv · 2026</div>
+    <p>그리드용 수계 전지 재부상에 대응해 리튬 비수계 전해질에서 축적된 이온 수송·용매화 지식을 수계 시스템 설계 원리로 이전하는 전략을 제안. 수계 ESS의 캘린더 수명·전위창 한계를 정량적으로 정리. <code>aqueous</code> <code>ESS</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 우선)</strong>
+  <ol>
+    <li>Nature Energy — <a href="https://www.nature.com/articles/s41560-025-01924-4" target="_blank" rel="noopener">Iodide-induced acidic CO2RR (vol 11, 244–253, 2026)</a></li>
+    <li>Nature Energy — <a href="https://www.nature.com/articles/s41560-026-02038-1" target="_blank" rel="noopener">Quantifying self-discharge of SSBs (2026)</a></li>
+    <li>Nature Catalysis — <a href="https://www.nature.com/articles/s41929-025-01387-6" target="_blank" rel="noopener">Pulsed CO2RR on Cu(100), 2025/2026</a></li>
+    <li>Nature Communications — <a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">PET hydrogenolysis over Co@CoO (2026)</a></li>
+    <li>IEA — <a href="https://www.iea.org/data-and-statistics/data-tools/2026-energy-crisis-policy-response-tracker" target="_blank" rel="noopener">2026 Energy Crisis Policy Response Tracker</a></li>
+    <li>IEA — <a href="https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary" target="_blank" rel="noopener">State of Energy Policy 2026 (Executive Summary)</a></li>
+    <li>Congress.gov / CRS — <a href="https://www.congress.gov/crs-product/IF11861" target="_blank" rel="noopener">DOE CCS/Carbon Removal Programs (IF11861)</a></li>
+    <li>Fuel Cells Works — <a href="https://fuelcellsworks.com/2026/05/10/electrolyzer/hyundai-motor-to-sign-hydrogen-business-agreement-with-korea-south-east-power" target="_blank" rel="noopener">Hyundai × Korea South-East Power, 2026-05-10</a></li>
+    <li>Clarios / GlobeNewswire — <a href="https://www.globenewswire.com/news-release/2026/05/08/3291203/0/en/Clarios-Provides-One-Year-Update-on-6B-U-S-Energy-Manufacturing-Strategy.html" target="_blank" rel="noopener">$6B US Manufacturing 1Y update, 2026-05-08</a></li>
+    <li>Construction Owners — <a href="https://www.constructionowners.com/news/u-s-battery-manufacturing-construction-reaches-45b-as-automakers-shift-toward-energy-storage" target="_blank" rel="noopener">US Battery Manufacturing $45B</a></li>
+    <li>ChemRxiv — <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002895/v1" target="_blank" rel="noopener">MLIPs at Electrified Interfaces (2026-05-08)</a></li>
+    <li>ChemRxiv — <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">Aqueous electrolyte transport learnings (2026)</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
