@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-05-15</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-15 (금) · 최근 24~72시간 · 전기화학·배터리·CO₂RR·수전해·바이오매스·플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>고체전해질 셀의 외부 압력 장벽이 깨졌다</strong> — Li-Zr-Al-Cl-O 신규 전해질이 5 MPa(기존 수백 MPa 대비)에서 안정 사이클링. 대량생산 친화도 급상승 (<em>Nature Communications</em>).</li>
+    <li><strong>구리 CO₂RR의 C–C 메커니즘이 온도·압력에서 달라진다</strong> — 125℃ 이상에서 Fischer-Tropsch 유사 사슬 성장이 CO 이량화를 대체. 산업 조건 매칭 가능성 시사 (<em>Nature Catalysis</em>).</li>
+    <li><strong>Na-ion이 LFP를 위협</strong> — 평균 $59/kWh로 리튬이온 평균가 아래. CATL의 헝가리 $8.2B 2공장 가동까지 겹쳐 EV·ESS 경쟁 지형 변동 (<em>Bloomberg</em>).</li>
+    <li><strong>IEA Global Hydrogen Review 2025</strong> — 저배출 수소 프로젝트 200건 이상 확약, 1,000건+ 정책 트래킹. 2030년 GW급 PEM/AEM 확장이 과제.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 (Peer-reviewed Research)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c00633" target="_blank" rel="noopener">A Pulsed Tandem Electrocatalysis Strategy for CO₂ Reduction</a></h3>
+    <div class="src">JACS · 2026 · Fe–N₄/Fe–O₄ dual-site SAC</div>
+    <p>FeN₄(자리 1)는 CO를 생성, FeO₄(자리 2)는 CO 이동·C–C 커플링을 매개. 0 V ↔ −0.7 V 펄스 전위로 두 자리의 활성 시간을 분리해 멀티카본 효율 상승. 단원자 촉매로 C₂⁺ 선택성 끌어올리는 새 접근. <code>CO₂RR</code> <code>SAC</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-025-01451-1" target="_blank" rel="noopener">Cu CO₂ Electroreduction via Chain-Growth Mechanism at Elevated T &amp; P</a></h3>
+    <div class="src">Nature Catalysis · 2025-2026</div>
+    <p>125℃ 이상에서 구리 표면의 C–C 커플링이 전형적 CO 이량화 → Fischer-Tropsch 유사 사슬 성장으로 전환. 산업적 고온·고압 운전 조건과 직결되는 메커니즘 전환점으로, 시스템 설계 시 온도 의존성 재정의 필요. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-025-01838-1" target="_blank" rel="noopener">Covariance of Interphasic Properties and Fast Chargeability of Li-metal Batteries</a></h3>
+    <div class="src">Nature Energy · 2025</div>
+    <p>설계 변수 동시 최적화로 4C 충전에서 5→70% SOC를 12분, 350 사이클 유지. 386 Wh/kg 고에너지 셀은 10→80% SOC를 17분 내 180 사이클. 고속충전·고에너지의 동시 달성이 인터페이즈 공변량 제어로 가능함을 시사. <code>Li-metal</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-025-66079-y" target="_blank" rel="noopener">Real-time AI for Solid-state Li-metal Batteries</a></h3>
+    <div class="src">Nature Communications · 2025-2026</div>
+    <p>실시간 AI 기반 모니터링·제어가 고체전해질 셀의 작동 안전성·수명을 끌어올리는 경로를 제시. ASSB 진단·운영 자동화의 기준점이 될 가능성. <code>solid-state</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제 (Policy &amp; Regulation)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA Global Hydrogen Review 2025 · Hydrogen Tracker 공개</a></h3>
+    <div class="src">IEA · 2025-2026 갱신본 (2026년 5월 시점 최신 트래킹)</div>
+    <p>저배출 수소 프로젝트가 시범 단계 몇 건에서 200건 이상의 확정 투자로 확장. Hydrogen Tracker(온라인)는 2020년 이후 1,000건 이상의 정책을 정리. 다만 PEM/AEM 모두 GW급 확장이 2030 목표에 미달.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/eere/fuelcells/technical-targets-proton-exchange-membrane-electrolysis" target="_blank" rel="noopener">DOE HFTO PEM 전해조 비용 타깃 — $250/kW (2026)</a></h3>
+    <div class="src">U.S. DOE · 2026 타깃 (Ultimate $150/kW)</div>
+    <p>$2/kg H₂(2026) · $1/kg H₂(2031) 비용 목표와 정합되는 미설치 자본비. PEMWE 누적 설치는 2019년 80 MW → 2023년 초 921 MW로 확장됐으나, 수백 GW까지 가는 길은 정책·공급망 모두 부족. <code>PEM</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.csis.org/analysis/new-phase-us-battery-industry" target="_blank" rel="noopener">미국 배터리 산업의 신국면 — IRA·관세·ITC 재편</a></h3>
+    <div class="src">CSIS · 2026</div>
+    <p>2026년 1월 기준 58% 관세를 적용해도 미국산 LFP 셀이 중국 수입품과 가격 경쟁력을 가지려면 30% ITC가 여전히 필요. IRA·관세·ITC 3축 정책 조합이 LFP 국내 생산 결정 변수.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스 (Industry)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage" target="_blank" rel="noopener">Na-ion 배터리, EV·ESS 진입 본격화 — 평균 $59/kWh</a></h3>
+    <div class="src">Bloomberg · 2026-04-21 (5월 추적 보도 지속)</div>
+    <p>리튬 가격 변동성과 기술 진보로 Na-ion이 OEM·전력회사에 신뢰 가능한 대안으로 부상. 평균 $59/kWh로 평균 Li-ion 셀가 아래. 단, 에너지밀도·저온 성능은 여전히 LFP 우위 영역. <code>Na-ion</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2025-12-09/bnef-why-global-battery-prices-are-expected-to-fall-in-2026" target="_blank" rel="noopener">BNEF: 2025년 팩 가격 $108/kWh — 사상 최저</a></h3>
+    <div class="src">Bloomberg / BNEF · 2026 전망</div>
+    <p>2018년 대비 절반 이하. 셀 가격은 $74/kWh로 추가 하락. 2026년에도 추가 하락 압력, 그러나 미국 시장은 관세·ITC 변수로 디커플링 지속.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/features/2025-12-23/ev-battery-giant-catl-s-expansion-plans-face-trump-and-european-pushback" target="_blank" rel="noopener">CATL, 헝가리 제2공장(8.2B$) 본격 가동 임박</a></h3>
+    <div class="src">Bloomberg · 2026 (보도 지속)</div>
+    <p>BMW·Mercedes-Benz 공급 목적. 트럼프 행정부·유럽 일부 반발 변수와 동시에 진행. 유럽 EV 셀 공급 지형의 변동점.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">Stellantis-Factorial 77 Ah ASSB 셀 검증 — 375 Wh/kg, 15→90% 18분</a></h3>
+    <div class="src">BatteryTechOnline (산업 분석) · 2026</div>
+    <p>2025년 4월 발표 검증 결과의 2026 후속 분석. 600+ 사이클, 급속 충전 성능. 양산 압력·온도 제약은 여전한 과제. <code>solid-state</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 (Preprints)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1lcxn" target="_blank" rel="noopener">Interfacial Cation Arrangement Governs Electrocatalytic Kinetics in CO₂ Reduction</a></h3>
+    <div class="src">ChemRxiv · 2025-2026</div>
+    <p>포스포늄 기반 제미니 디케이션으로 전극 계면 양이온 배열을 직접 제어. Ag 다결정 전극에서 CO₂→CO 변환을 케이스 스터디로, 양이온 효과가 운동학적 결정 인자임을 정량적으로 분리. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-6kcl4" target="_blank" rel="noopener">Chirality-induced Spin Selectivity Suppresses HER during CO₂ Reduction</a></h3>
+    <div class="src">ChemRxiv · 2025-2026</div>
+    <p>나선 구조 키랄 Cu 전극이 CO₂RR 경쟁 반응(HER)을 억제, 비키랄 대비 낮은 onset 전위. CISS 효과를 전기화학 선택성 도구로 활용하는 새 경로 제안. <code>CO2RR</code> <code>HER</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-dvwc9" target="_blank" rel="noopener">Comprehensive Guidelines for Magnetoelectrocatalysis</a></h3>
+    <div class="src">ChemRxiv · 2026-01-03</div>
+    <p>자기장-전기화학 결합 촉매 작용을 체계화한 가이드라인. 측정·재현·인공물 제거 권고 포함. CO₂RR·OER·HER에서 보고되는 자기장 보조 효과의 표준화 베이스라인 제공. <code>magneto-electrocatalysis</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (Sources)</strong>
+  <ol>
+    <li><a href="https://pubs.acs.org/doi/10.1021/jacs.5c00633" target="_blank" rel="noopener">JACS — Pulsed Tandem Electrocatalysis for CO₂ Reduction (DOI 10.1021/jacs.5c00633)</a></li>
+    <li><a href="https://www.nature.com/articles/s41929-025-01451-1" target="_blank" rel="noopener">Nature Catalysis — Cu CO₂ electroreduction chain growth (DOI 10.1038/s41929-025-01451-1)</a></li>
+    <li><a href="https://www.nature.com/articles/s41560-025-01838-1" target="_blank" rel="noopener">Nature Energy — Covariance of interphasic properties &amp; fast chargeability (DOI 10.1038/s41560-025-01838-1)</a></li>
+    <li><a href="https://www.nature.com/articles/s41467-025-66079-y" target="_blank" rel="noopener">Nature Communications — Real-time AI for solid-state Li-metal batteries (DOI 10.1038/s41467-025-66079-y)</a></li>
+    <li><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA — Global Hydrogen Review 2025 / Hydrogen Tracker</a></li>
+    <li><a href="https://www.energy.gov/eere/fuelcells/technical-targets-proton-exchange-membrane-electrolysis" target="_blank" rel="noopener">U.S. DOE — Technical Targets for PEM Electrolysis</a></li>
+    <li><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">U.S. DOE — Hydrogen Shot: Water Electrolysis Technology Assessment</a></li>
+    <li><a href="https://www.csis.org/analysis/new-phase-us-battery-industry" target="_blank" rel="noopener">CSIS — A New Phase for the U.S. Battery Industry</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage" target="_blank" rel="noopener">Bloomberg — Sodium-ion battery breakthrough for EVs &amp; ESS</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2025-12-09/bnef-why-global-battery-prices-are-expected-to-fall-in-2026" target="_blank" rel="noopener">Bloomberg / BNEF — Global battery prices to fall in 2026</a></li>
+    <li><a href="https://www.bloomberg.com/news/features/2025-12-23/ev-battery-giant-catl-s-expansion-plans-face-trump-and-european-pushback" target="_blank" rel="noopener">Bloomberg — CATL Hungary expansion under political pushback</a></li>
+    <li><a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">BatteryTechOnline — Stellantis-Factorial 77 Ah ASSB validation review</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1lcxn" target="_blank" rel="noopener">ChemRxiv — Interfacial Cation Arrangement Governs CO₂RR Kinetics</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-6kcl4" target="_blank" rel="noopener">ChemRxiv — Chirality-induced Spin Selectivity Suppresses HER in CO₂RR</a></li>
+    <li><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-dvwc9" target="_blank" rel="noopener">ChemRxiv — Comprehensive Guidelines for Magnetoelectrocatalysis</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>

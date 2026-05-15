@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-05-15</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026-05-15 (금) · 최근 24~48시간 프론티어 AI 업데이트</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Anthropic</strong>이 <em>Claude for Small Business</em>를 출시 — QuickBooks·PayPal·HubSpot·Canva 등에 곧바로 꽂히는 15개 자동화 워크플로우. Pro/Max/Teams 플랜에 추가 비용 없음.</li>
+    <li><strong>OpenAI</strong>가 사이버보안 이니셔티브 <em>Daybreak</em>를 공개 — Anthropic의 Glasswing/Mythos에 대항하는 보안 특화 라인업으로 양사 경쟁이 거의 매월 격화 중.</li>
+    <li><strong>Google DeepMind</strong>가 <em>Magic Pointer</em> 프로젝트 공개 — 마우스 커서가 시선·음성·맥락을 이해해 Gemini로 즉시 작업을 수행. Chrome Beta(US) 점진 배포.</li>
+    <li><strong>xAI</strong>가 <em>Grok Build</em> 에이전틱 코딩 CLI 베타를 SuperGrok Heavy 대상으로 확장. 동시에 5/15 정오(PT) 기준 다수 구형 Grok 모델 API 은퇴 → <code>grok-4.3</code>으로 자동 리다이렉트.</li>
+    <li><strong>Mistral</strong>이 Anthropic Mythos 접근이 차단된 유럽 은행권을 겨냥한 사이버보안 AI 모델을 논의 중(블룸버그 보도).</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://aibusiness.com/cybersecurity/openai-launches-daybreak-new-initiative-challenge-glasswing" target="_blank" rel="noopener">OpenAI, 사이버보안 이니셔티브 ‘Daybreak’ 출범</a></h3>
+    <div class="src">AI Business · 2026-05-14</div>
+    <p>Anthropic의 Project Glasswing/Mythos에 대응하는 보안 특화 모델 라인업. 양사가 거의 매월 새 보안 LLM(예: <code>GPT-5.5-Cyber</code>)을 내놓으며 엔터프라이즈 사이버보안 시장에서 정면 충돌.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant, ChatGPT 기본 모델로 전환</a></h3>
+    <div class="src">OpenAI 공식 · 2026-05-05 (5/15 기준 글로벌 롤아웃 진행)</div>
+    <p>고위험 영역(의료·법률·금융)에서 환각이 <strong>52.5% 감소</strong>. 과도한 이모지 사용 억제, 더 자연스러운 톤. Plus/Pro 사용자는 검색 도구로 과거 대화·파일·Gmail을 회상해 개인화 응답.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">ChatGPT for Excel · Google Sheets 글로벌 출시</a></h3>
+    <div class="src">OpenAI · 2026-05 (글로벌 GA)</div>
+    <p>Excel·Sheets 사이드바에서 직접 표·예산·시나리오·다탭 파일 작업 수행. 트래커·수식·시나리오 분석·시트 정리 지원. <code>Realtime 2</code> 음성 모델(추론 단계 가변)도 함께 출시.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">‘Parameter Golf’ 회고 발행</a></h3>
+    <div class="src">OpenAI 공식 · 2026-05-13</div>
+    <p>모델 파라미터 효율화 실험에서 배운 점을 정리한 기술 회고. 학습·튜닝 효율 관련 사내 실험 결과를 외부에 공개.</p>
+  </div>
+</div>
+
+<h2 class="section">Google / DeepMind</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://9to5google.com/2026/05/12/deepmind-googlebook-magic-pointer/" target="_blank" rel="noopener">DeepMind, ‘Magic Pointer’ 프로젝트 공개</a></h3>
+    <div class="src">9to5Google · 2026-05-12</div>
+    <p>커서가 화면 위 객체를 인식하고 음성·맥락을 결합해 Gemini가 즉시 동작 수행. Chrome Beta(미국) 점진 배포 중이며 AI Studio 데모 2종은 누구나 접근 가능. <em>"point at objects on the screen and ask Gemini to take actions"</em>.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html" target="_blank" rel="noopener">Android 재구축: Gemini를 중심으로</a></h3>
+    <div class="src">CNBC · 2026-05-12</div>
+    <p>Android 책임자 Sameer Samat 인터뷰. 일상 작업 완수를 위해 Android 일부를 <code>Gemini Intelligence</code> 위에 재구축 중이며, Galaxy·Pixel 최신 기종부터 여름 중 'Gemini Intelligence on Android' 확대.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://fortune.com/2026/05/12/google-hackers-using-ai-to-weaponize-zero-day-vulnerabilities/" target="_blank" rel="noopener">Google: 공격자가 AI로 제로데이 무기화 중</a></h3>
+    <div class="src">Fortune · 2026-05-12</div>
+    <p>Google의 위협 인텔리전스 보고. 공격자들이 LLM을 활용해 제로데이 취약점을 빠르게 실전 무기화하고 있으며, 방어 측의 AI 활용 격차가 벌어지는 중이라고 경고.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Claude for Small Business 출시</a></h3>
+    <div class="src">Anthropic 공식 · 2026-05-13</div>
+    <p>QuickBooks·PayPal·HubSpot·Canva·Docusign·Google Workspace·Microsoft 365에 직결되는 커넥터 패키지. 재무·운영·영업·마케팅·HR·CS에 걸친 <strong>15개 사전 구성 에이전틱 워크플로우</strong>. Pro/Max/Teams 플랜에 추가 비용 없음, 각 워크플로우는 사용자 승인 단계 포함.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Claude Opus 4.7 — 비전·디자인 강화</a></h3>
+    <div class="src">Anthropic 공식 · 2026-05 (전 채널 가용)</div>
+    <p>이미지 인식 해상도 향상, 슬라이드·문서·UI 산출물 품질 강화. 가격은 Opus 4.6과 동일(<code>$5/1M input</code>, <code>$25/1M output</code>). Bedrock·Vertex AI·Microsoft Foundry 동시 지원.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/" target="_blank" rel="noopener">Agent SDK 업데이트 + 법률 커넥터</a></h3>
+    <div class="src">TechCrunch · 2026-05-13</div>
+    <p>SMB 출시와 동시에 Agent SDK를 갱신해 외부 에이전트가 Claude 모델에 접근 가능. 별도로 법률 섹터를 겨냥한 새 커넥터도 추가, 엔터프라이즈+SMB 양 방향 확장.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://9to5mac.com/2026/05/13/anthropics-latest-claude-release-turns-your-mac-into-a-small-business-powerhouse/" target="_blank" rel="noopener">Claude Cowork — 데스크톱 자동화 허브</a></h3>
+    <div class="src">9to5Mac · 2026-05-13</div>
+    <p>SMB 워크플로우는 Claude Cowork(데스크톱)에서 실행. 기존 계정 권한이 그대로 적용돼 Claude가 사용자가 접근 가능한 범위 내에서만 작업 수행. Mac에서 결재·전송·게시 전 사용자 승인 단계 의무화.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <p class="quiet">— 지난 24시간 주목할 신규 발표 없음. 가장 가까운 동향은 5/6 LlamaCon 후속 보도 및 비공개 Llama 차기 모델 준비 소식. —</p>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.basenor.com/blogs/news/xai-launches-grok-build-beta-agentic-coding-cli-explained" target="_blank" rel="noopener">Grok Build 베타 확장 (에이전틱 코딩 CLI)</a></h3>
+    <div class="src">Basenor · 2026-05-14</div>
+    <p>SuperGrok Heavy 구독자 대상으로 공개된 CLI. 자연어로 프로젝트 계획·파일 작성·셸 실행·앱 빌드까지 수행. Elon Musk가 5/14 직접 베타 테스터 모집 트윗을 다수 게시.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noopener">5/15 정오(PT) 다수 Grok 모델 API 은퇴</a></h3>
+    <div class="src">xAI Docs · 2026-05-15 시행</div>
+    <p>은퇴 모델: <code>grok-4-1-fast-reasoning</code>, <code>grok-4-1-fast-non-reasoning</code>, <code>grok-4-fast-*</code>, <code>grok-4-0709</code>, <code>grok-code-fast-1</code>, <code>grok-3</code>, <code>grok-imagine-image-pro</code>. 요청은 자동으로 <code>grok-4.3</code>으로 리다이렉트.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok Computer 미리보기 신호 + Voice Agent 확장</a></h3>
+    <div class="src">xAI 공식 · 2026-05-07 / 2026-05-03</div>
+    <p>5/7 일부 사용자에게 Grok Computer/Build 컨트롤이 잠시 노출 후 회수. Grok 4.3 릴리스 노트는 "코드 작성·실행·필요 패키지 설치·실제 파일 생성" 능력 명시. 5/3에는 <code>grok-voice-think-fast-1.0</code>이 Voice Agent API에 합류.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-05-13/mistral-developing-new-ai-model-for-banks-lacking-mythos-access" target="_blank" rel="noopener">유럽 은행권 겨냥 사이버보안 AI 모델 개발</a></h3>
+    <div class="src">Bloomberg · 2026-05-13</div>
+    <p>Anthropic Mythos 접근이 차단된 유럽 은행을 타깃으로 사이버보안 특화 모델 논의 중. 출시 시점은 미정이나 EU 금융기관과의 협의가 진행 중이라고 보도.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://mistral.ai/news" target="_blank" rel="noopener">Le Chat 2026 — 에이전트 모드·영속 메모리</a></h3>
+    <div class="src">Mistral 공식 · 2026-05</div>
+    <p>Le Chat에 agent mode·persistent memory 추가, Mistral Agents API가 서버사이드 에이전트 런타임(툴 사용·메모리·호스티드 코드 인터프리터 내장)으로 출시. Medium 3.5(128B dense)가 Vibe·Le Chat 기본 모델로 채택, SWE-Bench Verified 77.6%.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html" target="_blank" rel="noopener">EU 사이버보안 시장 두고 OpenAI·Anthropic 갈림</a></h3>
+    <div class="src">CNBC · 2026-05-11</div>
+    <p>OpenAI는 EU에 새 사이버 모델 접근을 허용하기로 한 반면, Anthropic은 Mythos에 대해 신중한 자세 유지. 규제·국가안보 변수와 맞물려 양사 EU 전략이 갈리는 중.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic" target="_blank" rel="noopener">Pentagon, Big Tech 8곳과 계약 — Anthropic은 제외</a></h3>
+    <div class="src">CNN Business · 2026-05-01 (재조명 5/13 보도)</div>
+    <p>국방부가 8개 빅테크와 AI 계약을 체결했으나 Anthropic이 빠진 점이 워싱턴에서 주목됨. Anthropic의 정부·국방 사용 정책과 군 활용 적합성 논의가 지속.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (Sources)</strong>
+  <ol>
+    <li><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">OpenAI — GPT-5.5 Instant 공식 페이지</a></li>
+    <li><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI — News (Parameter Golf, Daybreak 공지 포함)</a></li>
+    <li><a href="https://aibusiness.com/cybersecurity/openai-launches-daybreak-new-initiative-challenge-glasswing" target="_blank" rel="noopener">AI Business — OpenAI Launches Daybreak</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Google Blog — Next-generation Gemini Deep Research</a></li>
+    <li><a href="https://9to5google.com/2026/05/12/deepmind-googlebook-magic-pointer/" target="_blank" rel="noopener">9to5Google — DeepMind Magic Pointer</a></li>
+    <li><a href="https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html" target="_blank" rel="noopener">CNBC — Google races to put Gemini at center of Android</a></li>
+    <li><a href="https://fortune.com/2026/05/12/google-hackers-using-ai-to-weaponize-zero-day-vulnerabilities/" target="_blank" rel="noopener">Fortune — Google: hackers using AI to weaponize zero-days</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Anthropic — Introducing Claude for Small Business</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Anthropic — Introducing Claude Opus 4.7</a></li>
+    <li><a href="https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/" target="_blank" rel="noopener">TechCrunch — Anthropic courts small business owners</a></li>
+    <li><a href="https://9to5mac.com/2026/05/13/anthropics-latest-claude-release-turns-your-mac-into-a-small-business-powerhouse/" target="_blank" rel="noopener">9to5Mac — Claude Cowork SMB workflows</a></li>
+    <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI — News</a></li>
+    <li><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noopener">xAI Docs — May 15, 2026 Model Retirement</a></li>
+    <li><a href="https://www.basenor.com/blogs/news/xai-launches-grok-build-beta-agentic-coding-cli-explained" target="_blank" rel="noopener">Basenor — xAI Launches Grok Build Beta</a></li>
+    <li><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral AI — News</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-05-13/mistral-developing-new-ai-model-for-banks-lacking-mythos-access" target="_blank" rel="noopener">Bloomberg — Mistral Developing AI Model for Banks Lacking Mythos Access</a></li>
+    <li><a href="https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html" target="_blank" rel="noopener">CNBC — OpenAI EU cyber model, Anthropic holds out on Mythos</a></li>
+    <li><a href="https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic" target="_blank" rel="noopener">CNN Business — Pentagon deals with 8 Big Tech, snubbing Anthropic</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
