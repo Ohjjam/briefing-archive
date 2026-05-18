@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-05-18</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>Energy &amp; Chemical Engineering Morning Brief</h1>
+  <div class="meta">2026년 5월 18일 (월) · 최근 24~72시간 + 진행 중 핵심 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>정책</strong> — EU 집행위 3차 수소 옥션 결과 발표 (5/7): 7개국 9개 프로젝트에 <code>1.1 GW</code> 전해조 용량 배정, 최저가 <strong>€0.44/kg</strong> 보조금 입찰. 2026 Q2에는 EU 수소전략 재검토 컨설테이션 개시.</li>
+    <li><strong>배터리</strong> — 강산 환경에서 금속 양이온 없이 CO2RR을 가능케 하는 전기장 구동 폴라리제이션 + 양성자 차단 메커니즘 보고(<em>Nature Communications</em>, 2026).</li>
+    <li><strong>수전해</strong> — Ru-VO2 복합촉매로 알칼리 AEMWE에서 수해리·수소생성 양단을 동시에 개선하는 비귀금속 OER/HER 촉매 진전 (Research / Spectrum IEEE).</li>
+    <li><strong>플라스틱</strong> — 100 ℃ 마일드 조건에서 PET 폐기물을 고순도 테레프탈산 + 1.2 V 청정수소로 분리하는 멀티펑셔널 촉매 공정 — 재생 TPA 비용 46% 절감 보고.</li>
+    <li><strong>리튬배터리</strong> — Nankai/SISP 연합팀, fluorinated hydrocarbon 전해질로 <code>700 Wh/kg</code> 상온, <code>~400 Wh/kg</code> @-50 ℃ 달성 (<em>Nature</em>, 2026-02 게재, 5월 산업 적용 논의 가속).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Electric-field-driven CO2 polarization + bio-inspired proton blocking — 강산 무금속이온 조건에서의 CO2RR</a></h3>
+    <div class="src">Nature Communications · 2026 · DOI: 10.1038/s41467-026-68435-y</div>
+    <p>CTAC 캡핑 sharp-triangle Au 나노구조가 국소 전기장을 강화해 CO2 분자의 쌍극자 모멘트를 키우고 흡착·활성화를 촉진. 산성 전해질에서 알칼리 양이온 없이 작동하는 첫 시연으로, 강산성 MEA 셀 상용화의 큰 걸림돌인 양이온 누적 문제를 우회. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02032-7" target="_blank" rel="noopener">Polymerizable non-flammable 전해질로 Ah급 Na-ion 배터리의 thermal runaway 차단</a></h3>
+    <div class="src">Nature Energy · 2026 · DOI: 10.1038/s41560-026-02032-7</div>
+    <p>중합 가능한 난연성 전해질이 셀 내부에서 보호용 가교막을 자기 형성해 부반응을 억제하고 열폭주를 차단. 암페어시 급 대용량 Na-ion 셀에서 실증, 그리드급 ESS의 안전 마진을 끌어올리는 직접적 처방. <code>sodium-ion</code> <code>safety</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://en.nankai.edu.cn/2026/0302/c23047a590160/page.htm" target="_blank" rel="noopener">700 Wh/kg 리튬 배터리 — fluorinated hydrocarbon 전해질</a></h3>
+    <div class="src">Nature (Nankai Univ · 상하이 우주 전원 연구소) · 원 발표 2026-02 (산업 적용 5월 가속)</div>
+    <p>Nankai 화학원 Zhao Qing·Chen Jun 그룹과 SISP Li Yong 연구원 팀이 새 플루오린화 탄화수소 전해질로 상온 <code>700 Wh/kg</code>, -50 ℃에서도 ~400 Wh/kg을 유지. 항공·우주·고고도 드론 등 극저온 응용에 직접 연결. <code>Li-metal</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.rsc.org/en/content/articlehtml/2026/su/d5su00803d" target="_blank" rel="noopener">Electrocatalytic valorization of lignin — 종합 리뷰</a></h3>
+    <div class="src">RSC Sustainability · 2026 · DOI: 10.1039/D5SU00803D</div>
+    <p>매년 1억 톤 이상 발생하지만 대부분 저가 연료로 소각되는 리그닌을 전기촉매적으로 방향족 합성원료로 전환하는 경로를 통합 정리. C–O/C–C 결합 분해, 전극-매개체 설계, 셀 통합 측면의 한계를 명시. <code>biomass</code> <code>lignin</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.pv-magazine.com/2026/05/07/eu-allocates-1-1-gw-of-electrolyzer-capacity-in-third-hydrogen-auction-lowest-bid-comes-in-at-e0-44-kg/" target="_blank" rel="noopener">EU 3차 수소 옥션, 1.1 GW 전해조 배정 — 최저가 €0.44/kg</a></h3>
+    <div class="src">pv magazine · 2026-05-07 · 1차 보도</div>
+    <p>EU 집행위가 12월 시작한 3차 재생수소 옥션에서 7개국 9개 프로젝트에 총 <code>1.1 GW</code>를 배정, EU 자금 €1.09B 투입. 최저 입찰가가 <strong>kg당 €0.44</strong>로, 보조금 자체가 1차 옥션보다 빠르게 떨어지는 신호. 정책효율 개선 + 1차 사업자들의 학습효과 누적.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://observatory.clean-hydrogen.europa.eu/eu-policy/eu-hydrogen-strategy-under-eu-green-deal" target="_blank" rel="noopener">EU 수소전략 재검토 컨설테이션, 2026 Q2 개시 예정</a></h3>
+    <div class="src">European Hydrogen Observatory · 2026 · 정책 일정</div>
+    <p>2030년 40 GW 전해조·1천만 톤 재생수소 목표의 현실성을 산업계와 함께 재평가. 산업 측은 RFNBO 정의·전력 매칭 규제(추가성·시간 매칭) 완화, 비용 분담 메커니즘 강화를 우선 요구할 것으로 전망.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.hydrogenexchange.io/post/italy-s-6-billion-green-hydrogen-bet-what-it-means-for-the-hydrogen-economy" target="_blank" rel="noopener">EU, 이탈리아 €6B 그린·바이오매스 수소 보조 승인</a></h3>
+    <div class="src">Hydrogen Exchange · 원 승인 2026-03-30 (EU State Aid)</div>
+    <p>이탈리아 정부의 재생·바이오매스 기반 수소 생산 지원 €6B 스킴이 EU 국가보조 심사 통과. CapEx·OpEx 양쪽 보조와 함께 산업 수요처(정유·암모니아·철강)와의 연계 계약을 의무화해 수요 측 락인을 동시에 시도.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/energy-system/low-emission-fuels/hydrogen" target="_blank" rel="noopener">IEA, 수소 정책 개혁 촉구 — '다음 단계' 성장의 병목은 수요 측</a></h3>
+    <div class="src">IEA · 2026-02 (5월 후속 정책 라운드 반영)</div>
+    <p>IEA는 공급 측 보조 위주의 정책이 한계에 도달했다고 진단하고, 산업·중공업 수요 측 mandate, 국경탄소조정(CBAM)과의 연계, 인증·보장 메커니즘 강화를 권고. 2030년 전 글로벌 청정수소 생산비 목표를 $2-3/kg으로 재확인.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://insideevs.com/news/778354/toyota-solid-state-battery-ev-40-year-lifespan/" target="_blank" rel="noopener">Toyota, 2027~28 전고체 배터리 양산 진입 — "10분 충전 + 주행거리 20~50% ↑"</a></h3>
+    <div class="src">InsideEVs · 2026-05 (Toyota 공식 일정 반영)</div>
+    <p>일본 정부 인가 라인업에서 2026년 소규모 시생산, 2027~28 양산 진입. 황화물계 SE를 기반으로 10분 급충 + 주행거리 20~50% 증가를 표적. 본격 mass production은 "2030년 이후"로 그대로 유지. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.monolithai.com/blog/solid-state-battery-news" target="_blank" rel="noopener">Samsung SDI, 2027년 9분 80% 급충 약속 — S-Line 양산 준비</a></h3>
+    <div class="src">Monolith AI Industry Watch · 2026-05</div>
+    <p>2023년 완공된 세계 최대 규모의 전고체 파일럿 라인 'S-Line'을 기반으로 2027년 양산 진입을 공언. 에너지밀도·안전성을 동시 강화한 'super-gap' 전고체 셀로 K-배터리 3사 경쟁 구도 재편이 임박.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://spectrum.ieee.org/anion-exchange-membrane-electrolyzer" target="_blank" rel="noopener">AEM 전해조, 2026년 메가와트 스케일 진입 — PFAS-free 가능성</a></h3>
+    <div class="src">IEEE Spectrum · 2026 (5월 시장 현황 갱신)</div>
+    <p>PEM의 PFAS(영구화학물질) 의존 + 이리듐 사용 문제에 대한 대안으로 AEM이 빠르게 부상. 비귀금속(Ni·Fe·Co) OER/HER 촉매 진전과 함께 다수 스타트업이 2026년 MW급 시운전에 돌입. EU 40 GW 목표와 직접 연결되는 기술 옵션. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/" target="_blank" rel="noopener">전해조 특허 출원 12배 폭증 — 글로벌 IP 경쟁 본격화</a></h3>
+    <div class="src">PatSnap 분석 · 2026 (5월 현재 누계)</div>
+    <p>5년 전 대비 전해조 관련 특허 출원이 12배 증가. 중국·EU·미국의 3극 구도에서 한국은 막·촉매·BoP 분야 특허 비중 상승. 표준·인증과 결합된 SEP(Standard Essential Patent) 확보 전략이 본격 부각.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 · 신규 결과</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acsaem.5c03402" target="_blank" rel="noopener">PET 폐기물 → 배터리 소재 직접 전환 로드맵</a></h3>
+    <div class="src">ACS Applied Energy Materials · DOI: 10.1021/acsaem.5c03402 · 2025 게재, 2026 후속 데이터</div>
+    <p>PET 가수분해 산물(테레프탈산·EG)을 분리 정제 후 산화환원 활성 유기물(Li/Na 배터리 음극) 및 전해질 첨가제로 끌어들이는 풀-시퀀스 설계. "ZERO-emission society" 시나리오에서 폐플라스틱 → 에너지저장재 순환의 정량 평가. <code>upcycling</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820" target="_blank" rel="noopener">자성 회수 가능 nZVI 촉매로 혼합 폐플라스틱 중 PET만 선택 분해</a></h3>
+    <div class="src">Environ. Sci. Technol. · DOI: 10.1021/acs.est.5c06820 · 2026</div>
+    <p>실제 MRF(재활용 분리시설) 라인에서 나오는 혼합 플라스틱 스트림에서 PET만 선택적으로 분해, 촉매는 외부 자장으로 회수 재사용. 분리·세척 라인을 줄여 챔피언 셀 수준이 아닌 "현장 수율" 관점의 경제성을 끌어올림.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c15278" target="_blank" rel="noopener">Thermally-stabilized SAA로 선택적 CO2 전기환원 — JACS</a></h3>
+    <div class="src">JACS · DOI: 10.1021/jacs.5c15278 · 2025 게재, 2026 후속 응용</div>
+    <p>단일 원자 합금(SAA)의 hydrogenation dynamics를 열적으로 안정화해 CO2 전기환원의 부산물(H2) 비중을 끌어내리고 C1·C2+ 생성물 선택도를 유지. 산업 전류 밀도 영역에서의 내구성 확보가 핵심.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41598-026-39916-3" target="_blank" rel="noopener">스트로 기반 HMF/FDCA 100% 재생 전력 LCA — GWP 74.56% 감축</a></h3>
+    <div class="src">Scientific Reports · DOI: 10.1038/s41598-026-39916-3 · 2026</div>
+    <p>밀짚 유래 5-HMF / FDCA 생산 공정을 100% 재생 전력에서 운용하는 시나리오의 전 과정 평가. 기존 화석연료 그리드 대비 GWP가 <strong>74.56% 감소</strong>. PEF 등 바이오 폴리에스터 상용화의 LCA 근거를 강화.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://www.nature.com/articles/s41467-026-68435-y">Nature Communications — Electric-field-driven CO2 polarization (DOI: 10.1038/s41467-026-68435-y)</a></li>
+    <li><a href="https://www.nature.com/articles/s41560-026-02032-7">Nature Energy — Thermal runaway-free Na-ion battery (DOI: 10.1038/s41560-026-02032-7)</a></li>
+    <li><a href="https://en.nankai.edu.cn/2026/0302/c23047a590160/page.htm">Nankai University — 700 Wh/kg lithium battery (Nature, 2026-02)</a></li>
+    <li><a href="https://pubs.rsc.org/en/content/articlehtml/2026/su/d5su00803d">RSC Sustainability — Electrocatalytic valorization of lignin (DOI: 10.1039/D5SU00803D)</a></li>
+    <li><a href="https://www.pv-magazine.com/2026/05/07/eu-allocates-1-1-gw-of-electrolyzer-capacity-in-third-hydrogen-auction-lowest-bid-comes-in-at-e0-44-kg/">pv magazine — EU 3rd Hydrogen Auction (2026-05-07)</a></li>
+    <li><a href="https://observatory.clean-hydrogen.europa.eu/eu-policy/eu-hydrogen-strategy-under-eu-green-deal">European Hydrogen Observatory — EU Hydrogen Strategy revision (2026 Q2)</a></li>
+    <li><a href="https://www.hydrogenexchange.io/post/italy-s-6-billion-green-hydrogen-bet-what-it-means-for-the-hydrogen-economy">Hydrogen Exchange — Italy €6B green hydrogen scheme</a></li>
+    <li><a href="https://www.iea.org/energy-system/low-emission-fuels/hydrogen">IEA — Hydrogen policy update</a></li>
+    <li><a href="https://insideevs.com/news/778354/toyota-solid-state-battery-ev-40-year-lifespan/">InsideEVs — Toyota solid-state battery timeline</a></li>
+    <li><a href="https://www.monolithai.com/blog/solid-state-battery-news">Monolith AI — Samsung SDI solid-state status</a></li>
+    <li><a href="https://spectrum.ieee.org/anion-exchange-membrane-electrolyzer">IEEE Spectrum — AEM electrolyzer outlook</a></li>
+    <li><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/">PatSnap — Green hydrogen patent surge</a></li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/acsaem.5c03402">ACS Applied Energy Materials — PET → battery materials (DOI: 10.1021/acsaem.5c03402)</a></li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820">ES&amp;T — Selective PET depolymerization with nZVI catalyst (DOI: 10.1021/acs.est.5c06820)</a></li>
+    <li><a href="https://pubs.acs.org/doi/10.1021/jacs.5c15278">JACS — Single-atom alloy for selective CO2RR (DOI: 10.1021/jacs.5c15278)</a></li>
+    <li><a href="https://www.nature.com/articles/s41598-026-39916-3">Scientific Reports — HMF/FDCA LCA (DOI: 10.1038/s41598-026-39916-3)</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>

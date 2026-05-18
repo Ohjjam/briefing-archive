@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-05-18</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 5월 18일 (월) · 최근 24~72시간 주요 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>xAI</strong> — 일론 머스크가 <code>Grok Build</code> 에이전틱 코딩 CLI의 공개 베타 확장을 직접 푸시(5/14). Wall Street 주요 펌(Apollo, Morgan Stanley)이 Grok 내부 테스트 시작.</li>
+    <li><strong>OpenAI</strong> — <code>gpt-5.5-instant</code>가 ChatGPT 기본 모델로 전환되며 환각률 52.5% 감소(고위험 프롬프트 기준). 미국 Pro 사용자 대상 개인 재무 계정 연동 기능 롤아웃 시작.</li>
+    <li><strong>Anthropic</strong> — 법률 산업 전용 MCP 커넥터 20+종 및 12개 실무영역 플러그인 공개. PwC와 글로벌 단위 확대 파트너십 발표.</li>
+    <li><strong>Google</strong> — DeepMind, AI 기반 새 입력 패러다임 <em>Magic Pointer</em> 발표(5/12, Chrome Beta 점진 출시). Chromebook을 'Googlebook'으로 리브랜딩 예정(2026년 가을).</li>
+    <li><strong>Mistral</strong> — <code>Mistral Medium 3.5</code> 공개 + Vibe Remote Agents 출시. SWE-Bench Verified 77.6%. 유럽 은행 대상 사이버보안 도구 협의 중(5/13).</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant, ChatGPT의 새 기본 모델로 전환</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-05-05</div>
+    <p><code>gpt-5.5-instant</code>가 <code>gpt-5.3-instant</code>를 대체하며 전 사용자에 기본 모델로 적용. 내부 평가에서 의료·법률·금융 등 고위험 프롬프트의 허위 주장(hallucinated claims)이 <strong>52.5% 감소</strong>. Plus·Pro 사용자에는 웹·이미지·STEM 응답 품질 향상이 함께 적용됨.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT 개인 재무 기능 단계적 롤아웃</a></h3>
+    <div class="src">OpenAI Help Center · 2026-05 (진행 중)</div>
+    <p>미국 Pro 사용자부터 금융 계좌 연동(account-connect) 기능이 활성화. 거래 내역과 보유 자산을 직접 참조해 예산·세금·투자 질의에 응답. 광고는 호주·뉴질랜드·캐나다 Free/Go 플랜에 한해 노출되며, 유료 플랜은 광고 제외.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">DALL·E 2/3 API에서 정식 제거</a></h3>
+    <div class="src">OpenAI API Changelog · 2026-05-12</div>
+    <p><code>dall-e-2</code> / <code>dall-e-3</code> 스냅샷이 API에서 deprecation 후 제거. 마이그레이션 권장 모델은 <code>gpt-image-2</code>, <code>gpt-image-1</code>, <code>gpt-image-1-mini</code>. 기존 호출이 실패하므로 프로덕션 코드 점검 필요.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://deepmind.google/" target="_blank" rel="noopener">Magic Pointer — DeepMind, AI 기반 차세대 커서 발표</a></h3>
+    <div class="src">Google DeepMind · 2026-05-12</div>
+    <p>커서 인식 + 음성 명령 + 문맥 추론을 결합한 새 입력 패러다임. 사용자가 화면 요소를 가리키며 "move this", "merge those" 같은 짧은 음성 명령으로 직접 작업을 지시. 미국 Chrome Beta 채널부터 점진적 롤아웃.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Deep Research Max — 자율 리서치 에이전트 차세대 버전</a></h3>
+    <div class="src">Google Blog · 2026-05</div>
+    <p>Gemini 3.1 Pro 기반의 풀-자율 리서치 에이전트. 웹과 사용자 사적 데이터(메일·드라이브 등) 양쪽을 동시에 탐색하며 멀티-홉 합성이 가능. 기업·정부 활용을 겨냥한 'Gemini for Government' 라인업과 묶여 공개.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/" target="_blank" rel="noopener">Gemini 3 Deep Think — 과학 연구 특화 추론 모델</a></h3>
+    <div class="src">Google Blog · 2026-05</div>
+    <p>장시간 추론(long-horizon reasoning)을 의도적으로 강화한 변종. 수식 유도·증명·코드 합성 등 과학 워크플로우에 우선 적용. Genesis Mission(미국 정부 과학 발견 이니셔티브)과 연계해 Vertex 상에서 호스팅.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude Code, 에이전트 뷰 및 다중 세션 관리 도입</a></h3>
+    <div class="src">Anthropic 공식 뉴스 · 2026-05</div>
+    <p>하나의 CLI 뷰에서 다중 에이전트를 시작·백그라운드 전환·상태 점검·재진입 가능. 훅(hook)·플러그인·권한·피드백 플로우 개선, MCP 핸들링 안정화. Windows·음성 통합 관련 다수 버그 수정 동반.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://news.bloomberglaw.com/legal-ops-and-tech/anthropic-pushes-deeper-into-legal-work-with-claude-updates" target="_blank" rel="noopener">법률 산업 전용 MCP 커넥터 20+ 및 12개 실무영역 플러그인 출시</a></h3>
+    <div class="src">Bloomberg Law · 2026-05</div>
+    <p>리서치·계약·디스커버리·매터 관리·legal aid를 아우르는 워크플로우 확장. 로펌과 인하우스 팀의 도구 통합을 겨냥한 개방형 커스터마이제이션 지원. 동일 시기에 PwC와의 글로벌 단위 확대 파트너십도 발표.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Claude for Small Business — 중소기업 패키지 공개</a></h3>
+    <div class="src">Anthropic 공식 뉴스 · 2026-05</div>
+    <p>QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365용 커넥터 + 즉시 실행 가능한 워크플로우 번들. 광고 의존 없이 작동하도록 설계됐다는 정책 메시지("ad-free")가 함께 공식화됨.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">LlamaCon 2026 — Llama 4 Scout / Maverick 정식 출시</a></h3>
+    <div class="src">Meta AI 공식 블로그 · 2026-05</div>
+    <p>첫 LlamaCon 행사에서 멀티모달 네이티브 + MoE 아키텍처 기반 <code>Llama 4 Scout</code>·<code>Llama 4 Maverick</code> 공개. WhatsApp·Messenger·Instagram Direct·Meta.AI에서 직접 사용 가능. 컨텍스트 길이가 동급 오픈 모델 중 최고 수준.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">Llama Guard 4 · LlamaFirewall · Llama Prompt Guard 2 공개</a></h3>
+    <div class="src">Meta AI · 2026-05</div>
+    <p>오픈소스 커뮤니티용 보호 도구 3종. 자체 호스팅 환경에서도 입력 필터링, 프롬프트 인젝션 차단, 정책 위반 탐지를 외부 의존 없이 구성할 수 있도록 함. 신규 파인튜닝/평가 API와 함께 배포.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/" target="_blank" rel="noopener">Grok Build 공개 베타 확장 — 머스크가 직접 트윗으로 푸시</a></h3>
+    <div class="src">Engadget · 2026-05-14</div>
+    <p>에이전틱 코딩 CLI인 <code>Grok Build</code>가 SuperGrok Heavy 구독자 대상으로 라이브. 프로젝트 계획·파일 편집·셸 명령 실행·자연어 기반 풀-앱 구축까지 단일 CLI에서 처리. Anthropic의 Claude Code, Mistral의 Vibe와 정면 경쟁 구도.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noopener">5/15부 구형 Grok 모델 일괄 retirement</a></h3>
+    <div class="src">xAI Docs · 2026-05-15</div>
+    <p>현지시각 5/15 12:00 PT부로 다수 구형 모델이 xAI API에서 제거. 마이그레이션 권장 타겟은 최신 <code>grok-4.3</code> 라인. 프로덕션 인티그레이션은 모델 ID 업데이트 필수.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.japantimes.co.jp/business/2026/05/14/tech/musk-xai-wall-street-grok-chatbot/" target="_blank" rel="noopener">Wall Street 펌들이 Grok 내부 도입 시작 — Apollo, Morgan Stanley</a></h3>
+    <div class="src">Japan Times · 2026-05-14</div>
+    <p>xAI가 월가 주요 금융 기관을 대상으로 Grok 시범 도입 영업 중. Apollo Global Management와 Morgan Stanley가 내부 사용을 개시한 것으로 확인. 엔터프라이즈 시장에서 OpenAI·Anthropic 양강 구도에 본격적인 도전을 시작.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Voice Agent API + Speech-to-Text / TTS 출시</a></h3>
+    <div class="src">xAI News · 2026-05-03</div>
+    <p><code>grok-voice-think-fast-1.0</code>를 Voice Agent API에 정식 지원. 25개 이상 언어, 저지연 멀티스텝 워크플로우, 정확한 도구 호출을 강조. 별도 STT/TTS API도 공개 — 화자 분리, 타임스탬프, 표현형 음성 태그 지원.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral Medium 3.5 + Vibe Remote Agents 공개</a></h3>
+    <div class="src">Mistral AI · 2026-05-02</div>
+    <p>128B 덴스 모델 <code>mistral-medium-3.5</code>가 Le Chat과 Vibe CLI의 기본 모델로 전환. 채팅·추론·코딩·에이전트 통합 단일 모델 구조. SWE-Bench Verified <strong>77.6%</strong>로 자사 Devstral 2 및 Qwen3.5 397B를 상회. Vibe는 로컬 세션을 클라우드로 "텔레포트" 가능.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.pymnts.com/artificial-intelligence-2/2026/mistral-plans-cybersecurity-tool-for-banks-cut-off-from-mythos/" target="_blank" rel="noopener">유럽 은행 대상 사이버보안 AI 도구 협의 중</a></h3>
+    <div class="src">PYMNTS · 2026-05-13</div>
+    <p>대형 미국 모델(Mythos 등)에 대한 접근이 차단된 유럽 금융권을 타깃으로 한 자국 대안. 대규모·고속의 보안 취약점 탐지를 표방하며, 데이터 주권 이슈를 마케팅 포인트로 활용.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blogs.nvidia.com/blog/mistral-frontier-open-models/" target="_blank" rel="noopener">NVIDIA × Mistral 오픈 모델 패밀리 가속화 파트너십</a></h3>
+    <div class="src">NVIDIA Blog · 2026-05</div>
+    <p>차세대 Mistral 오픈 모델 학습·추론을 NVIDIA 인프라(블랙웰·H200 기반)에서 가속. EU 진영의 오픈 프론티어 모델 경쟁력을 확보하기 위한 GPU 공급 보장 성격.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">SubQ 1M-Preview — 첫 상용 서브쿼드라틱 LLM 등장</a></h3>
+    <div class="src">LLM-Stats · 2026-05-05 <span class="unverified">[2차]</span></div>
+    <p>Subquadratic이 표준 트랜스포머가 아닌 풀-서브쿼드라틱 sparse attention 구조로 첫 상용 LLM 공개. 네이티브 <strong>12M 토큰</strong> 컨텍스트, 프론티어 모델 대비 약 1/5 가격, 스케일 시 최대 52× 빠른 attention을 주장. 1차 검증 자료 부족 — 후속 벤치마크 필요.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">Gemini 3.1 Flash Lite · ZAYA1-8B 등 경량/오픈 모델 동시 출시</a></h3>
+    <div class="src">LLM-Stats · 2026-05-06~08 <span class="unverified">[2차]</span></div>
+    <p>Google이 비용 최적화용 <code>gemini-3.1-flash-lite</code>를 공개. 같은 주에 Zyphra가 AMD GPU 클러스터로 학습한 Apache 2.0 라이선스 MoE <code>ZAYA1-8B</code>를 출시 — 비 NVIDIA 학습 스택의 신뢰성 검증 사례.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://openai.com/index/gpt-5-5-instant/">OpenAI — Introducing GPT-5.5 Instant</a></li>
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI Help Center — ChatGPT Release Notes</a></li>
+    <li><a href="https://developers.openai.com/api/docs/changelog">OpenAI API Changelog</a></li>
+    <li><a href="https://deepmind.google/">Google DeepMind — Magic Pointer announcement</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/">Google Blog — Deep Research Max</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/">Google Blog — Gemini 3 Deep Think</a></li>
+    <li><a href="https://www.anthropic.com/news">Anthropic — News (Claude Code, MCP connectors)</a></li>
+    <li><a href="https://news.bloomberglaw.com/legal-ops-and-tech/anthropic-pushes-deeper-into-legal-work-with-claude-updates">Bloomberg Law — Anthropic Legal Updates</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-for-small-business">Anthropic — Claude for Small Business</a></li>
+    <li><a href="https://ai.meta.com/blog/llamacon-llama-news/">Meta AI Blog — LlamaCon News</a></li>
+    <li><a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/">Engadget — xAI Grok Build</a></li>
+    <li><a href="https://docs.x.ai/developers/migration/may-15-retirement">xAI Docs — May 15 Model Retirement</a></li>
+    <li><a href="https://www.japantimes.co.jp/business/2026/05/14/tech/musk-xai-wall-street-grok-chatbot/">Japan Times — Wall Street firms test Grok</a></li>
+    <li><a href="https://x.ai/news">xAI News — Voice Agent API</a></li>
+    <li><a href="https://mistral.ai/news">Mistral AI — News (Medium 3.5, Vibe Remote Agents)</a></li>
+    <li><a href="https://www.pymnts.com/artificial-intelligence-2/2026/mistral-plans-cybersecurity-tool-for-banks-cut-off-from-mythos/">PYMNTS — Mistral cybersecurity for European banks</a></li>
+    <li><a href="https://blogs.nvidia.com/blog/mistral-frontier-open-models/">NVIDIA Blog — Mistral partnership</a></li>
+    <li><a href="https://llm-stats.com/llm-updates">LLM-Stats — May 2026 AI Updates</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
