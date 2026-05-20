@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy & Chemical Engineering Morning Brief · 2026-05-20</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지 · 화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-20 (수) · 최근 24~72시간</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Na-ion 배터리 열폭주 차단</strong> — Nature Energy: 중합형 비가연성 전해질로 Ah급 셀에서 thermal runaway 완전 억제. 차세대 ESS·EV 안전 기준 재정립 가능.</li>
+    <li><strong>CO2 전해 고선택성·장기 안정</strong> — Nature Catalysis: Cu/Bi core–shell 나노와이어 MEA로 <code>4.5 M formate</code> 직접 생산을 <code>8,000 h+</code> 유지. 산업화 직전 단계의 핵심 진전.</li>
+    <li><strong>HKU 'SS-H2' 스테인리스</strong> — 해수 직접 전해를 가능케 하는 신소재 보고. 중국 본토 공장과 양산 협력 진행 중, 해수 수전해 비용 곡선 변화 신호.</li>
+    <li><strong>CATL Super Tech Day 2026</strong> — 초고속 충전 셀 + 준-고체전지급 차세대 아키텍처 공개. 글로벌 시장 점유 38.7% → 42.1%로 격차 확대.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02032-7" target="_blank" rel="noopener">Thermal runaway-free ampere-hour-level Na-ion battery via polymerizable non-flammable electrolyte</a></h3>
+    <div class="src">Nature Energy · 2026 (s41560-026-02032-7) · Na-ion · safety</div>
+    <p>중합형 비가연성 전해질이 가교 구조로 보호막을 형성, 전극-전해질 부반응과 환원성 가스 발생을 동시에 차단한다. Ah급 셀에서 열폭주가 발생하지 않은 첫 보고로, 차세대 grid-scale Na-ion ESS 안전 인증 흐름을 가속할 전망. <code>Na-ion</code> <code>thermal runaway</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-026-01533-8" target="_blank" rel="noopener">A CO2 electrolyser with high flux for stable production of high-concentration formate</a></h3>
+    <div class="src">Nature Catalysis · 2026 (s41929-026-01533-8) · CO2RR</div>
+    <p>3D Cu foam 위에 성장시킨 Cu/Bi core–shell 나노와이어를 음극으로 한 고플럭스 MEA. <code>4.5 M</code> 농축 formate를 8,000시간 이상 안정적으로 생산. 그동안 CO2RR 상용화의 양대 장벽이던 '고농도 산물' + '장기 안정성'을 동시에 해소했다. <code>CO2RR</code> <code>formate</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.theregister.com/offbeat/2026/04/23/solid-state-battery-discoveries-could-improve-energy_storage/5220941" target="_blank" rel="noopener">세라믹 고체 전해질 균열 메커니즘 규명 — Max Planck Düsseldorf</a></h3>
+    <div class="src">Nature 보고(2026-04) · solid-state · The Register 보도(2026-04-23)</div>
+    <p>독일 Max Planck Institute for Sustainable Materials 팀이 전고체 배터리의 핵심 난제인 세라믹 전해질 균열 형성의 결정적 메커니즘을 식별. 양극 부피 변화에 의한 응력 집중점을 정량화해 셀 설계 가이드라인 갱신 근거 제공. <code>solid-state</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">정책 / 규제</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary" target="_blank" rel="noopener">IEA State of Energy Policy 2026 — 150개국 재생·원전 정책, 32개국 공급망 회복력 정책</a></h3>
+    <div class="src">IEA (공식) · 2026-05</div>
+    <p>'25년 정책 진척도를 정리한 IEA 연례 정책 보고. 재생·원자력 정책 시행국 150개국, 에너지 효율·전기화 정책 130개국, 핵심광물·청정 공급망 회복력 정책 32개국. NDC와 장기 net-zero 기여를 기준으로 인센티브 구조 변화가 누적되고 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/data-and-statistics/data-tools/2026-energy-crisis-policy-response-tracker" target="_blank" rel="noopener">IEA, 사상 최대 규모 비상 석유 비축분 방출 — 중동발 공급 충격 대응</a></h3>
+    <div class="src">IEA (공식) · 2026-05</div>
+    <p>중동 분쟁이 글로벌 연료 시장에 전례 없는 충격을 가하자 IEA가 사상 최대 비축유 방출을 단행. 동시에 정부·기업·가계가 적용 가능한 수요측 조치 메뉴를 공개해 가격 압력 완화와 에너지 안보 확보를 동시에 노린다.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/05/01/electrolyzer/china-approves-360m-off-grid-green-hydrogen-project-in-xinjiang-producing-30-000-tonnes-annually" target="_blank" rel="noopener">中, 신장 오프그리드 그린수소 프로젝트 3.6억 달러 승인 — 연 3만 톤</a></h3>
+    <div class="src">Fuel Cells Works · 2026-05-01</div>
+    <p>690MW 풍력·태양광 100% 오프그리드 전원에서 연 3만 톤 그린수소를 생산하고 CO₂ 135만 톤을 감축하는 사업. 분산형 재생 → 그린수소 전환 사업 모델의 대표 사례로 평가. <code>green hydrogen</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026" target="_blank" rel="noopener">美 DOE, FERC에 'AI·데이터센터 대형 부하 접속 단축' 절차 개시 지시</a></h3>
+    <div class="src">IEA Electricity 2026 인용 · 2025-10 지시 / 2026 효과 본격화</div>
+    <p>AI·데이터센터의 폭발적 전력 수요에 대응해, 발전·부하 co-location 접속 요청 허용 등 대형 부하 연결 시간 단축과 업그레이드 비용 절감 절차를 FERC가 본격 진행. 미국 청정전력 인프라 투자 흐름의 핵심 변수.</p>
+  </div>
+
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://evtech.news/battery-technology/catl-super-tech-day-2026-unveils-breakthrough-ev-battery-technologies.html" target="_blank" rel="noopener">CATL Super Tech Day 2026 — 초고속 충전 셀 & 준-고체전지급 아키텍처 공개</a></h3>
+    <div class="src">EVTech.News · 2026-05</div>
+    <p>고전류 충전에서도 안전·수명을 유지하는 신소재·열관리 시스템과, 고체전지에 근접한 차세대 셀 아키텍처를 동시 공개. 글로벌 시장 점유율 38.7% → 42.1%로 확대돼 배터리 패권 격차가 더 벌어졌다. <code>Li-ion</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/05/11/clean-energy/cannot-be-explained-new-ultra-stainless-steel-stuns-researchers" target="_blank" rel="noopener">HKU 'SS-H2' 스테인리스 — 해수 직접 전해를 위한 신소재</a></h3>
+    <div class="src">Fuel Cells Works · 2026-05-11 · HKU Mingxin Huang 교수팀</div>
+    <p>홍콩대 황밍신 교수팀이 발표한 SS-H2는 해수 환경에서도 부식을 견디며 수전해 셀 구조재로 활용 가능한 특수 스테인리스. 중국 본토 공장과 협력해 톤급 와이어 생산이 진행 중이라 해수 수전해 CAPEX 곡선 변화 가능성이 크다. <code>green hydrogen</code> <code>seawater electrolysis</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403" target="_blank" rel="noopener">MIT — 더 싸고 깨끗한 수소 생산 경로 제시</a></h3>
+    <div class="src">MIT News (공식) · 2026-04-03 (직전 영향 지속)</div>
+    <p>1s1 Energy 등이 협력 중인 새 전기화학 셀 소재가 수소 전해 에너지 사용량을 30% 절감. 동시에 EU 펀딩 SUPREME 프로젝트가 PFAS-free, 이리듐 의존 최소화 전해시스템 개발을 가속. 그린수소 LCOH 하락 곡선의 직접 동인. <code>PEM</code> <code>AEM</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.energyplanets.org/a-chemical-breakthrough-that-could-fix/" target="_blank" rel="noopener">Denovia — PET 화학적 해중합을 '분' 단위로 단축</a></h3>
+    <div class="src">Energy Planets · 2026-05</div>
+    <p>특수 액체로 PET를 분자 수준에서 분해, 기존 30~180분·150℃ 이상이 필요하던 PET 해중합을 수 분·중온대로 단축. 액체의 대부분이 재사용 가능해 공정 경제성도 동시 확보. 폴리에스터 섬유까지 적용 범위 확장 예상. <code>PET</code> <code>chemical recycling</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">프리프린트 (ChemRxiv / arXiv)</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://arxiv.org/html/2304.04986v3/" target="_blank" rel="noopener">Deep learning of experimental electrochemistry for battery cathodes across diverse compositions</a></h3>
+    <div class="src">arXiv (cond-mat.mtrl-sci) · 2304.04986 (최근 갱신 v3)</div>
+    <p>실험 전기화학 데이터를 학습한 모델이 양극재 조성-성능 매핑을 일반화. AI/ML × 배터리 양극 설계의 표준 프로토콜이 정착되는 흐름의 대표 프리프린트. <code>Li-ion</code> <code>ML</code> <span class="unverified">[프리프린트]</span></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-jvfqq" target="_blank" rel="noopener">Designing electrodes and electrolytes for batteries by leveraging deep learning</a></h3>
+    <div class="src">ChemRxiv · 10.26434/chemrxiv-2023-jvfqq</div>
+    <p>딥러닝 기반 전극·전해질 설계 워크플로를 정리한 종합 리뷰형 프리프린트. 2026년 들어 인용·후속 연구가 빠르게 증가하며 사실상 산업 표준 참고 문헌으로 자리잡는 중. <code>electrolyte design</code></p>
+  </div>
+
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Nature Energy, "Thermal runaway-free ampere-hour-level Na-ion battery..." — https://www.nature.com/articles/s41560-026-02032-7</li>
+    <li>Nature Catalysis, "A CO2 electrolyser with high flux for stable production of high-concentration formate" — https://www.nature.com/articles/s41929-026-01533-8</li>
+    <li>The Register, "Solid-state battery discoveries could improve energy storage" (Max Planck Düsseldorf, Nature) — https://www.theregister.com/offbeat/2026/04/23/solid-state-battery-discoveries-could-improve-energy_storage/5220941</li>
+    <li>IEA, "State of Energy Policy 2026 — Executive summary" — https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary</li>
+    <li>IEA, "2026 Energy Crisis Policy Response Tracker" — https://www.iea.org/data-and-statistics/data-tools/2026-energy-crisis-policy-response-tracker</li>
+    <li>Fuel Cells Works, "China Approves $360M Off-Grid Green Hydrogen Project in Xinjiang" — https://fuelcellsworks.com/2026/05/01/electrolyzer/china-approves-360m-off-grid-green-hydrogen-project-in-xinjiang-producing-30-000-tonnes-annually</li>
+    <li>IEA, "State of Energy Policy 2026" (DOE/FERC 부분) — https://www.iea.org/reports/state-of-energy-policy-2026</li>
+    <li>EVTech.News, "CATL Super Tech Day 2026" — https://evtech.news/battery-technology/catl-super-tech-day-2026-unveils-breakthrough-ev-battery-technologies.html</li>
+    <li>Fuel Cells Works, "Ultra Stainless Steel SS-H2 Revolutionizes Green Hydrogen" (HKU) — https://fuelcellsworks.com/2026/05/11/clean-energy/cannot-be-explained-new-ultra-stainless-steel-stuns-researchers</li>
+    <li>MIT News, "Toward cheaper, cleaner hydrogen production" — https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403</li>
+    <li>Energy Planets, "A Chemical Breakthrough That Could Fix the Plastic Crisis" (Denovia) — https://www.energyplanets.org/a-chemical-breakthrough-that-could-fix/</li>
+    <li>arXiv 2304.04986, "Deep learning of experimental electrochemistry for battery cathodes" — https://arxiv.org/html/2304.04986v3/</li>
+    <li>ChemRxiv, "Designing electrodes and electrolytes for batteries by leveraging deep learning" — https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-jvfqq</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
