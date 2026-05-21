@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 산업 일일 브리핑 — 2026-05-21</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 산업 일일 브리핑</h1>
+  <div class="meta">2026년 5월 21일 (목) · 최근 24–48시간 · 대상: OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Google I/O 2026</strong>(5/19 키노트) — 모든 입력을 모든 모달리티로 변환하는 <code>Gemini Omni</code>, 정식 출시된 <code>Gemini 3.5 Flash</code>, 24/7 개인 AI 에이전트 <code>Gemini Spark</code> 공개. Sundar Pichai "우리는 명백히 에이전틱 Gemini 시대에 있다".</li>
+    <li><strong>OpenAI</strong>, 콘텐츠 출처(provenance) 강화 — C2PA Conforming Generator 인증 획득 + 생성 이미지에 <code>SynthID</code> 워터마크 내장 + 누구나 쓰는 공개 검증 도구 프리뷰.</li>
+    <li><strong>Google 요금 개편</strong> — AI Ultra 월 $250→$200 인하, 월 $100 신규 개발자 티어 신설. <code>Gemini 3.5 Flash</code>는 $1.50/$9 per 1M tokens.</li>
+    <li><strong>Anthropic</strong>, 개발자 콘퍼런스 'Code w/ Claude'를 런던으로(5/20–21). 이번 레그에서 신규 모델 발표는 없음.</li>
+    <li><strong>Meta · xAI · Mistral</strong>은 지난 24시간 내 신규 발표 없음 — 각각 Muse Spark · Grok · Medium 3.5 롤아웃을 이어가는 중.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI, C2PA 공식 인증·SynthID 워터마크로 콘텐츠 출처 추적 강화</a></h3>
+    <div class="src">openai.com · 2026-05-19 · 콘텐츠 출처/신뢰</div>
+    <p>OpenAI가 <code>C2PA</code> Conforming Generator Product 인증을 받아, 외부 플랫폼이 OpenAI 생성 콘텐츠의 서명된 출처 메타데이터를 읽고 보존·전달할 수 있게 됐다. 동시에 ChatGPT·Codex·API로 생성한 이미지에 Google DeepMind의 비가시성 워터마크 <code>SynthID</code>를 내장 — 메타데이터가 스크린샷·포맷 변환으로 손실돼도 살아남는 2차 신호를 더했다. 이미지를 업로드해 OpenAI 도구 생성 여부를 확인하는 공개 검증 도구도 프리뷰로 공개됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Gemini Omni 공개 — 모든 입력을 모든 모달리티로 변환하는 생성 모델</a></h3>
+    <div class="src">blog.google · 2026-05-19 · Google I/O 2026</div>
+    <p>I/O 2026 키노트에서 공개. 이미지·오디오·비디오·텍스트를 입력받아 실세계 지식에 기반한, 편집 가능한 비디오를 생성한다. <code>Gemini Omni Flash</code>는 발표 당일부터 Gemini 앱·Google Flow·YouTube Shorts에서 사용 가능. Demis Hassabis는 <em>"Gemini의 지능과 최고의 생성형 미디어 모델을 결합한 새로운 수준의 세계 이해"</em>라고 표현했다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener">Gemini 3.5 Flash 정식 출시 — 경쟁 프런티어 대비 4배 속도</a></h3>
+    <div class="src">developers.googleblog.com · 2026-05-19 · Google I/O 2026</div>
+    <p>에이전틱 코딩·장기 호흡 과제·실무 워크플로우용 모델. 비교 가능한 프런티어 모델 대비 4배 속도, 코딩 벤치마크에서 큰 폭의 개선을 주장한다. 가격은 $1.50/$9 per 1M tokens, 1M 컨텍스트. 발표 당일부터 개발자에게 GA(정식) 제공. <code>gemini-3.5-flash</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Gemini Spark — 24/7 백그라운드로 작동하는 개인 AI 에이전트</a></h3>
+    <div class="src">blog.google · 2026-05-19 · Google I/O 2026</div>
+    <p>Gemini 앱 안에서 사용자를 대신해 디지털 생활을 탐색하고 행동하는 범용 에이전트. <code>Gemini 3.5</code>와 Antigravity 하니스(harness) 기반으로 장기 과제를 백그라운드에서 수행해, 노트북을 켜둘 필요가 없다. 이번 주 신뢰 테스터부터 시작해 다음 주 미국 Google AI Ultra 구독자 베타로 확대된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Google AI 요금 개편 — Ultra 인하·개발자 티어 신설</a></h3>
+    <div class="src">blog.google · 2026-05-19 · Google I/O 2026</div>
+    <p>최상위 AI Ultra 요금이 월 $250에서 $200로 인하됐고, Pro($20) 대비 5배 사용량을 제공하는 월 $100 신규 티어가 도입됐다. Gemini 월간 사용자는 9억 명으로 1년 전(4억 명) 대비 두 배로 늘었다고 Google이 밝혔다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic, 개발자 콘퍼런스 'Code w/ Claude' 런던 개최 (5/20–21)</a></h3>
+    <div class="src">anthropic.com · 2026-05-20 · 콘퍼런스 <span class="unverified">[2차]</span></div>
+    <p>Anthropic이 에이전틱 개발 콘퍼런스 Code w/ Claude를 런던에서 진행 중이다. Day 1 키노트와 브레이크아웃 세션이 라이브 스트리밍됐고, Asana·Cursor·GitHub·Replit·Vercel 등 고객사가 프로덕션급 에이전트 설계 사례를 공유했다. 이번 런던 레그에서 신규 모델 발표는 없었다(다음 레그: 도쿄 6/5–6). 공식 행사 페이지 딥링크 미확인으로 안내 페이지를 출처로 표기.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 (Muse Spark 기반 Meta AI 음성 대화 등 신기능 롤아웃은 5/12–13 이후 지속 중) —</p>
+
+<h2 class="section">xAI</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 (Grok Imagine API Quality Mode·Grok Web 커넥터·Grok Build 베타 등은 이번 주 초 공개) —</p>
+
+<h2 class="section">Mistral</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 (Mistral Medium 3.5·Vibe 원격 에이전트는 5월 초 공개) —</p>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://9to5google.com/2026/05/19/google-io-2026-news/" target="_blank" rel="noopener">Google I/O, Android 17·Android XR 스마트 글래스도 함께 공개</a></h3>
+    <div class="src">9to5Google · 2026-05-19 · Google I/O 2026</div>
+    <p>이번 키노트에서는 모델 발표 외에 Android 17과 Android XR 기반 스마트 글래스도 공개됐다. 글래스는 Samsung·Warby Parker와 협력해 2026년 가을 출시 예정으로, AI 비서를 안경 폼팩터에 얹는 장기 하드웨어 베팅이다. AI 모델 경쟁이 디바이스 단으로 확장되는 흐름을 보여준다.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI — Advancing content provenance for a safer, more transparent AI ecosystem (openai.com)</a></li>
+    <li><a href="https://spec.c2pa.org/post/openai_pr/" target="_blank" rel="noopener">C2PA — OpenAI Joins C2PA Steering Committee / Conforming Generator (spec.c2pa.org)</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Google — Sundar Pichai's opening keynote, Google I/O 2026 (blog.google)</a></li>
+    <li><a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener">Google Developers Blog — All the news from the Google I/O 2026 Developer keynote</a></li>
+    <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic — News (anthropic.com)</a></li>
+    <li><a href="https://9to5google.com/2026/05/19/google-io-2026-news/" target="_blank" rel="noopener">9to5Google — Everything Google announced at I/O 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/05/19/openai-is-making-it-easier-to-check-if-an-image-was-made-by-their-models/" target="_blank" rel="noopener">TechCrunch — OpenAI is making it easier to check if an image was made by their models</a></li>
+  </ol>
+  <p>생성: 2026-05-21 · 자동 일일 브리핑 · 최근 24–48시간 필터 적용. 1차 출처(공식 블로그·표준 단체) 우선.</p>
+</footer>
+
+</div>
+</body>
+</html>
