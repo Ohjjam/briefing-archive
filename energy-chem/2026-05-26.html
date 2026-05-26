@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-05-26</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-26 (화) · 최근 24~72시간 · 전기화학 · 배터리 · CO2RR · 수전해 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>전고체 배터리, '파일럿 라인의 해' 도달 — Ganfeng 500 Wh/kg 소량 생산, Samsung SDI S-Line, Toyota 한정 생산 2026, 양산 2027~30.</li>
+    <li>PEM 전해조 5년간 CapEx 40%↓, AEM이 ALK·PEM 중간을 노리며 메가와트급 진입; LCOH는 여전히 $4–7/kg (2030년 $2–3/kg 목표).</li>
+    <li>PET 업사이클 신공정 — 페놀 IL 매개 70℃ 저온 분해(<code>DMT 93.1%</code>), Co@CoO 수소화분해(p-xylene >97%) 등 1단 공정 제안.</li>
+    <li>호주·중국 GWh급 그린수소 라인 가동 + Tesla 베를린 75만대 누적·$250M 추가 투자, 유럽 EV 4월 +26% YoY.</li>
+  </ul>
+</div>
+
+<!-- ── 논문 ── -->
+<h2 class="section">논문 (Peer-reviewed Journals)</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">Tuning selectivity in direct hydrogenolysis of PET over Co catalysts through interfacial hydrogen spillover</a></h3>
+    <div class="src">Nature Communications · 2026 · DOI 10.1038/s41467-026-71868-0</div>
+    <p>Co@CoO 계면에서의 수소 스필오버를 제어해 PET 직접 수소화분해에서 <em>p</em>-xylene을 >97%, 1,4-dimethylcyclohexane을 >90% 수율로 1단 생산. 기존 2단 업사이클 공정의 패러다임을 단축할 잠재력. <code>PET upcycling</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41893-026-01832-9" target="_blank" rel="noopener">Low-temperature PET upcycling by phenolic ionic liquids</a></h3>
+    <div class="src">Nature Sustainability · 2026 · DOI 10.1038/s41893-026-01832-9</div>
+    <p>페놀계 이온성 액체(IL)를 매개로 70℃에서 PET를 단량체로 완전 분해. 100 g 실폐 PET에서 <em>dimethyl terephthalate</em> 93.1% 회수. 저온·고선택성 케미컬 재활용의 실용 후보. <code>depolymerization</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Rate-limiting step of CO2 electroreduction on metal phthalocyanines</a></h3>
+    <div class="src">Nature Communications · 2026-03 (5월 인용 확대)</div>
+    <p>고정화 금속 프탈로사이아닌(MPc) 분자 촉매에서 CO2→CO 전환의 율속 단계를 전기화학·KIE 측정으로 규명. 분자 촉매 설계 가이드로 5월 후속 인용·재논의 활발. <code>CO2RR</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Emerging Heterogeneous Catalysis for Valorization of Biomass-Derived Platform Molecules</a></h3>
+    <div class="src">Advanced Energy and Sustainability Research · 2026-02 (체계적 리뷰)</div>
+    <p>furfural·HMF·levulinic acid 등 바이오매스 플랫폼 분자 가치화를 위한 이종촉매 시스템을 망라한 체계적 리뷰. 산업 적용 갭과 단일원자/고엔트로피 촉매 방향 제시. <code>HMF</code> <code>biomass</code></p>
+  </div>
+
+</div>
+
+<!-- ── 정책·규제 ── -->
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA: 수소 다음 단계 잠금 해제 조건 — 정책 개혁 촉구</a></h3>
+    <div class="src">IEA Commentary · 2026-02 (5월까지 정책 라운드에서 인용)</div>
+    <p>2024년 글로벌 수소 수요 100 Mt 도달(+2%). 다만 정책 1세대가 제로베이스에서 설계되며 지연이 누적, 개발자·투자자 불확실성을 야기. IEA는 보조금 구조와 수요측 의무화 동시 정비를 권고. <code>green hydrogen</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/policies/27847-hydrogen-allocation-round-1" target="_blank" rel="noopener">EU Hydrogen Allocation Round 1 — 진행 상황 점검</a></h3>
+    <div class="src">IEA Policy DB · 2026-05 업데이트</div>
+    <p>EU 수소은행(Hydrogen Bank) 1차 옥션의 프로젝트 진척 상황을 IEA가 정책DB에 갱신. 낙찰 프로젝트의 FID·EPC 단계 도달 비율이 향후 2차 옥션 설계의 변수.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.hydrogen.energy.gov/library/roadmaps-vision" target="_blank" rel="noopener">DOE Clean Hydrogen Strategy & Roadmap — 갱신본 유지</a></h3>
+    <div class="src">U.S. DOE Hydrogen Program · 2026-05 활성</div>
+    <p>국가 청정수소 로드맵에서 LCOH $2/kg 목표(2026 마일스톤 1)와 hub 프로그램의 보조금 조건이 5월 라운드 검토 대상. 산업 부문 디카본 시나리오와 인터페이스. <code>LCOH</code></p>
+  </div>
+
+</div>
+
+<!-- ── 산업 뉴스 ── -->
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://battery-tech.net/batterytech-news-updates-2026-21/" target="_blank" rel="noopener">Ganfeng, 전고체 500 Wh/kg 소량 생산 — Basquevolt 402 Wh/kg 셀</a></h3>
+    <div class="src">Battery-Tech Network · 2026-05 (21주차)</div>
+    <p>Ganfeng Lithium이 500 Wh/kg 전고체 셀의 소량 생산을 개시. 400 Wh/kg 셀은 1,100사이클 검증. Basquevolt BQV400L(402 Wh/kg)은 기가팩토리 호환 설계로 발표. 2026은 '파일럿 라인의 해'로 평가. <code>solid-state</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://news.metal.com/newscontent/103633667/toyotas-solid-state-battery-layout-mass-production-in-2027-to-achieve-a-1000-km-driving-range-revolution" target="_blank" rel="noopener">Toyota, 2027 양산 목표 재확인 — 10분 충전·항속 +50% 표적</a></h3>
+    <div class="src">SMM (Shanghai Metals Market) · 2026-05</div>
+    <p>일본 METI가 Toyota의 2026 한정 생산·2030+ 양산 계획을 다시 추인. 10분 충전과 항속거리 20–50% 증대가 1세대 KPI. <code>solid-state</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://evmagazine.com/news/why-tesla-is-investing-250m-in-its-berlin-gigafactory" target="_blank" rel="noopener">Tesla Giga Berlin — 75만대 누적 + $250M 추가 투자</a></h3>
+    <div class="src">EV Magazine · 2026-05</div>
+    <p>2026년 5월 기준 Tesla 베를린 공장 누적 75만대 생산 돌파. 주간 생산 +20% 목표로 $250M 추가 투자, 1,500명 신규 채용. 유럽 EV 4월 판매 +26% YoY 흐름과 동조.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026" target="_blank" rel="noopener">Bloomberg: 2026 배터리 산업 — 성장축 재편</a></h3>
+    <div class="src">Bloomberg · 2026-04 (5월 분석 갱신)</div>
+    <p>북미 EV 슬로다운 속에서 ESS·산업용 배터리로 투자 축이 이동. Gotion High-Tech는 스페인 PERTE VEC에서 €92M 확보, 발야돌리드 양극재(€532.8M)·재활용(€411.5M) 라인 추진. <code>ESS</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://spectrum.ieee.org/anion-exchange-membrane-electrolyzer" target="_blank" rel="noopener">AEM 전해조, ALK·PEM 중간 시장 노린다 — 메가와트급 진입</a></h3>
+    <div class="src">IEEE Spectrum · 2026 (5월 라운드 인용)</div>
+    <p>AEM이 ALK의 비귀금속 촉매 장점과 PEM의 솔리드 멤브레인 구조를 결합. 멤브레인 내구성이 마지막 관문. 한 스타트업이 2026년 내 MW급 도달을 목표로 명시. <code>green hydrogen</code> <code>AEM</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-materials-2026-pem-alkaline-soec/" target="_blank" rel="noopener">PEM 전해조 CapEx 5년간 40%↓ — 이리듐 0.5 mg/cm² 미만이 분기점</a></h3>
+    <div class="src">PatSnap 산업 분석 · 2026-05</div>
+    <p>PEM 전해조 스택 비용 감소 추세 지속. 채택 기준은 이리듐 로딩 <code>&lt;0.5 mg/cm²</code> 및 재활용 능력. 코발트계 산화물·전이금속 인화물이 후속 후보. LCOH는 현재 $4–7/kg, 2030 목표 $2–3/kg.</p>
+  </div>
+
+</div>
+
+<!-- ── 프리프린트 ── -->
+<h2 class="section">프리프린트 (ChemRxiv · arXiv)</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002738/v2" target="_blank" rel="noopener">A high-throughput experimentation platform for hydroxide electrodeposition and electrocatalyst evaluation</a></h3>
+    <div class="src">ChemRxiv (Nakanowatari et al., NIMS) · 2026-05-07</div>
+    <p>스크린프린트 전극 + 96-well 마이크로플레이트 + 자체제작 32채널 포텐쇼스탯으로 합성-평가 워크플로를 표준화·소형화·병렬화. OER/HER 후보 탐색 속도를 한 자릿수 배 가속하는 플랫폼. <code>HTE</code> <code>electrocatalysis</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-r7x16" target="_blank" rel="noopener">LLM-guided grand canonical DFT for accelerating electrocatalyst discovery</a></h3>
+    <div class="src">ChemRxiv · 2025-12 → 2026-05 v2 갱신</div>
+    <p>대형 언어모델로 grand canonical DFT 계산을 가이드하여 전기촉매 탐색 속도를 단축. 입력 구성·매개변수 추천에 LLM을 활용, 베이스라인 대비 후보 발굴 사이클 축소. <code>ML-driven catalysis</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2512.05938" target="_blank" rel="noopener">Adsorption energies are necessary but not sufficient to identify good catalysts</a></h3>
+    <div class="src">arXiv 2512.05938 · 2026-05 인용 라운드</div>
+    <p>흡착에너지 디스크립터만으로 좋은 촉매를 판별할 수 없음을 보이고, 동역학·매스 트랜스퍼·전극 환경 변수를 결합한 평가 프레임을 제안. 디스크립터 기반 스크리닝의 한계 정량화.</p>
+  </div>
+
+</div>
+
+<footer>
+<ol>
+  <li><a href="https://www.nature.com/articles/s41467-026-71868-0" target="_blank" rel="noopener">Nat. Commun. — PET hydrogenolysis over Co/CoO (DOI 10.1038/s41467-026-71868-0)</a></li>
+  <li><a href="https://www.nature.com/articles/s41893-026-01832-9" target="_blank" rel="noopener">Nat. Sustainability — Low-temperature PET upcycling by phenolic ILs (DOI 10.1038/s41893-026-01832-9)</a></li>
+  <li><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Nat. Commun. — Rate-limiting step of CO2RR on metal phthalocyanines</a></li>
+  <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Adv. Energy Sustain. Res. — Heterogeneous catalysis for biomass platform molecules</a></li>
+  <li><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA — Unlocking next phase of hydrogen growth</a></li>
+  <li><a href="https://www.iea.org/policies/27847-hydrogen-allocation-round-1" target="_blank" rel="noopener">IEA Policy DB — Hydrogen Allocation Round 1</a></li>
+  <li><a href="https://www.hydrogen.energy.gov/library/roadmaps-vision" target="_blank" rel="noopener">U.S. DOE — Clean Hydrogen Strategy & Roadmap</a></li>
+  <li><a href="https://battery-tech.net/batterytech-news-updates-2026-21/" target="_blank" rel="noopener">Battery-Tech Network — 2026 #21 (Ganfeng/Basquevolt)</a></li>
+  <li><a href="https://news.metal.com/newscontent/103633667/toyotas-solid-state-battery-layout-mass-production-in-2027-to-achieve-a-1000-km-driving-range-revolution" target="_blank" rel="noopener">SMM — Toyota solid-state mass production 2027</a></li>
+  <li><a href="https://evmagazine.com/news/why-tesla-is-investing-250m-in-its-berlin-gigafactory" target="_blank" rel="noopener">EV Magazine — Tesla Giga Berlin $250M</a></li>
+  <li><a href="https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026" target="_blank" rel="noopener">Bloomberg — Batteries growth axes 2026</a></li>
+  <li><a href="https://spectrum.ieee.org/anion-exchange-membrane-electrolyzer" target="_blank" rel="noopener">IEEE Spectrum — AEM electrolyzer game-changer</a></li>
+  <li><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-materials-2026-pem-alkaline-soec/" target="_blank" rel="noopener">PatSnap — Green hydrogen materials 2026</a></li>
+  <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002738/v2" target="_blank" rel="noopener">ChemRxiv — High-throughput electrocatalyst platform</a></li>
+  <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-r7x16" target="_blank" rel="noopener">ChemRxiv — LLM-guided GC-DFT</a></li>
+  <li><a href="https://arxiv.org/abs/2512.05938" target="_blank" rel="noopener">arXiv 2512.05938 — Adsorption energies necessary but not sufficient</a></li>
+</ol>
+</footer>
+
+</div>
+</body>
+</html>
