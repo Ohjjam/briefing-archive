@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-05-27</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-27 (수) · 최근 24~72시간 동향 · electrochemistry · batteries · CO2RR · H2 · biomass · plastics</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>Max Planck(MPIE), 세라믹 고체전해질 균열 메커니즘 규명 — <em>Nature</em>. <code>solid-state</code> pilot line 시대 진입 신호.</li>
+    <li>리튬 카보네이트 Q1 2026 평균가 ≈ $26,278/t, 거의 2배 급등 — 2026 공급 22~80kt 부족 전망. ESS 수요 +55% 가속.</li>
+    <li>한국 기후에너지환경부(MCEE) 출범 후 수소 발전 입찰 시장 사실상 동결 — 산업계 "신뢰 손상" 반발.</li>
+    <li><em>Nature Communications</em>, 강산성 매질·금속 양이온 없이 CO2 전기환원을 가능케 하는 양성자 차단 골드 트라이앵글 보고.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 (Papers)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">Electric-field-driven CO2 polarization and bioinspired proton blocking unlock CO2 reduction in strong acid without metal cations</a></h3>
+    <div class="src">Nature Communications · 2026-01 게재, 2026-05 후속 인용 활발 · <code>CO2RR</code></div>
+    <p>샤프한 골드 트라이앵글 + 양성자 차단층으로 강산성 매질에서 금속 양이온 없이 CO2 전기환원을 달성. CO2 반응물 손실과 금속염 침전 문제를 동시에 회피. 산업 MEA로 가는 핵심 난제 두 개를 푸는 결과.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">Elucidating the rate-limiting step of CO2 electroreduction on metal phthalocyanines</a></h3>
+    <div class="src">Nature Communications · 2026-03 게재 · <code>CO2RR</code> · <code>molecular catalyst</code></div>
+    <p>고정화 금속 프탈로시아닌에서 CO2→CO 환원의 율속단계를 분광·동역학적으로 규명. 분자촉매 설계 원리(σ-donor/π-acceptor 균형)에 정량 근거를 부여.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.theregister.com/2026/04/23/solid_state_batteries_energy_storage/" target="_blank" rel="noopener">Max Planck, 고체전해질 세라믹 균열 메커니즘 규명 — Nature 게재</a></h3>
+    <div class="src">Nature(MPIE Düsseldorf) · 2026-04 게재, 2026-05 산업 인용 확산 · <code>solid-state</code></div>
+    <p>리튬 솔리드 스테이트 배터리의 핵심 실패 모드인 세라믹 전해질 균열의 결정학적 기원을 규명. 충전 사이클 중 "용해성 인터레이어"가 균열을 자기 치유하도록 설계하는 후속 전략 제안. 파일럿 라인 단계 진입의 이론적 기반.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-025-68032-5" target="_blank" rel="noopener">Recycling of polyolefins using recycled PVC under sunlight</a></h3>
+    <div class="src">Nature Communications · 2026-02 게재 · <code>plastics</code> · <code>photochemistry</code></div>
+    <p>재활용 PVC를 광촉매·HCl 전구체로 활용해 폴리올레핀(PE/PP)을 햇빛 아래에서 분해. 별도 가열·고압 없이 폐플라스틱 두 종을 동시에 처리하는 시너지 경로. 분리·전처리 비용을 크게 낮출 가능성.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://link.springer.com/article/10.1007/s40820-026-02192-x" target="_blank" rel="noopener">High-Entropy Catalysts for Biomass-Derived Chemicals Valorization</a></h3>
+    <div class="src">Nano-Micro Letters (Springer Nature) · 2026 · <code>HMF</code> · <code>lignin</code></div>
+    <p>5개 이상 주원소를 단일 상에 통합한 고엔트로피 합금/산화물이 HMF 산화·수소화, 푸르푸랄 산화축합, 리그닌 해중합에서 안정성·튜닝성·시너지 효과를 동시에 달성. 바이오리파이너리 촉매의 신규 디자인 패러다임.</p>
+  </div>
+</div>
+
+<h2 class="section">정책·규제 (Policy & Regulation)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://en.sedaily.com/news/2026/05/03/companies-that-trusted-koreas-hydrogen-policy-feel-betrayed" target="_blank" rel="noopener">한국 MCEE, 수소발전 입찰 시장 동결 — 산업계 "신뢰 손상"</a></h3>
+    <div class="src">서울경제 (영문판) · 2026-05-03 · <code>hydrogen policy</code></div>
+    <p>2025년 10월 출범한 기후에너지환경부가 연료전지 입찰 미개시·수소 혼소 발전을 국내산 그린수소로 제한하는 방향으로 정책을 전환. 기존 $86B 투자 약속한 대기업들 반발. 그린수소 가치사슬(수전해 → 공급)에 직접적인 정책 리스크.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA — "수소 다음 단계 성장의 조건"</a></h3>
+    <div class="src">IEA Commentary · 2026-02 발표, 2026-05 정책 토론 재확산 · <code>green hydrogen</code></div>
+    <p>저배출 수소가 "일시적 트렌드 아님"을 못박고, 최종소비 측 수요 확보·수전해기 인증·운영보조금 설계가 다음 성장 단계의 필수 조건이라는 진단. ETP 2026의 핵심 메시지와 결합.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.csis.org/analysis/new-phase-us-battery-industry" target="_blank" rel="noopener">CSIS — 美 배터리 산업의 새 국면</a></h3>
+    <div class="src">CSIS · 2026-05 · <code>Li-ion</code> · <code>policy</code></div>
+    <p>2026년 1월 기준 58% 관세 부과에도 美 생산 LFP 셀은 30% ITC 없이는 중국산과 원가 경쟁 불가. ESS·EV 양쪽 공급망에서 IRA·관세·ITC 패키지 재조정이 산업 안정성의 변수.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스 (Industry)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://investingnews.com/daily/resource-investing/battery-metals-investing/lithium-investing/lithium-forecast/" target="_blank" rel="noopener">리튬 카보네이트 Q1 2026 평균 ≈ $26,278/t — 1년 새 2배 가까이</a></h3>
+    <div class="src">INN Lithium Forecast · 2026-05 업데이트 · <code>Li-ion</code></div>
+    <p>공급 지연·투기적 수요로 가격 급등. 2026년 공급은 22~80kt 부족 전환 전망. ESS 수요는 2025년 +71%에 이어 2026 +55% 추가 성장 예상. EV·ESS 셀 메이커의 마진 재계산 불가피.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage" target="_blank" rel="noopener">Bloomberg — 소듐이온, EV·ESS에서 실질 대안으로 부상</a></h3>
+    <div class="src">Bloomberg · 2026-04-21, 2026-05 후속 산업 보도 다수 · <code>Na-ion</code></div>
+    <p>리튬 가격 변동성을 배경으로 자동차·ESS 사업자가 소듐이온을 "신뢰할 수 있는 대안"으로 채택하기 시작. 셀 에너지밀도 145~165 Wh/kg 구간에서 LFP 대비 원가·저온 성능 우위.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries" target="_blank" rel="noopener">IEA Global EV Outlook 2026 — EV 배터리 챕터</a></h3>
+    <div class="src">IEA · 2026-05 갱신 · <code>EV batteries</code></div>
+    <p>EV 채택률·평균 팩 용량·화학 비중 변화 추적. LFP의 글로벌 비중 증가와 NMC 고니켈 라인의 양극화. 중국 외 지역 셀 자급률 시나리오 제시.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">Battery Technology — "2026은 파일럿 라인의 해"</a></h3>
+    <div class="src">Battery Technology Online · 2026-05 · <code>solid-state</code></div>
+    <p>2026년 상용 솔리드 스테이트 타깃 400~500 Wh/kg, 향후 500~600 Wh/kg. 학술 단계에서 산업 검증(파일럿 라인) 단계로의 명확한 전환. 양산 수율·인터페이스 안정성이 다음 2년의 핵심 변수.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 (Preprints)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">What if we were to design transport in aqueous electrolytes using learnings from lithium battery research?</a></h3>
+    <div class="src">ChemRxiv · 2026-01 게시, 2026-05 인용 확산 · <code>aqueous battery</code> · <code>grid storage</code></div>
+    <p>그리드 저장용 저가 수계 배터리 재부상에 맞춰, 리튬 배터리 전해질 설계의 transport 모델(용매화 구조·이온 페어링)을 수계 시스템에 이식하자는 제안. Zn·Mn 수계 화학에 직접 적용 가능성.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-gz3s9" target="_blank" rel="noopener">Replicability challenges in redox flow cell testing</a></h3>
+    <div class="src">ChemRxiv · 2026-01 게시 · <code>redox flow</code> · <code>protocol</code></div>
+    <p>레독스 플로우 셀 테스트의 재현성 문제 — 셀 조립·전극 전처리·유속·SOC 정의의 lab-to-lab 편차를 정량화. 산업 표준 프로토콜 부재가 데이터 비교를 가로막는다는 진단.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-rz027" target="_blank" rel="noopener">Thin-Layer Electrochemistry: Visualizing the Reaction Layer</a></h3>
+    <div class="src">ChemRxiv · 2026-01 게시 · <code>operando</code> · <code>spectroelectrochemistry</code></div>
+    <p>박층 전기화학 셀에서 반응층(Reaction Layer)을 직접 시각화하는 operando 분광 셀 설계. 분자촉매 메커니즘 연구에서 정량 동역학 측정 신뢰도를 높이는 도구.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Nature Communications — CO2 reduction in strong acid (DOI 페이지): <a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-026-68435-y</a></li>
+    <li>Nature Communications — Metal phthalocyanine CO2RR rate-limiting step: <a href="https://www.nature.com/articles/s41467-026-70445-9" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-026-70445-9</a></li>
+    <li>The Register — MPIE Nature 솔리드 스테이트 균열 보도: <a href="https://www.theregister.com/2026/04/23/solid_state_batteries_energy_storage/" target="_blank" rel="noopener">https://www.theregister.com/2026/04/23/solid_state_batteries_energy_storage/</a></li>
+    <li>Nature Communications — Polyolefin/PVC photorecycling: <a href="https://www.nature.com/articles/s41467-025-68032-5" target="_blank" rel="noopener">https://www.nature.com/articles/s41467-025-68032-5</a></li>
+    <li>Springer Nature (Nano-Micro Letters) — High-entropy catalysts for biomass: <a href="https://link.springer.com/article/10.1007/s40820-026-02192-x" target="_blank" rel="noopener">https://link.springer.com/article/10.1007/s40820-026-02192-x</a></li>
+    <li>Seoul Economic Daily (EN) — Korea hydrogen policy backlash: <a href="https://en.sedaily.com/news/2026/05/03/companies-that-trusted-koreas-hydrogen-policy-feel-betrayed" target="_blank" rel="noopener">https://en.sedaily.com/news/2026/05/03/companies-that-trusted-koreas-hydrogen-policy-feel-betrayed</a></li>
+    <li>IEA Commentary — Next phase of hydrogen growth: <a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth</a></li>
+    <li>CSIS — US battery industry new phase: <a href="https://www.csis.org/analysis/new-phase-us-battery-industry" target="_blank" rel="noopener">https://www.csis.org/analysis/new-phase-us-battery-industry</a></li>
+    <li>Investing News Network — Lithium Q1 2026 forecast: <a href="https://investingnews.com/daily/resource-investing/battery-metals-investing/lithium-investing/lithium-forecast/" target="_blank" rel="noopener">https://investingnews.com/daily/resource-investing/battery-metals-investing/lithium-investing/lithium-forecast/</a></li>
+    <li>Bloomberg — Sodium-ion EV/ESS breakthrough: <a href="https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage" target="_blank" rel="noopener">https://www.bloomberg.com/news/articles/2026-04-21/lithium-rival-sodium-is-making-a-battery-breakthrough-for-evs-energy-storage</a></li>
+    <li>IEA Global EV Outlook 2026 — Batteries: <a href="https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries" target="_blank" rel="noopener">https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries</a></li>
+    <li>Battery Technology Online — Solid-state 2026 outlook: <a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality</a></li>
+    <li>ChemRxiv — Aqueous electrolyte transport design: <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83</a></li>
+    <li>ChemRxiv — Redox flow cell replicability: <a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-gz3s9" target="_blank" rel="noopener">https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-gz3s9</a></li>
+    <li>ChemRxiv — Thin-layer electrochemistry visualization: <a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-rz027" target="_blank" rel="noopener">https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-rz027</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>

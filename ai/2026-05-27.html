@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 모닝 브리프 · 2026-05-27</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 모닝 브리프</h1>
+  <div class="meta">2026-05-27 (수) · 최근 24~48시간 프런티어 AI 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>xAI, <code>Grok Build</code> CLI 코딩 에이전트 베타 공개 (5/25) — SuperGrok·X Premium+ 대상.</li>
+    <li>Anthropic, <em>Code with Claude</em> 컨퍼런스 마무리. ARR $30B, 분기 80배 성장 — Dario Amodei "너무 빠르다"고 토로.</li>
+    <li>OpenAI, ChatGPT Finances 프리뷰(Pro·미국)와 Codex 모바일 프리뷰 전 플랜 확대. IPO 신청 임박 보도.</li>
+    <li>Google, <em>Antigravity Agent</em> 매니지드 에이전트 공개 프리뷰 + <code>gemini-3.1-flash-live-preview</code>(A2A) + Lyria 3 음악 생성 모델 라인.</li>
+    <li>Mistral Medium 3.5(128B 밀집) — Vibe 원격 에이전트와 함께 GA. SWE-Bench Verified 77.6%.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant, ChatGPT 기본 모델로 전환</a></h3>
+    <div class="src">openai.com · 2026-05 (전 사용자 롤아웃)</div>
+    <p><code>gpt-5.5-instant</code>가 <code>gpt-5.3-instant</code>를 대체. 내부 평가에서 의료·법·금융 등 고난이도 프롬프트의 환각 발화가 52.5% 감소. 이미지·STEM·웹 검색 응답 품질 강화. <em>"sharper accuracy, clearer and more concise answers"</em>가 핵심 메시지.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">ChatGPT Finances 프리뷰 (Pro·미국)</a></h3>
+    <div class="src">openai.com/news · 2026-05 후반</div>
+    <p>계좌 연결 후 지출·청구·구독·자산·투자·재무 계획을 ChatGPT 안에서 추적·질의. 웹·iOS 우선. Pro 전용 프리뷰로 시작.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">Codex iOS·Android 프리뷰 전 플랜 확대</a></h3>
+    <div class="src">OpenAI Release Notes · 2026-05</div>
+    <p>Codex 모바일 앱이 Business 포함 전 플랜으로 프리뷰 확대. 목표·권한·플러그인·앱 서버 워크플로 광범위 업데이트, TUI 안정성·원격 제어 동작 개선.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/05/20/openai-ipo-filing.html" target="_blank" rel="noopener">IPO 비공개 신청 임박 보도</a></h3>
+    <div class="src">CNBC · 2026-05-20</div>
+    <p>OpenAI가 수 주 내 비공개 IPO 신청을 목표로 하며 9월 상장을 노린다는 소식. 컴퓨트·자본 수요 급증 맥락에서 의미.</p>
+  </div>
+</div>
+
+<h2 class="section">Google / DeepMind</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Antigravity Agent (antigravity-preview-05-2026) 공개 프리뷰</a></h3>
+    <div class="src">Gemini API Changelog · 2026-05</div>
+    <p>샌드박스 컨테이너 안에서 자율 계획·추론·코드 실행·파일 관리·웹 브라우징을 수행하는 범용 매니지드 에이전트. Vertex/AI Studio 진입.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">gemini-3.1-flash-live-preview (A2A) 출시</a></h3>
+    <div class="src">Gemini API · 2026-05</div>
+    <p>실시간 다이얼로그·음성 우선 앱 타깃의 audio-to-audio 모델. 저지연 음성 에이전트 시장에서 xAI grok-voice 라인과 직접 경쟁.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Lyria 3 음악 생성 모델 라인</a></h3>
+    <div class="src">Gemini API · 2026-05</div>
+    <p><code>lyria-3-clip-preview</code>(30초)와 <code>lyria-3-pro-preview</code>(풀 송) 두 종을 프리뷰 공개. 영상·게임 후작업용 BGM 생성에 즉시 활용 가능.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Deep Research Max — 차세대 자율 리서치 에이전트</a></h3>
+    <div class="src">blog.google · 2026-05</div>
+    <p>장시간 자율 리서치 워크플로를 위한 새 Deep Research 라인. Google CEO Sundar Pichai의 <em>"firmly in our agentic Gemini era"</em> 메시지의 핵심 제품.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/" target="_blank" rel="noopener">분기 매출 80배 성장 · ARR $30B · SpaceX Colossus 임대</a></h3>
+    <div class="src">Fortune · 2026-05 (Code with Claude 발언)</div>
+    <p>Dario Amodei가 <em>"too hard to handle"</em>이라고 표현. Uber·Netflix 등 엔터프라이즈가 Claude Code를 대량 도입하며 컴퓨트 부족. xAI Colossus를 임대해 부족분 보충.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" target="_blank" rel="noopener">Code with Claude — 코딩의 미래 시연</a></h3>
+    <div class="src">MIT Technology Review · 2026-05-21</div>
+    <p>샌프란시스코 본행사 마감. 5/20–21 런던, 6/5–6 도쿄 일정. 자율 에이전트·매니지드 에이전트 데모가 키노트의 중심.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/" target="_blank" rel="noopener">Claude Managed Agents — dreaming, 멀티에이전트 오케스트레이션, webhooks</a></h3>
+    <div class="src">9to5Mac · 2026-05-07</div>
+    <p>매니지드 에이전트가 백그라운드 "꿈" 단계로 장기 컨텍스트 정리, 다중 에이전트 협업, 외부 이벤트 트리거(webhooks)까지 처리. Self-hosted sandboxes 퍼블릭 베타, MCP tunnels 리서치 프리뷰 동반.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude Platform on AWS · Opus 4.7 / Sonnet 4.6 / Haiku 4.5</a></h3>
+    <div class="src">anthropic.com/news · 2026-05</div>
+    <p>최신 라인업이 출시와 동시에 AWS에서 가용. 200M 게이츠 재단·KPMG·PwC 등 파트너십 확대로 엔터프라이즈 진입 가속.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">LlamaCon 후속 — 누적 다운로드 10억 돌파</a></h3>
+    <div class="src">ai.meta.com · 2026-05 (행사 후 보도)</div>
+    <p>Llama 누적 다운로드 1B 돌파. 신규 파인튜닝·평가 API, Llama Guard 4·LlamaFirewall·Llama Prompt Guard 2 보호 도구 공개. NVIDIA NeMo·IBM·Red Hat·Dell과의 Llama Stack 통합 확장.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">Llama Impact Grants 2회차 · $1.5M+</a></h3>
+    <div class="src">ai.meta.com · 2026-05</div>
+    <p>10개 국제 수상자 선정, Llama 기반 사회·연구 임팩트 프로젝트 지원.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news/grok-build-cli" target="_blank" rel="noopener">Grok Build — 터미널 코딩 에이전트 베타 공개</a></h3>
+    <div class="src">x.ai/news · 2026-05-25</div>
+    <p>SuperGrok·X Premium+ 전 사용자에게 베타 개방. <em>plan mode</em>에서 계획 승인·코멘트·재작성 후 실행, 변경은 diff로 출력. Claude Code·Codex와 직접 경쟁 구도.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok 3rd-party 커넥터 (Vercel, Canva, Gamma, S&P Global)</a></h3>
+    <div class="src">x.ai/news · 2026-05-22</div>
+    <p>Vercel 배포, Canva 디자인, Gamma 슬라이드, S&P Global 실시간 시장 데이터까지 챗 안에서 호출. 에이전트형 워크플로 확장.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok Skills 출시</a></h3>
+    <div class="src">x.ai/news · 2026-05-18</div>
+    <p>대화 사이에 영속되는 커스텀 전문성(스킬) 개념 도입. Claude Skills 컨셉과 정면 충돌.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">grok-voice-think-fast-1.0 + Speech APIs</a></h3>
+    <div class="src">x.ai/news · 2026-05</div>
+    <p>플래그십 음성 에이전트 API, 25개 이상 언어. 표준 STT/TTS API도 함께 공개(스피커 다이어라이제이션·타임스탬프·표현 태그). 음성 에이전트 시장 본격 진입.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news" target="_blank" rel="noopener">Mistral Medium 3.5 — 128B 밀집, Vibe·Le Chat 기본 모델</a></h3>
+    <div class="src">mistral.ai/news · 2026-05 초</div>
+    <p>최초의 "merged" 플래그십 멀티모달 모델. 에이전트·코딩 워크로드 최적화, SWE-Bench Verified 77.6%. Vibe와 Le Chat의 기본 모델로 교체.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/" target="_blank" rel="noopener">Vibe 원격 코딩 에이전트</a></h3>
+    <div class="src">MarkTechPost · 2026-05-02</div>
+    <p>Medium 3.5 기반 에이전트가 클라우드에서 멀티파일 리팩터·대용량 컨텍스트 분석을 수행. 로컬 CLI 세션을 "텔레포트"해 클라우드에서 이어가기 가능. 파일 diff·툴 콜·진행 상태가 실시간 노출.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI, C2PA·SynthID·이미지 검증 도구 강화</a></h3>
+    <div class="src">openai.com/news · 2026-05</div>
+    <p>이미지 출처(provenance) 표준 C2PA 준수와 SynthID 워터마킹 도입. OpenAI 생성 이미지 여부를 확인하는 공개 검증 도구 프리뷰.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.macworld.com/article/2986799/ios-27-features-compatiblity-apple-intelligence-release-date-rumors.html" target="_blank" rel="noopener">Apple Intelligence — iOS 27 접근성 프리뷰</a></h3>
+    <div class="src">Macworld · 2026-05 <span class="unverified">[2차]</span></div>
+    <p>VoiceOver·Magnifier·Voice Control·Accessibility Reader·온디바이스 자막·Vision Pro 등 접근성 기능에 Apple Intelligence 통합. WWDC 본 발표는 6월 예정.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>OpenAI — GPT-5.5 Instant: <a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">https://openai.com/index/gpt-5-5-instant/</a></li>
+    <li>OpenAI News (Finances · Codex · provenance): <a href="https://openai.com/news/" target="_blank" rel="noopener">https://openai.com/news/</a></li>
+    <li>OpenAI Release Notes (Codex 모바일): <a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">https://releasebot.io/updates/openai</a></li>
+    <li>CNBC — OpenAI IPO 신청: <a href="https://www.cnbc.com/2026/05/20/openai-ipo-filing.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/05/20/openai-ipo-filing.html</a></li>
+    <li>Gemini API Changelog (Antigravity · gemini-3.1-flash-live · Lyria 3): <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/docs/changelog</a></li>
+    <li>Google Blog — Deep Research Max: <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/</a></li>
+    <li>Fortune — Anthropic 80x 성장: <a href="https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/" target="_blank" rel="noopener">https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/</a></li>
+    <li>MIT Tech Review — Code with Claude: <a href="https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/</a></li>
+    <li>9to5Mac — Claude Managed Agents 업데이트: <a href="https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/" target="_blank" rel="noopener">https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/</a></li>
+    <li>Anthropic News: <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">https://www.anthropic.com/news</a></li>
+    <li>Meta AI — LlamaCon: <a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">https://ai.meta.com/blog/llamacon-llama-news/</a></li>
+    <li>xAI — Grok Build CLI: <a href="https://x.ai/news/grok-build-cli" target="_blank" rel="noopener">https://x.ai/news/grok-build-cli</a></li>
+    <li>xAI News (커넥터·Skills·Voice): <a href="https://x.ai/news" target="_blank" rel="noopener">https://x.ai/news</a></li>
+    <li>Mistral News: <a href="https://mistral.ai/news" target="_blank" rel="noopener">https://mistral.ai/news</a></li>
+    <li>MarkTechPost — Mistral Medium 3.5 / Vibe: <a href="https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/" target="_blank" rel="noopener">https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/</a></li>
+    <li>Macworld — iOS 27 Apple Intelligence: <a href="https://www.macworld.com/article/2986799/ios-27-features-compatiblity-apple-intelligence-release-date-rumors.html" target="_blank" rel="noopener">https://www.macworld.com/article/2986799/ios-27-features-compatiblity-apple-intelligence-release-date-rumors.html</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
