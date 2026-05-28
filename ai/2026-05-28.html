@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 — 2026-05-28</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026-05-28 (목) · 최근 24시간 프론티어 AI 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>Sam Altman·Dario Amodei 모두 단기 일자리 충격 경고 톤 다운 — "AI는 파괴자보다 생산성 배수기"로 메시지 전환 (Axios, 5/27).</li>
+    <li>Anthropic 공동창업자 Chris Olah는 바티칸 AI 윤리 컨퍼런스에서 "대규모 노동 대체 가능성 현실적"이라며 회사 공식 톤과 미묘한 결.</li>
+    <li>Google·DeepMind, Health 웨어러블 통합 가속 — 일상 헬스 코치 포지셔닝 확산 (CNN/Axios 보도).</li>
+    <li>OpenAI <code>gpt-5.5-instant</code>(5/6), Anthropic Claude Managed Agents 3대 신기능(5/7), xAI <code>grok-4.3</code>(5/4), Mistral Medium 3.5(5/2) — 5월은 단월 최다 프론티어 출시.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic" target="_blank" rel="noopener">Altman, "AI 일자리 단기 충격 예측은 꽤 틀렸다"</a></h3>
+    <div class="src">Axios · 2026-05-27</div>
+    <p>Altman이 화이트칼라 일자리에 대한 단기 영향 전망을 공개적으로 후퇴. Anthropic의 "50% 대체" 발언도 부드러워짐. 양사 모두 1조 달러 가치 IPO를 준비 중이라는 보도와 함께, 메시지가 "파괴자"에서 "생산성 배수기"로 이동.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant — 신규 기본 모델 (5/6 배포, 5/28 기준 안정 운영)</a></h3>
+    <div class="src">OpenAI 공식 · 2026-05-06 (지속 운영 중)</div>
+    <p><code>gpt-5.5-instant</code>가 <code>gpt-5.3-instant</code>를 대체. 의료·법·금융 고위험 프롬프트 내부 평가에서 환각 주장 <em>52.5% 감소</em>. 이미지·STEM·웹 검색 활용에서 일관된 개선.</p>
+  </div>
+</div>
+
+<h2 class="section">Google / DeepMind</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" target="_blank" rel="noopener">Google의 'AI 전쟁' 전략 — 프론티어보다 배포 효율 우선</a></h3>
+    <div class="src">Axios · 2026-05-21 (5/27 후속 분석)</div>
+    <p>벤치마크 1등보다 "수십억 명에 배포 가능한 저가·고속 모델"에 무게. <code>gemini-3.5-flash</code>가 새 검색의 백본. DeepMind는 Contextual AI 인재 영입($80~90M 라이선스 딜)으로 응용 인재 확보.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Deep Research Max — 자율 리서치 에이전트의 단계 변화</a></h3>
+    <div class="src">Google 공식 블로그 · 2026-05 (5월 후반 확장 전개)</div>
+    <p>Gemini Deep Research가 다중 소스 자율 추론·인용·반복 검증 능력을 강화. Search Agent와 결합되어 일반 검색 UX에 침투 중. 월 활성 9억 명 도달.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic" target="_blank" rel="noopener">바티칸 AI 윤리 컨퍼런스 — Olah의 노동 대체 경고</a></h3>
+    <div class="src">Axios · 2026-05-27</div>
+    <p>Anthropic 공동창업자 Chris Olah가 "AI가 매우 큰 규모로 인간 노동을 대체할 현실적 가능성"을 강조. CEO Amodei의 톤 완화와는 결이 다른 발언으로, 회사 내부 메시지 다변화 시그널.</p>
+    <blockquote>"There is a real possibility that AI will displace human labor at very large scale."</blockquote>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Claude for Small Business — 커넥터·워크플로 번들 (지속)</a></h3>
+    <div class="src">Anthropic 공식 · 2026-05 (운영 중)</div>
+    <p>QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, Microsoft 365 통합 패키지. SMB 시장 진입 본격화. 함께 발표된 Managed Agents 3대 신기능(<em>dreaming</em>, multi-agent orchestration, capability curve)이 5월 후반 확산 중.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <div class="card">
+    <p class="quiet">— 지난 24시간 메타발 주목할 만한 단독 업데이트 없음. 5월 초 LlamaCon에서 발표된 Llama Guard 4 / LlamaFirewall / Llama Prompt Guard 2 보안 도구, Llama 3.3 8B 파인튜닝 API가 계속 확산 중. —</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok 4.3 — 비용 효율 플래그십, 1M 토큰 컨텍스트·네이티브 비디오 입력</a></h3>
+    <div class="src">xAI 공식 뉴스 · 2026-05-04 (5월 내내 확산)</div>
+    <p>Intelligence Index 53 (중위 35)·GDPval-AA 대비 Grok 4.20보다 +300 Elo. 같은 달 Custom Skills, Vercel·Canva·Gamma·S&P Global 커넥터, <code>grok-voice-think-fast-1.0</code> 음성 API까지 연속 출시.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral Medium 3.5 + Vibe Remote Agents</a></h3>
+    <div class="src">Mistral 공식 뉴스 · 2026-05-02 (운영 중)</div>
+    <p>128B 덴스 모델 <em>Medium 3.5</em>가 Vibe·Le Chat 기본 모델로 승격. SWE-Bench Verified <strong>77.6%</strong>. Vibe CLI 로컬 세션을 클라우드로 "텔레포트"하는 Remote Agents가 핵심 차별점.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.cio.com/article/4167787/openai-anthropic-expand-services-push-signaling-new-phase-in-enterprise-ai-race.html" target="_blank" rel="noopener">OpenAI·Anthropic, 엔터프라이즈 서비스 사업 동시 강화</a></h3>
+    <div class="src">CIO.com · 2026-05 (5월 후반)</div>
+    <p>두 회사 모두 "모델 + 서비스" 조인트벤처 모델로 SI·컨설팅 영역 진입. 모델 판매에서 솔루션 통합으로 수익 구조 전환 중.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models" target="_blank" rel="noopener">정부 사전 테스트 — MS·Google·xAI 동참</a></h3>
+    <div class="src">CNN Business · 2026-05-05 (정책 확산 중)</div>
+    <p>출시 90일 전 정부가 새 모델 평가하는 자발적 프레임워크. Trump 행정부의 AI 행정명령 후속. 안전·국가안보 평가 의무가 사실상 표준화 단계.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (Sources)</strong>
+  <ol>
+    <li><a href="https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic" target="_blank" rel="noopener">Axios — OpenAI and Anthropic dig in against each other on AI jobs apocalypse (2026-05-27)</a></li>
+    <li><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">OpenAI — GPT-5.5 Instant: smarter, clearer, and more personalized</a></li>
+    <li><a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" target="_blank" rel="noopener">Axios — How Google plans to win the AI war (2026-05-21)</a></li>
+    <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Google Blog — Deep Research Max</a></li>
+    <li><a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Anthropic — Introducing Claude for Small Business</a></li>
+    <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic — News (Managed Agents updates)</a></li>
+    <li><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">Meta AI — Everything we announced at LlamaCon</a></li>
+    <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI — News (Grok 4.3 등)</a></li>
+    <li><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral AI — Latest news</a></li>
+    <li><a href="https://www.cio.com/article/4167787/openai-anthropic-expand-services-push-signaling-new-phase-in-enterprise-ai-race.html" target="_blank" rel="noopener">CIO — OpenAI, Anthropic expand services push</a></li>
+    <li><a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models" target="_blank" rel="noopener">CNN Business — Microsoft, Google and xAI will let the government test their AI models before launch (2026-05-05)</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>

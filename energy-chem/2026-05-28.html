@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 — 2026-05-28</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-28 (목) · Energy & Chemical Engineering · 최근 24~72시간</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2RR</strong> — 산성 매질에서 SnO2 스폰지(OH<sup>−</sup> 트랩) 기반 안정적 포름산 생산이 Nature 계열 학술지에 보고. 산업 전류밀도에서 셀렉티비티 안정성 확보가 핵심.</li>
+    <li><strong>전해</strong> — AEM 수전해 종설(Research, 5월 게재) — AWE의 저가성 + PEM의 동특성을 겸비, "가장 유망한 차세대 후보"로 평가.</li>
+    <li><strong>정책</strong> — IEA <em>Energy Technology Perspectives 2026</em> 후속 보고서 — 2025년 저탄소 수소 투자 $8B(+80% YoY), CCUS 투자 $5B+(2020 대비 15배).</li>
+    <li><strong>한국</strong> — 사용후 배터리 핵심자원화 정책, LFP 실증센터 2026년 구축 가속.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 (Peer-reviewed)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41565-025-02059-z" target="_blank" rel="noopener">Efficient CO2-to-methanol electrocatalysis in acidic media via microenvironment-tuned cobalt phthalocyanine</a></h3>
+    <div class="src">Nature Nanotechnology · 2026</div>
+    <p>코발트 프탈로시아닌(CoPc) 미세환경을 튜닝해 pH ≈ 1 산성 매질에서 CO2 → 메탄올 직접 전환. 메탄올 부분 전류밀도 <strong>132 mA cm<sup>−2</sup></strong>, 셀렉티비티 <strong>62%</strong>. 산성 CO2RR의 셀렉티비티 병목을 우회한 첫 사례군. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/subjects/electrocatalysis/ncomms" target="_blank" rel="noopener">SnO2 sponge electrocatalyst — acidic formate production with K<sup>+</sup>-lean condition</a></h3>
+    <div class="src">Nature Communications · 2026-04-27</div>
+    <p>다공성 SnO2 스폰지가 OH<sup>−</sup>를 트랩해 저 K<sup>+</sup> 농도 산성 CO2RR에서 포름산 생산을 안정화. 산업 전해조에서 운전 가능한 K<sup>+</sup> 농도 제약을 풀어주는 게 임팩트. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://spj.science.org/doi/10.34133/research.0677" target="_blank" rel="noopener">Recent Advances in Green Hydrogen Production by Electrolyzing Water with AEM</a></h3>
+    <div class="src">Research (AAAS) · 2026-05 · <code>AEM</code></div>
+    <p>AEM 수전해 종설. AWE의 저가 비귀금속 촉매와 PEM의 컴팩트·동특성을 결합. 막·이오노머 안정성, AST 프로토콜 표준화가 다음 과제로 정리. 산업화 초기 단계라 셀 수명·MEA 기준 데이터셋 정비가 핵심 게이팅 요인. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Heterogeneous catalysis for biomass-derived platform molecules — systematic review</a></h3>
+    <div class="src">Advanced Energy and Sustainability Research (Wiley) · 2026</div>
+    <p>퍼푸랄, HMF, 레불린산, 글리세롤 4대 플랫폼 분자 업그레이딩 촉매 종설. 금속산화물·제올라이트·MOF·POPs·탄소계 활성점 구조-반응 메커니즘 비교. <code>bio-refinery</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/state-of-energy-policy-2026" target="_blank" rel="noopener">IEA — State of Energy Policy 2026</a></h3>
+    <div class="src">IEA · 2026 · 정책 종합</div>
+    <p>2025년 각국 에너지 정책 진척도 통합 리뷰. 정부 지출·에너지효율 규제·NDC 기여도에 초점. 청정에너지 정책이 산업·교통 부문에서 동시에 강화되는 추세 확인.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary" target="_blank" rel="noopener">IEA — Energy Technology Perspectives 2026</a></h3>
+    <div class="src">IEA · 2026 (5월 후속 분석)</div>
+    <p>저탄소 수소 글로벌 투자 $8B(+80% YoY), CCUS는 $5B+로 2020 대비 15배. 전해조 누적 설치용량 2009년 100MW → 2025년 말 약 5GW, 중국이 약 40% 비중. <code>green hydrogen</code> <code>CCUS</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://h2hub.or.kr/main/index.do" target="_blank" rel="noopener">한국 — 제4차 수소경제 이행 기본계획 후속 점검</a></h3>
+    <div class="src">수소경제 종합정보포털 · 2026-05</div>
+    <p>2026년까지 전국 수소충전소 450기+, 수소경제 산업투자 약 5조 원 계획. 인프라·연료전지·모빌리티·융복합 기술 동시 추진. 인프라 밀도가 수소차 보급 임계점을 넘기느냐가 다음 1년 관전 포인트.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://data.kei.re.kr/data/01cf7ed8-c46b-4cce-b86d-e5a91ed3de95/7b52a8ce-1f0d-4471-9a91-3af6c3b79c1d" target="_blank" rel="noopener">한국 — 사용후 배터리 국가 핵심자원 정책 / LFP 실증센터 2026 구축</a></h3>
+    <div class="src">환경부·산업부 보도자료 · 정책 진행 중</div>
+    <p>사용 후 배터리를 핵심 원료 공급망으로 순환. LFP 전용 실증센터 2026년 가동 목표. 셀-팩-원료 회수 흐름의 국가 단위 표준화 추진. <code>battery recycling</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">전고체 배터리 2026 — 약속과 물리, 상용화 경로 점검</a></h3>
+    <div class="src">Battery Technology · 2026</div>
+    <p>전고체 ≥500 Wh/kg·≥1000 Wh/L 잠재력 재확인. 단, 진정한 전고체 시스템의 양산 경쟁력은 2030년대 초로 현실화. 그 사이는 하이브리드(반고체) 시스템이 교통·국방·항공에서 선행 도입 시나리오.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/" target="_blank" rel="noopener">전해 기술 특허 12배 폭증 — 그린수소 IP 경쟁 본격화</a></h3>
+    <div class="src">PatSnap · 2026</div>
+    <p>PEM·AEM·SOEC 전 영역에서 특허 출원이 폭증. Topsoe(덴마크)의 대형 SOEC 양산 라인 가동이 산업화 신호. 폐열 통합 시 효율 95% 클레임. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.todayenergy.kr/news/articleView.html?idxno=294456" target="_blank" rel="noopener">투데이에너지 — 2026 수소경제 인프라·기술 전망</a></h3>
+    <div class="src">투데이에너지 · 2026-05</div>
+    <p>국내 수소 인프라가 비용·가동률 압박을 동시에 받음. 중대형 트럭·발전용 수요가 충전소 단가를 좌우할 변수.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">Designing Transport in Aqueous Electrolytes — Lithium Battery Lessons</a></h3>
+    <div class="src">ChemRxiv · 2026 · <code>aqueous battery</code></div>
+    <p>리튬 배터리에서 축적된 이온 수송 설계 원리를 수계 전해질로 이식. 그리드 ESS용 안전·저가 수계 배터리 설계에 직접 시사. 비-Li 화학종을 위한 솔베이션 셸 엔지니어링이 핵심 메시지.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/browse" target="_blank" rel="noopener">ChemRxiv — Mechanical frustration & ambient-pressure superconductivity (2D)</a></h3>
+    <div class="src">ChemRxiv · 2026-05-22</div>
+    <p>2D 박막에서 기계적 변형(strain engineering)으로 상온·상압 초전도 가능성 탐색. 에너지 전송 손실 0 패러다임에 다시 한번 학계 관심을 환기.<span class="unverified">[프리프린트·미검증]</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.biorxiv.org/content/10.1101/2024.07.20.604433.full.pdf" target="_blank" rel="noopener">PET 완전 효소 분해 — Saccharomyces cerevisiae 전세포 생촉매</a></h3>
+    <div class="src">bioRxiv · 2024 (2026 후속 검증 진행) · <code>PET depolymerization</code></div>
+    <p>효모 기반 전세포 생촉매가 PET를 단량체까지 완전 분해. 후속 연구들이 kg 단위 96% 수율을 확인하면서 화학적 업사이클링 경로의 보완 후보로 부상.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (Sources)</strong>
+  <ol>
+    <li><a href="https://www.nature.com/articles/s41565-025-02059-z" target="_blank" rel="noopener">Nature Nanotechnology — CO2-to-methanol on CoPc in acidic media (DOI)</a></li>
+    <li><a href="https://www.nature.com/subjects/electrocatalysis/ncomms" target="_blank" rel="noopener">Nature Communications — Electrocatalysis (SnO2 sponge formate)</a></li>
+    <li><a href="https://spj.science.org/doi/10.34133/research.0677" target="_blank" rel="noopener">Research (AAAS) — AEM water electrolysis review (DOI)</a></li>
+    <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Wiley AESR — Heterogeneous catalysis for biomass platform molecules (DOI)</a></li>
+    <li><a href="https://www.iea.org/reports/state-of-energy-policy-2026" target="_blank" rel="noopener">IEA — State of Energy Policy 2026</a></li>
+    <li><a href="https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary" target="_blank" rel="noopener">IEA — Energy Technology Perspectives 2026 (Executive Summary)</a></li>
+    <li><a href="https://h2hub.or.kr/main/index.do" target="_blank" rel="noopener">수소경제 종합정보포털 — 한국 수소 인프라 / 4차 기본계획</a></li>
+    <li><a href="https://data.kei.re.kr/data/01cf7ed8-c46b-4cce-b86d-e5a91ed3de95/7b52a8ce-1f0d-4471-9a91-3af6c3b79c1d" target="_blank" rel="noopener">한국환경산업기술원 자료 — 사용후 배터리 국가 핵심자원 정책</a></li>
+    <li><a href="https://www.batterytechonline.com/industry-outlook/lithium-solid-state-batteries-in-2026-promise-physics-and-the-path-to-commercial-reality" target="_blank" rel="noopener">Battery Technology — Solid-State Batteries in 2026</a></li>
+    <li><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/" target="_blank" rel="noopener">PatSnap — Green hydrogen patents surge 12×</a></li>
+    <li><a href="https://www.todayenergy.kr/news/articleView.html?idxno=294456" target="_blank" rel="noopener">투데이에너지 — 2026년 에너지 전망 ⑦ 수소경제 인프라</a></li>
+    <li><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-t8p83" target="_blank" rel="noopener">ChemRxiv — Aqueous electrolyte transport design from Li battery lessons (DOI)</a></li>
+    <li><a href="https://chemrxiv.org/browse" target="_blank" rel="noopener">ChemRxiv — Browse (mechanical frustration superconductivity preprint, 2026-05-22)</a></li>
+    <li><a href="https://www.biorxiv.org/content/10.1101/2024.07.20.604433.full.pdf" target="_blank" rel="noopener">bioRxiv — Yeast whole-cell PET depolymerization</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
