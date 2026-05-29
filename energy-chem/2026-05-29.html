@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 — 2026-05-29</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-05-29 (금) · 최근 24~72시간 (일부 5월 전반 정착 단계 포함)</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>플라스틱 업사이클: <em>Nature Communications</em>에 배위불포화 Zn 촉매로 폴리에스터를 모노머로 되돌리는 저에너지 경로 보고.</li>
+    <li>수전해: AEM 진영에서 NiFe 수산화물이 1 A/cm²에서 90% 이상 효율 달성, PEM의 차별점을 위협. PEM은 이리듐 공급(연 3–5 GW) 병목이 여전.</li>
+    <li>고체전해질 배터리: Stellantis–Factorial이 77 Ah 셀 검증 (375 Wh/kg, 600+ 사이클, 15→90% 18분). MIT 측은 <em>Nature</em>에서 전기화학적 응력이 고체전해질 균열을 가속한다고 보고.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 (Papers)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-71862-6" target="_blank" rel="noopener">Sustainable recycling of polyester wastes using a coordinatively unsaturated Zn catalyst</a></h3>
+    <div class="src">Nature Communications · 2026 게재 · 폴리에스터 업사이클</div>
+    <p>배위불포화 Zn 활성점이 폴리에스터 사슬 에스터 결합을 선택적으로 절단해 모노머로 회수. 기존 강염기·강산 가수분해 대비 에너지·중성 조건 강점. <code>polyester upcycling</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-024-01278-2" target="_blank" rel="noopener">Organic electrolyte cations promote non-aqueous CO₂RR by tuning interfacial fields</a></h3>
+    <div class="src">Nature Catalysis · 2026-05 후속 인용 확산</div>
+    <p>비수계 CO₂ 환원에서 알킬암모늄 양이온이 촉매 표면 전기장 세기를 분자 단위로 조절, 선택성·활성을 결정함을 보임. 비수계 CO₂RR 설계 원리 정리.<code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-023-01208-9" target="_blank" rel="noopener">Challenges in speeding up solid-state battery development (관점 논문 후속 인용)</a></h3>
+    <div class="src">Nature Energy · 2025–2026 후속 연구 누적</div>
+    <p>5월 발표된 MIT 그룹의 후속 Nature 논문이 전기화학 응력 하에서 고체전해질 균열 가속 메커니즘을 보고. 인터페이즈 설계가 fast charging의 진짜 병목임을 다시 부각.<code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Heterogeneous catalysis for biomass-derived platform molecules (HMF 중심 리뷰)</a></h3>
+    <div class="src">Advanced Energy and Sustainability Research · 2026</div>
+    <p>HMF·푸르푸랄·레불린산 등 플랫폼 분자의 고체촉매 변환 경로를 정리한 리뷰. 마이크로파-DES 전처리로 분해 시간 수 시간→40초 수준까지 압축한 사례 포함.<code>biorefinery</code> <code>HMF</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제 (Policy)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA, "수소 성장 다음 단계 개방 조건" 정책 논평</a></h3>
+    <div class="src">IEA Commentary · 2026-02 발행, 5월 후속 인용 확산</div>
+    <p>수요 보조·계약 구조 개편(차액계약, 의무 비율) 없이는 저배출 수소 시장이 다음 단계로 가지 못한다는 진단. 전해조 비용 인플레는 스케일·학습효과로 반전 가능.<code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">DOE Hydrogen Shot — PEM 설치자본 $250/kW 2026 목표 재확인</a></h3>
+    <div class="src">U.S. DOE HFTO · 기술 평가서</div>
+    <p>DOE는 청정수소 $2/kg(2026)·$1/kg(2031), PEM 비설치 자본 $250/kW(2026)·궁극 $150/kW를 목표로 명시. 2026년 5월 기준 LCOH는 $4–7/kg 수준.<code>PEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA Energy Technology Perspectives 2026 — 저배출 수소 장기 트렌드 재확인</a></h3>
+    <div class="src">IEA Reports · 2026 정착 인용</div>
+    <p>최근 전해조 자본비 상승은 일시적이며 누적 학습으로 반전될 것으로 전망. 저배출 수소는 일시 트렌드가 아니라는 메시지.<code>policy</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스 (Industry)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.intelligentliving.co/solid-state-battery-scoreboard-2025-2026/" target="_blank" rel="noopener">Stellantis–Factorial, 77 Ah 고체전해질 셀 검증 발표</a></h3>
+    <div class="src">Intelligent Living 산업 트래커 · 2026-05 정착 · 원 발표 Factorial Energy</div>
+    <p>375 Wh/kg, 600+ 사이클, 15→90% 18분 급속충전이라는 수치가 시험 조건 하에 검증됐다고 보고. 양산까지의 인터페이즈·수율 이슈는 여전히 남음. <span class="unverified">[2차]</span> 원 보도자료 링크 확인 권장.<code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/" target="_blank" rel="noopener">전해조 특허 12배 급증 — 산업 R&amp;D 가속</a></h3>
+    <div class="src">PatSnap 분석 · 2026-05</div>
+    <p>최근 수년간 전해조 관련 특허 출원이 12배로 폭증. PEM의 이리듐 의존을 줄이려는 Ru/W 산화물·전이금속 옥시칼코지나이드 등 비귀금속 라인이 핵심 출원 흐름.<code>electrolysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.theregister.com/2026/04/23/solid_state_batteries_energy_storage/" target="_blank" rel="noopener">고체전해질 발견들 — 에너지 저장 시장 진입에 가까워지는가</a></h3>
+    <div class="src">The Register · 2026-04-23 (5월 후속 보도 다수)</div>
+    <p>리튬 메탈 음극과 결합된 고체전해질의 덴드라이트 억제·고속 충전 데이터가 누적되며, 2026년 중반부터 일부 차종 PoC 적용 가능성 보도. 양산은 여전히 인터페이즈 안정성 검증 단계.<code>energy storage</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 (Preprints)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/browse" target="_blank" rel="noopener">ChemRxiv — 5월 후반 전기화학 프리프린트 라운드업</a></h3>
+    <div class="src">ChemRxiv · 2026-05-22 등 다수</div>
+    <p>나노스케일에서 Ørsted 자기장의 비연속성을 다룬 양자 기반 이산 상호작용 모델 등, 전기화학·자성 인터페이스 신모델 제안이 잇따름. 응용은 향후 검증 필요. <code>electrochem theory</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/pdf/2408.15124" target="_blank" rel="noopener">Silver electrodes selectivity in CO₂RR (arXiv preprint, 후속 인용 확산)</a></h3>
+    <div class="src">arXiv (cond-mat.mtrl-sci) · 2024-08 등재 → 2026-05 후속 인용</div>
+    <p>Ag 전극이 CO₂RR에서 CO를 선택적으로 생성하는 원인이 전압 의존 동역학·열역학의 상호작용이라는 결론. 비수계 양이온·전기장 효과 논문(상단 Nature Catalysis)과 결합 해석 권장. <code>CO2RR</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (DOI / 1차 페이지 우선)</strong>
+  <ol>
+    <li><a href="https://www.nature.com/articles/s41467-026-71862-6" target="_blank" rel="noopener">Nature Communications — Sustainable recycling of polyester wastes using coordinatively unsaturated Zn catalyst</a></li>
+    <li><a href="https://www.nature.com/articles/s41929-024-01278-2" target="_blank" rel="noopener">Nature Catalysis — Organic electrolyte cations promote non-aqueous CO₂RR</a></li>
+    <li><a href="https://www.nature.com/articles/s41560-023-01208-9" target="_blank" rel="noopener">Nature Energy — Challenges in speeding up solid-state battery development</a></li>
+    <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500402" target="_blank" rel="noopener">Adv. Energy &amp; Sustainability Research — Heterogeneous catalysis for biomass-derived platforms</a></li>
+    <li><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA Commentary — Unlocking next phase of hydrogen growth (2026-02)</a></li>
+    <li><a href="https://www.energy.gov/sites/default/files/2024-12/hydrogen-shot-water-electrolysis-technology-assessment.pdf" target="_blank" rel="noopener">DOE HFTO — Hydrogen Shot Water Electrolysis Technology Assessment</a></li>
+    <li><a href="https://www.iea.org/reports/global-hydrogen-review-2025" target="_blank" rel="noopener">IEA — Global Hydrogen Review 2025</a></li>
+    <li><a href="https://www.intelligentliving.co/solid-state-battery-scoreboard-2025-2026/" target="_blank" rel="noopener">Intelligent Living — Solid-State Battery Scoreboard 2025–2026</a></li>
+    <li><a href="https://www.patsnap.com/resources/blog/articles/green-hydrogen-patents-surge-12x-in-electrolysis-race/" target="_blank" rel="noopener">PatSnap — Green hydrogen patents surge 12× in electrolysis race</a></li>
+    <li><a href="https://www.theregister.com/2026/04/23/solid_state_batteries_energy_storage/" target="_blank" rel="noopener">The Register — Solid-state battery discoveries (2026-04-23)</a></li>
+    <li><a href="https://chemrxiv.org/browse" target="_blank" rel="noopener">ChemRxiv Browse — 2026-05 preprints</a></li>
+    <li><a href="https://arxiv.org/pdf/2408.15124" target="_blank" rel="noopener">arXiv 2408.15124 — Silver electrodes selectivity in CO₂RR</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
