@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-01</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 1일 (월) · 최근 24~72시간 (일부 1~2주 이내 논문 포함)</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>금속 양이온 없이 강산성 매질에서 CO2 전환을 가능케 한 'CO2 분극 + 양성자 차단' 전략이 보고됨(<code>CO2RR</code>).</li>
+    <li>전고체·리튬금속 전지의 계면 안정화·할라이드 전해질 인성 강화 연구가 잇따라 게재 — 고속충전 안전성 진전(<code>solid-state</code>).</li>
+    <li>IEA·BloombergNEF: 배터리 설치 급증(유럽·중동·아프리카·중남미 주도) vs. 그린수소는 $6~7/kg 정체로 부진(<code>green hydrogen</code>).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-68435-y" target="_blank" rel="noopener">금속 양이온 없는 강산성 CO2 전기환원 — 생체모방 양성자 차단</a></h3>
+    <div class="src">Nature Communications · 2026-01 · CO2RR</div>
+    <p>전기장으로 CO2를 분극시키고 양성자 차단층을 둔 생체모방 금 삼각구조로 수소 발생을 억제, 금속염 침전 없이 강산성에서 CO2 환원을 구현했다. 반응물 손실을 줄여 디바이스 내성을 넓힌다. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41893-025-01649-y" target="_blank" rel="noopener">무가압 전고체 리튬금속 전지 — 적응형 계면(interphase)</a></h3>
+    <div class="src">Nature Sustainability · 2025~2026 · solid-state</div>
+    <p>가압 없이 동작하는 전고체 리튬금속 셀을 위한 적응형 interphase 설계. 스택 압력 의존성을 낮춰 셀·팩 단순화와 양산성 측면에서 의미가 크다. <code>solid-state</code> <code>Li-metal</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-025-66079-y" target="_blank" rel="noopener">전고체 리튬금속 전지를 위한 실시간 AI 모니터링</a></h3>
+    <div class="src">Nature Communications · 2025~2026 · solid-state</div>
+    <p>전고체 리튬금속 셀의 열화·덴드라이트를 실시간으로 추적하는 AI 기반 진단을 제안. 데이터 기반 셀 운용·수명 예측으로 안전 고속충전에 한 걸음 다가섰다. <code>Li-metal</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://spj.science.org/doi/10.34133/bdr.0027" target="_blank" rel="noopener">해중합 리그닌의 미생물 업사이클링 — 고부가 화학물질</a></h3>
+    <div class="src">BioDesign Research (Science Partner Journal) · 2026 · biomass</div>
+    <p>해중합된 리그닌을 미생물 대사로 고부가 방향족·화학물질로 전환하는 최신 전략을 정리. 무용매·무촉매 H2O2 산화 해중합이 25배 스케일업에서도 유효함이 함께 보고됐다. <code>lignin</code> <code>biomass</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA: 수소 성장의 다음 단계를 여는 조건</a></h3>
+    <div class="src">IEA Commentary · 2026-02 (지속 참조) · green hydrogen</div>
+    <p>IEA는 저배출 수소의 다음 성장 국면을 위해 정책 장벽 해소와 수요 견인책이 필요하다고 진단했다. Global Hydrogen Review 2025 기준 추가 6Mt가 2030년 가동 가능성이 높다고 평가. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/news" target="_blank" rel="noopener">IEA 5월 업데이트 — 메탄·전력시장·EV</a></h3>
+    <div class="src">IEA News · 2026-05 · policy</div>
+    <p>IEA는 5월 메탄, 에너지 시장, 전기차 관련 분석·통계를 잇따라 공개했다. 에너지 전환의 수요 측 지표와 배출 규제 흐름을 점검하는 데 유용하다. <code>policy</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026" target="_blank" rel="noopener">2026 배터리 설치 급증 — 중국 공급과잉이 저장장치 확산 견인</a></h3>
+    <div class="src">Bloomberg Green · 2026-04 · battery</div>
+    <p>중국발 공급과잉과 가격 하락으로 세계 에너지저장장치(ESS) 설치가 급증할 전망. 유럽·중동·아프리카·중남미가 성장을 주도한다고 분석했다. <code>battery</code> <code>ESS</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://electrek.co/2026/05/28/us-clean-energy-is-booming-and-unraveling-at-the-same-time/" target="_blank" rel="noopener">미 청정에너지, 호황과 균열의 공존</a></h3>
+    <div class="src">Electrek · 2026-05-28 · industry</div>
+    <p>Q1 2026 신규 공장 발표 대부분이 송배전·ESS 제조에 집중됐으나 전체 제조 발표 건수는 둔화. 정책 불확실성 속 성장과 위축이 동시에 나타나는 국면이다. <code>grid</code> <code>storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://lee-enterprises.com/state-of-green-hydrogen-2026/" target="_blank" rel="noopener">2026 그린수소 현황 — $6~7/kg 정체</a></h3>
+    <div class="src">State of Green Hydrogen 2026 · 2026 · green hydrogen <span class="unverified">[2차]</span></div>
+    <p>IRA 45V 생산세액공제 변경과 높은 단가로 그린수소 보급이 기대에 못 미친다. 유럽 시장가는 3년째 $6~7/kg 수준으로 정체. 다만 철강·암모니아 등 산업용 수요는 장기 유효. <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cctc.202501858" target="_blank" rel="noopener">플라스틱 순환경제 종합 리뷰 — 생촉매·화학-바이오 하이브리드</a></h3>
+    <div class="src">ChemCatChem (Wiley) · 2026 · plastic</div>
+    <p>생촉매 해중합·직접 업사이클링·하류 생물학적 가치화를 차세대 순환 플라스틱의 세 축으로 제시. AI 기반 촉매 설계와 화학-바이오 하이브리드 플랫폼이 핵심 가속 요인으로 꼽혔다. <code>depolymerization</code> <code>PET</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://link.springer.com/article/10.1007/s43393-026-00437-9" target="_blank" rel="noopener">조건부 생분해 플라스틱의 생물학적 업사이클링 프레임워크</a></h3>
+    <div class="src">Systems Microbiology and Biomanufacturing (Springer) · 2026 · plastic</div>
+    <p>효소 해중합 → 미생물 가치화 → 통합 바이오프로세싱(CBP)으로 이어지는 프레임워크를 제안. PET를 TPA·EG로 분해 후 PHA·카테콜 등 고부가물로 전환하는 경로를 정리했다. <code>PET</code> <code>biomass</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Nature Communications — 강산성 CO2 전기환원: https://www.nature.com/articles/s41467-026-68435-y</li>
+    <li>Nature Sustainability — 무가압 전고체 리튬금속: https://www.nature.com/articles/s41893-025-01649-y</li>
+    <li>Nature Communications — 실시간 AI 전고체 모니터링: https://www.nature.com/articles/s41467-025-66079-y</li>
+    <li>BioDesign Research — 리그닌 미생물 업사이클링: https://spj.science.org/doi/10.34133/bdr.0027</li>
+    <li>IEA Commentary — 수소 성장: https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth</li>
+    <li>IEA News: https://www.iea.org/news</li>
+    <li>Bloomberg Green — 배터리 2026: https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026</li>
+    <li>Electrek — 미 청정에너지: https://electrek.co/2026/05/28/us-clean-energy-is-booming-and-unraveling-at-the-same-time/</li>
+    <li>State of Green Hydrogen 2026: https://lee-enterprises.com/state-of-green-hydrogen-2026/</li>
+    <li>ChemCatChem (Wiley) — 플라스틱 순환경제: https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cctc.202501858</li>
+    <li>Springer — 생물학적 업사이클링: https://link.springer.com/article/10.1007/s43393-026-00437-9</li>
+  </ol>
+  <p>생성: 2026-06-01 · 자동 일일 브리핑. 일부 논문은 발표 시점이 1주를 넘으며 메타에 날짜 명시.</p>
+</footer>
+
+</div>
+</body>
+</html>

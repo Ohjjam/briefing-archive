@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-01</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 1일 (월) · 프론티어 AI 모델·기업 동향 · 최근 24~72시간</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>xAI가 <code>Grok V9 Medium</code>(1.5조 파라미터) 학습 완료를 알리며 6월 중순 공개를 예고 — 현재 SFT/RL 단계.</li>
+    <li>Anthropic의 <strong>6/15 과금 개편</strong> 임박: Agent SDK·<code>claude -p</code>·third-party 에이전트가 구독 한도에서 분리돼 별도 API 단가 크레딧으로 청구.</li>
+    <li>Google이 I/O 26에서 <code>Gemini 3.5 Flash</code>·Gemini Omni를 공개하고 Ultra 구독가를 $250→$200로 인하.</li>
+    <li>Mistral이 AI Now Summit에서 통합 에이전트 <strong>Vibe</strong>와 산업용 AI 스택, 자체 칩 설계 검토를 발표.</li>
+    <li>OpenAI는 <code>GPT-5.5 Instant</code> 품질 업데이트 진행, <code>GPT-4.5</code> 6/27 ChatGPT 퇴역 예정.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">GPT-5.5 Instant 품질 업데이트 · GPT-4.5 ChatGPT 퇴역 예고</a></h3>
+    <div class="src">OpenAI Help Center (Model Release Notes) · 2026-05</div>
+    <p><code>gpt-5.5-instant</code>가 ChatGPT·API에서 응답 스타일·가독성·페이싱 개선을 받았다. <code>gpt-4.5</code>는 30일 선셋 후 6/27 ChatGPT에서 퇴역, <code>o3</code>는 8/26 퇴역(API는 변경 없음). 구버전 정리와 신모델 강화가 동시에 진행 중이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">GPT-5.4 mini 롤아웃 · 인터랙티브 시각 모듈 추가</a></h3>
+    <div class="src">OpenAI Help Center (ChatGPT Release Notes) · 2026-05</div>
+    <p>Free·Go 사용자도 + 메뉴의 "Thinking" 기능으로 <code>gpt-5.4-mini</code>를 쓸 수 있게 됐다. 특정 주제 질문 시 수식·변수를 실시간 조작하는 인터랙티브 시각 모듈도 제공된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini / DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash 공개 — 에이전트·코딩 최강 주장</a></h3>
+    <div class="src">blog.google · I/O 26 (2026-05-19)</div>
+    <p>Google이 <code>gemini-3.5-flash</code>를 출시. Terminal-Bench 2.1 76.2%, GDPval-AA 1656 Elo, MCP Atlas 83.6% 등에서 3.1 Pro를 앞선다고 밝혔다. 비디오 출력이 가능한 멀티모달 <strong>Gemini Omni</strong>와 24/7 개인 에이전트 <strong>Gemini Spark</strong>도 함께 공개.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Ultra 구독가 인하 · Developer 티어 신설</a></h3>
+    <div class="src">blog.google · 2026-05</div>
+    <p>Gemini Ultra 구독료를 월 $250 → $200로 인하하고, 엔지니어·전문가용 월 $100 Developer 티어를 신설했다. DeepMind는 Contextual AI 연구진 20여 명을 $80~90M 규모 라이선스 딜로 영입.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic (Claude)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">6/15 구독 과금 개편 — 에이전트 사용량 별도 미터링</a></h3>
+    <div class="src">Anthropic News · 발표 2026-05-14, 시행 2026-06-15</div>
+    <p>Claude Agent SDK·<code>claude -p</code>·Claude Code GitHub Actions·third-party 에이전트가 구독 한도에서 분리돼 별도 달러 크레딧($20 Pro/$100 Max 5x/$200 Max 20x, 표준 API 단가, 롤오버 없음)으로 청구된다. 터미널 대화형 Claude Code, Claude.ai 웹/데스크톱/모바일, Cowork는 기존 구독 한도 유지.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Sonnet 4 / Opus 4 API 퇴역 · 신규 플랫폼 기능</a></h3>
+    <div class="src">Claude Platform Docs · 2026-06-15 예정</div>
+    <p><code>claude-sonnet-4</code>·<code>claude-opus-4</code>가 6/15 API에서 퇴역하며 Sonnet 4.6/Opus 4.7로 마이그레이션 권고. Managed Agents 퍼블릭 베타, YAML 기반 <code>ant</code> CLI도 공개됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama / Muse)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://9to5mac.com/2026/04/08/goodbye-llama-meta-unveils-muse-spark-ai-with-new-contemplating-mode/" target="_blank" rel="noopener">Muse Spark 공개 — Llama 후속 'Contemplating' 모드</a></h3>
+    <div class="src">9to5Mac · 2026-04-08 (원 발표 시점) <span class="unverified">[2차]</span></div>
+    <p>Meta가 AI 라인업을 리부트하며 멀티모달·추론·헬스·에이전트에서 경쟁력을 내세운 <strong>Muse Spark</strong>를 "스케일링 사다리의 첫 단계"로 발표. 신규 Contemplating 모드는 Humanity's Last Exam 58%, FrontierScience 38%를 기록했다고 주장. 6월 신규 발표는 확인되지 않음.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/llamacon-llama-news/" target="_blank" rel="noopener">LlamaCon — Llama 보호 도구·Impact Grants</a></h3>
+    <div class="src">ai.meta.com (Meta AI Blog) · 2026</div>
+    <p>Llama Guard 4, LlamaFirewall, Llama Prompt Guard 2 등 오픈소스 보호 도구를 공개. 2회차 Llama Impact Grants로 10개 기관에 $1.5M+ 지원.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI (Grok)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok V9 Medium 학습 완료 — 6월 중순 공개 예고</a></h3>
+    <div class="src">xAI News / Elon Musk · 2026-05-25</div>
+    <p>1.5조 파라미터 <code>Grok V9 Medium</code>이 학습을 마쳤다(현 v8 small 0.5조의 3배). SFT 진행 중, RL 임박, 공개는 발표 후 2~3주(6월 중순) 목표. xAI는 매일 Grok 빌드 버전 업데이트를 공개 중.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Speech-to-Text API GA · Grok 4.1 전면 배포</a></h3>
+    <div class="src">xAI Docs (Release Notes) · 2026-05-30</div>
+    <p>25개 언어를 배치·스트리밍으로 전사하는 xAI Speech-to-Text API가 GA로 전환됐다. <code>grok-4.1</code>은 grok.com·X·iOS/Android 전 사용자에게 제공 중.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/vibe-agent/" target="_blank" rel="noopener">통합 에이전트 'Vibe' 출시 — Work/Code 모드</a></h3>
+    <div class="src">mistral.ai · AI Now Summit (2026-05~06)</div>
+    <p>업무·코드를 아우르는 단일 에이전트 <strong>Vibe</strong>를 공개. Work Mode는 다단계 작업 계획을 사용자 승인 후 커넥터 전반에서 수행, Code Mode는 원격 코딩·PR 생성을 담당. VS Code 확장·CLI 업데이트 동반.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://venturebeat.com/technology/mistral-ai-launches-vibe-expands-into-industrial-ai-and-announces-data-center-push-to-challenge-openai" target="_blank" rel="noopener">산업용 AI·데이터센터·자체 칩 설계 검토</a></h3>
+    <div class="src">VentureBeat · CNBC · 2026-05-28</div>
+    <p>물리 시뮬레이션을 결합한 'Mistral for Industrial Engineering'을 발표(Emmi AI 인수 기반, Airbus 협업). Les Ulis에 10MW 추론 전용 데이터센터(Q3 2026 가동)와 자체 칩 설계 검토도 공개. 엔터프라이즈용 Forge 플랫폼도 소개.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">프론티어 랩 전반 — '빠른 릴리스' 경쟁 가속</a></h3>
+    <div class="src">업계 종합 · 2026-05~06</div>
+    <p>OpenAI(GPT-5.5)·Google(Gemini 3.5)·xAI(Grok V9)·Mistral(Vibe)이 수 주 단위로 모델·에이전트를 쏟아내며 경쟁이 격화. 동시에 Anthropic의 과금 분리처럼 에이전트 사용량의 수익화·미터링이 공통 화두로 부상.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>OpenAI Help Center — Model Release Notes: https://help.openai.com/en/articles/9624314-model-release-notes</li>
+    <li>OpenAI Help Center — ChatGPT Release Notes: https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>Google Blog — Gemini 3.5: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/</li>
+    <li>Anthropic News: https://www.anthropic.com/news</li>
+    <li>Claude Platform Release Notes: https://platform.claude.com/docs/en/release-notes/overview</li>
+    <li>Meta AI Blog — LlamaCon: https://ai.meta.com/blog/llamacon-llama-news/</li>
+    <li>9to5Mac — Muse Spark: https://9to5mac.com/2026/04/08/goodbye-llama-meta-unveils-muse-spark-ai-with-new-contemplating-mode/</li>
+    <li>xAI News: https://x.ai/news</li>
+    <li>xAI Docs — Release Notes: https://docs.x.ai/developers/release-notes</li>
+    <li>Mistral — Vibe: https://mistral.ai/news/vibe-agent/</li>
+    <li>VentureBeat — Mistral Vibe/Industrial: https://venturebeat.com/technology/mistral-ai-launches-vibe-expands-into-industrial-ai-and-announces-data-center-push-to-challenge-openai</li>
+  </ol>
+  <p>생성: 2026-06-01 · 자동 일일 브리핑. 일부 항목은 1차 발표 시점이 24h을 넘으며 메타에 날짜를 명시함.</p>
+</footer>
+
+</div>
+</body>
+</html>
