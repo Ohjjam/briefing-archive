@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-04</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 4일 (목) · 산업·정책 최근 24~72시간 우선, 논문·프리프린트는 최근 2026 발표 기준 · 전기화학 · 배터리 · CO₂RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>차세대 배터리 양산 경쟁 가속</strong> — BYD가 2027년 전고체 EV 탑재 로드맵을 공식화하고(6/1), CATL은 2026년 나트륨이온 대규모 배치를 확정. <code>solid-state</code> <code>Na-ion</code></li>
+    <li><strong>CO₂ 전환 상용화 관문 돌파</strong> — <em>Nature Catalysis</em>가 Cu/Bi 나노와이어 MEA로 4.5 M 고농도 포메이트를 8,000시간 연속 생산한 연구를 게재. <code>CO2RR</code></li>
+    <li><strong>무자기장 스핀편극 OER 촉매</strong> — ChemRxiv(6/1)가 벌집 양자자석으로 외부 자기장 없이 과전압 290 mV를 달성. <code>OER</code></li>
+    <li><strong>에너지안보가 변수</strong> — IEA <em>Electricity 2026</em>·<em>World Energy Investment 2026</em>가 중동 분쟁發 공급 불안을 전망의 핵심 축으로 제시.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-026-01524-9" target="_blank" rel="noopener">A high-flux MEA for CO₂ electroreduction to 4.5 M formate with over 8,000 h stability</a></h3>
+    <div class="src">Nature Catalysis · 2026 · CO₂RR / formate</div>
+    <p>코어–쉘 Cu/Bi 나노와이어를 평균 기공 190 μm의 3차원 Cu 폼 위에 성장시킨 음극으로, CO₂를 직접 4.5 M 고농도 포메이트로 전환하며 200 mA cm⁻²에서 ~90% 패러데이 효율을 8,000시간 유지했다. 100 cm² 스케일업 전해조에서도 20 A로 2,000시간 이상 연속 생산 — 농도·내구성·스케일 세 관문을 동시에 넘은 점이 중요. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s44286-026-00362-7" target="_blank" rel="noopener">A hydrogen-molecule-mediated proton-exchange membrane with near-complete permselectivity</a></h3>
+    <div class="src">Nature Chemical Engineering · 2026 · Xu, J. et al. · PEM / 수소</div>
+    <p>가스확산전극의 수소 발생·산화 반응을 매개로 양극·음극 전해액 간 직접 이온 경로를 차단, 약 100% 양성자 선택성을 달성하면서도 면적비저항을 pH 0에서 0.15 Ω cm²(상용막 수준)로 낮췄다. 선택도–전도도 트레이드오프를 깬 설계로 pH 분리형 Zn-MnO₂ 전지(200사이클)·해수 산·염기 생성에 응용. <code>PEM</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s44286-026-00381-4" target="_blank" rel="noopener">Co-electrolysis of CO₂ and H₂O in an alkaline-polymer-coated PEM electrolyzer</a></h3>
+    <div class="src">Nature Chemical Engineering · 2026 · CO₂ 전해 / 수전해</div>
+    <p>양성자교환막 전해조 표면에 알칼리성 고분자층을 코팅해 CO₂와 물을 동시 전해하는 구조를 제시했다. 산성 PEM 환경의 장점을 유지하면서 CO₂ 환원 선택성을 끌어올려, 단일 셀에서 합성가스·연료 전구체 생산 경로를 넓힌 결과. <code>CO2RR</code> <code>electrolysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/electricity-2026" target="_blank" rel="noopener">IEA · Electricity 2026</a></h3>
+    <div class="src">IEA · 2026 · 전력 / 그리드 유연성</div>
+    <p>전망 기간을 5년(2026–2030)으로 확장하고, 글로벌 전력수요가 산업·EV·냉방·데이터센터에 힘입어 연평균 3.6% 증가할 것으로 전망했다. 그리드·유연성 특집을 신설해 대규모 배터리가 단기 유연성과 공급안정의 핵심 자원으로 부상했음을 강조. <code>grid</code> <code>batteries</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/world-energy-investment-2026" target="_blank" rel="noopener">IEA · World Energy Investment 2026</a></h3>
+    <div class="src">IEA · 2026 · 에너지 투자</div>
+    <p>부문·지역별 투자 마일스톤을 정리하면서, 중동 분쟁에서 비롯된 에너지안보 우려가 부문별 투자에 미치는 영향을 핵심 변수로 다뤘다. 저배출 수소 투자는 2025년 약 80억 달러(전년比 +80%)로 늘었으나 프로젝트 취소·지연도 병존. <code>investment</code> <code>hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/events/oil-market-report-june-2026" target="_blank" rel="noopener">IEA · Oil Market Report (June 2026)</a></h3>
+    <div class="src">IEA · 2026-06-17 발표 예정 · 석유 수급</div>
+    <p>중동 분쟁 장기화로 수급 전망 기간을 2027년까지 확장한다고 예고했다. 유가가 배럴당 $96(WTI)를 넘긴 상황에서, 공급 차질 시나리오와 비OPEC 증산 여력이 6월 보고서의 관전 포인트. <code>oil</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/cmei/h2awsm/articles/department-energy-announces-11-new-hydrogen-projects-part-42-million-funding" target="_blank" rel="noopener">US DOE · HydroGEN 신규 11개 과제 $42M 지원</a></h3>
+    <div class="src">US DOE · 2026(원 발표 2026 상반기) · 수소</div>
+    <p>미 에너지부가 HydroGEN 컨소시엄과 함께 저비용 수소 생산·저장·연료전지 핵심 기술 11개 과제에 4,200만 달러를 배정했다. 10년 내 수소 $1/kg("1-1-1") Hydrogen Shot 목표를 뒷받침. 단, 2026 AMR이 2027년 봄으로 연기되는 등 정책 불확실성도 병존. <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://electrek.co/2026/06/01/byd-all-solid-state-batteries-evs-by-2027/" target="_blank" rel="noopener">BYD, 2027년 전고체 배터리 EV 탑재 로드맵 공식화</a></h3>
+    <div class="src">Electrek · 2026-06-01 · solid-state</div>
+    <p>BYD가 전고체 배터리를 2027년부터 EV에 탑재하겠다고 밝혔다. SAIC·Qingtao, Changan(Golden Bell) 등 중국 업체들이 잇따라 2027년 양산을 목표로 시제품 검증에 들어가며, 전고체 상용화 타임라인이 빠르게 당겨지는 흐름. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://batteriesnews.com/catl-confirms-2026-large-scale-sodium-ion-battery-deployment-in-multiple-sectors/" target="_blank" rel="noopener">CATL, 2026년 나트륨이온 배터리 대규모 배치 확정</a></h3>
+    <div class="src">Batteries News · 2026 · Na-ion</div>
+    <p>CATL이 2026년 말 승용 EV를 포함한 다부문에서 나트륨이온 배터리를 본격 배치한다고 확인했다. 에너지저장·저속차 중심이던 적용처를 승용·상용차와 유틸리티 저장으로 확장 — 산업이 초기 상용화에서 양산 단계로 이동 중. <code>Na-ion</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.hydrogeninsight.com/electrolysers/analysis-why-alkaline-electrolyser-makers-are-launching-all-in-one-green-hydrogen-plants/2-1-1996347" target="_blank" rel="noopener">알칼라인 전해조 업체들, '올인원' 그린수소 플랜트로 전환</a></h3>
+    <div class="src">Hydrogen Insight · 2026-06-02 · electrolyzer</div>
+    <p>현장에서 시스템을 짜맞추는 대신, BOP(밸런스 오브 플랜트)를 제품에 통합한 '올인원' 패키지로 전해조 제조사들이 이동하고 있다. 설치 리스크·공기 단축을 노린 흐름으로, 그린수소 균등화비용(LCOH) 절감의 실질적 지렛대가 될지가 관건. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://electrek.co/2026/05/06/ess-adds-8-5-gwh-of-sodium-ion-to-its-battery-storage-portfolio/" target="_blank" rel="noopener">ESS, 나트륨이온 8.5 GWh를 저장 포트폴리오에 추가</a></h3>
+    <div class="src">Electrek · 2026-05-06 · grid storage</div>
+    <p>장주기 저장 업체 ESS가 나트륨이온 8.5 GWh를 포트폴리오에 더하며 유틸리티 저장에서 Na-ion 채택을 확대했다. 리튬 의존도를 낮추고 공급망을 다변화하려는 그리드 저장 시장의 신호. <code>Na-ion</code> <code>redox flow</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/engage/chemrxiv/article-details/692e4f1da10c9f5ca1b1dd2f" target="_blank" rel="noopener">Spin-polarized oxygen evolution catalysis enabled by a honeycomb quantum magnet</a></h3>
+    <div class="src">ChemRxiv · 2026-06-01 · OER / 전기화학</div>
+    <p>벌집 구조 코발테이트 Na₂Co₂₋ₓNiₓTeO₆(Kitaev형 좌절 반강자성체)의 내재적 스핀편극을 이용해, 외부 자기장 없이 산소발생반응(OER) 효율을 끌어올렸다. 순수 NCTO가 과전압 290 mV·Tafel 40 mV/dec로 최저치를 기록 — 양자자성 소재를 촉매로 끌어들인 새 접근. <code>OER</code> <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002738/v2" target="_blank" rel="noopener">A high-throughput experimentation platform for hydroxide electrodeposition and electrocatalyst evaluation</a></h3>
+    <div class="src">ChemRxiv · 2026-05-07 · 고속 스크리닝 / 전기화학</div>
+    <p>전착(electrodeposition) 기반 합성과 전기화학 평가를 결합해, 스크린프린트 전극·96웰 마이크로플레이트·자체 제작 32채널 포텐셔스탯으로 수산화물 전기촉매를 병렬·표준화 스크리닝하는 플랫폼을 제시. 촉매 탐색 속도를 끌어올리는 실험 인프라. <code>electrocatalysis</code> <code>HTE</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 출처 우선 — 논문 DOI · 학술지 · 기관 보도자료)</strong>
+  <ol>
+    <li>Nature Catalysis (2026) — 4.5 M formate, 8,000 h MEA: https://www.nature.com/articles/s41929-026-01524-9 (DOI 10.1038/s41929-026-01524-9)</li>
+    <li>Nature Chemical Engineering (2026) — H₂-mediated PEM, Xu, J. et al.: https://www.nature.com/articles/s44286-026-00362-7</li>
+    <li>Nature Chemical Engineering (2026) — Co-electrolysis of CO₂ and H₂O in PEM electrolyzer: https://www.nature.com/articles/s44286-026-00381-4</li>
+    <li>ChemRxiv (2026-06-01) — Spin-polarized OER, honeycomb quantum magnet: https://chemrxiv.org/engage/chemrxiv/article-details/692e4f1da10c9f5ca1b1dd2f</li>
+    <li>ChemRxiv (2026-05-07) — High-throughput hydroxide electrocatalyst platform: https://chemrxiv.org/doi/full/10.26434/chemrxiv.15002738/v2</li>
+    <li>IEA — Electricity 2026: https://www.iea.org/reports/electricity-2026</li>
+    <li>IEA — World Energy Investment 2026: https://www.iea.org/reports/world-energy-investment-2026</li>
+    <li>IEA — Oil Market Report (June 2026): https://www.iea.org/events/oil-market-report-june-2026</li>
+    <li>US DOE — HydroGEN 11 projects, $42M: https://www.energy.gov/cmei/h2awsm/articles/department-energy-announces-11-new-hydrogen-projects-part-42-million-funding</li>
+    <li>Electrek (2026-06-01) — BYD all-solid-state by 2027: https://electrek.co/2026/06/01/byd-all-solid-state-batteries-evs-by-2027/</li>
+    <li>Batteries News (2026) — CATL sodium-ion deployment: https://batteriesnews.com/catl-confirms-2026-large-scale-sodium-ion-battery-deployment-in-multiple-sectors/</li>
+    <li>Hydrogen Insight (2026-06-02) — All-in-one green hydrogen plants: https://www.hydrogeninsight.com/electrolysers/analysis-why-alkaline-electrolyser-makers-are-launching-all-in-one-green-hydrogen-plants/2-1-1996347</li>
+    <li>Electrek (2026-05-06) — ESS adds 8.5 GWh sodium-ion: https://electrek.co/2026/05/06/ess-adds-8-5-gwh-of-sodium-ion-to-its-battery-storage-portfolio/</li>
+  </ol>
+  <p>생성: 2026-06-04 · 자동 일일 브리핑 · 보도자료 재게시 어그리게이터 직접 인용 배제, 논문 DOI·학술지·IEA/DOE·전문 산업매체 1차 링크 사용.</p>
+</footer>
+
+</div>
+</body>
+</html>
+                        
