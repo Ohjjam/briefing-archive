@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-06-05</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 5일 (금) · 최근 24~72시간 프런티어 AI 동향 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Anthropic</strong>가 Claude Partner Network에 <strong>Services Track·Partner Hub</strong>를 공식 출범(6/3) — 컨설팅 파트너 생태계를 3단계 등급으로 제도화.</li>
+    <li><strong>xAI</strong>는 코딩 에이전트 <code>Composer 2.5</code> 출시(6/1)에 이어, 1.5조 파라미터 <code>V9-Medium</code>을 6월 중순 출시 예고 <span class="unverified">[미확인]</span> — 발전 중인 스토리.</li>
+    <li><strong>OpenAI</strong>는 ChatGPT에 <strong>Active Sessions</strong> 보안 기능 추가·개인화 확대(6/3 릴리스 노트). 신규 프런티어 모델 출시는 아님.</li>
+    <li><strong>Anthropic</strong>, IPO용 <strong>S-1 초안</strong>을 SEC에 비공개 제출(6/1) + 6/15부터 구독 플랜의 프로그래매틱 사용량을 별도 크레딧 풀로 전환 예정.</li>
+    <li>지난 24시간 내 <strong>신규 프런티어 모델 출시는 없음</strong> — 5월의 대형 출시(<code>gpt-5.5-instant</code>·<code>claude-opus-4-8</code>·<code>gemini-3.5-flash</code>) 이후 소강 국면.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT, 'Active Sessions' 보안 기능 추가 · 개인화 모바일 확대</a></h3>
+    <div class="src">OpenAI · ChatGPT 릴리스 노트 · 2026-06-03</div>
+    <p>계정에 연결된 세션을 <em>Settings &gt; Security &gt; Active sessions</em>에서 점검하고 인식하지 못하는 기기를 로그아웃할 수 있는 보안 기능을 추가. 과거 대화·파일·연동 Gmail을 활용한 개인화가 Plus/Pro 웹에 이어 모바일로 확대 중. 신규 모델 발표가 아닌 점진적 제품 업데이트다. 기본 모델은 5월 출시된 <code>gpt-5.5-instant</code> 유지.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">[참고] GPT-4.5, 6월 27일 ChatGPT에서 은퇴 예정</a></h3>
+    <div class="src">OpenAI · 모델 릴리스 노트 · 시행 2026-06-27</div>
+    <p>30일 일몰 기간을 거쳐 <code>gpt-4.5</code>가 ChatGPT에서 제거될 예정. 지난 24시간 신규 발표는 아니며 예고된 일정 항목으로, 사용자 영향 측면에서 보조적으로 기록.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 — 가장 최근 주요 발표는 5/19 Google I/O 2026에서의 <code>gemini-3.5-flash</code> 정식 출시(GA). 자세한 내용은 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Google 공식 블로그</a> 참조.</p>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/services-track-partner-hub" target="_blank" rel="noopener">Claude Partner Network에 'Services Track'·'Partner Hub' 공식 출범</a></h3>
+    <div class="src">Anthropic · Newsroom · 2026-06-03</div>
+    <p>컨설팅·서비스 파트너를 실제 구축·배포 실적 기준으로 <strong>Select / Preferred / Global Premier</strong> 3단계로 제도화하고, 파트너가 자신의 등급 요건 충족 현황을 확인하는 포털(Partner Hub)을 개설. 3월 1억 달러 투자로 출범한 네트워크에 이후 4만 곳 이상이 지원, 1만 명 이상이 Claude 인증을 취득. 승급 심사는 연 2회(1/1, 7/1).</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" rel="noopener">IPO용 S-1 등록신고서 초안, SEC에 비공개 제출</a></h3>
+    <div class="src">Anthropic · Newsroom · 2026-06-01</div>
+    <p>기업공개를 위한 Form S-1 초안을 미 증권거래위원회(SEC)에 비공개로 제출했다고 공식 확인. AI 붐의 공개시장 시험대가 될 전망. 구체적 공모 규모·시점은 미공개.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">6/15부터 구독 플랜의 프로그래매틱 사용량 → 별도 크레딧 풀로 전환</a></h3>
+    <div class="src">Anthropic · Claude Platform 릴리스 노트 · 시행 2026-06-15</div>
+    <p>Claude Code·Agent SDK 등 구독 기반 프로그래매틱 사용분이 6/15부터 월별 별도 크레딧 풀로 분리된다. 정액 구독으로 에이전트를 대량 구동하던 사용 패턴에 직접 영향을 주는 과금 정책 변경.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude, 광고 없는(ad-free) 모델 유지 방침 재확인</a></h3>
+    <div class="src">Anthropic · Newsroom · 2026-06 (최근)</div>
+    <p>광고 인센티브가 '진정으로 도움이 되는 AI 어시스턴트'와 양립할 수 없다는 이유로 Claude 제품을 광고 없이 유지하겠다고 밝힘. 수익모델 관련 입장 표명.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama · Meta AI)</h2>
+<p class="quiet">— 지난 24~72시간 주목할 신규 업데이트 없음 — 검색된 항목은 대부분 이전 발표(LlamaCon, Llama 4, Muse Spark 등)로 24시간 필터를 통과하지 못함. 새 정보 확인 시 익일 브리핑 반영.</p>
+
+<h2 class="section">xAI (Grok)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">코딩 에이전트 'Composer 2.5', Grok Build에 출시</a></h3>
+    <div class="src">xAI · News · 2026-06-01</div>
+    <p>장기 실행 태스크와 복잡한 지시 수행에 특화된 빠른 에이전틱 코딩 모델 <code>Composer 2.5</code>를 발표. Moonshot <code>Kimi K2.5</code> 오픈 체크포인트 기반으로, 전작 대비 25배 많은 합성 태스크로 학습. 가격은 입력 $0.50 / 출력 $2.50(per M 토큰)부터.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.techtimes.com/articles/317328/20260528/grok-ai-new-model-triples-parameter-count-targets-coding-lead-release-expected-mid-june.htm" target="_blank" rel="noopener">1.5조 파라미터 'V9-Medium', 6월 중순 출시 예고</a> <span class="unverified">[미확인]</span></h3>
+    <div class="src">TechTimes 보도 · 2026-05-28 · 미출시(developing)</div>
+    <p>현 프로덕션 모델의 3배인 1.5조 파라미터 기반 모델 학습을 완료, 6월 중순 공개를 목표로 한다는 언론 보도. Cursor의 실제 개발자 워크플로 데이터로 학습했다고 전해짐. xAI 공식 발표 전 단계로 <span class="unverified">[미확인]</span> 표기.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">'Le Chat' → 'Vibe' 리브랜드, 업무·코딩 통합 에이전트로 전환</a></h3>
+    <div class="src">Mistral AI · News · 2026-05-28 (지난 24시간 외 · 최근 맥락)</div>
+    <p>챗봇 Le Chat을 <strong>Vibe</strong>로 개편하고 업무 자동화(Work Mode)와 코딩 에이전트를 단일 제품·라이선스로 통합. VS Code용 Vibe 확장으로 IDE 전체 프로젝트에서 코딩 에이전트 구동 지원. 지난 24시간 신규 항목은 아니며 최근 흐름으로 기록.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">통합 모델 'Small 4' 공개 — 119B · 256k 컨텍스트</a></h3>
+    <div class="src">Mistral AI · News · 2026-06 (최근)</div>
+    <p>빠른 인스트럭션·심층 추론·멀티모달 챗을 하나로 묶고 추론 강도를 설정 가능한 119B 파라미터·256k 컨텍스트 모델 <code>Small 4</code>를 공개. 음성 합성 모델 <code>voxtral-tts</code>(제로샷 보이스 클로닝)도 함께 공개됨.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.cybersecuritydive.com/news/trump-ai-security-executive-order/821755/" target="_blank" rel="noopener">트럼프 행정부, 프런티어 AI 사이버 위험 행정명령 서명</a></h3>
+    <div class="src">Cybersecurity Dive / The Hill · 2026-06-02</div>
+    <p>'Promoting Advanced Artificial Intelligence Innovation and Security' 명령으로, 프런티어 모델의 신규 능력을 점검하는 <strong>출시 전 30일 자발적 사전 테스트</strong> 절차를 제시. Anthropic <em>Mythos</em>·OpenAI <em>GPT-5.5</em> 평가에서 소프트웨어 취약점 탐지·악용 능력이 상승한 점이 배경으로 거론됨.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://thehill.com/policy/technology/5909898-national-ai-framework-draft/" target="_blank" rel="noopener">美 하원, 국가 AI 프레임워크 초안 공개</a></h3>
+    <div class="src">The Hill · 2026-06 (최근)</div>
+    <p>AI 모델 개발을 겨냥한 주(州) 규제를 3년간 선점·무효화하는 내용을 담은 논의용 초안이 공개됨. 연방 차원의 AI 규율 방향을 둘러싼 입법 논쟁이 가열되는 신호.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 출처 우선)</strong>
+  <ol>
+    <li>Anthropic — Introducing the Services Track and Partner Hub: https://www.anthropic.com/news/services-track-partner-hub</li>
+    <li>Anthropic — Confidential draft S-1 to the SEC: https://www.anthropic.com/news/confidential-draft-s1-sec</li>
+    <li>Anthropic — Newsroom (ad-free 방침): https://www.anthropic.com/news</li>
+    <li>Anthropic — Claude Platform 릴리스 노트: https://platform.claude.com/docs/en/release-notes/overview</li>
+    <li>OpenAI — ChatGPT 릴리스 노트: https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>OpenAI — GPT-5.5 Instant: https://openai.com/index/gpt-5-5-instant/</li>
+    <li>Google — Gemini 3.5 (공식 블로그): https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/</li>
+    <li>xAI — News: https://x.ai/news</li>
+    <li>TechTimes — Grok V9-Medium 보도(미확인): https://www.techtimes.com/articles/317328/20260528/grok-ai-new-model-triples-parameter-count-targets-coding-lead-release-expected-mid-june.htm</li>
+    <li>Mistral AI — News: https://mistral.ai/news/</li>
+    <li>Cybersecurity Dive — Trump AI 행정명령: https://www.cybersecuritydive.com/news/trump-ai-security-executive-order/821755/</li>
+    <li>The Hill — 국가 AI 프레임워크 초안: https://thehill.com/policy/technology/5909898-national-ai-framework-draft/</li>
+  </ol>
+  <p style="margin-top:10px;">자동 생성 · 2026-06-05 · 최근 24~72시간 기준. 신규 프런티어 모델 출시가 없는 날에는 직전 주요 발표를 맥락으로만 표기하며, 미발표·보도 단계 항목은 <span class="unverified">[미확인]</span>로 명시함.</p>
+</footer>
+
+</div>
+</body>
+</html>
