@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-06-08</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 8일 (월) · 프런티어 AI 핵심 동향 — 오늘은 Apple WWDC 키노트가 중심, 그 외 주요 진행 스토리(5/28–6/5) 포함</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Apple WWDC 2026 키노트가 오늘(6/8) 개막</strong> — 전면 개편 Siri가 구글 <code>Gemini</code> 맞춤형 모델로 구동되고, 'Extensions'로 ChatGPT·Gemini·<code>claude</code>를 기본 AI로 선택 가능(보도 기준).</li>
+    <li><strong>Anthropic</strong>, Series H로 650억 달러 조달·기업가치 9,650억 달러 — OpenAI 제치고 최고가 스타트업, 비공개 IPO(S-1) 서류 제출(6/1).</li>
+    <li><strong>OpenAI</strong>, 생명과학 모델 <code>GPT-Rosalind</code> 신기능 공개(6/3)·'Rosalind Biodefense' 프로그램 확대.</li>
+    <li><strong>xAI</strong>, 이미지→영상 <code>grok-imagine-video-1.5-preview</code> API 공개 + 차세대 <code>Grok V9-Medium</code>(1.5조 파라미터) 학습 완료 시사(6/5).</li>
+    <li><strong>Mistral</strong>, Le Chat을 'Vibe'로 리브랜딩 + 산업용 물리 AI·파리 인근 데이터센터 발표(AI Now Summit, 5/28).</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/" target="_blank" rel="noopener">생명과학 모델 <code>GPT-Rosalind</code> 신기능 공개 + 'Rosalind Biodefense' 확대</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-06-03 (Biodefense 프로그램 5/29 발표)</div>
+    <p>OpenAI가 6월 3일 생명과학 전용 모델 <code>GPT-Rosalind</code>의 새 기능을 공개하고, 정부·학계·비영리 바이오보안 개발자에게 모델을 무료 제공하는 'Rosalind Biodefense' 프로그램을 확대했다. <em>"strengthening societal resilience"</em>를 내세워 팬데믹 대비·생물방어 연구를 겨냥한다. MedChemBench·GeneBench에서 <code>gpt-5.5</code> 대비 더 적은 토큰으로 높은 정확도를 보였다고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3>오늘 WWDC에서 ChatGPT, Siri 'Extensions' 선택지로 포함</h3>
+    <div class="src">TechCrunch·MacRumors 보도 · 2026-06-08 (WWDC 키노트)</div>
+    <p>오늘 개막한 애플 WWDC 키노트에서 사용자가 작문·이미지 등 기능의 기본 AI로 ChatGPT를 선택할 수 있는 'Extensions'가 도입된다고 보도됐다. 별도 OpenAI 자체 모델 출시는 지난 24시간 내 없었으며, 가장 최근 제품 발표는 위 <code>GPT-Rosalind</code>(6/3)다. (상세는 아래 '기타' 카드 참조)</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://techcrunch.com/2026/06/06/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/" target="_blank" rel="noopener">구글 <code>Gemini</code>, 애플 새 Siri의 두뇌로 채택 (연 ~$10억 규모 보도)</a></h3>
+    <div class="src">TechCrunch·MacRumors 보도 · 2026-06-08 (WWDC)</div>
+    <p>오늘 개막한 WWDC에서 전면 개편된 Siri가 구글의 맞춤형 <code>Gemini</code> 모델(보도상 약 1.2조 파라미터)로 구동된다고 알려졌다. 연 약 10억 달러 규모 라이선스로 보도됐다. 구글이 프런티어 경쟁사 플랫폼에 핵심 추론을 공급하는 대형 사례로, OS 단 AI 유통 경쟁의 분수령이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/" target="_blank" rel="noopener"><code>gemini-3.5</code> Pro 일반 공개 임박</a></h3>
+    <div class="src">Google I/O 2026 · 원 발표 2026-05-19, 6월 공개 예정</div>
+    <p>5월 19일 I/O에서 공개된 <code>gemini-3.5</code> 제품군 중 Flash는 출시됐고, Pro는 내부 테스트를 거쳐 6월 일반 공개가 예상된다. Ultra 구독료는 월 $250→$200로 인하됐고 개발자용 $100 티어가 신설됐다. (원 발표 2026-05, 6월 재조명)</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Series H로 650억 달러 조달·기업가치 9,650억 달러 — OpenAI 추월</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-05-28</div>
+    <p>Anthropic이 시리즈 H에서 650억 달러를 조달하며 포스트머니 기업가치 9,650억 달러를 기록, OpenAI를 제치고 세계 최고가 스타트업이 됐다. 2월 시리즈 G(3,800억 달러)의 약 2.5배다. 런레이트 매출은 470억 달러를 넘어섰다고 밝혔다. (주요 진행 스토리)</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/confidential-draft-s1-sec" target="_blank" rel="noopener">SEC에 비공개 IPO 서류(S-1) 제출</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-06-01</div>
+    <p>6월 1일 Anthropic이 SEC에 Form S-1 초안을 비공개 제출했다고 공식 발표했다. 심사 후 이르면 올가을 상장 가능성이 거론되며, OpenAI보다 먼저 상장에 이를 수 있다는 전망이 나온다. 오늘 WWDC에서는 <code>claude</code>가 Siri 'Extensions' 선택지 중 하나로 포함됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama · Meta AI)</h2>
+<p class="quiet">— 지난 24시간 주목할 공식 업데이트 없음 — (라마 신모델 출시 관련 보도는 있으나 24시간 내 Meta 공식 발표 미확인)</p>
+
+<h2 class="section">xAI (Grok)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">이미지→영상 모델 <code>grok-imagine-video-1.5-preview</code> API 공개</a></h3>
+    <div class="src">xAI 공식(x.ai) · 2026-06</div>
+    <p>xAI가 정지 이미지를 자연어 모션 제어로 시네마틱 영상으로 변환하는 <code>grok-imagine-video-1.5-preview</code>를 API 프리뷰로 공개했다. 최대 720p, 원본의 조명·룩을 유지한다. 함께 Grok Web에 SharePoint·Outlook·Notion·GitHub·Linear 등 Connectors와 사용자 MCP 서버 연결을 추가했다.</p>
+  </div>
+  <div class="card">
+    <h3>차세대 <code>Grok V9-Medium</code>(1.5조 파라미터) 학습 완료 시사<span class="unverified">[미확인]</span></h3>
+    <div class="src">Elon Musk X 게시물 보도 · 2026-06-05</div>
+    <p>머스크가 6월 5일 차세대 <code>Grok V9-Medium</code>(1.5조 파라미터, 현 v8-small의 3배) 학습 완료를 시사했다. 지도 미세조정(SFT)·강화학습(RL)이 진행 중이며 추론·코드 성능 향상이 기대된다. 공식 릴리스 전 단계로 세부 사양은 미확정이다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/ai-now-summit-2026/" target="_blank" rel="noopener">Le Chat을 'Vibe'로 리브랜딩 + 산업용 물리 AI·데이터센터 발표</a></h3>
+    <div class="src">Mistral 공식(mistral.ai) · 2026-05-28 (AI Now Summit, 파리)</div>
+    <p>Mistral이 AI Now Summit(5/28)에서 어시스턴트 Le Chat을 'Vibe'로 통합 리브랜딩하고 Work Mode·Code Mode를 갖춘 단일 에이전트로 확장했다. 항공·자동차·반도체를 겨냥한 산업 AI 스택(Airbus·BMW·ASML 고객)과 파리 인근 10MW 추론 데이터센터(Q3 가동)를 공개했다. <code>voxtral-tts</code> 음성 모델과 오픈소스 Search Toolkit도 함께 발표. (주요 진행 스토리)</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.macrumors.com/guide/wwdc-2026-what-to-expect/" target="_blank" rel="noopener">애플 WWDC 2026 개막 — Siri 'Extensions'로 ChatGPT·Claude·Gemini 선택</a></h3>
+    <div class="src">TechCrunch·MacRumors 보도 · 2026-06-08</div>
+    <p>오늘 개막한 WWDC에서 애플은 iOS·iPadOS·macOS 27에 'Extensions'를 도입, 사용자가 작문 도구·Image Playground 등의 기본 AI로 ChatGPT·<code>Gemini</code>·<code>claude</code>를 선택하게 한다고 보도됐다. iMessage형 독립 Siri 앱과 대화 자동삭제(30일·1년·영구) 옵션도 포함. 프런티어 모델의 OS 단 유통 경쟁이 본격화된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html" target="_blank" rel="noopener">Microsoft, 자체 코딩 모델 <code>MAI-Code-1-Flash</code> 공개 — OpenAI 의존도 축소</a></h3>
+    <div class="src">CNBC 보도 · 2026-06-01</div>
+    <p>마이크로소프트가 코드 생성용 <code>MAI-Code-1-Flash</code>와 추론 모델 <code>MAI-Thinking-1</code>(Foundry 비공개 프리뷰)을 공개하며 OpenAI 의존도를 낮추고 개발자 비용 절감을 노린다. 구글·앤트로픽·오픈AI가 격돌하는 AI 코딩 모델 시장의 경쟁이 한층 심화됐다.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 출처 우선)</strong>
+  <ol>
+    <li>OpenAI — Rosalind Biodefense (공식): https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/</li>
+    <li>Anthropic — Series H 펀딩 (공식): https://www.anthropic.com/news/series-h</li>
+    <li>Anthropic — 비공개 S-1 제출 (공식): https://www.anthropic.com/news/confidential-draft-s1-sec</li>
+    <li>Google — I/O 2026 AI (공식 블로그): https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</li>
+    <li>xAI — News (공식): https://x.ai/news</li>
+    <li>Mistral — AI Now Summit 2026 (공식): https://mistral.ai/news/ai-now-summit-2026/</li>
+    <li>Mistral — Vibe agent (공식): https://mistral.ai/news/vibe-agent/</li>
+    <li>TechCrunch — WWDC 2026 / Siri·Gemini 보도: https://techcrunch.com/2026/06/06/what-to-expect-from-wwdc-2026-siris-highly-anticipated-revamp-and-apple-intelligence-updates/</li>
+    <li>MacRumors — WWDC 2026 What to Expect: https://www.macrumors.com/guide/wwdc-2026-what-to-expect/</li>
+    <li>CNBC — Microsoft·Google vs Anthropic·OpenAI 코딩 모델: https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html</li>
+    <li>Fortune — Anthropic $965B 밸류·IPO: https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/</li>
+  </ol>
+  <p>생성 시각: 2026-06-08 · 본 브리핑은 공개 보도·공식 발표 기준이며, '보도' 또는 [미확인] 표기 항목은 1차 확인 전 단계입니다.</p>
+</footer>
+
+</div>
+</body>
+</html>

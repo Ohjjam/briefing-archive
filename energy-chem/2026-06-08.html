@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-08</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 8일 (월) · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱 — 최근 동향(발표일은 카드별 표기)</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2RR 산업화 진전</strong> — 알칼리 양이온 없는 고확산 가스확산전극(GDE)으로 <em>킬로와트급</em> CO2 전해를 구현(Nature Communications 2026). <code>CO2RR</code></li>
+    <li><strong>리그닌 밸러라이제이션 가속</strong> — 흐름 광촉매로 바닐린·바이오가소제를 상온 g-스케일 생산, '거시규모 응용' 리뷰도 출간(Nature 계열 2026). <code>lignin valorization</code></li>
+    <li><strong>IEA</strong>: 2025년 저배출 수소 투자 약 80억 달러(+80% YoY)·CCUS 약 50억 달러(2020년比 15배↑) — 오프테이크·인증이 병목. <code>green hydrogen</code> <code>CCUS</code></li>
+    <li><strong>그린수소 현장</strong>: 영국 Barrow 30 MW PEM(Plug Power) 최종투자결정(5/20), Kimberly-Clark에 연 ~100 GWh 공급. <code>PEM</code></li>
+    <li><strong>배터리 산업</strong>: 美 1분기 ESS 9.7 GWh 사상 최대, CATL–HyperStrong 나트륨이온 60 GWh 공급계약. <code>Na-ion</code></li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-69175-9" target="_blank" rel="noopener">Kilowatt-scale alkali-cation-free CO2 electrolysis via accelerating mass transfer</a></h3>
+    <div class="src">Nature Communications · 2026 · 전기화학/CO2RR</div>
+    <p>느린 물질전달이 산업 전류밀도에서의 CO2 전해를 가로막아 온 한계를, 고확산 플럭스 가스확산전극(HDF-GDE)으로 돌파해 <em>알칼리 양이온 없이</em> 킬로와트급 CO2 전해를 시연했다. 양이온 누적·염 석출 문제를 우회해 장기 안정성과 스케일업 가능성을 동시에 보였다는 점이 핵심이다. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-73706-9" target="_blank" rel="noopener">Selective lignin conversion via flow photocatalysis for vanillin and bioplasticizers production</a></h3>
+    <div class="src">Nature Communications · 2026 · 바이오매스/플라스틱</div>
+    <p>상온 조건에서 작동하는 확장형 광촉매 흐름반응기로 리그닌을 선택적으로 분해해 바닐린과 바이오가소제를 g-스케일로 생산했다. 다운스트림 공정까지 포함해 '상업성 있는 제품' 회수를 입증, 리그닌의 고부가 화학물질 전환 경로에 실마리를 제시한다. <code>lignin valorization</code> <code>photocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s44359-026-00155-4" target="_blank" rel="noopener">From depolymerization challenges to macro-scale applications of lignin</a></h3>
+    <div class="src">Nature Reviews Clean Technology · 2026 · 리뷰/플라스틱</div>
+    <p>리그닌을 단량체 화학물질로 분해하는 경로는 스케일업 한계가 큰 반면, 고분자 형태 그대로 소재에 쓰면 거시규모 활용이 열린다고 정리한 리뷰. 분해(depolymerization) 일변도에서 '폴리머 활용'으로 전략 축을 옮길 것을 제안한다. <code>lignin</code> <code>upcycling</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/policy-and-financing-momentum-sustain-ccus-progress-despite-setbacks" target="_blank" rel="noopener">정책·금융 모멘텀이 CCUS 진전을 떠받친다 (IEA 논평)</a></h3>
+    <div class="src">IEA Commentary · 2026 · CCUS/수소 투자</div>
+    <p>2025년 저배출 수소 생산 투자가 약 80억 달러로 전년比 80% 증가했고, CCUS 연평균 투자는 2020년 대비 15배 이상 늘어 50억 달러를 넘었다. 다만 장기 오프테이크 부재와 배출 인증·회계 불확실성이 수요 형성을 늦추는 구조적 병목으로 지목됐다. <code>CCUS</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary" target="_blank" rel="noopener">Energy Technology Perspectives 2026 — 저배출 수소·CCUS 전망</a></h3>
+    <div class="src">IEA 플래그십 리포트 · 발표 2026-04-17</div>
+    <p>IEA의 대표 기술 전망 보고서. 저배출 수소와 CCUS는 대형 엔지니어링 프로젝트로 정책 지원에 의존해 스케일업·비용 절감이 이뤄진다고 진단하며, 부문별 투자·배치 전망을 제시한다. (발표일 정직 표기 — 약 7주 전 플래그십, 표준 레퍼런스로 포함) <code>policy</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.ir.plugpower.com/press-releases/news-details/2026/30-MW-Barrow-Green-Hydrogen-Project-Achieves-Final-Investment-Decision-with-Plug-Power-Electrolyzer-Supply/default.aspx" target="_blank" rel="noopener">英 Barrow 30 MW 그린수소 프로젝트 FID — Plug Power PEM 공급</a></h3>
+    <div class="src">Plug Power IR(공식) · 2026-05-20 · 수전해/수소</div>
+    <p>영국 컴브리아 Barrow 그린수소 프로젝트가 최종투자결정(FID)에 도달, Plug Power가 5 MW GenEco PEM 전해조 6기(총 30 MW)를 공급한다. 재생전력으로 생산한 수소를 Kimberly-Clark 공장에 연 약 100 GWh 공급하며, 영국 Hydrogen Business Model(HAR1) 지원을 받는다. <code>PEM</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.csis.org/analysis/new-phase-us-battery-industry" target="_blank" rel="noopener">美 1분기 에너지저장 9.7 GWh 사상 최대 — 데이터센터·AI 수요</a></h3>
+    <div class="src">CSIS 분석 · 2026 · 배터리/ESS</div>
+    <p>미국 1분기 ESS 설치가 9.7 GWh로 분기 사상 최대를 기록했다. 데이터센터·AI 전력 수요와 변동성 큰 전기요금이 견인했으며, 연방 정책 역풍에도 중국발 저가 공급과 단가 하락이 글로벌 설치 급증을 뒷받침하고 있다. <code>grid storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://battery-tech.net/batterytech-news-updates-2026-19/" target="_blank" rel="noopener">CATL–HyperStrong, 나트륨이온 배터리 60 GWh 공급계약</a></h3>
+    <div class="src">Battery-Tech Network · 2026-04-27 · 배터리</div>
+    <p>CATL와 HyperStrong이 닝더(푸젠)에서 최대 60 GWh 규모 나트륨이온 배터리 공급·공동 R&D·대규모 배치 협력에 3년 계약을 체결했다. 리튬 의존도를 낮추는 그리드용 저장 시장에서 나트륨이온 상용화 흐름을 보여준다. <code>Na-ion</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-dvwc9" target="_blank" rel="noopener">Comprehensive Guidelines for Magnetoelectrocatalysis</a></h3>
+    <div class="src">ChemRxiv · 2026-01 · 전기화학</div>
+    <p>외부 자기장이 CO2RR을 포함한 전기화학 반응에서 물질전달을 어떻게 향상시키는지 정리한 가이드라인 프리프린트. 자기장 보조 전극 설계·측정의 표준화를 제안한다. (미peer review) <code>magnetoelectrocatalysis</code> <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1lcxn" target="_blank" rel="noopener">Interfacial Cation Arrangement Governs Electrocatalytic Kinetics in CO2 Reduction</a></h3>
+    <div class="src">ChemRxiv · 2025-10 · 전기화학</div>
+    <p>포스포늄 기반 제미날 이중양이온으로 계면 양이온 배열을 제어해, 건조 비양성자성 용매(아세토나이트릴) 속 Ag 전극에서의 CO2→CO 반응속도를 좌우함을 보인 프리프린트. 전해질 양이온 설계의 동역학적 영향을 정량화한다. (미peer review) <code>CO2RR</code> <code>electrolyte</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (DOI·1차 출처 우선)</strong>
+  <ol>
+    <li>Nat. Commun. (2026) — Kilowatt-scale alkali-cation-free CO2 electrolysis: https://www.nature.com/articles/s41467-026-69175-9 (DOI 10.1038/s41467-026-69175-9)</li>
+    <li>Nat. Commun. (2026) — Selective lignin conversion via flow photocatalysis: https://www.nature.com/articles/s41467-026-73706-9 (DOI 10.1038/s41467-026-73706-9)</li>
+    <li>Nat. Rev. Clean Technol. (2026) — Lignin depolymerization to macro-scale applications: https://www.nature.com/articles/s44359-026-00155-4 (DOI 10.1038/s44359-026-00155-4)</li>
+    <li>IEA Commentary — Policy and financing momentum sustain CCUS progress: https://www.iea.org/commentaries/policy-and-financing-momentum-sustain-ccus-progress-despite-setbacks</li>
+    <li>IEA — Energy Technology Perspectives 2026 (executive summary): https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary</li>
+    <li>Plug Power IR — Barrow 30 MW green hydrogen FID (2026-05-20): https://www.ir.plugpower.com/press-releases/news-details/2026/30-MW-Barrow-Green-Hydrogen-Project-Achieves-Final-Investment-Decision-with-Plug-Power-Electrolyzer-Supply/default.aspx</li>
+    <li>CSIS — A New Phase for the U.S. Battery Industry: https://www.csis.org/analysis/new-phase-us-battery-industry</li>
+    <li>Battery-Tech Network — CATL–HyperStrong sodium-ion 60 GWh (2026-04-27): https://battery-tech.net/batterytech-news-updates-2026-19/</li>
+    <li>ChemRxiv (2026-01) — Magnetoelectrocatalysis guidelines: https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2026-dvwc9 (DOI 10.26434/chemrxiv-2026-dvwc9)</li>
+    <li>ChemRxiv (2025-10) — Interfacial cation arrangement in CO2RR: https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1lcxn (DOI 10.26434/chemrxiv-2025-1lcxn)</li>
+  </ol>
+  <p>생성 시각: 2026-06-08 · 본 브리프는 1차 출처(논문 DOI·IEA·기업 IR·전문 트레이드프레스) 기준입니다. 엄격한 24~72시간 신규 학술 발표가 제한적이어서, 각 카드에 실제 발표일을 정직하게 표기했습니다(재게시 어그리게이터 미사용).</p>
+</footer>
+
+</div>
+</body>
+</html>
