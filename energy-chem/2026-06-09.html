@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-09</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-06-09 (화) · 전기화학·배터리·CO2RR·수소·바이오매스·플라스틱 · 1차 출처(논문 DOI·기관·산업지) 우선 · 카드별 발표 시점 명시</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Na-ion:</strong> Nature Energy(2026)가 특허 인용망 1.5만+ 패밀리를 분석해 Li-ion→Na-ion으로의 지속적 지식 이전을 정량화 — Na-ion 상용화 가속의 구조적 근거.</li>
+    <li><strong>수소:</strong> IEA 분석상 저배출 수소 투자가 2025년 약 80억 달러(+80% YoY)로 급증했으나 LCOH는 여전히 4~7달러/kg로 2030 목표(2~3달러)와 격차. Nel ASA·ErreDue 등 전해조 상용화는 진전 중.</li>
+    <li><strong>플라스틱:</strong> 자기 회수형 nZVI 촉매를 이용한 혼합 폐플라스틱 내 PET 선택적 해중합(ACS EST) 등 저에너지 업사이클링 경로가 확대.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-01985-z" target="_blank" rel="noopener">Knowledge interdependencies between lithium- and sodium-ion battery chemistries</a></h3>
+    <div class="src">Nature Energy · 2026 (vol.11, pp.313–323) · 배터리</div>
+    <p>15,000개 이상 특허 패밀리의 인용 네트워크를 LLM 기반 자동 분류로 분석해, 성숙한 Li-ion에서 신흥 Na-ion으로 제품·공정 혁신 지식이 지속적·방향성 있게 흐른다는 점을 보였다. Na-ion 기술 로드맵이 Li-ion 축적 자산 위에서 빠르게 전진할 수 있음을 시사. <code>Na-ion</code> <code>Li-ion</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-025-67756-8" target="_blank" rel="noopener">Near-100% site utilization of single atoms for efficient electrocatalysis</a></h3>
+    <div class="src">Nature Communications · 2026 · 전기화학 <span class="unverified">[저자 미확인]</span></div>
+    <p>단원자 촉매의 활성점 이용률을 거의 100%까지 끌어올려, 알칼리 산소환원(ORR)에서 반파전위 0.958 V를 달성했다고 보고. 귀금속 사용을 줄이면서 연료전지·수전해 전극 효율을 높이는 설계 원리로 주목된다. <code>electrocatalysis</code> <code>ORR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820" target="_blank" rel="noopener">Selective Depolymerization of PET in Mixed Plastic Waste Using Magnetically Recoverable nZVI Catalyst</a></h3>
+    <div class="src">Environmental Science &amp; Technology (ACS) · 2025–2026 · 플라스틱 <span class="unverified">[저자 미확인]</span></div>
+    <p>자기적으로 회수 가능한 나노영가철(nZVI) 촉매로 혼합 폐플라스틱에서 PET만 선택적으로 해중합. 분리·정제 부담을 줄여 실제 혼합 폐기물 처리에 유리한 경로를 제시한다. <code>PET</code> <code>depolymerization</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41929-025-01399-2" target="_blank" rel="noopener">Microenvironment effects in electrochemical CO2 reduction from first-principles multiscale modelling</a></h3>
+    <div class="src">Nature Catalysis · 원 발표 2025-09 · CO2RR <span class="unverified">[저자 미확인]</span></div>
+    <p>은(Ag) 촉매상 CO2 전기환원에서 전해질 효과를 전 스케일에 걸쳐 명시적으로 반영한 다중스케일 모델링. 미세환경(이온·전기장·국소 pH)이 선택성·활성을 좌우함을 정량화해 산업화 설계 지침을 제공. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary" target="_blank" rel="noopener">Energy Technology Perspectives 2026 (Executive Summary)</a></h3>
+    <div class="src">IEA · 2026 · 청정기술 전망</div>
+    <p>IEA의 청정에너지 기술 플래그십 보고서. 지난 10년간 배터리 가격이 75% 하락해 전기차 보급과 변동성 재생에너지 수용을 견인했다는 분석 등 제조·공급망 관점의 기술 경로를 제시한다. <code>battery</code> <code>clean tech</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">What it would take to unlock the next phase of hydrogen growth</a></h3>
+    <div class="src">IEA 분석 · 2026-02 · 수소</div>
+    <p>저배출 수소 생산 투자가 2025년 약 80억 달러로 전년 대비 80% 증가했고, 2024년 수소 수요는 100 Mt에 도달(정유·화학·철강 중심). 다음 성장 국면을 열기 위한 수요 측 정책 개혁 필요성을 강조한다. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.korea.kr/special/policyCurationView.do?newsId=148857966" target="_blank" rel="noopener">한국 수소경제 정책 동향 — 인프라·연료전지·모빌리티 투자</a></h3>
+    <div class="src">대한민국 정책브리핑(korea.kr) · 2026 · 수소 <span class="unverified">[정책 개관]</span></div>
+    <p>정부 수소경제 이행계획상 생산·저장·수송 인프라와 연료전지·모빌리티 확산에 투자가 집중되며, 그린 공급망(수소·배터리·핵심광물) 강화가 병행된다. 구체 신규 발표가 아닌 정책 개관 페이지. <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.pv-magazine.com/2026/05/08/the-hydrogen-stream-nel-asa-launches-new-pressurized-alkaline-electrolyzer/" target="_blank" rel="noopener">Nel ASA, 차세대 가압 알칼라인 전해조 출시</a></h3>
+    <div class="src">pv magazine · 2026-05-08 · 수소</div>
+    <p>Nel ASA가 프로젝트 실행을 단순화하고 비용·성능·확장성을 개선한 차세대 가압 알칼라인 전해조를 공개. 25 MW 플랜트 기준 턴키 전범위 비용을 kW당 1,450달러 미만으로 제시했다. <code>green hydrogen</code> <code>ALK</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/06/03/electrolyzer/green-hydrogen-in-tuscany-wine-country-erredue-s-1-mw-electrolyser-arrives" target="_blank" rel="noopener">ErreDue 1 MW 전해조, 토스카나 와인산지에 도착</a></h3>
+    <div class="src">Fuel Cells Works · 2026-06-03 · 수소</div>
+    <p>몬탈치노(시에나)에 토스카나 최초의 MW급 그린수소 설비가 반입됐다. 태양광·배터리 저장과 연계해 가동되며, 농식품 지역의 분산형 수소 실증 사례로 의미가 있다. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://evmagazine.com/news/solid-state-battery-cars-coming-soon-to-ev-production" target="_blank" rel="noopener">Stellantis–Factorial, 전고체 배터리 실증 차량 추진</a></h3>
+    <div class="src">EV Magazine · 2026 · 배터리 <span class="unverified">[2차·예정 일정]</span></div>
+    <p>Stellantis가 Factorial의 전고체 배터리(약 350 Wh/kg)를 Dodge Charger Daytona 실증 플릿에 적용해 1회 충전 약 621마일 주행을 목표로 한다는 보도. 상용화가 아닌 데모 단계로, 일정은 변동 가능. <code>solid-state</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/10.26434/chemrxiv-2026-wp1rv" target="_blank" rel="noopener">Systematic Ligand Modification Tunes the Stability and Reactivity of Copper Complexes for Electrocatalytic CO2 Reduction</a></h3>
+    <div class="src">ChemRxiv (프리프린트, 미동료심사) · 2026 · CO2RR</div>
+    <p>전기화학적으로 불안정하던 CO2 고정 구리 착물을 합리적 리간드 변형으로 안정성과 전기촉매 활성을 동시에 끌어올린 분자 설계. 균일계 CO2RR 촉매의 내구성 향상 전략. <code>CO2RR</code> <code>Cu complex</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2601.15845" target="_blank" rel="noopener">NASICON solid-electrolyte modification and analysis using ion and neutron beams</a></h3>
+    <div class="src">arXiv (cond-mat.mtrl-sci, 프리프린트) · 2026-01 · 배터리</div>
+    <p>이온·중성자 빔을 이용해 NASICON계 고체전해질을 개질·분석. Na 이온 전도와 계면 안정성 규명을 통해 전고체 Na-ion 배터리 전해질 설계에 단서를 제공한다. <code>solid-state</code> <code>Na-ion</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-n41q2" target="_blank" rel="noopener">Electrochemical Potential-Driven Water Dynamics Control CO2 Electroreduction at the Ag/H2O Interface</a></h3>
+    <div class="src">ChemRxiv (프리프린트) · 2025 · CO2RR <span class="unverified">[2025]</span></div>
+    <p>머신러닝 가속 분자동역학으로 Ag(111)/H2O 계면에서 인가 전위가 계면 물 분자 동역학을 바꾸고 그것이 CO2 환원을 제어함을 규명. 계면 물 구조가 활성·선택성의 숨은 변수임을 시사. <code>CO2RR</code> <code>MD</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (DOI·1차 페이지 우선)</strong>
+  <ol>
+    <li>Nature Energy (2026) — Li/Na-ion knowledge interdependencies: https://www.nature.com/articles/s41560-026-01985-z</li>
+    <li>Nature Communications (2026) — Near-100% single-atom site utilization: https://www.nature.com/articles/s41467-025-67756-8</li>
+    <li>Environmental Science &amp; Technology (ACS) — PET selective depolymerization (nZVI): https://pubs.acs.org/doi/10.1021/acs.est.5c06820</li>
+    <li>Nature Catalysis (2025) — CO2 reduction microenvironment multiscale modelling: https://www.nature.com/articles/s41929-025-01399-2</li>
+    <li>IEA — Energy Technology Perspectives 2026 (Exec. Summary): https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary</li>
+    <li>IEA — Unlocking the next phase of hydrogen growth: https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth</li>
+    <li>대한민국 정책브리핑 — 수소경제 정책: https://www.korea.kr/special/policyCurationView.do?newsId=148857966</li>
+    <li>pv magazine — Nel ASA pressurized alkaline electrolyzer (2026-05-08): https://www.pv-magazine.com/2026/05/08/the-hydrogen-stream-nel-asa-launches-new-pressurized-alkaline-electrolyzer/</li>
+    <li>Fuel Cells Works — ErreDue 1 MW electrolyser, Tuscany (2026-06-03): https://fuelcellsworks.com/2026/06/03/electrolyzer/green-hydrogen-in-tuscany-wine-country-erredue-s-1-mw-electrolyser-arrives</li>
+    <li>EV Magazine — Stellantis × Factorial solid-state demo fleet: https://evmagazine.com/news/solid-state-battery-cars-coming-soon-to-ev-production</li>
+    <li>ChemRxiv (2026) — Cu-complex ligand modification for CO2RR: https://chemrxiv.org/doi/10.26434/chemrxiv-2026-wp1rv</li>
+    <li>arXiv (2026-01) — NASICON solid electrolyte (ion/neutron beams): https://arxiv.org/abs/2601.15845</li>
+    <li>ChemRxiv (2025) — Water dynamics control CO2 electroreduction at Ag/H2O: https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-n41q2</li>
+  </ol>
+  <p>생성 2026-06-09 · 자동 브리핑. 보도자료 재게시 어그리게이터 미사용 — 논문 DOI·기관·산업지 직접 인용. [미확인]은 저자·소속 미확인, [2025]/[2차]는 발표 시점·출처 등급 주의 표기.</p>
+</footer>
+
+</div>
+</body>
+</html>
+               
