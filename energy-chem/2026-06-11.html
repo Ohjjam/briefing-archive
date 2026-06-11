@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-11</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 11일 (목) · 최근 동향 (24~72시간 우선, 일부 1~2주 핵심 포함)</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2RR</strong> — Nature Energy·Nature Nanotechnology가 산업화 경로(태양광 학습효과 이식, 탠덤 전해조)를 잇따라 제시하며 셀 단가·효율·수명 균형이 핵심 변수로 부상.</li>
+    <li><strong>수소·정책</strong> — IEA 2026 업데이트, 생산 보조금에서 <em>수요측 의무화</em>(섹터 쿼터·CCfD)로 정책 무게추 이동. 최근 프로젝트 취소의 80%+가 그린수소 전해 부문.</li>
+    <li><strong>배터리·산업</strong> — BloombergNEF, 2026년 글로벌 ESS 158GW 전망. CATL·HyperStrong 60GWh Na-ion 공급계약 등 비(非)리튬 화학의 규모화 가속.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-025-01953-z" target="_blank" rel="noopener">Translating insights from photovoltaics to accelerate industrial-scale CO2 electroreduction</a></h3>
+    <div class="src">Nature Energy · 2026 · CO2RR</div>
+    <p>태양광 산업이 밟아온 비용 학습곡선을 CO2 전해환원(CO2E)에 이식하는 전략을 제시. 산업 채택은 에너지 효율·자본비·수명에 더해 전력·탄소 가격까지 결합돼 화학·연료의 균등화 비용이 경쟁력을 가질 때 가능하다고 분석. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41565-025-02117-6" target="_blank" rel="noopener">Tandem architectures for electrochemical CO2 reduction</a></h3>
+    <div class="src">Nature Nanotechnology · 2026 · CO2RR</div>
+    <p>원자수준 결합 사이트부터 탠덤 전해조까지 탠덤 촉매 개념을 분류·비교. 탠덤은 함산소 화합물 선택성을 높이지만 에틸렌 생산은 비탠덤보다 불리. 재료 복잡성을 줄이고 미세환경을 개별 튜닝할 수 있는 <em>탠덤 전해조</em>가 가장 유망. <code>tandem</code> <code>electrolyser</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-025-01946-y" target="_blank" rel="noopener">Embracing change in electrocatalysis (Perspective)</a></h3>
+    <div class="src">Nature Energy · 2026 · electrocatalysis</div>
+    <p>전기화학 촉매 연구의 방법론 전환을 촉구하는 관점 논문. 정적 활성점 가정에서 벗어나 작동 중 동적 재구성·열화를 표준 분석에 포함해야 한다는 문제의식을 제시. <code>electrocatalysis</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acs.est.5c06820" target="_blank" rel="noopener">Selective Depolymerization of PET in Mixed Plastic Waste Using Magnetically Recoverable nZVI Catalyst</a></h3>
+    <div class="src">Environmental Science &amp; Technology (ACS) · 2026 · plastics</div>
+    <p>혼합 플라스틱 폐기물에서 PET만 선택적으로 해중합하는 자성 회수형 nZVI 촉매를 보고. 단량체 BHET 수율 90% 초과, 자력으로 촉매를 회수해 분리·재사용성을 확보. 분리수거가 어려운 실폐기물 적용에 의미. <code>PET</code> <code>depolymerization</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2753149-global-hydrogen-output-far-below-net-zero-needs-iea" target="_blank" rel="noopener">IEA: 저탄소 수소 생산, 넷제로 요구치에 크게 미달</a></h3>
+    <div class="src">Argus Media (IEA 보고 인용) · 2026 · hydrogen</div>
+    <p>저탄소 수소 생산이 2020년 대비 약 두 배 늘어 2025년 1Mt 수준에 도달했으나 여전히 전 세계 생산의 1% 미만. IEA는 2026 업데이트에서 생산 보조 중심에서 정유·중공업 의무 사용 쿼터, 탄소차액계약(CCfD) 등 <em>수요측 정책</em>으로의 전환을 권고. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage" target="_blank" rel="noopener">IEA Global Energy Review 2026 — Battery storage</a></h3>
+    <div class="src">IEA · 2026 · storage</div>
+    <p>IEA 글로벌 에너지 리뷰 2026의 배터리 저장 섹션. AI 데이터센터 수요가 ESS 설치를 끌어올리는 구조적 요인으로 지목되며, 정책·인센티브 설계가 배치 속도를 좌우한다고 정리. <code>BESS</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/energy-system/low-emission-fuels/hydrogen" target="_blank" rel="noopener">전해 프로젝트 취소의 80%+가 그린수소 부문</a></h3>
+    <div class="src">IEA Hydrogen · 2026 · hydrogen</div>
+    <p>최근 수소 프로젝트 취소의 80% 이상이 전해(그린수소) 부문에서 발생. 자본비 상승과 높은 전력가로 '그린 프리미엄'을 넘기 어려웠던 결과. EU는 10Mtpa 목표 달성이 불확실하고, 미국은 세액공제 구조상 블루수소로 무게중심 이동. <code>electrolysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/" target="_blank" rel="noopener">BloombergNEF, 2026년 글로벌 ESS 158GW/459GWh 전망</a></h3>
+    <div class="src">Energy-Storage.News (BNEF 인용) · 2026 · storage</div>
+    <p>BNEF는 양수발전 제외 글로벌 저장장치 설치가 2026년 41% 증가할 것으로 전망(158GW/459GWh). 중국이 최대 비중을 유지하고, AI 데이터센터 수요가 신규 동력으로 가세. <code>grid storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://about.bnef.com/insights/clean-energy/energy-storage-enters-the-100-gigawatt-era-three-things-to-know/" target="_blank" rel="noopener">에너지 저장, '100기가와트 시대' 진입 — CATL·HyperStrong Na-ion 60GWh</a></h3>
+    <div class="src">BloombergNEF · 2026 · Na-ion</div>
+    <p>장기 저장(LDES) 연간 추가가 2026년 2GW로 4배 확대되며 대부분 비리튬 기술이 담당. CATL·HyperStrong이 60GWh 규모 나트륨이온 다년 공급계약을 체결해 대체 화학의 규모화를 알렸다. <code>Na-ion</code> <code>LDES</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/category/news/" target="_blank" rel="noopener">Neoen, 파리 인근에 프랑스 최대 배터리(496MWh) 가동</a></h3>
+    <div class="src">Energy-Storage.News · 2026 · BESS</div>
+    <p>Neoen이 파리 남동쪽 약 70km 지점에 400kV 송전망과 연결된 496MWh 규모 프랑스 최대 배터리를 가동. 유럽 계통 안정화·재생에너지 통합용 대형 BESS 확산 사례. <code>BESS</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-xw0tl" target="_blank" rel="noopener">Integrated Bipolar Membrane Electrodialysis and Electrolysis for CO2 Capture and Conversion</a></h3>
+    <div class="src">ChemRxiv · 2026-01 게재(원 발표 기준) · CCUS</div>
+    <p>양극성막 전기투석(BMED)과 CO2 전해조를 단일 시스템(BMEED)으로 결합해 포집과 전환을 통합. CO2→CO 선택성 98%, 비에너지소비 34.00 kWh/kg-CO를 보고. 포집-전환 분리 공정의 통합 가능성을 제시. <code>CCUS</code> <code>CO2RR</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Nature Energy — PV insights to CO2 electroreduction (DOI): https://www.nature.com/articles/s41560-025-01953-z</li>
+    <li>Nature Nanotechnology — Tandem architectures for CO2RR (DOI): https://www.nature.com/articles/s41565-025-02117-6</li>
+    <li>Nature Energy — Embracing change in electrocatalysis (DOI): https://www.nature.com/articles/s41560-025-01946-y</li>
+    <li>ACS EST — Selective PET depolymerization, nZVI (DOI): https://pubs.acs.org/doi/10.1021/acs.est.5c06820</li>
+    <li>Argus Media — Global hydrogen output below net-zero needs (IEA): https://www.argusmedia.com/en/news-and-insights/latest-market-news/2753149-global-hydrogen-output-far-below-net-zero-needs-iea</li>
+    <li>IEA — Global Energy Review 2026, Battery storage: https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage</li>
+    <li>IEA — Hydrogen (energy system): https://www.iea.org/energy-system/low-emission-fuels/hydrogen</li>
+    <li>Energy-Storage.News — BNEF 158GW forecast: https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/</li>
+    <li>BloombergNEF — 100-Gigawatt era: https://about.bnef.com/insights/clean-energy/energy-storage-enters-the-100-gigawatt-era-three-things-to-know/</li>
+    <li>Energy-Storage.News — News archive (Neoen): https://www.energy-storage.news/category/news/</li>
+    <li>ChemRxiv — BMEED CO2 capture &amp; conversion (DOI): https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-xw0tl</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
