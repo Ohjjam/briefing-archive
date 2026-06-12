@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-12</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 12일 (금) · 최근 24~72시간 (후보 부족 섹션은 2주 윈도우) · 전기화학 · 배터리 · CO2RR · 수전해 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>배터리가 이번 주 흐름을 주도</strong> — 중국이 'EV 다이어트'(배터리 대형화로 차체 비대) 규제 신호(6/7), BYD·SAIC는 2027년 전고체 EV 양산 목표(6/2)를 제시.</li>
+    <li><strong>저널</strong> — ACS Energy Letters(6/8)가 용해 전이금속의 재증착과 SEI 열화 메커니즘을 다루며 셀 수명 개선 단서를 제시(<code>Li-ion</code>).</li>
+    <li><strong>정책</strong> — IEA 2026 전망상 배터리 저장이 최고 성장 기술(2025년 108GW, +40%, <code>LFP</code> ~90%), EU는 수소은행 경매로 10억 유로+ 지원.</li>
+    <li><em>정직성 표기</em>: 최근 1~2주 내 1차 출처가 확인된 <strong>프리프린트</strong>는 확보하지 못해 해당 섹션은 비움(검색된 CO2RR 프리프린트는 1월자라 윈도우 외).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/toc/aelccp/0/0" target="_blank" rel="noopener">용해 전이금속의 재증착이 배터리 수명에 미치는 영향 (ACS Energy Letters)<span class="unverified">[미확인]</span></a></h3>
+    <div class="src">ACS Energy Letters (Ahead of Print) · 2026-06-08 · 저널·게재일 확인, 특정 DOI·저자 미확정</div>
+    <p>양극에서 용출된 전이금속(TM)이 전해질을 열화시키고 SEI에 영향을 주는데, 일부 TM이 양극 표면에 재증착된다는 점을 규명했다. TM 용해·재증착 동역학을 제어하면 셀 수명을 늘릴 수 있다는 함의로, 고용량 양극 상용화의 열화 난제에 직접 닿는다. 검증 기준(저자·소속·저널·게재일 중 3+)에서 저널·게재일만 확인돼 <strong>[미확인]</strong> 표기 — 후속 호에서 DOI 확정 시 갱신 필요. <code>Li-ion</code> <code>SEI</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/electricity-2026/executive-summary" target="_blank" rel="noopener">IEA, 배터리 저장을 '최고 성장 전력 기술'로 — 2025년 108GW 신규(+40%)</a></h3>
+    <div class="src">IEA · Electricity 2026 / Global Energy Review 2026 (현행 전망) · 토픽: grid storage</div>
+    <p>IEA 2026 전망에 따르면 배터리 저장은 현재 가장 빠르게 성장하는 전력 기술로, 2025년 전 세계 108GW가 신규 배치돼 전년 대비 40% 늘었다. <code>LFP</code>가 배치량의 약 90%를 차지하며, 에너지밀도는 낮아도 저가·잦은 사이클에 유리해 유틸리티급 단기 유연성 자원으로 자리잡고 있다. (속보가 아닌 현행 연간 전망 인용) <code>LFP</code> <code>grid-storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1004" target="_blank" rel="noopener">EU, 수소은행 경매로 수소 생산 프로젝트에 10억 유로+ 지원<span class="unverified">[발표일 미확인]</span></a></h3>
+    <div class="src">European Commission (보도자료 IP/26/1004) · 2026 · 정확 발표일 미확인</div>
+    <p>유럽위원회가 European Hydrogen Bank 경매를 통해 7개 EEA 국가의 수소 생산 프로젝트에 10억 유로 이상을 배정했고, 별도로 독일 재생수소 생산 지원을 위한 13억 유로 규모 국가보조(Auctions-as-a-Service)를 승인했다. 보조금 경매 방식이 EU 청정수소 스케일업의 표준 도구로 굳어지는 흐름. 2026년 EC 보도자료이나 정확 게시일은 검색에서 확정하지 못해 표기. <code>green hydrogen</code> <code>PEM/AEM</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-07/china-puts-evs-on-a-diet-as-battery-boom-adds-bulk-cctv-reports" target="_blank" rel="noopener">중국, 'EV 다이어트' 신호 — 배터리 대형화發 차체 비대에 제동</a></h3>
+    <div class="src">Bloomberg · 2026-06-07 · 토픽: EV 배터리</div>
+    <p>CCTV 보도를 인용한 블룸버그에 따르면, 중국은 수년간 배터리 용량·공간·기능 경쟁으로 승용차가 크고 무거워지자 더 슬림한 EV를 주문했다. 대용량화 일변도였던 셀 탑재 전략에 효율·경량화 압력이 가해지는 정책 전환 신호로, 배터리 화학·팩 설계 방향에 영향을 줄 수 있다. <code>Li-ion</code> <code>pack-design</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://asia.nikkei.com/business/technology/china-s-byd-saic-motor-eye-evs-with-all-solid-state-batteries-in-2027" target="_blank" rel="noopener">BYD·SAIC, 2027년 전고체 배터리 EV 양산 정조준</a></h3>
+    <div class="src">Nikkei Asia · 2026-06-02 · 토픽: solid-state battery</div>
+    <p>중국 BYD와 SAIC가 2027년 전고체전지(ASSB) 탑재 EV 출시를 겨냥한다고 닛케이가 보도했다. 일본·한국 셀 업체와의 상용화 경쟁이 본격화되는 가운데, 비가연성 고체전해질·고에너지밀도라는 ASSB의 강점을 양산 수율·원가로 입증하는 단계로 진입하고 있다. <code>solid-state</code> <code>ASSB</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 1~2주 내 1차 출처(ChemRxiv·arXiv)가 확인된 신규 프리프린트를 확보하지 못함. 검색된 CO2RR 관련 프리프린트는 2026년 1월자로 수집 윈도우(2주) 밖이라 의도적으로 제외 —</p>
+
+<footer>
+  <strong>출처 (1차 출처 우선 · 저널/기관/1차 보도)</strong>
+  <ol>
+    <li>ACS Energy Letters — Ahead of Print (전이금속 용해·재증착 / SEI). https://pubs.acs.org/toc/aelccp/0/0 · 2026-06-08 (특정 DOI 미확정)</li>
+    <li>IEA — Electricity 2026 (Executive summary, 배터리 저장 108GW/+40%, LFP ~90%). https://www.iea.org/reports/electricity-2026/executive-summary</li>
+    <li>IEA — Global Energy Review 2026: Battery storage. https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage</li>
+    <li>European Commission — EU awards over €1 billion to European hydrogen projects (IP/26/1004). https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1004 (발표일 미확인)</li>
+    <li>European Commission — €1.3bn German State aid for renewable hydrogen (IP/26/1096). https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1096</li>
+    <li>Bloomberg — China Puts EVs on a Diet as Battery Boom Adds Bulk. https://www.bloomberg.com/news/articles/2026-06-07/china-puts-evs-on-a-diet-as-battery-boom-adds-bulk-cctv-reports · 2026-06-07</li>
+    <li>Nikkei Asia — China's BYD, SAIC Motor eye EVs with all-solid-state batteries in 2027. https://asia.nikkei.com/business/technology/china-s-byd-saic-motor-eye-evs-with-all-solid-state-batteries-in-2027 · 2026-06-02</li>
+  </ol>
+  <p>생성: 2026-06-12 · 수집 윈도우: 1차 발표 기준 1~2주 · 보도자료 재게시 어그리게이터 직접 인용 없음 · 1차 발표일을 확정 못 한 항목은 [미확인]/[발표일 미확인]으로 명시 · 데이터 무결성 우선으로 프리프린트 섹션은 억지로 채우지 않음.</p>
+</footer>
+
+</div>
+</body>
+</html>
