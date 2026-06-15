@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-15</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 15일 (월) · 최근 24–72시간 · 전기화학 · 배터리 · CO2RR · 수전해/수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2 전해조 장기 안정성의 병목</strong>은 염 석출·플러딩 — 이온·물 수송을 <em>동시에</em> 관리해야 1,000h 이상 운전 가능 (Nature Energy, 6/10).</li>
+    <li><strong>EU, 수소 RFNBO 규정 개정 앞당김</strong> — 개정 위임법 6월 중 공표, additionality·시간상관 의무 2032–33로 연기 검토.</li>
+    <li><strong>ESS 자금·인허가 러시</strong>: EnerVenue 니켈-수소 $3억, esVolta $4.5억(6/8), Eku 1GWh Griffith(6/9); BNEF는 2026년 글로벌 158GW 전망.</li>
+    <li><strong>유럽 수소 정책 가속</strong>: EC, 독일 재생수소에 €13억 국가보조 승인 + 수소·CCUS €50억 배정.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02052-3" target="_blank" rel="noopener">Understanding interconnected ion and water transport in anion exchange membrane zero-gap CO2 electrolysers</a></h3>
+    <div class="src">Nature Energy · 2026-06-10 · Biemolt, Pelzer, Filippi 외 · CO2RR / 수전해</div>
+    <p>저온 AEM 제로갭 CO2 전해조가 산업 수준 전류밀도(&gt;200 mA cm⁻²)에서 1,000h 이상 버티지 못하는 주원인은 <em>염 석출과 플러딩</em>으로, 둘 다 촉매층으로의 CO2 수송을 막는다. 물·이온 균형 최적화로 두 실패 모드를 함께 완화해야 함을 정량적으로 보였다 — 스케일업 운전수명 설계의 핵심 가이드. <code>CO2RR</code> <code>AEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-69175-9" target="_blank" rel="noopener">Kilowatt-scale alkali-cation-free CO2 electrolysis via accelerating mass transfer</a></h3>
+    <div class="src">Nature Communications · 2026 <span class="unverified">[게재일 미확인]</span> · CO2RR</div>
+    <p>고확산 기체확산전극으로 알칼리 양이온 없이 kW급 CO2 전해를 구현, 1,000h 이상 안정적으로 CO 144 kg(1.29 kW) 또는 C₂H₄ 17 kg(1.95 kW)을 생산했다. 양이온 없는 운전은 염 석출 문제를 원천 회피한다는 점에서 위 Nature Energy 논의와 맞물린다. <code>CO2RR</code> <code>C2H4</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://energy.ec.europa.eu/topics/eus-energy-system/hydrogen_en" target="_blank" rel="noopener">EU, 수소 RFNBO 생산규정 개정 앞당겨 — 6월 중 위임법 공표</a></h3>
+    <div class="src">European Commission · Energy (Hydrogen) · 2026-06 · 수소</div>
+    <p>집행위가 당초 2028년 예정이던 RFNBO(재생연료) 생산규정 개정을 약 18개월 앞당겨 6월 중 개정 위임법을 내놓는다. additionality·시간상관(hourly correlation) 의무의 단계 도입을 2032–33년까지 미루는 방안이 거론된다. 개정 EU 수소전략과 RED IV 제안은 Q3 2026 예정. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1096" target="_blank" rel="noopener">EC, 독일 재생수소 생산에 €13억 국가보조 승인</a></h3>
+    <div class="src">European Commission · Press corner (IP/26/1096) · 2026 · 수소</div>
+    <p>집행위가 독일의 재생수소 생산 지원을 위한 €13억 규모 국가보조를 승인했다. 역내 청정수소 생산단가 격차 보전을 통해 초기 시장 형성을 촉진하려는 조치. 산업 탈탄소·수소 밸류체인 투자에 직접 신호. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.gasworld.com/story/europe-allocates-e5bn-to-germany-for-hydrogen-and-ccus/2153479.article/" target="_blank" rel="noopener">EU, 독일 산업 탈탄소에 €50억 배정 — 수소·CCUS·전기화</a></h3>
+    <div class="src">gasworld (업계 매체) · 2026 · 수소 / CCUS</div>
+    <p>집행위가 독일 산업공정의 CO2 감축을 위해 수소·CCUS·전기화에 €50억 지원을 승인했다. 철강·화학 등 난감축(hard-to-abate) 부문의 청정수소·탄소포집 도입을 가속하는 대규모 재정. <code>CCUS</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/enervenue-closes-us300-million-series-b-for-30000-cycle-nickel-hydrogen-battery-manufacturing/" target="_blank" rel="noopener">EnerVenue, 니켈-수소 전지 양산에 $3억 시리즈B 추가 조달</a></h3>
+    <div class="src">Energy-Storage.News · 2026-06 · 배터리 / ESS</div>
+    <p>우주항공 유래 니켈-수소(Ni-H₂) 전지를 상용화 중인 EnerVenue가 시리즈B 우선주 $3억을 추가 마감했다(창저우 양산설비 확장). 같은 주 ESS 자금·인허가도 잇따랐다 — esVolta 최대 $4.5억 신용공여(6/8), Eku Energy 1,000MWh Griffith BESS 환경평가 제출(6/9). <code>Ni-H2</code> <code>BESS</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/" target="_blank" rel="noopener">BloombergNEF: 2026년 글로벌 ESS 158GW 전망 — LFP 90% 차지</a></h3>
+    <div class="src">Energy-Storage.News (BNEF 인용) · 2026 · ESS</div>
+    <p>BNEF가 2026년 전 세계 ESS 설치를 158GW로 전망했다. 2025년엔 108GW가 신규 설치돼 전년 대비 40% 증가했고, LFP(리튬인산철)가 배치의 약 90%를 점했다. 화학·셀 공급망이 LFP 중심으로 고착되는 흐름. <code>LFP</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.chemistryworld.com/news/clean-hydrogen-project-cancellations-point-to-narrower-future/4023051.article" target="_blank" rel="noopener">청정수소 프로젝트 취소 잇따라 — 좁아지는 전망</a></h3>
+    <div class="src">Chemistry World (RSC) · 2026 · 수소</div>
+    <p>고비용·수요 불확실성으로 일부 대형 청정수소 프로젝트가 취소·축소되며, 수소 경제가 당초 기대보다 좁은 산업용(정유·암모니아·철강) 중심으로 재편될 수 있다는 진단. 위 EU 보조금 가속과 대비되는 시장 현실. <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 1–2주 내 1차 확인 가능한(게재일·식별자 명확) 신규 프리프린트 없음. 검색 후보는 모두 2026년 초(1월) 게재분으로 윈도 초과하여 제외 —</p>
+
+<footer>
+  <strong>출처 (Sources) — 1차(DOI·기관) 우선</strong>
+  <ol>
+    <li>Nature Energy — Biemolt, Pelzer, Filippi et al., "Understanding interconnected ion and water transport in AEM zero-gap CO2 electrolysers" (2026) — https://www.nature.com/articles/s41560-026-02052-3</li>
+    <li>Nature Communications — "Kilowatt-scale alkali-cation-free CO2 electrolysis via accelerating mass transfer" (2026) — https://www.nature.com/articles/s41467-026-69175-9</li>
+    <li>European Commission — Energy / Hydrogen (RFNBO) — https://energy.ec.europa.eu/topics/eus-energy-system/hydrogen_en</li>
+    <li>European Commission — Press corner IP/26/1096 (German renewable hydrogen State aid) — https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1096</li>
+    <li>gasworld — Europe allocates €5bn to Germany for hydrogen and CCUS — https://www.gasworld.com/story/europe-allocates-e5bn-to-germany-for-hydrogen-and-ccus/2153479.article/</li>
+    <li>Energy-Storage.News — EnerVenue closes US$300M for nickel-hydrogen battery manufacturing — https://www.energy-storage.news/enervenue-closes-us300-million-series-b-for-30000-cycle-nickel-hydrogen-battery-manufacturing/</li>
+    <li>Energy-Storage.News — BloombergNEF forecasts 158GW of global energy storage in 2026 — https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/</li>
+    <li>Chemistry World (RSC) — Clean hydrogen project cancellations point to narrower future — https://www.chemistryworld.com/news/clean-hydrogen-project-cancellations-point-to-narrower-future/4023051.article</li>
+  </ol>
+  <p>생성: 2026-06-15 · 에너지·화학공학 자동 브리프 · 보도자료 재배포 어그리게이터 미사용, 1차 출처(DOI·EC·업계 매체) 기준. [게재일 미확인] 항목은 정확한 게재일 추가 확인 권장.</p>
+</footer>
+
+</div>
+</body>
+</html>
+                      
