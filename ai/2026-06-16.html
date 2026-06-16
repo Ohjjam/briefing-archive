@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-16</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 16일 (화) · 최근 24시간 프런티어 AI 동향 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Anthropic</strong>가 오늘의 핵심. 오리지널 Claude 4 모델(<code>claude-sonnet-4-20250514</code>·<code>claude-opus-4-20250514</code>)이 6/15부로 Claude API에서 공식 은퇴 — 호출 시 에러 반환, 마이그레이션 필요.</li>
+    <li><strong>Anthropic</strong> 과금 체계 변경도 6/15 발효: Claude Agent SDK·<code>claude -p</code> 프로그래매틱 사용량이 구독 한도 풀에서 분리되어 별도 달러 크레딧(API 정가)으로 과금.</li>
+    <li><strong>Anthropic</strong> Claude Fable 5(Mythos 클래스 첫 공개 모델)가 6/9 공개 후 美 정부 수출 지침으로 ~6/12 일시 오프라인 — 진행 중 이슈(developing).</li>
+    <li>OpenAI·Google·Meta·xAI·Mistral은 <em>지난 24시간 내 새로운 1차(공식) 발표 없음</em>. 최근 수일 동향(GPT-5.2 은퇴, Mistral 자금조달 보도 등)은 하단 '기타'에 날짜 명시해 정리.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<p class="quiet">— 지난 24시간 주목할 1차 발표 없음 (최근 동향은 '기타' 참고) —</p>
+
+<h2 class="section">Google</h2>
+<p class="quiet">— 지난 24시간 주목할 1차 발표 없음 (Google I/O 2026 발표는 5월, Chrome·Android용 Gemini 롤아웃은 '기타' 참고) —</p>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">오리지널 Claude 4 모델, 6/15 API에서 공식 은퇴</a></h3>
+    <div class="src">Anthropic (platform.claude.com 공식 문서) · 발효 2026-06-15 (예고 2026-04-14)</div>
+    <p>2026-04-14 예고대로 <code>claude-sonnet-4-20250514</code>·<code>claude-opus-4-20250514</code>가 6/15부터 Claude API에서 제거됐다. 이후 해당 모델 호출은 에러를 반환하며, 각각 <code>claude-sonnet-4-6</code>·<code>claude-opus-4-8</code>로 마이그레이션해야 한다. 두 모델을 하드코딩한 프로덕션 파이프라인은 즉시 점검 필요. <code>model-deprecation</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/" target="_blank" rel="noopener">프로그래매틱 사용량 과금 분리 — 6/15 발효</a><span class="unverified">[2차]</span></h3>
+    <div class="src">Enterprise DNA 보도 · 발효 2026-06-15 (예고 2026-05-14) · 1차 공식 링크 미확인</div>
+    <p>6/15부터 Claude Agent SDK·<code>claude -p</code>(비대화형) 사용량이 구독 플랜의 사용 한도에서 분리됐다. 플랜 요금에 상응하는 월 달러 크레딧이 부여되며, 이를 초과하는 자동화 루프는 표준 API 정가로 과금된다. 에이전트·배치 자동화를 돌리는 사용자는 비용 구조 재검토 필요. <code>billing</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.infoq.com/news/2026/06/claude-5-release/" target="_blank" rel="noopener">Claude Fable 5 공개 직후 수출 지침으로 일시 중단 (developing)</a></h3>
+    <div class="src">InfoQ · 2026-06 보도 (공개 2026-06-09, ~06-12 일시 중단)</div>
+    <p>Mythos 클래스의 첫 공개 모델 Claude Fable 5가 6/9 출시됐으나, 사흘 내 美 정부 수출 지침으로 일시적으로 다시 오프라인 처리됐다고 InfoQ가 전했다. 코딩·지식작업·비전·메모리·롱컨텍스트 성능 개선을 표방했던 모델로, 재개 시점·범위는 미정. 규제발 모델 가용성 리스크를 보여주는 사례. <code>Mythos</code></p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 (LlamaCon·Llama 연구 발표는 이전 시점) —</p>
+
+<h2 class="section">xAI</h2>
+<p class="quiet">— 지난 24시간 주목할 1차 발표 없음 (가장 최근 공식 발표는 6/11 — '기타' 참고) —</p>
+
+<h2 class="section">Mistral</h2>
+<p class="quiet">— 지난 24시간 주목할 1차 발표 없음 (공식 뉴스 최신은 5/28, 자금조달 보도는 '기타' 참고) —</p>
+
+<h2 class="section">기타 주목할 만한 동향 (최근 수일, 날짜 명시)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">OpenAI, ChatGPT에서 GPT-5.2 계열 제거 → GPT-5.5로 이전</a></h3>
+    <div class="src">OpenAI Help Center (공식 릴리스 노트) · 2026-06-12</div>
+    <p>6/12부로 ChatGPT에서 <code>gpt-5.2</code> Instant·Thinking·Pro가 제거되고 기존 대화는 대응 <code>gpt-5.5</code> 모델로 자동 이어진다(참고: GPT-5.5 자체는 4/23 출시). <code>gpt-4.5</code>는 6/27 ChatGPT에서 은퇴 예정. 모델 picker가 단순화되는 흐름. <code>gpt-5.5</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/" target="_blank" rel="noopener">Mistral, 약 €30억(~$35억) 추가 자금조달 협의 보도</a><span class="unverified">[2차]</span></h3>
+    <div class="src">PYMNTS 등 보도 · 2026-06-12 · 1차(공식 발표) 미확인</div>
+    <p>Mistral이 약 €200억 밸류에이션에 €30억 규모(약 $35억) 신규 라운드를 협의 중이라고 보도됐다. 유럽 AI 인프라(데이터센터·인퍼런스) 확충 목적으로 알려졌다. 공식 발표 전 보도 단계이므로 확정 아님. <code>funding</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news/grok-plugin-marketplace" target="_blank" rel="noopener">xAI, Grok Build 플러그인 마켓플레이스 출시</a></h3>
+    <div class="src">xAI (x.ai 공식 뉴스) · 2026-06-11</div>
+    <p>xAI가 코딩 에이전트 Grok Build용 내장 플러그인 마켓플레이스를 공개했다. MongoDB·Vercel·Sentry·Chrome DevTools·Cloudflare 등 파트너 플러그인으로 시작하며, 사용자가 직접 만든 플러그인 게시도 지원한다. 에이전트 생태계 확장 행보. <code>Grok Build</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">Google, Chrome·Android용 Gemini '6월 말' 롤아웃 예고</a></h3>
+    <div class="src">Google (blog.google, I/O 2026 발표 모음) · 발표 2026-05, 롤아웃 6월 말</div>
+    <p>I/O 2026에서 예고된 안드로이드 Chrome의 Gemini(요약·질의·Nano Banana·auto browse)가 6월 말부터 RAM 4GB+·영어(US) 기기에 우선 롤아웃된다. 발표 자체는 5월이며 6/16 시점 기준 아직 미출시 — 가용성은 단계적. <code>Gemini in Chrome</code></p>
+  </div>
+</div>
+
+<footer>
+  <p><strong>출처</strong> (1차 우선):</p>
+  <ol>
+    <li>Anthropic — Model deprecations (공식): https://platform.claude.com/docs/en/about-claude/model-deprecations</li>
+    <li>Anthropic 과금 변경 (2차 보도): https://enterprisedna.co/resources/news/anthropic-claude-june-15-retirements-billing-2026/</li>
+    <li>Anthropic Claude Fable 5 공개·중단 — InfoQ: https://www.infoq.com/news/2026/06/claude-5-release/</li>
+    <li>OpenAI — Model Release Notes (공식): https://help.openai.com/en/articles/9624314-model-release-notes</li>
+    <li>OpenAI — ChatGPT Release Notes (공식): https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>Mistral 자금조달 (2차 보도): https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/</li>
+    <li>xAI — Grok Build Plugin Marketplace (공식): https://x.ai/news/grok-plugin-marketplace</li>
+    <li>Google — I/O 2026 발표 모음 (공식): https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/</li>
+  </ol>
+  <p>생성: 2026-06-16 · 자동 일일 브리핑 · 지난 24시간 신규 1차 발표가 제한적이어서 최근 수일 동향은 날짜를 명시해 '기타'로 분리했습니다. 2차 출처는 <span class="unverified">[2차]</span>로 표기.</p>
+</footer>
+
+</div>
+</body>
+</html>

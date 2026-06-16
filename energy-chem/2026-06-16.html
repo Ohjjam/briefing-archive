@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-16</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 16일 (화) · 최근 24~72시간 · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2 전해조 안정성</strong>: AEM 제로갭 CO2 전해조의 장기 안정성 한계가 ‘이온·물 수송’의 상호작용에 있음을 짚은 <em>Nature Energy</em> Perspective(6/5) — 염 석출·범람을 동시 관리해야 셀 수명이 늘어난다.</li>
+    <li><strong>전기촉매 실시간 관측</strong>: 간섭계 전기광학 현미경으로 50 nm·10 ms 해상도에서 전류를 영상화, MoS<sub>2</sub> 수소발생이 특정 결정방향을 따라 전파됨을 포착(<em>Nature Energy</em> N&amp;V, 6/10).</li>
+    <li><strong>시스템 유연성</strong>: 중국 알루미늄 부문을 사례로 ‘산업 과잉설비’가 계절 단위 전력 유연성 자원이 될 수 있음을 정량화(<em>Nature Energy</em>, 6/12).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02052-3" target="_blank" rel="noopener">Understanding interconnected ion and water transport in anion exchange membrane zero-gap CO2 electrolysers</a></h3>
+    <div class="src">Nature Energy (Perspective) · 2026-06-05 · Biemolt, Pelzer, Strasser · CO2RR/수전해</div>
+    <p>저온 AEM 제로갭 CO2 전해조의 장기 안정성은 염 석출과 범람(flooding)으로 CO2 전달이 막히며 무너진다. 저자들은 이온 수송과 물 수송이 얽혀 있어 둘을 동시에 제어해야 셀 가동시간을 늘릴 수 있다고 정리했다. 상용화 병목을 ‘물 관리’ 관점에서 재정의. <code>CO2RR</code> <code>AEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02089-4" target="_blank" rel="noopener">Watching catalysis take a walk</a></h3>
+    <div class="src">Nature Energy (News &amp; Views) · 2026-06-10 · J. B. Sambur · electrocatalysis</div>
+    <p>나노스케일 전류와 구조를 넓은 면적에서 상관짓는 방법은 드물었다. 간섭계 전기광학 현미경이 50 nm·10 ms 해상도로 전기화학 전류를 영상화해, MoS<sub>2</sub> 위 수소발생(HER)이 특정 결정학적 방향을 따라 시작·전파됨을 보였다. 촉매 ‘활성 지점’을 동영상처럼 관측. <code>HER</code> <code>operando</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02073-y" target="_blank" rel="noopener">Industrial overcapacity can enable seasonal flexibility in electricity use</a></h3>
+    <div class="src">Nature Energy (Article) · 2026-06-12 · Lyu, Li, Jenkins · 에너지 시스템</div>
+    <p>부담으로만 여겨지던 산업 과잉설비를 재해석. 중국 알루미늄 부문을 예로, 여유 설비와 원료 저장이 계절 단위 전력 수요 유연성을 제공해 에너지 비용을 낮출 수 있음을 정량적으로 보였다. 전해(製鍊) 산업의 수요반응 잠재력. <code>demand flexibility</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage" target="_blank" rel="noopener">IEA Global Energy Review 2026 — 배터리 저장 가속</a><span class="unverified">[리포트]</span></h3>
+    <div class="src">IEA (Global Energy Review 2026, 분석) · 2026 · 토픽: grid storage</div>
+    <p>IEA 분석에 따르면 2025년 신규 배터리 저장이 108 GW 추가되며 전년 대비 약 40% 증가했다(24~72시간 신규 발표가 아닌 2026 플래그십 리포트). 중국발 과잉생산과 비용 하락이 보급을 끌어올리는 구도. 정책·투자 판단의 기준선. <code>energy storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.spglobal.com/energy/en/news-research/blog/energy-transition/010726-et-highlights-rwe-europe-electroluzer-ccs-renewables-drive-asia-renewables" target="_blank" rel="noopener">유럽 CCS, ‘있으면 좋은 것’에서 핵심 정책으로</a><span class="unverified">[분석]</span></h3>
+    <div class="src">S&amp;P Global Commodity Insights (분석) · 2026 · 토픽: CCUS</div>
+    <p>신규 법·EU 규제·수십억 달러 투자로 CCS가 유럽 탈탄소의 중심축으로 이동 중이라는 분석. 2030년까지 연 5천만t, 2040년 2.5억t의 CO2 주입 역량이 요구된다. 수소·산업 탈탄소와 직결되는 인프라 의제. <code>CCUS</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://autotechinsight.spglobal.com/news/5283735/indian-conglomerate-reliance-industries-plans-to-launch-battery-gigafactory-in-gujarat-in-2026" target="_blank" rel="noopener">Reliance, 2026년 배터리·전해조 기가팩토리 가동 추진</a><span class="unverified">[계획]</span></h3>
+    <div class="src">S&amp;P Global Mobility (보도) · 2026 가동 예정 (2025 발표) · 토픽: battery/green H2</div>
+    <p>인도 Reliance Industries가 구자라트에 배터리 기가팩토리(초기 40 GWh→100 GWh 확장)를 2026년 가동하고, 전해조 기가팩토리도 2026년 말 양산(연 3 GW까지 확장)을 목표로 한다. 글로벌 그린수소 단가 경쟁의 변수. 24~72시간 신규 뉴스가 아닌 가동 임박 계획으로 표기. <code>gigafactory</code> <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 24~72시간 내 1차 출처(ChemRxiv·arXiv)로 검증 가능한 신규 프리프린트를 확인하지 못함. 어그리게이터가 오늘자로 띄운 옛 연구는 규칙에 따라 제외함. —</p>
+
+<footer>
+  <p><strong>출처</strong> (DOI·1차 페이지 우선):</p>
+  <ol>
+    <li>Nature Energy — AEM zero-gap CO2 electrolysers (Perspective, 2026-06-05): https://www.nature.com/articles/s41560-026-02052-3</li>
+    <li>Nature Energy — Watching catalysis take a walk (News &amp; Views, 2026-06-10): https://www.nature.com/articles/s41560-026-02089-4</li>
+    <li>Nature Energy — Industrial overcapacity &amp; seasonal flexibility (Article, 2026-06-12): https://www.nature.com/articles/s41560-026-02073-y</li>
+    <li>IEA — Global Energy Review 2026, Battery storage: https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage</li>
+    <li>S&amp;P Global Commodity Insights — Europe CCS/electrolyzer analysis (2026): https://www.spglobal.com/energy/en/news-research/blog/energy-transition/010726-et-highlights-rwe-europe-electroluzer-ccs-renewables-drive-asia-renewables</li>
+    <li>S&amp;P Global Mobility — Reliance gigafactory (2026): https://autotechinsight.spglobal.com/news/5283735/indian-conglomerate-reliance-industries-plans-to-launch-battery-gigafactory-in-gujarat-in-2026</li>
+  </ol>
+  <p>생성: 2026-06-16 · 최근 24~72시간 동향 우선 · 논문 카드는 저자·저널·게재일을 명시(1차 DOI). 정책·산업 항목 중 일부는 24~72시간 신규 발표가 아닌 2026 리포트/계획으로 <span class="unverified">[리포트/분석/계획]</span> 표기. 보도자료 재게시 어그리게이터는 직접 인용하지 않고 1차 페이지(저널·기관)만 사용함.</
