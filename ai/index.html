@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 아카이브 · 날짜별</title>
+<style>
+  :root{ --accent:#b34700; --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf; --card:#fff; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; height:100%; }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--fg); display:flex; flex-direction:column; min-height:100vh;
+  }
+  header.bar{ position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid var(--fg); padding:10px 16px; }
+  .row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .brandback{ font-size:13px; color:var(--muted); text-decoration:none; }
+  .brandback:hover{ color:var(--accent); }
+  h1{ font-size:18px; margin:0; font-weight:700; }
+  h1 .dot{ color:var(--accent); }
+  .controls{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:9px; }
+  select,button{ font-size:14px; padding:6px 11px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--fg); cursor:pointer; font-family:inherit; }
+  select{ min-width:160px; font-variant-numeric:tabular-nums; }
+  button.primary{ background:var(--accent); color:#fff; border-color:var(--accent); font-weight:700; }
+  button:disabled{ opacity:.4; cursor:default; }
+  .meta{ font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .frameWrap{ flex:1 1 auto; }
+  iframe{ width:100%; height:100%; min-height:60vh; border:0; display:block; background:#fff; }
+  .empty{ padding:64px 20px; text-align:center; color:var(--muted); font-size:15px; }
+  .toast{ position:fixed; left:50%; bottom:22px; transform:translateX(-50%); background:var(--fg); color:#fff; padding:9px 18px; border-radius:22px; font-size:13px; opacity:0; transition:opacity .2s; pointer-events:none; z-index:20; }
+  .toast.show{ opacity:1; }
+  @media(max-width:600px){ select{ min-width:130px; } h1{ font-size:16px; } }
+</style>
+</head>
+<body>
+  <header class="bar">
+    <div class="row">
+      <a class="brandback" href="../">← Briefing Archive</a>
+      <h1>🤖 AI <span class="dot">·</span> 날짜별 아카이브</h1>
+    </div>
+    <div class="controls">
+      <button id="latest" class="primary" title="가장 최신 날짜로">최신</button>
+      <button id="older" title="이전(과거) 날짜">◀ 과거</button>
+      <select id="dateSel" aria-label="날짜 선택"></select>
+      <button id="newer" title="다음(최신 쪽) 날짜">최신 ▶</button>
+      <button id="copy" title="지금 보는 날짜의 공유 링크 복사">🔗 이 날짜 링크</button>
+      <span class="meta" id="meta"></span>
+    </div>
+  </header>
+  <div class="frameWrap" id="frameWrap"><iframe id="viewer" title="briefing"></iframe></div>
+  <div class="empty" id="empty" style="display:none">아직 이 카테고리 브리핑이 없습니다.</div>
+  <div class="toast" id="toast"></div>
+<script>
+(function(){
+  var sel=document.getElementById('dateSel');
+  var frame=document.getElementById('viewer');
+  var wrap=document.getElementById('frameWrap');
+  var empty=document.getElementById('empty');
+  var meta=document.getElementById('meta');
+  var dates=[];
+  function hashDate(){ try{ return decodeURIComponent((location.hash||'').replace(/^#/,'')); }catch(e){ return (location.hash||'').replace(/^#/,''); } }
+  function toast(m){ var t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); setTimeout(function(){ t.classList.remove('show'); },1500); }
+  function render(d){
+    if(dates.indexOf(d)<0){ d=dates[0]; }
+    sel.value=d;
+    if(frame.getAttribute('data-d')!==d){ frame.setAttribute('data-d',d); frame.src=d+'.html'; }
+    var i=dates.indexOf(d);
+    document.getElementById('older').disabled=(i>=dates.length-1);
+    document.getElementById('newer').disabled=(i<=0);
+    meta.textContent=(i+1)+' / '+dates.length;
+  }
+  function go(d){ if(('#'+d)!==location.hash){ location.hash=d; } else { render(d); } }
+  function fail(msg){ wrap.style.display='none'; empty.style.display='block'; empty.textContent=msg; sel.disabled=true; ['latest','older','newer','copy'].forEach(function(id){ document.getElementById(id).disabled=true; }); }
+  fetch('manifest.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(j){
+    dates=(j&&j.dates)||[];
+    if(!dates.length){ fail('아직 이 카테고리 브리핑이 없습니다.'); return; }
+    sel.innerHTML=dates.map(function(d){ return '<option value="'+d+'">'+d+'</option>'; }).join('');
+    render(hashDate()||dates[0]);
+  }).catch(function(){ fail('목록을 불러오지 못했습니다 (manifest.json).'); });
+  window.addEventListener('hashchange',function(){ if(dates.length){ render(hashDate()||dates[0]); } });
+  sel.addEventListener('change',function(){ go(sel.value); });
+  document.getElementById('older').addEventListener('click',function(){ var i=dates.indexOf(sel.value); if(i<dates.length-1){ go(dates[i+1]); } });
+  document.getElementById('newer').addEventListener('click',function(){ var i=dates.indexOf(sel.value); if(i>0){ go(dates[i-1]); } });
+  document.getElementById('latest').addEventListener('click',function(){ if(dates.length){ go(dates[0]); } });
+  document.getElementById('copy').addEventListener('click',function(){
+    var url=location.origin+location.pathname+'#'+sel.value;
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(function(){ toast('링크 복사됨'); },function(){ window.prompt('복사하세요',url); }); }
+    else { window.prompt('복사하세요',url); }
+  });
+})();
+</script>
+</body>
+</html>
