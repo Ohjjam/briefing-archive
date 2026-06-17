@@ -115,7 +115,7 @@ footer ol{padding-left:20px;margin:0}
     var a=c.querySelector('h3 a'); if(!a||c.querySelector('.cmp'))return;
     var k=q(a.textContent);
     var d=document.createElement('div'); d.className='cmp';
-    d.innerHTML='💰 시세·역대가 확인: <a target="_blank" rel="noopener" href="https://search.danawa.com/dvc/list/?query='+k+'">다나와</a> · <a target="_blank" rel="noopener" href="https://search.shopping.naver.com/search/all?query='+k+'">네이버최저가</a>';
+    d.innerHTML='💰 시세·역대가 확인: <a target="_blank" rel="noopener" href="https://search.danawa.com/dsearch.php?k1='+k+'">다나와</a> · <a target="_blank" rel="noopener" href="https://search.naver.com/search.naver?query='+k+'%20%EC%B5%9C%EC%A0%80%EA%B0%80">네이버최저가</a>';
     c.appendChild(d);
   });
 })();
