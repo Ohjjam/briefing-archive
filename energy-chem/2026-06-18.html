@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-18</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 18일 (목) · 최근 24~72시간 · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>수소 정책 역풍</strong> — IEA는 2026 전망을 하향. 최근 프로젝트 취소의 80%+가 그린수소(<code>수전해</code>) 영역으로, 자본비·전기료가 '그린 프리미엄'을 감당 불가 수준으로 키움.</li>
+    <li><strong>에너지저장 급팽창</strong> — BloombergNEF, 2026 글로벌 ESS 배치 <strong>158GW/459GWh</strong> 전망(전년比 +41%). 데이터센터·계통용 장주기 저장이 견인. <code>long-duration</code></li>
+    <li><strong>나트륨이온·비리튬 확장</strong> — CATL·HyperStrong 최대 60GWh <code>Na-ion</code> 공급계약, CMBlu는 5천만 유로 Series C(>10억 유로 밸류)로 SolidFlow 장주기 배터리 양산 추진.</li>
+    <li><strong>논문·프리프린트</strong> — 최근 1~2주 내 1차 출처(DOI/학술지/대학 보도자료)로 검증된 신규 항목이 확인되지 않아 두 섹션은 보류(억지 채움 금지).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문 (Nature · Science · JACS · Joule · Nature Energy/Catalysis 등)</h2>
+<p class="quiet">— 최근 1~2주 내 1차 출처로 검증된 신규 동향 없음 (재게시 사이트가 재조명한 옛 연구는 freshness 룰에 따라 제외) —</p>
+
+<h2 class="section">정책 / 규제 (IEA · DOE · EU · 산업부 · NREL 등)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth" target="_blank" rel="noopener">IEA, 2026 수소 전망 하향 — 프로젝트 취소의 80%+가 그린수소(수전해)</a></h3>
+    <div class="src">IEA (공식 분석) · 2026 · 토픽: 수소 정책</div>
+    <p>IEA는 규제 명확성의 약 4년 지연이 투자 불확실성을 키웠다고 진단. 최근 취소 프로젝트의 80% 이상이 <code>수전해</code> 그린수소 영역으로, 상승한 자본비와 높은 전기료가 다수 개발자에게 '그린 프리미엄'을 감당 불가하게 만들었다고 평가. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/d41586-026-00560-6" target="_blank" rel="noopener">EU 그린수소 규정 성급한 개정 경계 — <em>Nature</em> 코멘트</a></h3>
+    <div class="src">Nature (코멘트) · 2026 · 토픽: EU 규제</div>
+    <p>EU 규정은 그린수소 설비가 신규 재생에너지원으로 구동되도록 요구해 재생에너지 확대를 유도한다. 2030년까지 재생수소 1,000만 톤 생산·1,000만 톤 수입 목표를 두고, 규정 개정 논의가 투자 신호를 흔들지 말아야 한다는 지적. <code>electrolysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스 (Reuters · Bloomberg · Nikkei · 전기신문 등)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/" target="_blank" rel="noopener">BloombergNEF, 2026 글로벌 ESS 158GW/459GWh 전망 — 전년比 +41%</a></h3>
+    <div class="src">Energy-Storage.News · BloombergNEF 인용 · 2026</div>
+    <p>2026년 글로벌 에너지저장 배치가 158GW/459GWh로 2025년(112GW/307GWh) 대비 41% 늘 것으로 전망. 재생에너지·EV와 함께 배터리 저장이 넷제로 시나리오의 핵심 축으로 자리. <code>grid storage</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://battery-tech.net/batterytech-news-updates-2026-19/" target="_blank" rel="noopener">CATL·HyperStrong, 최대 60GWh 나트륨이온 3년 공급계약</a></h3>
+    <div class="src">Battery-Tech Network (2026 #19) · 2026-06</div>
+    <p>CATL과 HyperStrong이 최대 60GWh 규모의 <code>Na-ion</code> 배터리 공급에 합의. 리튬 의존도를 낮추는 비(非)리튬 계통저장 수요가 본격화되는 신호로 해석된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://battery-tech.net/batterytech-news-updates-2026-19/" target="_blank" rel="noopener">CMBlu Energy, 5천만 유로 Series C…SolidFlow 장주기 배터리 양산</a></h3>
+    <div class="src">Battery-Tech Network (2026 #19) · 2026-06</div>
+    <p>CMBlu Energy가 10억 유로 이상 밸류에이션으로 5천만 유로 Series C를 마감, 데이터센터·유틸리티용 비리튬 장주기 배터리 SolidFlow 스케일업에 투입. <code>redox flow</code> 계열 장주기 저장 경쟁 가열.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026" target="_blank" rel="noopener">전문가 전망: 2026 배터리 성장 영역 — 데이터센터·계통·장주기</a><span class="unverified">[참고]</span></h3>
+    <div class="src">Bloomberg · 2026-04-20 (배경 참고)</div>
+    <p>2026년 배터리 성장축을 데이터센터 백업·계통저장·장주기 기술로 짚은 분석. 최근 24~72시간 항목은 아니며 산업 맥락 보강용 배경 자료로 첨부.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트 (ChemRxiv · arXiv)</h2>
+<p class="quiet">— 최근 1~2주 내 신규 프리프린트(전기화학·배터리·CO2RR·수소·바이오매스·플라스틱) 1차 확인 실패 → 보류 —</p>
+
+<footer>
+  <strong>출처 (1차 우선)</strong>
+  <ol>
+    <li>IEA — 수소(저배출 연료) 시스템: https://www.iea.org/energy-system/low-emission-fuels/hydrogen</li>
+    <li>IEA — What it would take to unlock the next phase of hydrogen growth: https://www.iea.org/commentaries/what-it-would-take-to-unlock-the-next-phase-of-hydrogen-growth</li>
+    <li>Nature — EU leaders should not rush to revamp green-hydrogen rules (comment): https://www.nature.com/articles/d41586-026-00560-6</li>
+    <li>BloombergNEF — New Energy Outlook 2026: https://about.bnef.com/insights/clean-energy/new-energy-outlook/</li>
+    <li>Energy-Storage.News — BNEF 158GW 2026 forecast: https://www.energy-storage.news/bloombergnef-forecasts-158gw-of-global-energy-storage-deployments-in-2026/</li>
+    <li>Battery-Tech Network — 2026 #19 (CATL·HyperStrong, CMBlu): https://battery-tech.net/batterytech-news-updates-2026-19/</li>
+    <li>Bloomberg — Where experts see batteries growing in 2026: https://www.bloomberg.com/news/newsletters/2026-04-20/where-experts-see-batteries-growing-in-2026</li>
+  </ol>
+  <p>생성: 2026-06-18 · 자동 일일 브리핑 · freshness 룰(1~2주, 1차 발표 시점 기준) 적용. 검증 미달 항목은 [참고]/[미확인]으로 표기하거나 컷.</p>
+</footer>
+
+</div>
+</body>
+</html>
