@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-19</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 19일 (금) · 최근 24~48시간 프론티어 AI 동향 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>OpenAI</strong>가 ChatGPT에 <strong>예약 작업(Scheduled Tasks)</strong>을 정식 출시 — 유료 플랜에서 알림·반복 작업·웹 모니터링을 자동화 (6/17).</li>
+    <li><strong>Databricks Data + AI Summit</strong>(6/15~18)에서 <strong>xAI Grok</strong>과 <strong>Anthropic Claude Fable 5</strong>가 Agent Bricks에 네이티브로 탑재됨 (6/18).</li>
+    <li><strong>Google</strong>가 Gemini CLI를 <strong>Antigravity CLI</strong>로 전환 시작 — 단일 멀티에이전트 플랫폼으로 통합 (6/18).</li>
+    <li><strong>Meta</strong>는 지난 24~48시간 내 주요 발표 없음. <strong>Mistral</strong>도 신규 모델 발표는 없으나 약 35억 달러 규모 투자 유치 협상이 진행 중.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">ChatGPT '예약 작업(Scheduled Tasks)' 정식 출시 — 반복 작업·웹 모니터링 자동화</a></h3>
+    <div class="src">OpenAI Help Center · 2026-06-17</div>
+    <p>유료(Plus·Pro·Business·Enterprise) 사용자가 ChatGPT에 알림, 반복 업무, 웹·연결 앱 변화 모니터링을 맡길 수 있게 됐다. 사이드바의 새 <em>Scheduled</em> 페이지에서 활성 작업과 다음 실행 시점을 한눈에 보고 일시정지·수정·삭제할 수 있으며, 모니터링 작업은 <em>"notify users only when there is something worth reporting"</em> 방식으로 의미 있는 변화가 있을 때만 알린다. 플랜 등급별로 활성 작업 수 제한이 다르다. <code>gpt-5.5</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">최근 누적 변경: GPT-5.5 Instant 개인화 확대 · 모델 선택기 개편 · GPT-5.2 은퇴</a></h3>
+    <div class="src">OpenAI Help Center · ChatGPT Release Notes (2026-06-09~12, 재조명)</div>
+    <p>48시간 밖 변경이지만 맥락상 정리: 기본 모델 <code>gpt-5.5</code> Instant의 개인화·정확도 개선이 Go·Free까지 확대(6/9)됐고, 모델 선택기가 모델 카탈로그 대신 '속도-깊이 슬라이더'로 바뀌었다(6/10). <code>gpt-5.2</code> 계열(Instant·Thinking·Pro)은 6/12자로 ChatGPT에서 은퇴, 기존 대화는 대응되는 <code>gpt-5.5</code> 모델로 자동 이전된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">Gemini CLI·Code Assist를 Antigravity CLI로 전환 시작</a></h3>
+    <div class="src">Google Developers Blog · 2026-06-18</div>
+    <p>개인·AI Pro·AI Ultra 등급의 Gemini Code Assist IDE 확장과 Gemini CLI가 6/18부터 요청 처리를 중단하고, Google이 도구를 단일 멀티에이전트 플랫폼 <strong>Antigravity</strong>로 통합한다. Antigravity CLI가 이미 제공되며, 기존 Gemini CLI 사용자는 새 CLI로 이전하게 된다. 에이전트형 개발 환경으로의 일원화가 핵심. <code>antigravity-cli</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://workspaceupdates.googleblog.com/" target="_blank" rel="noopener">Workspace, Gemini 앱 관리자 제어(admin controls) 롤아웃 완료</a></h3>
+    <div class="src">Google Workspace Updates · 2026-06-17~18</div>
+    <p>Rapid Release·Scheduled Release 도메인 대상 전면 롤아웃이 6/17 시작돼 6/18 무렵 완료 예정. 관리자가 조직 내 Gemini 앱 사용을 제어할 수 있는 설정이 배포되며, 엔터프라이즈 거버넌스 측면에서 Gemini가 Workspace에 더 깊게 결합되는 흐름. <code>gemini-3.5-flash</code></p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.databricks.com/blog/agent-bricks-dais-2026" target="_blank" rel="noopener">Claude Fable 5, Databricks Agent Bricks에 Unity AI Gateway로 탑재</a></h3>
+    <div class="src">Databricks Blog (Agent Bricks, DAIS 2026) · 2026-06-18</div>
+    <p>Databricks가 Anthropic 최신 모델 <code>claude-fable-5</code>를 Unity AI Gateway를 통해 플랫폼에 들였다. 거버넌스·가시성·비용 통제를 유지한 채 엔터프라이즈 워크플로에서 Claude를 쓸 수 있게 하는 통합으로, Agent Bricks는 OpenAI·Gemini·Grok·Kimi와 함께 Claude까지 모델 선택지를 넓혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude Code 안정화 패치 · Claude Design 업데이트</a><span class="unverified">[미확인]</span></h3>
+    <div class="src">Anthropic Newsroom (릴리스 노트 집계) · 2026-06-18</div>
+    <p>릴리스 노트 집계 기준 Claude Code가 스트림 중단·멈춤 스피너·WSL2 스크롤·서브에이전트 트랜스크립트·원격 작업 상태·플러그인 로딩 성능 이슈를 수정했고, Claude Design은 디자인 시스템 정합성과 Claude Code 동기화, 캔버스 직접 편집을 강화했다고 전해진다. 1차 릴리스 노트 URL을 특정하지 못해 <span class="unverified">[미확인]</span>으로 표기.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 — (Llama 3 Herd 논문은 6/5자로 본 윈도우 밖, 클로즈드소스 전환은 Q1 2026 사안)</p>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.databricks.com/blog/agent-bricks-dais-2026" target="_blank" rel="noopener">Grok, Databricks Agent Bricks에 네이티브 탑재 (SpaceX 파트너십)</a></h3>
+    <div class="src">Databricks Blog (Agent Bricks, DAIS 2026) · 2026-06-18</div>
+    <p>6/18 Databricks Data + AI Summit에서 <code>grok</code> 모델이 Agent Bricks에 네이티브로 제공된다고 발표됐다. Databricks가 SpaceX와 파트너십을 맺어 Grok(및 Kimi)을 OpenAI·Anthropic·Gemini와 나란히 모델 선택지에 추가하는 형태로, 엔터프라이즈 에이전트 빌드에서 Grok 접근성이 크게 넓어졌다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI Speech-to-Text API 정식 출시 · Grok Voice 공개</a></h3>
+    <div class="src">xAI Docs · Release Notes (2026-06-04~15, 재조명)</div>
+    <p>48시간 밖이지만 맥락 정리: Grok Voice가 6/4 공개돼 음성 대화·음성 응답이 가능해졌고, xAI Speech-to-Text API가 6/15자로 정식 출시되어 25개 언어 배치·스트리밍 전사를 지원한다. Grok이 음성·영상·도구 연결로 업무용 플랫폼화하는 흐름.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral</h2>
+<p class="quiet">— 지난 24시간 신규 모델·기능 발표 없음 — (Le Chat→Vibe 리브랜드는 5/28자, Code Mode의 Slack 잡 연동이 6월 중 예정. 약 35억 달러 투자 유치 협상은 '기타 동향' 참조)</p>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.databricks.com/blog/agent-bricks-dais-2026" target="_blank" rel="noopener">Databricks Data + AI Summit 2026 — 멀티모델 에이전트 경쟁의 무대</a></h3>
+    <div class="src">Databricks Blog · 2026-06-15~18</div>
+    <p>3만 명 이상이 모인 이번 서밋에서 Agent Bricks가 모델 선택지(OpenAI·Anthropic·Gemini·Grok·Kimi)·임의 하니스(LangGraph·CrewAI·Claude Code SDK)·Lakebase 기반 에이전트 메모리로 확장됐다. 프론티어 랩들이 자사 모델을 엔터프라이즈 에이전트 플랫폼에 꽂아 넣는 경쟁 구도가 선명해졌다. <code>agent-bricks</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/" target="_blank" rel="noopener">Mistral, 약 35억 달러 투자 유치 협상 (유럽 AI 인프라 구축)</a></h3>
+    <div class="src">PYMNTS · 2026-06 (진행 중 사안)</div>
+    <p>Mistral이 약 200억 유로(약 231억 달러) 밸류에이션에 약 30억 유로(약 35억 달러)를 조달하는 협상을 진행 중이라고 보도됐다. 추론 전용 Les Ulis 10MW 데이터센터(Q3 2026 개소 예정) 등 유럽 AI 인프라 확충이 배경. 아직 '협상 중' 단계로 확정 발표는 아님.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 우선)</strong>
+  <ol>
+    <li>OpenAI Help Center — Scheduled Tasks in ChatGPT: https://help.openai.com/en/articles/10291617-tasks-in-chatgpt</li>
+    <li>OpenAI Help Center — ChatGPT Release Notes: https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>Google Developers Blog — Transitioning Gemini CLI to Antigravity CLI: https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</li>
+    <li>Google Workspace Updates: https://workspaceupdates.googleblog.com/</li>
+    <li>Databricks Blog — Agent Bricks (DAIS 2026): https://www.databricks.com/blog/agent-bricks-dais-2026</li>
+    <li>Databricks Newsroom — 2026 Data + AI Summit: https://www.databricks.com/company/newsroom/press-releases/databricks-announces-2026-data-ai-summit-keynote-lineup-and</li>
+    <li>Anthropic Newsroom: https://www.anthropic.com/news</li>
+    <li>xAI Docs — Release Notes: https://docs.x.ai/developers/release-notes</li>
+    <li>PYMNTS — Mistral seeks ~$3.5B for European AI infrastructure: https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/</li>
+  </ol>
+  <p>※ 본 브리핑은 공개 검색 결과를 기반으로 자동 생성됨. 재게시 어그리게이터 대신 공식 도메인·1차 출처를 우선 인용. [미확인] 표기 항목은 1차 URL 특정 실패. 자동 태스크 실행 · 2026-06-19.</p>
+</footer>
+
+</div>
+</body>
+</html>
