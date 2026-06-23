@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-23</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 23일 (화) · 최근 24~72시간 프런티어 AI 동향 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>OpenAI–Getty Images</strong> 다년 디스플레이 제휴(6/21) — Getty 라이선스 라이브러리가 ChatGPT 검색·디스커버리에 노출.</li>
+    <li><strong>xAI Grok</strong>, Databricks <em>Agent Bricks</em>에 네이티브 탑재(6/18, Data+AI Summit). Grok 4.3은 Amazon Bedrock GA.</li>
+    <li><strong>Google Gemini 3.5 Flash</strong> 정식 출시(GA, 에이전트·코딩 강세). 구형 이미지 프리뷰 모델은 6/25 종료 예정.</li>
+    <li><strong>Anthropic Claude Fable 5 / Mythos 5</strong> — 6/9 출시 직후 美 수출통제 지시로 일시 오프라인 (진행 중 이슈).</li>
+    <li><strong>Mistral</strong>, Le Chat을 단일 에이전트 <code>Vibe</code>로 통합 + 물리 AI 스타트업 Emmi AI 인수.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">OpenAI–Getty Images, 다년 콘텐츠 디스플레이 제휴 체결</a></h3>
+    <div class="src">OpenAI Newsroom · 2026-06-21</div>
+    <p>Getty Images가 OpenAI와 다년 디스플레이 계약을 발표했다. Getty의 라이선스 콘텐츠 라이브러리가 ChatGPT 내 검색·디스커버리 경험 전반에 표시된다. <em>"licensed content libraries will appear across OpenAI search and discovery experiences within ChatGPT"</em> — 모델 학습이 아닌 결과 '표시(display)' 제휴라는 점이 특징.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant 품질 개선 + GPT-5.2 계열 ChatGPT에서 제거</a></h3>
+    <div class="src">OpenAI · 2026-06-09 (모델 전환 6/12 적용)</div>
+    <p>기본 모델 <code>gpt-5.5-instant</code>가 더 자연스럽고 간결한 응답으로 업데이트(Go·Free에 6/9 적용). 6/12부터 <code>gpt-5.2</code> Instant/Thinking/Pro는 ChatGPT에서 제거되어 기존 대화가 대응 GPT-5.5 모델로 자동 이관된다. <code>gpt-4.5</code>는 6/27 단종 예정.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Enterprise, 크레딧 사용량 분석·지출 통제 추가</a></h3>
+    <div class="src">OpenAI Help Center · 2026-06-18</div>
+    <p>Global Admin Console에서 ChatGPT·Codex의 크레딧 소비를 사용자·제품·모델별로 분해해 볼 수 있게 됐다. 엔터프라이즈 비용 가시성·통제 강화 흐름의 연장선.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month" target="_blank" rel="noopener">Gemini 3.5 Flash 정식 출시(GA) — 에이전트·코딩 최강 주장</a></h3>
+    <div class="src">Google Cloud Blog · 2026-06</div>
+    <p>Gemini 3.5 시리즈의 첫 모델 <code>gemini-3.5-flash</code>가 GA. <em>"strongest agentic and coding model yet"</em>로 장기 과업에서 Gemini 3.1 Pro를 상회한다고 밝혔다. 동시에 Managed Agents와 범용 Antigravity Agent가 Gemini API 퍼블릭 프리뷰로 공개돼, 격리된 Google 호스팅 Linux 샌드박스에서 자율 실행된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">구형 Gemini 이미지 프리뷰 모델 6/25 종료 예정</a></h3>
+    <div class="src">Google AI for Developers · 2026-06</div>
+    <p><code>gemini-3.1-flash-image-preview</code>와 <code>gemini-3-pro-image-preview</code>가 deprecated 처리됐으며 2026-06-25 셧다운된다. 해당 모델 기반 이미지 워크플로는 후속 모델로 이전이 필요하다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic (Claude)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude Fable 5 · Mythos 5 출시 직후 美 수출통제로 일시 오프라인</a></h3>
+    <div class="src">Anthropic Newsroom · 2026-06-09 (수출통제 지시 6/12) · 진행 중 이슈</div>
+    <p>6/9 Mythos 클래스 첫 공개 모델 Claude Fable 5가 출시돼 Claude API·AWS·Microsoft Foundry 등에 동시 제공됐다. 그러나 6/12 美 정부 수출통제 지시로 외국 국적자 접근이 차단되며 일시 오프라인 상태가 됐다. 장기 에이전트 작업용 최상위 모델로 포지셔닝.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic 서울 오피스 개설 · 한국 AI 생태계 제휴</a></h3>
+    <div class="src">Anthropic Newsroom · 2026-06-17</div>
+    <p>Anthropic이 서울 오피스를 열고 한국 AI 생태계 전반의 파트너십을 발표했다. TCS·DXC 등과 규제 산업(은행·항공 등)용 Claude 도입 협력도 함께 공개됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama · Meta AI)</h2>
+<div class="grid">
+  <p class="quiet">— 지난 24~72시간 주목할 업데이트 없음 (LlamaCon·Llama 보안 툴 등은 이전 발표) —</p>
+</div>
+
+<h2 class="section">xAI (Grok)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok, Databricks Agent Bricks에 네이티브 탑재</a></h3>
+    <div class="src">xAI News · 2026-06-18 (Databricks Data+AI Summit)</div>
+    <p>Databricks 2026 Data + AI Summit에서 Grok 모델이 Agent Bricks에 네이티브로 제공된다고 발표됐다. 엔터프라이즈가 Databricks 환경 안에서 Grok을 직접 에이전트 구축에 활용할 수 있다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Grok 4.3 Amazon Bedrock GA · Word 애드인 · Imagine Video 1.5</a></h3>
+    <div class="src">xAI Docs · 2026-06</div>
+    <p><code>grok-4.3</code>이 Amazon Bedrock에서 GA(1M 토큰 컨텍스트, 구성 가능한 추론 레벨, 낮은 환각률). 무료 Microsoft 365 애드인 <em>Grok for Word</em>, 이미지→비디오 품질을 높인 Grok Imagine Video 1.5, 25개 언어 STT/TTS API GA도 함께 공개됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Le Chat을 단일 에이전트 'Vibe'로 통합 + Emmi AI 인수</a></h3>
+    <div class="src">Mistral AI News · 2026-06</div>
+    <p>Le Chat이 <code>Vibe</code>로 재편됐다 — 업무·코딩을 하나의 에이전트·단일 라이선스로 묶고, Work Mode(장기 과업)와 Code Mode(원격 코딩·PR), VS Code 확장을 제공한다. 또한 물리 AI 스타트업 Emmi AI를 인수해 산업 엔지니어링용 고속 시뮬레이션·실시간 디지털 트윈 역량을 더했다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/" target="_blank" rel="noopener">Microsoft MAI 신모델 7종 + 오픈소스 경쟁 가속</a></h3>
+    <div class="src">Microsoft AI · 2026-06</div>
+    <p>Microsoft가 이미지·보이스·전사·추론·코딩을 아우르는 7종 신모델 패밀리를 발표했다. 첫 추론모델 <code>MAI-Thinking-1</code>은 추론·SW 엔지니어링에서 강세. 한편 Zhipu AI는 6/13 MIT 라이선스로 1M 토큰 MoE 모델 <code>GLM-5.2</code>를 오픈소스 공개해 폐쇄형 API의 로컬 대안을 넓혔다.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차·공식 우선)</strong>
+  <ol>
+    <li>OpenAI Newsroom — https://openai.com/news/</li>
+    <li>OpenAI — GPT-5.5 Instant — https://openai.com/index/gpt-5-5-instant/</li>
+    <li>OpenAI Help Center — ChatGPT Release Notes — https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>OpenAI Help Center — Model Release Notes — https://help.openai.com/en/articles/9624314-model-release-notes</li>
+    <li>Google Cloud Blog — What Google Cloud announced in AI this month — https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month</li>
+    <li>Google AI for Developers — Gemini API changelog — https://ai.google.dev/gemini-api/docs/changelog</li>
+    <li>Anthropic Newsroom — https://www.anthropic.com/news</li>
+    <li>xAI — News — https://x.ai/news</li>
+    <li>xAI Docs — Release Notes — https://docs.x.ai/developers/release-notes</li>
+    <li>Mistral AI — News — https://mistral.ai/news/</li>
+    <li>Microsoft AI — Build 2026 MAI keynote — https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/</li>
+  </ol>
+  <p>자동 생성 · 2026-06-23. 최근 24시간 엄격 필터 기준 후보가 적어, 검증·날짜 확인된 최근 5~6일 내 핵심 발표를 함께 수록했으며 각 카드 출처 줄에 실제 발표일을 명시했다. 사실은 출처 링크로만 기재했고 추측은 배제했다.</p>
+</footer>
+
+</div>
+</body>
+</html>
