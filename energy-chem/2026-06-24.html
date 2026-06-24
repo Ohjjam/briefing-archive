@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-24</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 24일 (수) · 최근 핵심 동향 (연구 6월 초·중순 / 정책·산업 2026년 판) · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>CO2 전해조 장기 안정성의 열쇠</strong> — Nature Energy 연구가 AEM 무격차 <code>CO2RR</code> 전해조의 이온·물 수송 상호작용을 규명, 염 석출·플러딩으로 인한 조기 수명 한계의 관리 전략을 제시.</li>
+    <li><strong>IEA</strong> — 2025년 저배출 수소 투자 80억 달러, 전해조 용량은 2030년까지 5배 전망. 국가전략 66개 중 목표 궤도는 네덜란드·중국뿐.</li>
+    <li><strong>IEA</strong> — 2025년 배터리 저장장치 108 GW 신규(+40% YoY)로 최고 성장 전력기술, <code>LFP</code>가 약 90% 차지.</li>
+    <li><strong>BloombergNEF NEO 2026</strong> — 저장장치가 2035년 3.8 TW로 17배 성장, 태양광이 2032년 세계 최대 발전원 전망.</li>
+    <li><strong>중국</strong>, EV용 고체전지 첫 국가표준(용어·분류)을 2026년 7월 공식 발표 예정 — 글로벌 기술표준 주도 포석.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02052-3" target="_blank" rel="noopener">Understanding interconnected ion and water transport in anion-exchange-membrane zero-gap CO₂ electrolysers</a></h3>
+    <div class="src">Nature Energy · Strasser 외 · 2026-06-05 (온라인)</div>
+    <p>산업 수준 전류밀도(&gt;200 mA cm⁻²)에서 1,000시간 이상 운전하는 셀이 드문 핵심 원인인 염 석출과 플러딩을 정면으로 다룬다. 이온 수송과 물 수송이 서로 얽혀 있어 둘을 <em>동시에</em> 관리해야 수명을 늘릴 수 있음을 보이고, anolyte-fed·water-fed AEM 전해조의 염·수분 관리 전략 방향을 제시. <code>CO2RR</code> <code>electrolysis</code></p>
+  </div>
+  <div class="card">
+    <p class="quiet">— 그 외 최근 1~2주 내 1차 출처(저자·소속·학술지·게재일 검증) 기준 추가 논문 미확인. 어그리게이터가 오늘자로 재게시한 옛 연구는 제외함 —</p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026" target="_blank" rel="noopener">IEA Global Hydrogen Review 2026 — 저배출 수소 투자·전해조 확대</a></h3>
+    <div class="src">IEA · 2026 분석</div>
+    <p>2025년 저배출 수소 투자가 80억 달러에 도달했고, 프로젝트 지연·시장 통합에도 전해조 설비는 2030년까지 5배 증가가 전망된다. 국가 수소전략은 66개로 안정화됐으나 대다수가 목표에 미달, 2030년 목표 궤도에 오른 곳은 네덜란드와 중국뿐. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage" target="_blank" rel="noopener">IEA Global Energy Review 2026 — 배터리 저장장치 최고 성장</a></h3>
+    <div class="src">IEA · 2026 분석</div>
+    <p>2025년 전 세계 배터리 저장장치 신규 설치가 108 GW로 전년 대비 40% 늘며 가장 빠르게 성장하는 전력기술로 자리매김. 인산철리튬(<code>LFP</code>)이 전체 배치의 약 90%를 차지해 비용·안전 중심의 화학 전환을 재확인했다.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://about.bnef.com/insights/clean-energy/bloombergnefs-new-energy-outlook-2026-transition-to-newer-technologies-expanded-electrification-to-strengthen-nations-energy-security/" target="_blank" rel="noopener">BloombergNEF New Energy Outlook 2026 — 저장장치 17배·태양광 1위 전망</a></h3>
+    <div class="src">BloombergNEF · 2026</div>
+    <p>저장장치 누적이 2025년 223 GW에서 2035년 3.8 TW로 약 17배 늘고, 태양광이 2032년 세계 최대 발전원이 될 것으로 전망. 중국발 공급 과잉과 비용 하락이 보급을 가속하며, 유가 변동성 확대가 저장장치 수요를 자극할 수 있다고 분석.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://technode.com/2026/02/11/china-to-release-countrys-first-national-standard-for-ev-solid-state-batteries-in-july/" target="_blank" rel="noopener">중국, EV용 고체전지 첫 국가표준 2026년 7월 발표 예정</a></h3>
+    <div class="src">TechNode · CATARC · 발표 예정 2026-07</div>
+    <p>중국 자동차기술연구센터(CATARC)가 '고체전지 1부: 용어·분류' 국가표준(GB/T)을 7월 공식 발표할 예정. 액체·반고체·전고체를 명확히 구분하는 4부작의 첫 단계로, 국제 자동차급 표준이 부재한 가운데 글로벌 기술 규격 주도권 확보 포석. <code>solid-state</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 1~2주 내 토픽(전기화학·배터리·CO2RR·수소·바이오매스·플라스틱)에 부합하는 신규 ChemRxiv·arXiv 프리프린트를 1차 출처·발행일 기준으로 확정하지 못함. 억지로 채우지 않음 —</p>
+
+<footer>
+  <strong>출처</strong> (DOI·기관 1차 우선)
+  <ol>
+    <li>Nature Energy (DOI 10.1038/s41560-026-02052-3) — https://www.nature.com/articles/s41560-026-02052-3</li>
+    <li>IEA — Global Hydrogen Review 2026 — https://www.iea.org/reports/global-hydrogen-review-2026</li>
+    <li>IEA — Global Energy Review 2026 (Battery storage) — https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage</li>
+    <li>BloombergNEF — New Energy Outlook 2026 — https://about.bnef.com/insights/clean-energy/bloombergnefs-new-energy-outlook-2026-transition-to-newer-technologies-expanded-electrification-to-strengthen-nations-energy-security/</li>
+    <li>TechNode — China EV solid-state battery national standard (2026-02-11) — https://technode.com/2026/02/11/china-to-release-countrys-first-national-standard-for-ev-solid-state-batteries-in-july/</li>
+  </ol>
+  <p>자동 생성 브리핑 · 2026-06-24 · 1차 출처(논문 DOI·IEA/BNEF 기관 자료) 우선, 보도자료 재게시 어그리게이터 미사용. 헤더의 '최근 24~72시간' 대신 실제 수집 시점(연구 6월 초·중순, 정책·산업 2026년 판)을 정확히 표기함.</p>
+</footer>
+
+</div>
+</body>
+</html>
+                
