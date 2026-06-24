@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-24</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 24일 (수) · 최근 24~48시간 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>같은 날 동시 장애</strong> — 6/23 ChatGPT/OpenAI API와 Claude 전 플랫폼이 나란히 오류율 급증 후 각각 복구. AI 인프라 신뢰성이 다시 도마 위에.</li>
+    <li><strong>Mistral OCR 4 공개</strong>(6/23) — 바운딩 박스·블록 분류·인라인 신뢰도 점수 추가, OlmOCRBench 85.20으로 최고점.</li>
+    <li><strong>xAI Grok ↔ Interactive Brokers 연동</strong>(6/22) — 자연어로 포트폴리오 분석·옵션 전략·주문 초안 작성(승인 후 체결), 추가 비용 없음.</li>
+    <li><strong>Google Gemini 이미지 프리뷰 모델 2종</strong> — <code>gemini-3.1-flash-image-preview</code>·<code>gemini-3-pro-image-preview</code> 6/25 종료 예정.</li>
+    <li><strong>Meta</strong>는 지난 24시간 신규 발표 없음.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://status.openai.com/" target="_blank" rel="noopener">ChatGPT·API 대규모 장애 발생 후 복구</a></h3>
+    <div class="src">OpenAI Status · 2026-06-23</div>
+    <p>6/23(화) ChatGPT가 웹·모바일 전반에서 오류·로딩 실패를 일으켜 무료·유료 사용자 모두 영향. 파일 업로드/다운로드 오류는 오후 2:27부터 <em>2시간 15분</em> 지속됐고, FedRAMP 워크스페이스와 API 조직도 성능 저하를 겪음. OpenAI 상태 페이지가 오류율 상승을 인정.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini 이미지 프리뷰 모델 2종, 6/25 종료 예정</a></h3>
+    <div class="src">Google AI for Developers · 종료 예정 2026-06-25</div>
+    <p><code>gemini-3.1-flash-image-preview</code>와 <code>gemini-3-pro-image-preview</code>가 deprecated 상태로, 6/25 셧다운된다. 해당 프리뷰에 의존하던 파이프라인은 GA 모델로의 마이그레이션이 필요. 한편 지난 24시간 사이 구글의 별도 신규 발표는 확인되지 않음.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://status.claude.com/" target="_blank" rel="noopener">Claude 전 플랫폼 장애 — 약 2시간 만에 복구</a></h3>
+    <div class="src">Claude Status · TechRadar · 2026-06-23</div>
+    <p>6/23 오전 10:02(ET) 신고 급증(미국 피크 7,119건), Claude 상태 페이지가 전 모델 오류율 상승을 확인하고 오후 12:44 복구 발표. Claude.ai·Console·API·Code·Cowork 모두 영향(Claude for Government 제외). <em>전날(6/22)</em>에도 모델별 단계 복구가 있었던 직후의 장애.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/events" target="_blank" rel="noopener">'Claude on Google Cloud' 에이전트 보안·모니터링 행사 (오늘)</a></h3>
+    <div class="src">Anthropic Events · 2026-06-24</div>
+    <p>대규모 에이전트 운영의 모니터링·보안을 주제로 한 핸즈온 워크숍·라이브 데모를 6/24 진행. 최근 잇따른 장애 이후 운영 신뢰성·거버넌스 메시지를 강화하는 흐름.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok, Interactive Brokers 연동 — 자연어 포트폴리오 분석·주문 초안</a></h3>
+    <div class="src">xAI News · 2026-06-22</div>
+    <p>IBKR 고객이 브로커리지 계좌를 <code>Grok</code>에 연결해 보유 종목 분석·옵션 전략·선물 주문 초안을 평이한 영어로 요청 가능. Grok이 만든 주문은 IBKR의 'AI Instructions' 탭에서 사용자가 검토·승인해야 체결되며, 유료 Grok 구독 없이도 무료로 이용.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/ocr-4/" target="_blank" rel="noopener">Mistral OCR 4 공개 — 바운딩 박스·블록 분류·신뢰도 점수</a></h3>
+    <div class="src">Mistral AI News · 2026-06-23</div>
+    <p>170개 언어를 지원하고 단일 컨테이너로 완전 자체 호스팅 가능한 문서 인텔리전스 OCR. 가장 요청이 많았던 바운딩 박스, 타입별 블록 분류(제목·표·수식·서명 등), 인라인 신뢰도 점수를 반환해 RAG·엔터프라이즈 검색의 인제스트 단계로 적합.</p>
+    <blockquote>독립 평가자 선호도 평균 승률 72%, OlmOCRBench 종합 85.20으로 최고점.</blockquote>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<p class="quiet">— 위 6개사 외 지난 24시간 신뢰 가능한 1차 출처 기준 추가 동향 없음 —</p>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>OpenAI Status — https://status.openai.com/</li>
+    <li>ChatGPT/OpenAI 장애 보도 (IBTimes) — https://www.ibtimes.com.au/chatgpt-outage-highlights-ai-service-reliability-challenges-1871183</li>
+    <li>Google Gemini API 릴리스 노트 (이미지 프리뷰 deprecation) — https://ai.google.dev/gemini-api/docs/changelog</li>
+    <li>Claude Status — https://status.claude.com/</li>
+    <li>Claude 장애 보도 (TechRadar) — https://www.techradar.com/news/live/claude-down-june-23-2026</li>
+    <li>Anthropic Events — https://www.anthropic.com/events</li>
+    <li>xAI News (Grok × Interactive Brokers) — https://x.ai/news</li>
+    <li>Mistral OCR 4 — https://mistral.ai/news/ocr-4/</li>
+  </ol>
+  <p>자동 생성 브리핑 · 2026-06-24 · 1차 출처(공식 상태/뉴스룸·공식 도메인) 우선 적용. 발행 시점 기준 최근 24~48시간 항목만 수록.</p>
+</footer>
+
+</div>
+</body>
+</html>
