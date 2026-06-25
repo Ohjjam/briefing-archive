@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-06-25</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 25일 (목) · 최근 24시간 프런티어 AI 동향 · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Anthropic, Alibaba의 Claude 무단 접근 공개</strong> — 약 2.5만 개 허위 계정으로 2,880만 건 교환, 소프트웨어 엔지니어링·에이전트 추론 역량 표적 (6/24).</li>
+    <li><strong>Google 인재 추가 이탈</strong> — Gemini 핵심 연구자 Jonas Adler·Alexander Pritzel가 Anthropic행 임박, 앞서 노벨상 수상자 John Jumper(→Anthropic)·Noam Shazeer(→OpenAI)도 이동 (6/24).</li>
+    <li><strong>Anthropic, Slack용 'Claude Tag' 베타 출시</strong> — 채널에서 <code>@Claude</code> 호출·작업 위임, <code>claude-opus-4-8</code> 구동 (6/23).</li>
+    <li><strong>OpenAI, GPT-5 Pro 과학 난제 해결 사례 공개</strong> — 면역학자 Derya Unutmaz의 3년 묵은 IL-2 미스터리 규명 (6/24 공개).</li>
+    <li><strong>Meta·xAI·Mistral은 지난 24시간 내 주목할 신규 발표 없음</strong>; Google은 <code>gemini-3-pro-image-preview</code> 등 이미지 프리뷰 모델을 오늘(6/25) 종료.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-immunology-mystery/" target="_blank" rel="noopener">GPT-5 Pro, 면역학자의 3년 묵은 난제 해결 — 공식 사례 공개</a></h3>
+    <div class="src">openai.com · 2026-06-24 공개 (연구는 2025년 말 수행)</div>
+    <p>OpenAI가 면역학자 Derya Unutmaz가 <code>gpt-5</code> Pro로 항암 면역세포 관련 난제를 푼 과정을 공개했다. 모델은 deoxyglucose가 IL-2 단백질 합성을 방해한다고 제안했고, 미발표 데이터 기반 실험을 시뮬레이션해 CD8+ 세포의 림프종 살상력 증가를 정확히 예측했다. <blockquote>"models like GPT-5 Pro function more like collaborators now"</blockquote> 제품 발표는 아니나, 프런티어 모델의 과학 연구 협업 활용을 보여주는 1차 사례.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">이미지 프리뷰 모델 오늘(6/25) 종료 — API 마이그레이션 필요</a></h3>
+    <div class="src">Google AI for Developers (Gemini API changelog) · 2026-06-25 종료</div>
+    <p>Gemini API에서 <code>gemini-3.1-flash-image-preview</code>와 <code>gemini-3-pro-image-preview</code>가 deprecated 처리되어 <strong>오늘부로 셧다운</strong>된다. 해당 프리뷰 모델을 호출하던 개발 워크플로는 정식(GA) 이미지 모델로 전환해야 한다. 동시에 <code>gemini-3.5-flash</code> GA, Managed Agents 퍼블릭 프리뷰 등 에이전트 기능이 이어지는 중.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic (Claude)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank" rel="noopener">'Claude Tag' 베타 출시 — Slack 채널의 공동 작업자</a></h3>
+    <div class="src">anthropic.com · 2026-06-23</div>
+    <p>Slack 채널에서 <code>@Claude</code>를 호출해 작업을 위임하면, 단계별로 분해해 도구를 써가며 처리하고 스레드로 결과를 회신한다. 채널마다 하나의 Claude가 맥락을 누적 기억하며, 'ambient' 모드 시 능동적으로 후속 업데이트를 제공한다. <code>claude-opus-4-8</code> 구동, Enterprise·Team 대상 베타.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models" target="_blank" rel="noopener">Anthropic, Alibaba의 Claude '무단 접근' 공개 고발</a></h3>
+    <div class="src">Bloomberg · 2026-06-24</div>
+    <p>Anthropic은 Alibaba가 4월 22일~6월 5일 약 25,000개 허위 계정으로 2,880만 건의 교환을 발생시키며 Claude의 핵심 역량(소프트웨어 엔지니어링·에이전트 추론)을 표적으로 대규모 무단 접근을 시도했다고 주장했다. 모델 역량 추출(distillation) 정황을 둘러싼 프런티어 랩 간 긴장을 보여주는 사례.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.techtimes.com/articles/318925/20260623/claude-outage-tops-8000-reports-agentic-pipeline-failures-mount-before-anthropic-ipo.htm" target="_blank" rel="noopener">Claude 대규모 장애 — 3주 새 열 번째 중단</a></h3>
+    <div class="src">TechTimes · 2026-06-23</div>
+    <p>6/23 다수 Claude 모델에서 오류율이 급등해 claude.ai·Claude Code·Console·Cowork 접근이 영향받았다. Downdetector 신고가 미국 기준 7,000건 이상으로 정점. Anthropic은 수요 증가 속도가 인프라 확장을 앞질렀다고 인정 — 엔터프라이즈 Claude Code 채택과 다운로드 급증이 배경.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama)</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">xAI (Grok)</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 (최신 확인 동향은 6/18 Grok Imagine Video 1.5 GA·Databricks 통합) —</p>
+
+<h2 class="section">Mistral AI</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" target="_blank" rel="noopener">AI 인재 전쟁 격화 — Google에서 Anthropic·OpenAI로 연쇄 이탈</a></h3>
+    <div class="src">Bloomberg · 2026-06-24</div>
+    <p>Gemini 핵심 기여자 Jonas Adler(코딩)·Alexander Pritzel(학습)가 Anthropic행 임박. 최근 노벨상 수상자 John Jumper(→Anthropic), 스타 연구자 Noam Shazeer(→OpenAI)도 떠났다. 잇단 이탈로 Google의 경쟁력 우려가 제기되며 Alphabet 주가가 장중 1.2%까지 하락. 프런티어 랩 간 인재 쟁탈이 핵심 변수로 부상.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">Getty Images–OpenAI 콘텐츠 디스플레이 제휴 (진행형)</a></h3>
+    <div class="src">OpenAI News · 2026-06-21 <span class="unverified">[48h 초과]</span></div>
+    <p>Getty Images가 OpenAI와 다년 디스플레이 계약을 발표, 라이선스 콘텐츠가 ChatGPT 내 검색·디스커버리 경험에 노출될 예정. 24시간 필터를 벗어난 진행형 이슈로 참고용 게재 (정확한 보도자료 URL 미확정, 공식 뉴스룸 링크).</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>OpenAI — How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery: https://openai.com/index/gpt-5-immunology-mystery/</li>
+    <li>Google AI for Developers — Gemini API release notes (changelog): https://ai.google.dev/gemini-api/docs/changelog</li>
+    <li>Anthropic — Introducing Claude Tag: https://www.anthropic.com/news/introducing-claude-tag</li>
+    <li>Bloomberg — Anthropic Accuses Alibaba of 'Illicitly' Accessing AI Models (2026-06-24): https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models</li>
+    <li>TechTimes — Claude Outage Tops 8,000 Reports (2026-06-23): https://www.techtimes.com/articles/318925/20260623/claude-outage-tops-8000-reports-agentic-pipeline-failures-mount-before-anthropic-ipo.htm</li>
+    <li>Bloomberg — Google Poised to Lose Two More High-Profile AI Staffers to Anthropic (2026-06-24): https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic</li>
+    <li>OpenAI News (Getty 제휴, 참고): https://openai.com/news/</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
