@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-25</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 25일 (목) · 최근 24~72시간 (논문·정책 항목은 후보 부족으로 최근 1~2주까지 확장) · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>IEA, Global Hydrogen Review 2026 발간</strong> — 저배출 수소의 '수용 가능 비용' 기준을 신규 분석하고 아프리카 공급망을 특별장으로 다룸 (프로젝트 DB 6/18 갱신).</li>
+    <li><strong>Nature Energy, AEM 제로갭 CO2 전해조의 이온·물 수송 상호작용 규명</strong> — 1,000h 이상 안정 운전을 막는 염 석출·플러딩의 메커니즘 제시 (~6/10). <code>CO2RR</code></li>
+    <li><strong>유럽 그린수소 최종투자결정(FID) 연이어</strong> — 룩셈부르크 LuxHyVal(6/12)·오스트리아 5MW(6/15) 사업 확정.</li>
+    <li><strong>ESS Tech, 美 데이터센터向 소듐(Na) 기반 BESS 초기 수요 견조 공개</strong> (SEC 8-K, 6/23).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02043-4" target="_blank" rel="noopener">Imaging dynamic electrocatalytic processes on nano-strained MoS₂ using interferometric electro-optical microscopy</a></h3>
+    <div class="src">Nature Energy · Ma, Cui, Ren et al. · 2026-06 · DOI 10.1038/s41560-026-02043-4</div>
+    <p>나노미터·밀리초 분해능의 간섭 전기광학 현미경으로 이중층 MoS₂의 수소발생반응(HER) 전류를 in situ 매핑. HER 활성점이 지그재그·암체어 방향을 따라 순차 활성화됨을 직접 관찰해, 변형(strain)·결정방향이 촉매 활성점 분포를 지배함을 보였다. 단일원자·결정면 수준 촉매 설계 진단법으로서 의미. <code>electrocatalysis</code> <code>HER</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02052-3" target="_blank" rel="noopener">Understanding interconnected ion and water transport in anion exchange membrane zero-gap CO₂ electrolysers</a></h3>
+    <div class="src">Nature Energy · Biemolt, Pelzer, Filippi et al. · 2026-06 · DOI 10.1038/s41560-026-02052-3</div>
+    <p>산업적 전류밀도에서 1,000h 이상 운전하는 AEM 제로갭 CO2 전해조가 드문 원인을 이온·물 수송의 상호작용으로 규명. 염 석출과 플러딩이 CO2 수송을 제약하는 경로를 분리·정량화해, 장기 안정성 확보를 위한 물·이온 관리 설계 지침을 제시한다(News&amp;Views 6/10). <code>CO2RR</code> <code>AEM</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026" target="_blank" rel="noopener">IEA — Global Hydrogen Review 2026 발간</a></h3>
+    <div class="src">IEA · 2026-06 (프로젝트 DB 6/18 갱신) · 정책·투자·혁신</div>
+    <p>6번째 연례 보고서로, 저배출 수소의 용도·지역별 '수용 가능 비용'을 새로 분석하고 아프리카발 수소 기반 제품 공급망을 특별장으로 다룬다. 일본 주최 수소에너지 장관회의 논의를 뒷받침하는 자료로, 정책 이행이 다음 성장 국면의 관건임을 강조. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026/policy" target="_blank" rel="noopener">EU RED 국가이행 13개국 완료 · 일본 CfD 6개 사업 선정</a></h3>
+    <div class="src">IEA Global Hydrogen Review 2026 — Policy · 2026-06</div>
+    <p>EU 재생에너지지침(RED)의 수송부문 국내법 전환이 13개 회원국에서 완료돼 575 ktpa 이상의 저배출 수소 수요가 창출됐다. 일본은 차액계약(CfD)에서 약 130 kt 규모 6개 사업을 선정(5월 말). 수요견인형 제도가 그린수소 상용화의 핵심 레버로 부상. <code>policy</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.korea.kr/special/policyCurationView.do?newsId=148857966" target="_blank" rel="noopener">한국, 기후에너지환경부 체제서 수소정책 재편 · 12차 전기본 연내 확정 (진행형)</a></h3>
+    <div class="src">대한민국 정책브리핑(korea.kr) · 진행형 정책 동향</div>
+    <p>2025년 10월 기후에너지환경부 출범으로 수소 정책 기능이 이관돼 그린수소 중심으로 재정비 중. 새 부처가 수립하는 첫 12차 전력수급기본계획은 2026년 중반~말 확정 예정이며, 암모니아 혼소 축소·그린/핑크수소 비중 확대가 명시될 전망. (단일 시점 발표가 아닌 진행형 정책으로 표기) <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.sec.gov/Archives/edgar/data/0001819438/000181943826000053/esspressrelease2026sodium-.htm" target="_blank" rel="noopener">ESS Tech, 美 데이터센터向 소듐 기반 BESS 초기 수요 견조 공개</a></h3>
+    <div class="src">SEC EDGAR — ESS Tech Form 8-K · 2026-06-23</div>
+    <p>레독스 플로우 기반 ESS Tech가 미국 내 생산 소듐(Na) 계열 BESS의 단·중주기 저장 수요가 AI 인프라·데이터센터 시장에서 견조하다고 공시했다. 계통 단주기 저장에서 리튬 대안 화학의 상업 견인을 보여주는 신호. <code>Na-ion</code> <code>redox flow</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.hydrogeninsight.com/production/luxembourg-s-first-green-hydrogen-project-reaches-a-final-investment-decision/2-1-2003392" target="_blank" rel="noopener">룩셈부르크 첫 그린수소 사업 'LuxHyVal'(€39m) FID 도달</a></h3>
+    <div class="src">Hydrogen Insight · 2026-06-12</div>
+    <p>룩셈부르크 최초의 그린수소 프로젝트 LuxHyVal(총 3,900만 유로)이 최종투자결정에 도달, 내년 시운전 예정. 소규모 분산형 수전해 사업의 FID가 잇따르며 유럽 수소 밸류체인 확장이 가시화. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.hydrogeninsight.com/production/final-investment-decision-taken-on-5mw-green-hydrogen-project-in-austria/2-1-2004195" target="_blank" rel="noopener">오스트리아 5MW 그린수소 수전해 사업 FID</a></h3>
+    <div class="src">Hydrogen Insight · 2026-06-15</div>
+    <p>오스트리아의 5MW급 그린수소 생산 사업이 최종투자결정을 받았다. 영국 Barrow(30MW, 5월 FID)에 이어 중·소형 수전해 프로젝트의 투자 확정이 이어지는 흐름으로, 산업·모빌리티용 분산 수소공급 기반이 두터워지고 있다. <code>PEM</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 1~2주 내 신규 프리프린트 동향 없음 (확인된 최신 ChemRxiv·arXiv 관련 항목은 2026년 3~4월자로 수집 기간 초과, 억지로 채우지 않음) —</p>
+
+<footer>
+  <strong>출처</strong> (DOI·학술지·공식 기관 우선)
+  <ol>
+    <li>Nature Energy — Imaging dynamic electrocatalytic processes on nano-strained MoS₂ (DOI 10.1038/s41560-026-02043-4): https://www.nature.com/articles/s41560-026-02043-4</li>
+    <li>Nature Energy — Ion and water transport in AEM zero-gap CO₂ electrolysers (DOI 10.1038/s41560-026-02052-3): https://www.nature.com/articles/s41560-026-02052-3</li>
+    <li>IEA — Global Hydrogen Review 2026: https://www.iea.org/reports/global-hydrogen-review-2026</li>
+    <li>IEA — Global Hydrogen Review 2026 / Policy: https://www.iea.org/reports/global-hydrogen-review-2026/policy</li>
+    <li>대한민국 정책브리핑(korea.kr) — 수소경제 정책: https://www.korea.kr/special/policyCurationView.do?newsId=148857966</li>
+    <li>SEC EDGAR — ESS Tech, Inc. Form 8-K (2026): https://www.sec.gov/Archives/edgar/data/0001819438/000181943826000053/esspressrelease2026sodium-.htm</li>
+    <li>Hydrogen Insight — Luxembourg LuxHyVal FID (2026-06-12): https://www.hydrogeninsight.com/production/luxembourg-s-first-green-hydrogen-project-reaches-a-final-investment-decision/2-1-2003392</li>
+    <li>Hydrogen Insight — Austria 5MW green hydrogen FID (2026-06-15): https://www.hydrogeninsight.com/production/final-investment-decision-taken-on-5mw-green-hydrogen-project-in-austria/2-1-2004195</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
