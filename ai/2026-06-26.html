@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-26</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 26일 (금) · 최근 24시간 프런티어 AI 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Meta</strong>, 예측시장 앱 <em>Arena</em> 개발 중 — Llama가 질문 생성부터 시장 판정까지 담당 (NPR 6/24)</li>
+    <li><strong>Mistral</strong>, 온프레미스 문서 AI <code>OCR 4</code> 출시 — 170개 언어·블라인드 평가 72% 승률 (공식 6/23)</li>
+    <li><strong>구글</strong> 핵심 Gemini 연구자(Adler·Pritzel)들, IPO 앞둔 <strong>Anthropic·OpenAI</strong>로 이탈 가속 (TechCrunch·Bloomberg 6/24)</li>
+    <li><strong>OpenAI</strong>, 내일(6/27) ChatGPT에서 <code>gpt-4.5</code> 정식 퇴역 — 30일 일몰 종료</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">ChatGPT, 내일(6/27) <code>gpt-4.5</code> 퇴역 — 30일 일몰 종료</a></h3>
+    <div class="src">OpenAI Help Center (모델 릴리스 노트) · 6/27 시행</div>
+    <p>OpenAI는 30일 일몰 절차에 따라 6월 27일 ChatGPT에서 <code>gpt-4.5</code>를 제거한다. 앞서 6월 12일에는 <code>gpt-5.2</code> 계열(Instant·Thinking·Pro)이 ChatGPT에서 내려갔고, 기존 대화는 대응되는 <code>gpt-5.5</code> 모델로 자동 승계됐다. <code>o3</code>는 90일 일몰 후 8월 26일 퇴역 예정.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/news/" target="_blank" rel="noopener">Getty Images, OpenAI와 다년 콘텐츠 라이선스 계약</a></h3>
+    <div class="src">OpenAI 뉴스룸 · 2026-06-21</div>
+    <p>Getty의 라이선스 이미지 라이브러리가 ChatGPT 내 검색·디스커버리 경험 전반에 노출된다. 학습 데이터가 아닌 표시·출처 제공 목적의 다년 계약으로, 생성형 검색에서 라이선스 콘텐츠를 전면에 두려는 흐름의 연장선이다. <span style="color:var(--quiet)">(최근 24시간 내 신규 발표는 제한적, 직전 동향 보강)</span></p>
+  </div>
+</div>
+
+<h2 class="section">Google / DeepMind</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank" rel="noopener">Gemini 핵심 연구자 Adler·Pritzel, Anthropic으로 이탈</a></h3>
+    <div class="src">TechCrunch · Bloomberg · 2026-06-24</div>
+    <p>Gemini 개발에 핵심 역할을 한 Jonas Adler·Alexander Pritzel이 Anthropic으로 옮긴다. 노벨상 수상자 John Jumper도 Anthropic행, Noam Shazeer는 OpenAI행으로 전해진다. 상장을 앞둔 두 스타트업이 "IPO 전 합류 시 보상" 기회를 내세워 구글 인재를 흡수하며 압박을 키우고 있다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">구글 인재 흡수 + IPO 추진 — 매출 런레이트 ~$47B</a></h3>
+    <div class="src">Anthropic 뉴스룸 · Bloomberg 보도 · 2026-06-24</div>
+    <p>보도에 따르면 Anthropic은 약 $965B 밸류에이션으로 라운드를 마무리하고 비밀 IPO 신청을 마쳤다. 5월 기준 매출 런레이트는 약 470억 달러로 전년(~100억 달러)에서 급증했으며, <code>Claude Code</code>가 성장을 견인하고 있다. 구글 출신 인재 영입이 이 모멘텀과 맞물린다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai" target="_blank" rel="noopener">저커버그, 예측시장 앱 'Arena' 추진 — Llama가 판정까지</a></h3>
+    <div class="src">NPR · TechCrunch · 2026-06-24</div>
+    <p>마크 저커버그가 별도 앱 <em>Arena</em>(코드명 Antwerp·FBForecast) 개발을 지시했다. Llama가 트렌딩 토픽에서 질문을 자동 생성하고 "개인화된 시장 추천"을 제공하며, 시장 결과까지 거의 실시간으로 판정한다. 실제 현금 대신 매일 지급되는 가상 머니로 베팅하는 구조로, Kalshi·Polymarket과 경쟁한다.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 — (직전 주요 동향: 6/16 Grok Imagine Video 1.5 GA, 6/18 Grok 4.3 Databricks·Bedrock 탑재 — 모두 48시간 초과)</p>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/ocr-4/" target="_blank" rel="noopener">온프레미스 문서 AI <code>OCR 4</code> 출시 — 170개 언어·SOTA</a></h3>
+    <div class="src">Mistral AI (공식) · 2026-06-23</div>
+    <p>규제 산업이 민감 문서를 자체 인프라 안에 두고도 SOTA 구조적 추출이 가능한 단일 컨테이너 모델. 바운딩 박스·블록 분류·단어별 신뢰도 점수를 제공하며 170개 언어를 지원한다. 독립 블라인드 평가에서 평균 72% 승률, OlmOCRBench 85.20을 기록했고, API 가격은 1,000페이지당 $4(배치 $2). RAG·엔터프라이즈 검색 파이프라인의 인제스트 계층을 노린다. <code>OCR 4</code></p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html" target="_blank" rel="noopener">AI 코딩 도구 시장, 2031년 ~$300억 전망 — 연 26% 성장</a></h3>
+    <div class="src">CNBC (Mordor Intelligence 인용) · 2026-06</div>
+    <p>Anthropic이 <code>Claude Code</code>로 선두에 섰고, Microsoft·구글도 전용 코딩 모델로 경쟁에 가세하고 있다. 시장조사기관 Mordor Intelligence는 AI 코드 도구 시장이 2026년 93억 달러에서 2031년 약 300억 달러로 연 26% 성장할 것으로 전망했다.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>OpenAI — Model Release Notes (gpt-4.5 퇴역·gpt-5.2 일몰): https://help.openai.com/en/articles/9624314-model-release-notes</li>
+    <li>OpenAI — 뉴스룸 (Getty Images 계약): https://openai.com/news/</li>
+    <li>TechCrunch — "AI researchers continue to leave Google for its rivals" (2026-06-24): https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/</li>
+    <li>Bloomberg — "Google Poised to Lose Two More High-Profile AI Staffers to Anthropic" (2026-06-24): https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic</li>
+    <li>Anthropic — 뉴스룸: https://www.anthropic.com/news</li>
+    <li>NPR — "Meta plans to release AI-powered prediction market app" (2026-06-24): https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai</li>
+    <li>TechCrunch — "Mark Zuckerberg wants Meta to launch its own prediction market" (2026-06-23): https://techcrunch.com/2026/06/23/mark-zuckerberg-wants-meta-to-launch-its-own-prediction-market/</li>
+    <li>Mistral AI — "Mistral OCR 4" 공식 발표 (2026-06-23): https://mistral.ai/news/ocr-4/</li>
+    <li>VentureBeat — "Mistral launches OCR 4..." (2026-06-24): https://venturebeat.com/data/mistral-launches-ocr-4-turning-document-extraction-into-a-full-enterprise-ai-play</li>
+    <li>CNBC — "Microsoft and Google take on Anthropic and OpenAI in AI coding models": https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
