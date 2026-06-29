@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-29</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 29일 (월) · 최근 동향 (산업·정책 최근 1~2주, 논문은 2026년 최신 인덱싱 기준) · 전기화학 · 배터리 · CO2RR · 수소 · 바이오매스 · 플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>전고체 배터리 자가방전</strong> 정량화 연구가 Nature Energy에 — 고체 분리막의 미세 전자 누설전류가 상용화의 숨은 장벽임을 규명.</li>
+    <li><strong>IEA Global Hydrogen Review 2026</strong> 공개 + 프로젝트 DB 6월 갱신 — EU RED 13개국 수송부문 전환 완료, 중국 11억 달러 수소 도시클러스터 발표.</li>
+    <li><strong>바이오매스·폐플라스틱 전기산화 + 수소 동시 생산</strong> 하이브리드 수전해 연구(RSC <em>Chemical Science</em>)가 고전류밀도에서 실증.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02038-1" target="_blank" rel="noopener">Quantifying the self-discharge rate of solid-state batteries</a></h3>
+    <div class="src">Nature Energy · 2026 · 전고체 배터리</div>
+    <p>전고체 배터리의 자가방전을 정량화. 액체 전해질과 달리 고체 분리막을 통한 미세 전자 누설전류가 보관 중 점진적 전하 손실을 일으키며, 이는 상용화의 핵심 난제로 지목된다. 화학퍼텐셜 구배에 따른 이동종 확산이 원인이다. <code>solid-state</code> <code>Li-metal</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.rsc.org/en/content/articlehtml/2026/sc/d5sc04651c" target="_blank" rel="noopener">Selective electrochemical oxidation of biomass and waste plastic for simultaneous H₂ generation via hybrid water electrolysis</a></h3>
+    <div class="src">RSC Chemical Science · 2026 · 바이오매스/플라스틱/수소 (DOI:10.1039/D5SC04651C)</div>
+    <p>바이오매스·폐플라스틱을 양극에서 선택적으로 전기산화하면서 음극에서 수소를 생산하는 하이브리드 수전해. 고전류밀도에서 작동해, 폐기물 업사이클링과 그린수소 생산을 한 셀에서 결합하는 경제성 경로를 제시한다. <code>biomass</code> <code>plastics</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s44160-026-01024-5" target="_blank" rel="noopener">Dilute alloy electrocatalysts enable asymmetric C–C coupling for ethylene from CO₂ post-capture liquid</a></h3>
+    <div class="src">Nature Synthesis · 2026 · CO2RR</div>
+    <p>희박 합금(dilute alloy) 전기촉매로 비대칭 C–C 커플링을 유도해, CO2 포집 후 액상으로부터 에틸렌을 생산. 포집-전환 통합 공정에서 다탄소(C2+) 선택성을 높이는 촉매 설계를 보였다. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 / 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026" target="_blank" rel="noopener">IEA, Global Hydrogen Review 2026 공개</a></h3>
+    <div class="src">IEA (공식 보고서) · 2026-06</div>
+    <p>전세계 수소 생산·수요와 정책·인프라·교역·투자·혁신 최신 동향을 종합. 그린수소가 차기 식량·에너지 위기 완충재가 될 수 있다는 메시지를 담았다. 정책 모멘텀 둔화 속 수요 창출 정책 개혁을 촉구. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/data-and-statistics/data-product/hydrogen-production-and-infrastructure-projects-database" target="_blank" rel="noopener">IEA 수소 생산·인프라 프로젝트 DB 6월 갱신</a></h3>
+    <div class="src">IEA (공식 데이터) · 2026-06</div>
+    <p>전세계 수소 프로젝트 데이터가 6월 갱신됐다. 6월 초 기준 EU 재생에너지지침(RED) 수송부문이 13개 회원국에서 국내법 전환 완료되며 57.5만 톤/년 이상의 저탄소 수소 수요를 창출. <code>PEM</code> <code>AEM</code> <code>SOEC</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026/policy" target="_blank" rel="noopener">중국 11억 달러 수소 도시클러스터·일본 CfD 6곳 선정</a></h3>
+    <div class="src">IEA Global Hydrogen Review 2026 (정책편) · 2026</div>
+    <p>중국은 총 11억 달러 규모 도시클러스터 프로그램으로 수소 용도를 차량 너머로 다변화하고 2030년까지 최종 수소가격 3.6→2.2달러/kg, FCEV 10만 대를 목표로 제시. 일본은 CfD(차액계약) 6개 사업을 선정해 약 13만 톤 저탄소 수소를 확보. <code>green hydrogen</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/organic-flow-battery-company-cmblu-closes-e50-million-series-c/" target="_blank" rel="noopener">CMBlu, 5천만 유로 시리즈C 마감하며 유니콘 진입 — 비리튬 장기저장</a></h3>
+    <div class="src">Energy-Storage.News (트레이드 프레스) · 2026-05 초</div>
+    <p>독일 CMBlu가 삼성벤처스 주도로 5천만 유로 시리즈C 1차 마감, 기업가치 10억 유로를 넘겼다. 흐름전지 구조에 고체 저장재를 결합한 <em>SolidFlow</em>로 AI 데이터센터·유틸리티용 장기저장(LDES)을 겨냥. <code>redox flow</code> <code>LDES</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/professional/insights/markets/hydrogens-reawakening-has-market-on-verge-of-a-breakthrough/" target="_blank" rel="noopener">Bloomberg: 수소 시장, 돌파구 직전의 '재각성'</a></h3>
+    <div class="src">Bloomberg Professional · 2026</div>
+    <p>철강·시멘트·장거리 항공·해운 등 배터리·전력으로 대체 어려운 고에너지 공정이 수소 수요를 견인. BloombergNEF는 2035년까지 최대 180만 톤 저탄소 수소 수요를 전망하며, 그린수소가 2030년부터 그레이수소와 가격 경쟁력을 갖출 것으로 봤다. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://about.bnef.com/insights/clean-energy/new-energy-outlook/" target="_blank" rel="noopener">BloombergNEF New Energy Outlook 2026 — 저장장치 보급 가속</a></h3>
+    <div class="src">BloombergNEF · 2026</div>
+    <p>중국발 생산 과잉과 비용 하락으로 에너지저장 설비가 유럽·중동·아프리카·중남미를 중심으로 급증 전망. 48시간 수소-리튬 하이브리드, 100시간 철-공기 전지 등 장기저장 파일럿도 확대되고 있다. <code>Li-ion</code> <code>iron-air</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/engage/chemrxiv/search-dashboard?text=bio-circular%20energy%20storage%20food%20waste%20gel%20polymer%20electrolyte" target="_blank" rel="noopener">Toward bio-circular energy storage: food waste 유래 겔 고분자 전해질 (수성 Zn-ion 전지)</a></h3>
+    <div class="src">ChemRxiv · 2026-06-23 <span class="unverified">[직접링크 미확인 — 제목 검색]</span> · 바이오매스/배터리</div>
+    <p>음식물 폐기물을 재가치화해 생분해성 겔 고분자 전해질을 만들고, 이를 수성 아연이온전지에 적용하는 '바이오-순환형' 에너지저장 접근. 프리프린트(미동료심사) 단계로, 직접 article URL을 확정하지 못해 ChemRxiv 검색 링크로 대체한다. <code>Na/Zn-ion</code> <code>biomass</code></p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 출처·DOI 우선)</strong>
+  <ol>
+    <li>Nature Energy — Quantifying the self-discharge rate of solid-state batteries: https://www.nature.com/articles/s41560-026-02038-1</li>
+    <li>RSC Chemical Science — DOI:10.1039/D5SC04651C: https://pubs.rsc.org/en/content/articlehtml/2026/sc/d5sc04651c</li>
+    <li>Nature Synthesis — Dilute alloy electrocatalysts for ethylene from CO₂ (DOI:10.1038/s44160-026-01024-5): https://www.nature.com/articles/s44160-026-01024-5</li>
+    <li>IEA — Global Hydrogen Review 2026: https://www.iea.org/reports/global-hydrogen-review-2026</li>
+    <li>IEA — Hydrogen Production and Infrastructure Projects Database (2026-06 갱신): https://www.iea.org/data-and-statistics/data-product/hydrogen-production-and-infrastructure-projects-database</li>
+    <li>IEA — Global Hydrogen Review 2026, Policy: https://www.iea.org/reports/global-hydrogen-review-2026/policy</li>
+    <li>Energy-Storage.News — CMBlu €50M Series C: https://www.energy-storage.news/organic-flow-battery-company-cmblu-closes-e50-million-series-c/</li>
+    <li>Bloomberg Professional — Hydrogen's reawakening: https://www.bloomberg.com/professional/insights/markets/hydrogens-reawakening-has-market-on-verge-of-a-breakthrough/</li>
+    <li>BloombergNEF — New Energy Outlook 2026: https://about.bnef.com/insights/clean-energy/new-energy-outlook/</li>
+    <li>ChemRxiv — bio-circular energy storage (food waste GPE, Zn-ion), 제목 검색: https://chemrxiv.org/engage/chemrxiv/search-dashboard?text=bio-circular%20energy%20storage%20food%20waste%20gel%20polymer%20electrolyte</li>
+  </ol>
+  <p>생성: 2026-06-29 · 자동 에너지·화학공학 브리프 · 1차 출처(논문 DOI·IEA 공식)를 우선했으며, 보도자료 재게시 어그리게이터는 배제했다. 논문 게재 시점은 색인 메타데이터 기준이며 일부는 6월 이내 정확 일자를 확정하지 못해 연도/월로 표기했다.</p>
+</footer>
+
+</div>
+</body>
+</html>
+                     

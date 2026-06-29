@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-06-29</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 6월 29일 (월) · 최근 동향 (지난 24~72시간 중심) · OpenAI · Google · Anthropic · Meta · xAI · Mistral</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Google</strong>가 6/26 <em>Gemini Drops 6월판</em>을 공개 — Nano Banana 실시간 이미지 생성, Thinking Levels 100% 롤아웃 등 5종.</li>
+    <li><strong>OpenAI</strong>가 6/26부로 ChatGPT에서 <code>gpt-4.5</code>를 종료, 대화는 <code>gpt-5.5</code>로 승계. 차기 <code>gpt-5.6</code>는 보도만 있고 공식 페이지 부재(미확인).</li>
+    <li><strong>Anthropic</strong>의 <code>Fable 5</code>·<code>Mythos 5</code>는 미 정부 수출통제 명령(6/12)으로 6/29 현재까지 글로벌 정지 지속 — 복구 미확정.</li>
+    <li><strong>Mistral</strong>이 6/23 <em>OCR 4</em>를 출시 — 온프레미스 배포·170개 언어 구조 인식 문서 추출.</li>
+    <li><strong>Meta</strong>는 지난 24시간 주목할 신규 발표 없음(라마 차기작 비공개 전환설 지속).</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">ChatGPT에서 GPT-4.5 종료 — 대화는 GPT-5.5로 승계</a></h3>
+    <div class="src">OpenAI Help Center (공식) · 2026-06-26</div>
+    <p>6월 26일부로 <code>gpt-4.5</code>가 커스텀 GPT를 포함해 ChatGPT에서 더 이상 제공되지 않는다. 기존 대화는 자동으로 <code>gpt-5.5</code>로 이어진다. 앞서 6/12에는 <code>gpt-5.2</code> 계열(Instant·Thinking·Pro)도 종료되어 모델 라인업이 5.5 중심으로 정리되는 흐름이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">GPT-5.5 Instant 업데이트 — 더 또렷하고 개인화된 응답</a></h3>
+    <div class="src">openai.com (공식) · 2026-06</div>
+    <p>OpenAI는 <code>gpt-5.5-instant</code>를 더 정확하고 간결하게 개선했다고 밝혔다. 분야 전반에서 답변을 더 압축적으로, 대화 톤은 더 자연스럽게 다듬었다는 설명이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">차기 GPT-5.6 — 보도만 선행, 공식 발표 부재 <span class="unverified">[미확인]</span></a></h3>
+    <div class="src">보도 기반(The Information 등) · 2026-06 (개발 중 스토리)</div>
+    <p>수석과학자 Jakub Pachocki가 <code>gpt-5.6</code>을 <em>"meaningful improvement"</em>로 표현했다는 내부 메모가 6/10~11 보도됐으나, OpenAI는 6/29 현재 모델 페이지·시스템 카드·API 식별자를 공개하지 않았다. 출시 창은 6/22~28로 거론될 뿐 공식 확인은 없어 미확인으로 표기한다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">Codex Remote 전 요금제 일반 공개</a></h3>
+    <div class="src">OpenAI Help Center (공식) · 2026-06</div>
+    <p>Codex Remote가 모든 ChatGPT 요금제에서 일반 제공된다. 모바일 앱에서 연결된 Mac·Windows 호스트의 작업을 시작·이어가고, 진행 상황 검토와 액션 승인을 폰에서 처리할 수 있다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google (Gemini · DeepMind)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://gemini.google/release-notes/" target="_blank" rel="noopener">Gemini Drops 2026년 6월판 공개 — 5종 신기능</a></h3>
+    <div class="src">gemini.google (공식 릴리스 노트) · 2026-06-26</div>
+    <p>6월 26일(금) Google이 Gemini Drops 6월판을 배포했다. ① Nano Banana 축구 템플릿(FIFA World Cup 2026 기념 12종), ② Gemini Live 실시간 이미지 생성·편집, ③ Google Business Profile 연동, ④ Play Store 연동(대화로 앱 검색·설치), ⑤ <code>Thinking Levels</code> 추론 제어 옵션 100% 롤아웃.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank" rel="noopener">I/O 2026 후속 — Gemini 3.5 Flash·가격 인하 흐름 지속</a></h3>
+    <div class="src">blog.google (공식) · 2026-06 (I/O 5/19 후속)</div>
+    <p>5월 I/O에서 시작된 <code>gemini-3.5-flash</code> 보급과 Ultra 구독가 인하($250→$200), Developer 등급($100) 신설 흐름이 6월에도 이어진다. 코딩·에이전트 벤치마크에서 3.1 Pro를 앞선다는 게 구글 설명이다. <em>(원 발표 2026-05, 6월 가용성 확대)</em></p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic (Claude)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank" rel="noopener">Fable 5·Mythos 5 수출통제 정지 지속 — 6/29 현재 복구 미확정</a></h3>
+    <div class="src">anthropic.com (공식 성명) · 원 발표 2026-06-12, 6/29 현재 지속</div>
+    <p>미 정부가 국가안보를 근거로 <code>Fable 5</code>·<code>Mythos 5</code>에 대한 모든 외국인 접근을 정지하라는 수출통제 명령을 내렸고(6/12 17:21 ET 수령), Anthropic은 국적 실시간 필터링의 기술적·법적 불확실성을 이유로 전 고객 대상 전면 차단을 시행했다. <code>Claude Opus 4.8</code> 등 하위 모델은 영향 없음. 6/29 현재까지 복구 미확정인 진행형 이슈다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">플랫폼: Slack 태그·Managed Agents 사내 샌드박스</a></h3>
+    <div class="src">anthropic.com (공식) · 2026-06</div>
+    <p>Team·Enterprise에서 Slack 대화에 Claude를 직접 태그해 작업을 위임할 수 있고, Managed Agents가 사용자 통제 샌드박스·사설 MCP 서버 안에서 동작하도록 확장됐다. Claude Code에는 <code>/rewind</code>가 추가됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta (Llama)</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 — (라마 차기작 비공개·클로즈드소스 전환 보도가 2025년 말부터 이어지나 6/29 기준 신규 공식 발표 없음)</p>
+
+<h2 class="section">xAI (Grok)</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok Imagine Video 1.5 일반 출시</a></h3>
+    <div class="src">x.ai (공식) · 2026-06 (최근 릴리스)</div>
+    <p>Imagine API와 grok.com/imagine, iOS·Android 앱에서 Grok Imagine Video 1.5가 일반 제공된다. 이미지→비디오 품질 향상, 생성 속도 개선, Projects·다중 에이전트·검색 등 워크플로 도구가 추가됐다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok for Microsoft Word 추가 — 무료 365 애드인</a></h3>
+    <div class="src">x.ai (공식) · 2026-06 (최근 릴리스)</div>
+    <p>메모를 문서로 정리하고 문장을 다듬으며, 웹·X 데이터를 Word로 가져오는 무료 Microsoft 365 애드인. 이메일·SharePoint·Google Drive 커넥터를 지원한다. 앞서 6/18에는 Databricks Agent Bricks에 Grok이 네이티브 탑재됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://venturebeat.com/data/mistral-launches-ocr-4-turning-document-extraction-into-a-full-enterprise-ai-play" target="_blank" rel="noopener">Mistral OCR 4 출시 — 온프레미스 문서 인텔리전스</a></h3>
+    <div class="src">VentureBeat (1차 보도) · 원 발표 2026-06-23</div>
+    <p>규제 산업이 민감 데이터를 자체 인프라 안에 두면서도 SOTA 구조 추출을 쓸 수 있는 문서 모델. 170개 언어를 커버하고 문단 단위 바운딩 박스를 텍스트와 함께 반환하며, 단일 컨테이너로 배포된다. <em>(원 발표 2026-06-23, 6/29 재조명)</em></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/more-control-over-connectors/" target="_blank" rel="noopener">엔터프라이즈 Connectors 강화 + 유럽 인프라 증설</a></h3>
+    <div class="src">mistral.ai (공식) · 2026-06</div>
+    <p>스코프형 API 키, 다중 계정 커넥터, 디버거, Vibe Code·Workflows 커넥터 지원 등 관리 기능이 확장됐다. 별도로 AI Now Summit에서 통합 Vibe 에이전트와 Les Ulis 신규 데이터센터(10MW, Q3 2026 가동 예정)를 발표했다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" target="_blank" rel="noopener">Microsoft AI, MAI 신모델 7종 공개</a></h3>
+    <div class="src">microsoft.ai (공식) · 2026-06</div>
+    <p>Microsoft AI가 자체 MAI 계열 신모델 7종을 공개하며 "hill-climbing machine"(점진 개선 체계)을 표방했다. 프런티어 랩 외 빅테크의 자체 모델 내재화 흐름을 보여주는 사례다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/" target="_blank" rel="noopener">Mistral, 유럽 AI 인프라용 35억 달러 조달 추진</a></h3>
+    <div class="src">PYMNTS (1차 보도) · 2026-06</div>
+    <p>Mistral이 유럽 AI 인프라 구축을 위해 약 35억 달러 규모 자금 조달을 모색 중이라는 보도. 미국·중국 의존도를 낮추려는 유럽 주권 AI 흐름의 일환이다.</p>
+  </div>
+</div>
+
+<footer>
+  <strong>출처 (1차 출처 우선)</strong>
+  <ol>
+    <li>OpenAI — Model Release Notes (GPT-4.5 종료): https://help.openai.com/en/articles/9624314-model-release-notes</li>
+    <li>OpenAI — GPT-5.5 Instant: https://openai.com/index/gpt-5-5-instant/</li>
+    <li>OpenAI — ChatGPT Release Notes (Codex Remote / GPT-5.6 맥락): https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>Google — Gemini Apps 릴리스 노트 (Gemini Drops 6월판): https://gemini.google/release-notes/</li>
+    <li>Google — I/O 2026 발표 모음: https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/</li>
+    <li>Anthropic — Fable 5·Mythos 5 정지 성명: https://www.anthropic.com/news/fable-mythos-access</li>
+    <li>Anthropic — Newsroom: https://www.anthropic.com/news</li>
+    <li>xAI — News: https://x.ai/news</li>
+    <li>xAI — Grok on Databricks: https://x.ai/news/grok-databricks</li>
+    <li>Mistral — OCR 4 (VentureBeat 1차 보도): https://venturebeat.com/data/mistral-launches-ocr-4-turning-document-extraction-into-a-full-enterprise-ai-play</li>
+    <li>Mistral — Connectors 강화 (공식): https://mistral.ai/news/more-control-over-connectors/</li>
+    <li>Microsoft AI — MAI 신모델 7종: https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/</li>
+    <li>Mistral 35억 달러 조달 (PYMNTS): https://www.pymnts.com/news/artificial-intelligence/2026/mistral-seeks-3-billion-dollars-build-european-ai-infrastructure/</li>
+  </ol>
+  <p>생성: 2026-06-29 · 자동 일일 AI 브리핑 · 본 브리핑은 1차 출처(공식 블로그·릴리스 노트)를 우선하며, 공식 발표가 없는 항목은 [미확인]으로 표기했다.</p>
+</footer>
+
+</div>
+</body>
+</html>
