@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리프 · 2026-06-30</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026년 6월 30일 화요일 · 최근 24~72시간 (후보 부족 시 최대 2주) · 전기화학·배터리·CO2RR·수소·바이오매스·플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>한국 정부, '청정수소'를 첫 한국형 IRA(K-IRA) 인센티브 대상 산업으로 선정(6/26). 8,146억 원 규모 수소환원제철 실증 예타도 통과.</li>
+    <li>QuantumScape–Honda, 전고체 배터리 다년 공동연구 계약(6/18) — 상용 양산 공정까지 협력 확대, QS 주가 16%↑.</li>
+    <li>IEA 2026 수소 리뷰: 정책 무게중심이 생산 보조금에서 '수요측 의무화'(부문 쿼터·CCfD)로 이동. 그린수소 취소의 80%+가 전해(electrolysis) 부문.</li>
+    <li>연구: 최근 1~2주 내 1차 검증(저자·소속·게재일) 가능한 신규 논문·프리프린트는 제한적 — 아래 논문은 2026년 1차 저널 자료(게재 시점 일부 미확인).</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-69506-w" target="_blank" rel="noopener">Synergistic electrode design for efficient CO2 electrolysis to multicarbon products at elevated temperatures</a></h3>
+    <div class="src">Nature Communications · 2026 · CO2 전해<span class="unverified">[게재주 미확인]</span></div>
+    <p>고온 조건에서 C2+ 다탄소 생성물의 선택성과 에너지 효율을 끌어올리는 전극 설계를 제시. 상온 전해의 한계를 넘어서는 고온 CO2 전해의 상용화 경로를 탐색한 연구다. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.rsc.org/en/content/articlelanding/2026/sc/d5sc08419a" target="_blank" rel="noopener">Gaseous CO2 electrolysis: latest advances in electrode and electrolyzer technologies toward abating CO2 emissions</a></h3>
+    <div class="src">RSC Chemical Science · 2026 · 전해조<span class="unverified">[게재주 미확인]</span></div>
+    <p>기체 CO2 전해의 전극·전해조 기술 최신 진전을 정리한 리뷰. 막전극접합체(MEA)와 기체확산전극(GDE) 설계, 장기 안정성 과제를 종합 조망한다. <code>electrolyzer</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-69970-4" target="_blank" rel="noopener">Reflections on bio-based PET and plastic waste management: a responsible research and innovation approach</a></h3>
+    <div class="src">Nature Communications · 2026 · 플라스틱<span class="unverified">[게재주 미확인]</span></div>
+    <p>바이오 기반 PET와 효소적 해중합을 '책임 있는 연구·혁신(RRI)' 관점에서 점검. 확장성·규제·GMO 봉쇄 등 상용화 쟁점을 비판적으로 짚는다. <code>PET</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책 · 규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.businesskorea.co.kr/news/articleView.html?idxno=245644" target="_blank" rel="noopener">한국, '청정수소'를 첫 K-IRA 대상 산업으로 선정 + 수소환원제철 실증 예타 통과</a></h3>
+    <div class="src">Business Korea · 2026-06-26 · 정책(한국)</div>
+    <p>산업통상자원부가 청정수소를 한국형 IRA 첫 수혜 산업으로 정하고 최적 법인세율·인센티브 패키지를 검토 중이다. 더불어 2026~2030년 총 8,146억 원 규모의 '한국형 수소환원제철 실증 기술개발' 예비타당성조사도 통과했다. <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026/policy" target="_blank" rel="noopener">IEA 2026 수소 리뷰 — 정책 무게중심, '수요측 의무화'로 이동</a></h3>
+    <div class="src">IEA Global Hydrogen Review 2026 · 정책(국제)</div>
+    <p>IEA는 생산 보조금 중심에서 부문별 쿼터·차액계약(CCfD)·공공조달 등 수요측 정책으로의 전환을 권고했다. 2026년 초 EU 13개국이 재생에너지지침(RED)을 전환 입법해 575 ktpa 이상의 저탄소 수소 수요가 형성됐고, 저탄소 철강 공공조달 쿼터도 제안됐다. <code>policy</code></p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.foreignpolicyjournal.com/2026/06/20/quantumscape-nasdaq-qs-stock-price-surges-16-after-securing-joint-solid-state-battery-research-deal-with-honda/" target="_blank" rel="noopener">QuantumScape–Honda, 전고체 배터리 다년 공동연구 계약 체결</a></h3>
+    <div class="src">보도(Foreign Policy Journal) · 2026-06-18 · 전고체</div>
+    <p>QuantumScape가 Honda R&D와 전고체 배터리 플랫폼 및 상용 양산 공정 개발을 위한 다년 공동연구 계약을 맺었다. 발표 직후 QS 주가는 16% 넘게 급등했고, 회사는 실험실 기준 4C에서 400사이클 후 80% 용량 유지를 보고했다. <code>solid-state</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.climefi.com/blog-posts/climefi-announces-85-000-tonne-procurement-round" target="_blank" rel="noopener">ClimeFi, 8.5만 톤 규모 탄소제거(CDR) 조달 라운드 마감</a></h3>
+    <div class="src">ClimeFi · 2026 · CDR/CCUS</div>
+    <p>ClimeFi가 8개 제거 경로에 걸쳐 85,000 tCO2 이상, 1,800만 달러 규모(평균 $213/t)의 내구성 탄소제거 구매를 성사시켰다. 바이오차·BECCS·DAC·강화풍화·광물화 등 다양한 경로가 포함됐다. <code>CCUS</code></p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<p class="quiet">— 최근 1~2주 내 1차 발행으로 확인되는 주요 프리프린트 미확인 (ChemRxiv·arXiv 검색분은 발행 시점 기준 윈도 밖) —</p>
+
+<footer>
+  <strong>출처 (DOI·학술지·1차 기관 우선)</strong>
+  <ol>
+    <li>Nature Communications — Synergistic electrode design for efficient CO2 electrolysis to multicarbon products at elevated temperatures: https://www.nature.com/articles/s41467-026-69506-w</li>
+    <li>RSC Chemical Science — Gaseous CO2 electrolysis: latest advances in electrode and electrolyzer technologies: https://pubs.rsc.org/en/content/articlelanding/2026/sc/d5sc08419a</li>
+    <li>Nature Communications — Reflections on bio-based PET and plastic waste management: https://www.nature.com/articles/s41467-026-69970-4</li>
+    <li>Business Korea — Clean Hydrogen Chosen for Korean-style IRA Incentives: https://www.businesskorea.co.kr/news/articleView.html?idxno=245644</li>
+    <li>IEA — Global Hydrogen Review 2026, Policy: https://www.iea.org/reports/global-hydrogen-review-2026/policy</li>
+    <li>ClimeFi — 85,000-tonne carbon removal procurement round: https://www.climefi.com/blog-posts/climefi-announces-85-000-tonne-procurement-round</li>
+    <li>(보도) Foreign Policy Journal — QuantumScape–Honda solid-state battery research deal: https://www.foreignpolicyjournal.com/2026/06/20/quantumscape-nasdaq-qs-stock-price-surges-16-after-securing-joint-solid-state-battery-research-deal-with-honda/</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
