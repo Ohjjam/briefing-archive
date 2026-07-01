@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-07-01</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 7월 1일 (수) · 최근 24시간 프런티어 AI 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>Anthropic Claude Sonnet 5 출시(6/30)</strong> — Sonnet 4.6 대비 코딩·에이전트·멀티모달 전반 개선. 무료·Pro 기본 모델, 8/31까지 도입가 <code>$2/$10</code>(입력/출력, 1M 토큰).</li>
+    <li><strong>OpenAI GPT-5.6 Sol·Terra·Luna 제한 프리뷰(6/26~, developing)</strong> — 약 20개 기관에만 API·Codex로 선공개, 정식 출시는 "수주 내" 예고.</li>
+    <li><strong>Google</strong> — Gemini API에서 구형 Veo·이미지 모델 지원 종료(6/30)가 발효, <code>gemini-flash-latest</code>는 Gemini 3.5 Flash를 가리킴.</li>
+    <li><strong>Meta · xAI · Mistral</strong> — 지난 24시간 내 독립 확인 가능한 신규 공식 발표 없음.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener">GPT-5.6 Sol·Terra·Luna 제한 프리뷰 — 정식 출시 "수주 내" 예고</a></h3>
+    <div class="src">OpenAI 공식 · 2026-06-26 발표 (진행 중 스토리)</div>
+    <p>OpenAI가 플래그십 <code>GPT-5.6 Sol</code>, 저비용 <code>Terra</code>, 최저가·최고속 <code>Luna</code>로 구성된 차세대 모델군을 공개했다. 현재는 API·Codex를 통해 소수 신뢰 파트너·기관(약 20곳)에만 제공되며, 미국 정부와 릴리스 계획을 공유한 뒤 <em>"generally available in the coming weeks"</em>로 정식 출시를 예고했다. 소프트웨어 엔지니어링·컴퓨터 사용·과학 연구·사이버보안 영역의 프런티어를 겨냥한다. 5일 전 발표지만 정식 출시가 임박한 개발 진행형 이슈로 추적한다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Gemini API — 구형 Veo·이미지 모델 지원 종료(6/30) 발효</a></h3>
+    <div class="src">Google AI for Developers (Gemini API 릴리스 노트) · 2026-06-30</div>
+    <p>Gemini API 릴리스 노트에 따르면 일부 구형 영상 생성 모델이 6월 30일자로 셧다운되어 <code>Veo 3.1</code> 프리뷰 모델 ID로 이전하도록 안내됐다. 앞서 <code>gemini-3.1-flash-image-preview</code>·<code>gemini-3-pro-image-preview</code>도 6/25 종료됐다. 한편 GA 버전 Gemini 3.5 Flash가 이제 <code>gemini-flash-latest</code>가 가리키는 기본 모델이다. 신규 모델 출시라기보다 플랫폼 정비 성격의 변경이다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">Claude Sonnet 5 출시 — 무료·Pro 기본 모델, 8/31까지 도입가 $2/$10</a></h3>
+    <div class="src">Anthropic 공식 뉴스 · 2026-06-30</div>
+    <p>Anthropic이 <code>claude-sonnet-5</code>를 공개했다. Sonnet 4.6의 업그레이드로, 내부·서드파티 벤치마크 전반에서 <em>coding, agentic search, multimodal reasoning, professional-task performance</em>의 뚜렷한 향상을 보였다고 밝혔다. 8월 31일까지 도입가 100만 토큰당 입력 <code>$2</code>·출력 <code>$10</code>(이후 <code>$3/$15</code>). Free·Pro의 기본 모델이며 Max·Team·Enterprise, Claude API에서 사용 가능하다. Claude Code에서도 기본 모델로 채택돼 네이티브 1M 토큰 컨텍스트를 지원한다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">xAI</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">Mistral AI</h2>
+<p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<p class="quiet">— 위 항목 외 지난 24시간 내 1차 출처로 확인된 프런티어 모델 뉴스 없음. 다음 분기점은 OpenAI GPT-5.6 정식 출시(수주 내 예고). —</p>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Anthropic — Introducing Claude Sonnet 5: https://www.anthropic.com/news/claude-sonnet-5</li>
+    <li>Anthropic — Claude Sonnet 5 System Card (2026-06-30): https://www.anthropic.com/claude-sonnet-5-system-card</li>
+    <li>OpenAI — Previewing GPT-5.6 Sol: a next-generation model: https://openai.com/index/previewing-gpt-5-6-sol/</li>
+    <li>OpenAI Help Center — A preview of GPT-5.6 Sol, Terra, and Luna: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna</li>
+    <li>Google AI for Developers — Gemini API Release notes (changelog): https://ai.google.dev/gemini-api/docs/changelog</li>
+  </ol>
+  <p style="margin-top:10px;">생성: 2026-07-01 · 자동 일일 브리핑 · 최근 24시간 필터(1차 출처 우선). 지난 24시간 신규 공식 발표가 없는 회사는 억지로 채우지 않고 표기함.</p>
+</footer>
+
+</div>
+</body>
+</html>
