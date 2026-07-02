@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 — 2026-07-02</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-02 (목) · 최근 24~72시간</div>
+</header>
+
+<div class="tldr">
+  <h2>오늘의 요약</h2>
+  <ul>
+    <li><strong>CCUS 명암 교차</strong> — Air Products가 루이지애나 45억 달러 규모 CCS 허브(블루수소·연 500만톤 CO2 격리)를 경제성 미달로 전격 취소(7/1)한 반면, BKV는 텍사스에서 신규 CCS 시설 2곳을 가동 개시 — 미국 CCUS 산업의 프로젝트별 온도차가 뚜렷해지고 있음.</li>
+    <li><strong>구리 기반 CO2RR 촉매 불안정성 규명</strong> — EPFL Buonsanti 그룹이 JACS에 발표한 연구로 구리 촉매 표면의 산화물·탄산염 형성이 CO2 전환 촉매의 구조 재편·비활성화를 가속함을 operando TEM으로 직접 관찰 — 차세대 안정형 Cu 촉매 설계에 시사점.</li>
+    <li><strong>바나듐 흐름전지, 파일럿을 넘어 GWh급으로</strong> — Nature Energy Brief Communication(다롄화학물리연구소)이 장주기 저장용 바나듐 흐름전지가 병목을 넘어 수백 MW급으로 스케일업되는 경로를 짚음 — 롱기·중국 기업들의 실증 확대와 맞물림.</li>
+    <li><strong>IEA 2026 수소 리뷰</strong> — 저탄소 수소 투자가 2025년 약 70억 달러로 전년 대비 거의 2배 증가, 2026년에는 수전해 투자가 CCUS 기반 수소 투자를 처음으로 추월할 전망(약 100억 달러 중 70%).</li>
+    <li><strong>프리프린트 동향은 관망 국면</strong> — ChemRxiv·arXiv에서 6개 핵심 토픽 관련 신규 프리프린트를 확인했으나 대부분 1월~5월 게재분으로 최근 1~2주 내 신규성 기준을 충족하지 못해 이번 브리프에서는 제외.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c21287" target="_blank" rel="noopener">Oxides and Carbonates Accelerate Copper Instability in CO2 Electroreduction</a></h3>
+    <div class="src">Journal of the American Chemical Society (JACS), 2026, Vol. 148 · Albertini, Toleukhanova, Vavra, Loiudice, Tileli, Buonsanti (EPFL, 스위스)</div>
+    <p>CO2 전기환원(CO2RR)용 구리 촉매는 다탄소(C2+) 생성물 선택성이 뛰어나지만 반응 중 표면이 재구성되며 활성을 잃는 문제가 있다. 이 연구는 준-operando 액상 전자현미경(ec-LPTEM)으로 초기 표면의 산화 상태와 탄산염 형성이 구조 재편 속도와 비활성화를 가속함을 직접 관찰했다. 안정적인 Cu 기반 CO2RR 촉매 설계에 핵심 가이드라인을 제시한다. <code>CO2RR</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41560-026-02053-2" target="_blank" rel="noopener">Scaling vanadium flow battery for long-duration energy storage</a></h3>
+    <div class="src">Nature Energy (Brief Communication), 2026-06-23 · Wenjing Lu, Xianfeng Li (다롄화학물리연구소, 중국과학원)</div>
+    <p>바나듐 레독스 흐름전지(VRFB)는 안전성과 긴 수명 덕분에 장주기 에너지 저장의 유력 후보였지만 파일럿 규모를 넘어서는 과정에서 병목을 겪어왔다. 저자들은 막·유동장·전해액 설계 전략을 종합해 수백 MW급 상용 규모로 신뢰성 있고 경제적인 VRFB를 구현하기 위한 극복 과제를 짚는다. <code>redox flow battery</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/global-hydrogen-review-2026/investment-and-innovation" target="_blank" rel="noopener">Global Hydrogen Review 2026 — Investment and Innovation</a></h3>
+    <div class="src">IEA (국제에너지기구), 2026-06-18 발표</div>
+    <p>2025년 저탄소 수소 프로젝트에 대한 자본 지출이 약 70억 달러로 전년 대비 거의 2배 증가했으며 이는 전 세계 에너지 공급 투자의 0.7%에 해당한다. 2026년에는 수전해 투자가 처음으로 CCUS 기반 수소 투자를 추월해 약 100억 달러 투자 중 70%를 차지할 전망이다. 중동 정세 불안이 수소·암모니아 공급망 취약성을 노출시키며 에너지 안보 관점에서 그린수소의 역할이 부각되고 있다. <code>green hydrogen</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://cen.acs.org/energy/hydrogen-power/Air-Products-cancels-blue-hydrogen/104/web/2026/07" target="_blank" rel="noopener">Air Products cancels blue hydrogen project in Louisiana</a></h3>
+    <div class="src">C&amp;EN (Chemical &amp; Engineering News, ACS), 2026-07-01 · 관련: Carbon Herald 보도(아래 산업 뉴스 참조)</div>
+    <p>Air Products가 루이지애나 어센션 패리시에 계획했던 45억 달러 규모 "Louisiana Clean Energy Complex"를 공식 취소했다. 이 프로젝트는 메탄 수증기 개질로 하루 1,700톤의 수소를 생산하고 연 500만톤 CO2를 인근 모레파스호 하부에 격리하는 블루수소·CCS 통합 설비였다. 회사는 최대 29억 달러의 세전 손실을 인식하며, 사유는 "기대 재무수익률이 엄격한 기준을 충족하지 못함"이라고 명시했다 — 미국 CCS 프로젝트 경제성에 대한 경고 신호. <code>CCUS</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://carbonherald.com/air-products-pulls-plug-on-landmark-4-5b-louisiana-ccs-hub/" target="_blank" rel="noopener">Air Products Pulls Plug On Landmark $4.5B Louisiana CCS Hub</a></h3>
+    <div class="src">Carbon Herald, 2026-07-01</div>
+    <p>Air Products의 이번 취소는 미국 탄소관리 부문 역사상 최대 규모의 자본 철회 사례 중 하나로 꼽힌다. 프로젝트 백지화로 연 500만톤 규모 CO2 격리 시스템도 함께 무산됐다. CCS 프로젝트의 자금조달·경제성 리스크가 여전히 크다는 점을 보여주는 사례다. <code>CCUS</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://carbonherald.com/two-new-bkv-carbon-capture-facilities-go-operational-in-texas/" target="_blank" rel="noopener">Two New BKV Carbon Capture Facilities Go Operational In Texas</a></h3>
+    <div class="src">Carbon Herald, 2026-07-01 · BKV Corporation(덴버 소재)</div>
+    <p>Air Products의 대형 프로젝트 취소와 대조적으로, BKV Corporation은 텍사스 이글포드 지역 CCS 시설 가동을 시작했다 — 포트워스 분지 코튼코브 시설에 이은 두 번째 가동이다. 두 시설을 합쳐 연간 12만톤 이상의 CO2를 포집·영구 격리할 예정이며, 대형 허브형 프로젝트 대신 중소 규모 분산형 CCS가 실질적으로 진전되고 있음을 보여준다. <code>CCUS</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <p class="quiet">— 오늘은 주요 동향 없음 — (ChemRxiv·arXiv에서 전기화학·배터리·CO2RR·수소·바이오매스·플라스틱 6개 토픽을 모두 조사했으나, 확인된 프리프린트는 대부분 2026년 1~5월 게재로 최근 1~2주 신규성 기준을 충족하지 못했고, 직접 URL 구성 없이 검색 결과에 실제로 나타난 것만 채택한다는 원칙상 이번 회차는 포함할 항목이 없음)</p>
+</div>
+
+<footer>
+  <strong>출처 (인용순)</strong>
+  <ol>
+    <li>Albertini, P. P. et al. "Oxides and Carbonates Accelerate Copper Instability in CO2 Electroreduction." <em>J. Am. Chem. Soc.</em> 2026. DOI: <a href="https://pubs.acs.org/doi/10.1021/jacs.5c21287" target="_blank" rel="noopener">10.1021/jacs.5c21287</a></li>
+    <li>Lu, W. &amp; Li, X. "Scaling vanadium flow battery for long-duration energy storage." <em>Nat. Energy</em> (2026-06-23). DOI: <a href="https://www.nature.com/articles/s41560-026-02053-2" target="_blank" rel="noopener">10.1038/s41560-026-02053-2</a></li>
+    <li>IEA. "Global Hydrogen Review 2026 — Investment and Innovation." (2026-06-18). <a href="https://www.iea.org/reports/global-hydrogen-review-2026/investment-and-innovation" target="_blank" rel="noopener">https://www.iea.org/reports/global-hydrogen-review-2026/investment-and-innovation</a></li>
+    <li>C&amp;EN (ACS). "Air Products cancels blue hydrogen project in Louisiana." (2026-07-01). <a href="https://cen.acs.org/energy/hydrogen-power/Air-Products-cancels-blue-hydrogen/104/web/2026/07" target="_blank" rel="noopener">https://cen.acs.org/energy/hydrogen-power/Air-Products-cancels-blue-hydrogen/104/web/2026/07</a></li>
+    <li>Carbon Herald. "Air Products Pulls Plug On Landmark $4.5B Louisiana CCS Hub." (2026-07-01). <a href="https://carbonherald.com/air-products-pulls-plug-on-landmark-4-5b-louisiana-ccs-hub/" target="_blank" rel="noopener">https://carbonherald.com/air-products-pulls-plug-on-landmark-4-5b-louisiana-ccs-hub/</a></li>
+    <li>Carbon Herald. "Two New BKV Carbon Capture Facilities Go Operational In Texas." (2026-07-01). <a href="https://carbonherald.com/two-new-bkv-carbon-capture-facilities-go-operational-in-texas/" target="_blank" rel="noopener">https://carbonherald.com/two-new-bkv-carbon-capture-facilities-go-operational-in-texas/</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
