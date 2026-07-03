@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 · 2026-07-03</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026-07-03 (금) · 프론티어 AI 6개사 최근 24~72시간 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>Anthropic이 7월 1일 <code>Claude Fable 5</code>를 미국 정부의 수출 통제 해제 후 전 세계에 복원했고, 새 사이버보안 필터로 탈옥 시도 차단율을 99% 이상으로 끌어올렸다.</li>
+    <li>OpenAI는 <code>GPT-5.6</code> 시리즈(Sol/Terra/Luna)를 6월 26일 제한적 프리뷰로 공개했으며, 7월 2일에는 미국 정부에 5% 지분을 제공하는 방안을 논의 중이라는 보도가 나왔다.</li>
+    <li>Google은 6월 30일 Gemini Spark를 macOS로 확장하고 Canva·Dropbox 등 외부 앱 연동 및 실시간 토픽 추적 기능을 추가했다.</li>
+    <li>xAI는 7월 1일 코드 작성 없이 음성 에이전트를 만드는 <code>Voice Agent Builder</code>를 출시했다.</li>
+    <li>Meta는 6월 29일 비침습 뇌파 기반 문장 디코딩 연구 <code>Brain2Qwerty v2</code>를 공개했고, Mistral은 커넥터 관리자 통제 기능을 강화했다.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener">GPT-5.6 Sol·Terra·Luna 제한적 프리뷰 공개</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-06-26</div>
+    <p>OpenAI가 차세대 <code>gpt-5.6</code> 시리즈(플래그십 Sol, 균형형 Terra, 경량형 Luna)의 제한적 프리뷰를 시작했다. 코딩·과학·사이버보안 역량이 크게 향상됐으며, 미 정부와의 협의에 따라 우선 신뢰할 수 있는 소수 파트너에게 API·Codex를 통해 제공된다. <blockquote>"GPT‑5.6 Sol launches with our most robust safety stack to date."</blockquote></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-02/openai-proposes-giving-the-us-government-a-5-stake-ft-says" target="_blank" rel="noopener">OpenAI, 美 정부에 5% 지분 제공 방안 논의</a></h3>
+    <div class="src">Bloomberg (FT 인용 보도) · 2026-07-02</div>
+    <p>파이낸셜타임스 보도에 따르면 샘 올트먼 등 OpenAI 경영진이 미국 정부에 자사 지분 5%를 제공하는 방안을 초기 단계에서 논의 중이며, 이는 Anthropic·Google·Meta 등 주요 AI 기업에도 유사하게 적용될 수 있는 더 큰 틀의 일부로 제안됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/" target="_blank" rel="noopener">Gemini Spark, macOS 확장 및 앱 연동 강화</a></h3>
+    <div class="src">Google 공식 블로그(blog.google) · 2026-06-30</div>
+    <p>Google이 <code>Gemini Spark</code>를 macOS 앱으로 확장해 데스크톱 파일 자동 정리 등 작업을 지원하고, Canva·Dropbox·Instacart 등 외부 앱과의 연동 및 뉴스·주가·스포츠 등 실시간 토픽 추적 기능을 추가했다. 커스텀 MCP(Model Context Protocol) 연결 지원도 새로 도입됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html" target="_blank" rel="noopener">Claude Fable 5, 수출 통제 해제 후 전 세계 복원</a></h3>
+    <div class="src">CNBC (Anthropic 발표 인용) · 2026-06-30 발표, 2026-07-01 서비스 복원</div>
+    <p>미 상무부가 약 2주 반 전 부과했던 <code>Claude Fable 5</code>·<code>Mythos 5</code>에 대한 수출 통제를 해제했다. Fable 5는 7월 1일부터 Claude.ai·API·Claude Code·Claude Cowork 전반에 복원됐으며, Anthropic은 탈옥 시도를 99% 이상 차단하는 신규 사이버보안 분류기를 도입했다고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.statnews.com/2026/06/30/anthropic-release-claude-science-ceo-dario-amodei/" target="_blank" rel="noopener">Anthropic, 제약·연구용 &quot;Claude Science&quot; 출시</a></h3>
+    <div class="src">STAT News (Anthropic 발표 인용) · 2026-06-30</div>
+    <p>Anthropic이 제약사·연구기관을 겨냥한 특화 애플리케이션 <code>Claude Science</code>를 공개했다. 최대 50개 연구 프로젝트에 각 3만 달러 상당의 크레딧을 지원하며, 신청은 7월 15일까지, 프로젝트는 9~12월에 진행된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/" target="_blank" rel="noopener">Meta, 비침습 뇌파-텍스트 변환 &quot;Brain2Qwerty v2&quot; 공개</a></h3>
+    <div class="src">Meta AI 공식 블로그(ai.meta.com) · 2026-06-29</div>
+    <p>Meta가 수술 없이 뇌파(MEG)만으로 문장을 실시간 디코딩하는 연구 시스템 <code>Brain2Qwerty v2</code>를 발표했다. 9명의 참가자 데이터로 학습해 평균 61%, 최고 참가자 기준 78%의 단어 정확도를 달성했으며, 학습 코드와 v1 데이터셋을 공개했다.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news/grok-voice-agent-builder" target="_blank" rel="noopener">xAI, 코드 없이 만드는 &quot;Voice Agent Builder&quot; 출시</a></h3>
+    <div class="src">xAI 공식 뉴스(x.ai) · 2026-07-01</div>
+    <p>xAI가 코드 작성 없이 2분 만에 맞춤형 음성 에이전트를 만들 수 있는 <code>Voice Agent Builder</code>를 공개했다. <code>Grok</code> 음성 모델 기반으로 기업 고객이 직접 음성 봇을 구성할 수 있도록 지원한다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/more-control-over-connectors/" target="_blank" rel="noopener">Mistral, 커넥터 관리자 통제 기능 강화</a></h3>
+    <div class="src">Mistral AI 공식 블로그(mistral.ai) · 2026-06-24 발표, 2026-07-03 재확인</div>
+    <p>Mistral이 엔터프라이즈 보안 강화를 위해 커넥터별 세부 도구 제어(쓰기 작업 차단 등), 커넥터 범위 API 키, 다중 계정 커넥터, 연결 문제 진단용 &quot;Connectors Debugger&quot;를 새로 도입했다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <p class="quiet">— 6개사 외 별도로 검증 가능한 주요 동향 없음 —</p>
+</div>
+
+<footer>
+  <p>출처 (1차 출처 우선, 재게시 사이트 제외):</p>
+  <ol>
+    <li>OpenAI — Previewing GPT-5.6 Sol: https://openai.com/index/previewing-gpt-5-6-sol/</li>
+    <li>Bloomberg — OpenAI Proposes Giving the US Government a 5% Stake: https://www.bloomberg.com/news/articles/2026-07-02/openai-proposes-giving-the-us-government-a-5-stake-ft-says</li>
+    <li>Google (blog.google) — Gemini Spark updates: macOS launch, connected apps and more: https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/</li>
+    <li>CNBC — Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5: https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html</li>
+    <li>STAT News — Anthropic releases Claude Science: https://www.statnews.com/2026/06/30/anthropic-release-claude-science-ceo-dario-amodei/</li>
+    <li>Meta AI (ai.meta.com) — Brain2Qwerty: A New Path to Communication Without Surgery: https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/</li>
+    <li>xAI (x.ai) — Introducing the Voice Agent Builder: https://x.ai/news/grok-voice-agent-builder</li>
+    <li>Mistral AI — Bringing more control over your connectors: https://mistral.ai/news/more-control-over-connectors/</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
