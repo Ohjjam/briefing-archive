@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAILY BRIEFING — 2026년 7월 6일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600&family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text: #1a1a1a;
+    --bg: #fafaf7;
+    --accent: #8b0000;
+    --gray: #6b6b6b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  /* Masthead */
+  .masthead {
+    text-align: center;
+    padding-bottom: 18px;
+  }
+
+  .masthead .kicker {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    font-weight: 900;
+    font-size: 52px;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    color: var(--text);
+  }
+
+  .masthead .date-line {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .rule-double {
+    border: none;
+    border-top: 3px double var(--text);
+    margin: 0;
+  }
+
+  .rule-thin {
+    border: none;
+    border-top: 1px solid var(--text);
+    margin: 4px 0 0 0;
+  }
+
+  .masthead-rules {
+    margin-top: 14px;
+  }
+
+  .edition-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray);
+    padding: 8px 0 0 0;
+    letter-spacing: 0.5px;
+  }
+
+  /* Category */
+  .category {
+    margin-top: 42px;
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .accent-bar {
+    width: 6px;
+    height: 26px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .category-header h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .category-header .cat-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  /* Headline card */
+  .headline {
+    padding: 0 0 22px 0;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #ddd8cd;
+  }
+
+  .headline:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .headline h3 {
+    font-family: 'Playfair Display', 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    color: var(--text);
+  }
+
+  .headline p.summary {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0 0 8px 0;
+  }
+
+  .headline .source-line {
+    font-size: 12px;
+    color: var(--gray);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .headline .source-line a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .headline .source-line a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 1px;
+  }
+
+  .footer .rule-thin {
+    margin-bottom: 14px;
+  }
+
+  @media print {
+    body {
+      background: #ffffff;
+    }
+    .page {
+      max-width: 100%;
+      padding: 10px;
+    }
+    .headline {
+      break-inside: avoid;
+    }
+    .category {
+      break-inside: avoid-page;
+    }
+    a {
+      color: var(--text) !important;
+      text-decoration: none !important;
+    }
+    .source-line::after {
+      content: " (" attr(data-url) ")";
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 20px; }
+    .masthead h1 { font-size: 38px; letter-spacing: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="kicker">GLOBAL &amp; KOREA EDITION</div>
+    <h1>DAILY BRIEFING</h1>
+    <div class="date-line">2026년 7월 6일 월요일</div>
+    <div class="masthead-rules">
+      <hr class="rule-double">
+      <hr class="rule-thin">
+    </div>
+    <div class="edition-info">
+      <span>VOL. 1 — NO. 187</span>
+      <span>국제 · 정치 · 경제 · 문화 · 한국</span>
+    </div>
+  </div>
+
+  <!-- 1. 국제·시사 -->
+  <section class="category">
+    <div class="category-header">
+      <div class="accent-bar"></div>
+      <h2>국제 · 시사 <span class="cat-num">I.</span></h2>
+    </div>
+
+    <div class="headline">
+      <h3>하메네이 장례 엿새째, 테헤란 최대 인파 운집</h3>
+      <p class="summary">2월 말 미국·이스라엘의 공습으로 사망한 이란 최고지도자 아야톨라 하메네이의 국장이 7월 6일 테헤란에서 절정에 이르렀다. 이맘 호세인 광장에서 아자디 광장까지 10km 구간의 본행렬에 수백만 인파가 참여했으며, 100여 개국 대표단이 참석한 것으로 전해졌다.</p>
+      <div class="source-line">CBS News · <a href="https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/" target="_blank" data-url="cbsnews.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>미·이란 휴전 속 호르무즈 해협 '봉쇄 외교' 지속</h3>
+      <p class="summary">지난달 성사된 미국과 이란의 60일 휴전 합의로 호르무즈 해협이 통행료 없이 재개방됐지만, 미국은 이란 항구에 대한 압박을 이어가고 이란은 여전히 해협 봉쇄 가능성을 거론하며 긴장이 지속되고 있다.</p>
+      <div class="source-line">World Economic Forum · <a href="https://www.weforum.org/stories/2026/05/blockade-diplomacy-and-other-geopolitical-stories-to-know-this-month/" target="_blank" data-url="weforum.org">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>바티칸, 성비오10세회 '이단' 선언하며 주교단 파문</h3>
+      <p class="summary">스위스 에콘 신학교에서 교황 승인 없이 주교 4명을 서품한 성비오10세회(SSPX)에 대해 바티칸이 이단으로 규정하고 관련 주교와 사제들을 파문했다. 신자들에게도 공식 지지 시 파문 위험이 있다고 경고했다.</p>
+      <div class="source-line">NPR · <a href="https://www.npr.org/2026/07/02/nx-s1-5878916/vatican-society-of-st-pius-x-in-schism" target="_blank" data-url="npr.org">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>중국, 시진핑 주도 군 고위급 인사 단행</h3>
+      <p class="summary">시진핑 중국 국가주석이 7월 3일 신임 장성들을 대거 승진시키는 군 고위층 개편을 단행했다. 공산당과 시 주석에 대한 군의 충성을 재확인하려는 조치로 해석된다.</p>
+      <div class="source-line">CBS News · <a href="https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/" target="_blank" data-url="cbsnews.com">원문 보기</a></div>
+    </div>
+  </section>
+
+  <!-- 2. 정치·외교 -->
+  <section class="category">
+    <div class="category-header">
+      <div class="accent-bar"></div>
+      <h2>정치 · 외교 <span class="cat-num">II.</span></h2>
+    </div>
+
+    <div class="headline">
+      <h3>하메네이 장례식에 각국 정상급 대표단 총출동</h3>
+      <p class="summary">100여 개국 대표단이 이란 최고지도자 장례식에 참석하며 이란의 외교적 위상과 향후 노선에 관심이 쏠리고 있다. 전문가들은 이번 장례식이 이란 신정체제의 결속력과 차기 지도부 향방을 가늠할 시험대가 될 것으로 본다.</p>
+      <div class="source-line">Al Jazeera · <a href="https://www.aljazeera.com/news/2026/7/3/irans-khamenei-funeral-which-world-leaders-are-attending" target="_blank" data-url="aljazeera.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>미·이란, '봉쇄 외교' 국면 속 힘겨루기 지속</h3>
+      <p class="summary">휴전 이후에도 미국은 이란 항구에 대한 제재 압박을 강화하고 있으며, 이란은 호르무즈 해협을 지렛대로 활용하는 강대강 대치를 이어가고 있어 중동 정세의 불확실성이 여전하다.</p>
+      <div class="source-line">World Economic Forum · <a href="https://www.weforum.org/stories/2026/05/blockade-diplomacy-and-other-geopolitical-stories-to-know-this-month/" target="_blank" data-url="weforum.org">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>바티칸-전통주의 진영 갈등, 가톨릭 내 균열 심화</h3>
+      <p class="summary">1988년 요한 바오로 2세 시절 갈라선 성비오10세회와의 봉합 시도가 2026년 결국 재파문으로 귀결됐다. 레오 14세 교황 체제 하 가톨릭 내부 노선 갈등이 재점화된 모양새다.</p>
+      <div class="source-line">America Magazine · <a href="https://www.americamagazine.org/vatican-dispatch/2026/07/02/vatican-excommunicates-sspx-bishops-priests-and-some-lay-faithful/" target="_blank" data-url="americamagazine.org">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>중국 군부 개편, 시진핑 3기 권력 공고화 신호</h3>
+      <p class="summary">이번 장성급 인사는 시진핑 주석의 군 장악력을 재확인하는 상징적 조치로 평가되며, 미중 전략경쟁이 이어지는 가운데 중국의 군사 지휘체계 안정화 의도가 반영된 것으로 분석된다.</p>
+      <div class="source-line">CNN · <a href="https://www.cnn.com/2026/07/05/world/live-news/iran-khamenei-funeral-war-trump" target="_blank" data-url="cnn.com">원문 보기</a></div>
+    </div>
+  </section>
+
+  <!-- 3. 경제·금융·시장 -->
+  <section class="category">
+    <div class="category-header">
+      <div class="accent-bar"></div>
+      <h2>경제 · 금융 · 시장 <span class="cat-num">III.</span></h2>
+    </div>
+
+    <div class="headline">
+      <h3>다우, 고용 둔화에도 사상 최고치 경신</h3>
+      <p class="summary">6월 미국 비농업 고용이 시장 예상치(11만5000명)를 크게 밑돈 5만7000명 증가에 그쳤음에도, 다우존스는 594.83포인트(1.14%) 오른 5만2900.07로 사상 최고치를 기록했다. 실업률은 4.2%로 소폭 하락했다.</p>
+      <div class="source-line">CNBC · <a href="https://www.cnbc.com/2026/07/01/stock-market-today-live-updates.html" target="_blank" data-url="cnbc.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>반도체주 이틀 연속 급락, 나스닥 발목</h3>
+      <p class="summary">마이크론이 10% 이상 급락하고 샌디스크도 10% 넘게 빠지는 등 반도체 업종이 연이틀 조정을 받았다. AI 인프라 투자비용 급증 우려와 상반기 80% 넘게 급등한 데 따른 차익실현이 겹친 결과로 풀이된다.</p>
+      <div class="source-line">CNBC · <a href="https://www.cnbc.com/2026/07/01/stock-market-today-live-updates.html" target="_blank" data-url="cnbc.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>유로존 물가상승률 2.8%로 둔화</h3>
+      <p class="summary">6월 유로존 소비자물가 상승률이 2.8%를 기록하며 5월(3.2%) 대비 둔화됐다. 독일, 프랑스, 이탈리아 등 주요국에서 인플레이션 둔화세가 뚜렷해 유럽중앙은행의 통화정책 완화 여지가 커지고 있다.</p>
+      <div class="source-line">CNBC · <a href="https://www.cnbc.com/2026/07/01/stock-market-today-live-updates.html" target="_blank" data-url="cnbc.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>고용지표 부진에 7월 금리인상 가능성 급락</h3>
+      <p class="summary">CME 페드워치 기준 7월 연방공개시장위원회(FOMC)의 금리인상 확률이 고용보고서 발표 후 29%에서 18%로 낮아졌다. 시장은 연준의 긴축 속도 조절 가능성에 무게를 싣고 있다.</p>
+      <div class="source-line">CNBC · <a href="https://www.cnbc.com/2026/07/01/stock-market-today-live-updates.html" target="_blank" data-url="cnbc.com">원문 보기</a></div>
+    </div>
+  </section>
+
+  <!-- 4. 문화·과학·라이프 -->
+  <section class="category">
+    <div class="category-header">
+      <div class="accent-bar"></div>
+      <h2>문화 · 과학 · 라이프 <span class="cat-num">IV.</span></h2>
+    </div>
+
+    <div class="headline">
+      <h3>허블, 50만 개 별이 빛나는 구상성단 M3 포착</h3>
+      <p class="summary">NASA 허블 우주망원경이 은하수에서 가장 오래된 구상성단 중 하나인 메시에3(M3)의 정밀 이미지를 공개했다. 두 개의 서로 다른 항성 집단이 관측돼 과거 왜소은하 합병 과정에서 형성됐을 가능성이 제기됐다.</p>
+      <div class="source-line">NASA Science · <a href="https://science.nasa.gov/missions/hubble/nasas-hubble-spots-star-spangled-cosmic-scene/" target="_blank" data-url="science.nasa.gov">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>존스홉킨스, 비강 분무형 결핵 DNA 백신 개발</h3>
+      <p class="summary">존스홉킨스 의대 연구진이 항생제에 내성을 보이는 휴면 결핵균까지 겨냥한 치료용 비강 DNA 백신을 개발했다. 동물실험에서 감염 제거 속도 향상과 폐 염증 감소, 재발 방지 효과가 확인됐다.</p>
+      <div class="source-line">Johns Hopkins Medicine · <a href="https://www.hopkinsmedicine.org/news/newsroom/news-releases/2026/04/johns-hopkins-team-develops-therapeutic-nasally-delivered-dna-vaccine-for-tuberculosis" target="_blank" data-url="hopkinsmedicine.org">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>월드컵 16강, 음바페 골 폭발로 메시와 동률</h3>
+      <p class="summary">2026 월드컵 16강전에서 프랑스가 파라과이를 1대0으로 꺾으며 8강에 진출했다. 킬리안 음바페는 이 경기에서 득점하며 통산 7골로 리오넬 메시와 월드컵 통산 득점 동률을 이뤘다.</p>
+      <div class="source-line">CBS News · <a href="https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/" target="_blank" data-url="cbsnews.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>F1, 르클레르 세이프티카 혼란 딛고 시즌 첫 우승</h3>
+      <p class="summary">샤를 르클레르가 후반 세이프티카 상황의 혼선 속에서도 침착한 레이스 운영으로 2026시즌 첫 승을 거뒀다. 시즌 중반 순위 경쟁이 한층 치열해질 전망이다.</p>
+      <div class="source-line">CBS News · <a href="https://www.cbsnews.com/live-updates/us-iran-war-trump-negotiations-pause-ayatollah-funeral/" target="_blank" data-url="cbsnews.com">원문 보기</a></div>
+    </div>
+  </section>
+
+  <!-- 5. 한국 주요 이슈 -->
+  <section class="category">
+    <div class="category-header">
+      <div class="accent-bar"></div>
+      <h2>한국 주요 이슈 <span class="cat-num">V.</span></h2>
+    </div>
+
+    <div class="headline">
+      <h3>이재명 대통령, 반도체 클러스터 민관합동 점검회의 주재</h3>
+      <p class="summary">이재명 대통령이 7월 6일 청와대에서 반도체 클러스터 민관합동점검회의를 주재했다. 삼성전자·SK하이닉스가 지난달 서남권에 800조 원 규모 투자를 발표한 지 일주일 만으로, '대한민국 대도약 3대 메가프로젝트'의 후속 조치로 진행됐다.</p>
+      <div class="source-line">파이낸셜뉴스 · <a href="https://www.fnnews.com/news/202607060501077000" target="_blank" data-url="fnnews.com">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>삼성전자·SK하이닉스, 800조 원 서남권 투자 후속 논의</h3>
+      <p class="summary">지난달 29일 발표된 서남권 반도체 클러스터 800조 원 투자 계획의 인허가 절차와 정부 지원 방안이 이번 회의의 핵심 의제로 다뤄졌다. 경제부총리, 산업부·국토부 장관 등 관계 부처가 총출동했다.</p>
+      <div class="source-line">아시아투데이 · <a href="https://www.asiatoday.co.kr/kn/view.php?key=20260703010001386" target="_blank" data-url="asiatoday.co.kr">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>제9호 태풍 '바비' 발생, 한반도 영향 여부 주시</h3>
+      <p class="summary">7월 2일 괌 동쪽 해상에서 제9호 태풍 바비가 발생했다. 진로와 세력이 아직 유동적이어서 한반도 영향 여부는 불투명하지만, 기상청은 장마전선 북상 지연과 맞물려 7월 초 집중호우 가능성을 예의주시하고 있다.</p>
+      <div class="source-line">이코노미톡뉴스 · <a href="http://www.economytalk.kr/news/articleView.html?idxno=422448" target="_blank" data-url="economytalk.kr">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>전국 대체로 흐리고 비, 장마 소강 국면</h3>
+      <p class="summary">기상청에 따르면 7월 6일 전국 대부분 지역에 비가 내리며 장마가 소강상태를 보이고 있다. 이후 태풍 북상과 맞물려 강수 패턴이 다시 강화될 가능성이 제기된다.</p>
+      <div class="source-line">국제신문 · <a href="https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20260706.22019001297" target="_blank" data-url="kookje.co.kr">원문 보기</a></div>
+    </div>
+
+    <div class="headline">
+      <h3>코스피, 반도체 대형주 중심 사상 최고 랠리 이어가</h3>
+      <p class="summary">코스피가 2026년 상반기 사상 처음으로 9000선을 돌파하는 강세장을 이어가고 있다. 삼성전자·SK하이닉스 등 반도체 대형주가 지수 비중의 절반 가까이를 차지하며 랠리를 주도하고 있다.</p>
+      <div class="source-line">Investing.com · <a href="https://kr.investing.com/indices/kospi" target="_blank" data-url="investing.com">원문 보기</a></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <hr class="rule-thin">
+    <p>DAILY BRIEFING — 자동 생성 브리핑 · 2026년 7월 6일 월요일 · Global &amp; Korea Edition</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 — 2026-07-06</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-06 (월) · 최근 24~72시간</div>
+</header>
+
+<div class="tldr">
+  <h2>오늘의 핵심</h2>
+  <ul>
+    <li>Angewandte Chemie에 CO2 광환원(포토전환) 및 CO2·바이오매스 병렬 전해 관련 논문이 잇달아 게재되며 CO2RR·바이오매스 융합 경로에 관심 집중.</li>
+    <li>중국 Sungrow Hydrogen과 남아프리카향 VERDE HYDROGEN이 각각 45MW·25MW급 수전해 설비 공급 계약을 7월 2일 동시 발표, 그린수소 설비 발주가 상반기 대비 가속.</li>
+    <li>EU 배터리 규정의 공급망 실사(due diligence) 가이드라인이 당초 계획보다 1년 이상 지연되어 2026년 7월 26일 발표 예정 — 배터리·수소 기업의 원자재 리스크 평가 의무化 준비 시급.</li>
+    <li>오사카시립대·후지안료 공동 연구팀이 실리카 마이크로캡슐로 색소를 감싸 아세톤 용해만으로 플라스틱과 안료를 100% 가까이 분리하는 색상 재활용 기술을 Green Chemistry에 발표.</li>
+    <li>ChemRxiv에는 극속충전(XFC) 리튬이온 전해질의 용매화 셸(solvation shell) 유동성을 높이는 공동용매 설계 프리프린트가 6월 말 게재.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://onlinelibrary.wiley.com/doi/10.1002/ange.3999411" target="_blank" rel="noopener">Electrophile–Nucleophile Paired Heteronuclear Dual-Site for Selective CO2 Photoreduction to Ethanol via Oxygen-Tethered Asymmetric C–C Coupling</a></h3>
+    <div class="src">Angewandte Chemie (VIP) · 2026-07-02 · CO2RR</div>
+    <p>Cu–Zr 이종 금속 활성점을 이용해 전자주개-받개 미스매치를 형성, CO2를 물을 희생환원제로 써서 에탄올로 선택적 전환(0.5 MPa에서 87.8 µmol·g⁻¹·h⁻¹, 1.5 MPa에서 195.1 µmol·g⁻¹·h⁻¹). C-O 결합 절단을 억제하며 C2 생성물 선택도를 높인 이종 금속 촉매 설계 전략.</p>
+    <code>CO2RR</code> <code>photocatalysis</code> <code>ethanol</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://onlinelibrary.wiley.com/doi/10.1002/anie.3951875" target="_blank" rel="noopener">Electron-Efficient Formate Electrosynthesis from CO2 and Biomass-Derived Carbohydrates in a Zero-Gap Electrolyzer</a></h3>
+    <div class="src">Angewandte Chemie International Edition · 2026 (Vol.65) · Ren, Xu, Zou et al. · CO2RR/바이오매스</div>
+    <p>제로갭 전해조에서 CO2 환원과 포도당 등 바이오매스 유래 탄수화물 산화를 결합, 전자당 0.88 포름산 생성으로 전자 효율을 극대화. 100 mA cm⁻²에서 76.5 Wh mol⁻¹의 낮은 전력소모로 CO2RR과 바이오매스 밸류체인을 잇는 병렬 전해 접근.</p>
+    <code>CO2RR</code> <code>biomass</code> <code>paired electrolysis</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.nature.com/articles/s41467-026-70872-8" target="_blank" rel="noopener">Balanced-state electrolytes overcome crossover in vanadium redox flow batteries</a></h3>
+    <div class="src">Nature Communications · 2026-03-24 · redox flow battery</div>
+    <p>기존 대칭형 전해질 설계 대신 농도와 원자가를 독립적으로 조정하는 균형상태 전해질 전략을 제시. 15μm 두께 Nafion 멤브레인 조합 시 용량 감쇠율을 75.4% 저감해 바나듐 레독스 흐름전지의 장기 안정성을 크게 개선.</p>
+    <code>redox flow</code> <code>vanadium</code> <code>membrane crossover</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.rsc.org/en/content/articlehtml/2026/su/d6gc02002j" target="_blank" rel="noopener">Sustainable and Recyclable Polymer Coloring System via Size-Tunable, Pigment-Encapsulated Silica Microspheres: Enabling Circular Economy of Plastics</a></h3>
+    <div class="src">Green Chemistry (RSC) · 2026-07-02 · Okada, Takahashi (Osaka Metropolitan Univ.) · 플라스틱</div>
+    <p>안료를 내열·내화학성 실리카 마이크로구체에 캡슐화, 플라스틱을 아세톤에 녹이면 캡슐만 남아 무색 플라스틱 용액과 안료를 거의 100% 효율로 분리 회수. 캡슐 크기별 체 분리로 색상별 선별까지 가능해 착색 플라스틱의 다운사이클링 문제를 해결할 잠재력.</p>
+    <code>plastic recycling</code> <code>circular economy</code> <code>pigment</code>
+  </div>
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en" target="_blank" rel="noopener">EU Batteries Regulation — Due Diligence Guidelines Timeline</a></h3>
+    <div class="src">European Commission (DG Environment) · 2026-07-06 기준 · 정책</div>
+    <p>당초 2025년 2월 예정이던 배터리 공급망 실사(원자재 리스크 평가) 가이드라인이 CSDDD와 일정을 맞추며 2026년 7월 26일로 재조정. 배터리·수소 기업은 코발트·니켈·리튬 등 전략 원자재 공급망 리스크를 정기 평가해야 하는 의무 준비 기간이 임박.</p>
+    <code>EU battery regulation</code> <code>due diligence</code> <code>critical raw materials</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/cmei/fuels/technical-targets-proton-exchange-membrane-electrolysis" target="_blank" rel="noopener">DOE Technical Targets for Proton Exchange Membrane Electrolysis</a></h3>
+    <div class="src">U.S. Department of Energy · 2026 갱신 · 수전해/수소</div>
+    <p>DOE는 PEM 수전해 목표로 2026년까지 그린수소 생산단가 $2/kg 달성, 2031년까지 $1/kg 달성을 제시. 최근 1s1 Energy 등 민간 기업이 붕소 기반 멤브레인으로 DOE의 2031년 77% 전기효율 목표를 앞당겨 달성했다고 보고하며 정책 목표 대비 산업 진전 속도가 주목.</p>
+    <code>green hydrogen</code> <code>PEM electrolysis</code> <code>DOE targets</code>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/07/02/electrolyzer/sungrow-hydrogen-secures-45-mw-electrolyser-order-from-china" target="_blank" rel="noopener">Sungrow Hydrogen Secures 45 MW Electrolyser Order from China</a></h3>
+    <div class="src">FuelCellsWorks · 2026-07-02 · 수전해/수소</div>
+    <p>중국 후베이성 다예시 공기업소 수소산업기지에 2000Nm³/h급 알칼라인 수전해 설비 7기(총 45MW)를 공급하는 계약 체결. 4000시간 이상 실증을 거친 설비로 자체 디지털 관리 시스템을 탑재, 대형 알칼라인 수전해 설비의 상용 스케일업이 본격화되는 신호.</p>
+    <code>green hydrogen</code> <code>AWE electrolyzer</code> <code>China</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/07/02/electrolyzer/verde-hydrogen-secures-25mw-electrolyzer-supply-award-for-flagship-off-grid-green-hydrogen-mega-project" target="_blank" rel="noopener">VERDE HYDROGEN Secures 25MW Electrolyzer Supply Award for Flagship Off-Grid Green Hydrogen Mega-Project</a></h3>
+    <div class="src">FuelCellsWorks · 2026-07-02 · 수전해/수소</div>
+    <p>오프그리드(재생에너지 단독 연계) 대형 그린수소 프로젝트에 25MW급 수전해 설비 공급이 확정. 계통 연계 없이 재생에너지로만 수전해를 가동하는 오프그리드 방식이 상업 프로젝트 단계로 진입하는 사례.</p>
+    <code>green hydrogen</code> <code>off-grid</code> <code>electrolyzer</code>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.asiaresearchnews.com/content/zero-waste-plastic-and-color-recycling" target="_blank" rel="noopener">Zero-waste plastic and color recycling</a></h3>
+    <div class="src">Asia Research News (Osaka Metropolitan University 발표 기반) · 2026-07-02 · 플라스틱</div>
+    <p>실리카 마이크로캡슐 색소 기술의 산업 적용 가능성을 소개. 후지안료(Fuji Pigment)와의 산학 협력으로 상용 스프레이 건조 공정을 활용, 기존 착색 플라스틱 재활용 시 발생하던 다운사이클링(저품질화) 문제 해결에 초점.</p>
+    <code>plastic recycling</code> <code>circular economy</code> <code>industry-academia</code>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-6bs5s" target="_blank" rel="noopener">Direct CO2 Reduction to CO with an Fe4S4-Based Coordination Polymer</a></h3>
+    <div class="src">ChemRxiv · 2026-01-06 게재 (최근 재확인) · CO2RR</div>
+    <p>철-황 클러스터(Fe4S4) 기반 배위 고분자를 직접 전기화학적 CO2 환원 촉매로 활용, CO 생성에 대한 선택성과 메커니즘적 통찰을 제시. 생체모사형 클러스터 촉매가 균일계 분자 촉매를 넘어 배위 고분자 형태로 확장될 수 있음을 시사.</p>
+    <code>CO2RR</code> <code>coordination polymer</code> <code>Fe-S cluster</code>
+  </div>
+  <p class="quiet">— 추가 프리프린트는 원문 링크 검증 기준 미충족으로 게재 보류 (배터리 전해질 관련 프리프린트 1건은 정확한 출처 URL을 확인하지 못해 제외) —</p>
+</div>
+
+<footer>
+  <p>출처</p>
+  <ol>
+    <li>Angewandte Chemie — https://onlinelibrary.wiley.com/doi/10.1002/ange.3999411</li>
+    <li>Angewandte Chemie International Edition — https://onlinelibrary.wiley.com/doi/10.1002/anie.3951875</li>
+    <li>Nature Communications — https://www.nature.com/articles/s41467-026-70872-8</li>
+    <li>Green Chemistry (RSC) — https://pubs.rsc.org/en/content/articlehtml/2026/su/d6gc02002j</li>
+    <li>European Commission, DG Environment — https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en</li>
+    <li>U.S. Department of Energy — https://www.energy.gov/cmei/fuels/technical-targets-proton-exchange-membrane-electrolysis</li>
+    <li>FuelCellsWorks (Sungrow Hydrogen) — https://fuelcellsworks.com/2026/07/02/electrolyzer/sungrow-hydrogen-secures-45-mw-electrolyser-order-from-china</li>
+    <li>FuelCellsWorks (VERDE HYDROGEN) — https://fuelcellsworks.com/2026/07/02/electrolyzer/verde-hydrogen-secures-25mw-electrolyzer-supply-award-for-flagship-off-grid-green-hydrogen-mega-project</li>
+    <li>Asia Research News — https://www.asiaresearchnews.com/content/zero-waste-plastic-and-color-recycling</li>
+    <li>ChemRxiv (Fe4S4 CO2RR) — https://chemrxiv.org/doi/full/10.26434/chemrxiv-2026-6bs5s</li>
+  </ol>
+</footer>
+</div>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

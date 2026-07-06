@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 - 2026-07-06</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 7월 6일 (월) · 최근 24~48시간 프런티어 AI 업계 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>xAI 일론 머스크가 7월 5일 "Grok Imagine 개발 완료"를 선언, 이미지·영상 생성 기능이 정식 단계로 전환됨.</li>
+    <li>Anthropic이 Amazon·Microsoft·Google과 공동으로 <code>Cyber Jailbreak Severity(CJS)</code> 등급 체계(7월 2일 발표)를 제안, 업계 공통 탈옥 위험도 평가 기준 마련.</li>
+    <li>Meta 최고AI책임자 알렉산더 왕이 사내 타운홀에서 차세대 모델 "Watermelon"이 <code>GPT-5.5</code> 수준 벤치마크에 도달했다고 발언(미검증 단일 소스).</li>
+    <li>OpenAI <code>GPT-5.6 Sol/Terra/Luna</code>가 미국 정부 요청에 따라 신뢰 파트너 약 20곳에 한정 프리뷰 중이며, 수주 내 일반 공개 예정.</li>
+    <li>Mistral AI가 'AI Now Summit 2026'에서 Le Chat을 <code>Vibe</code>로 리브랜딩하고 Airbus·BMW·ASML과 산업용 AI 파트너십을 발표.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener">OpenAI, <code>GPT-5.6 Sol</code> 등 차세대 모델군 프리뷰 공개</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-06-26 (진행 중인 이슈, 7월 초까지 후속 보도 이어짐)</div>
+    <p>OpenAI가 플래그십 모델 <code>GPT-5.6 Sol</code>과 저비용 옵션 <code>Terra</code>, 초경량 <code>Luna</code>를 공개했다. 미국 정부 요청에 따라 초기에는 약 20개 "신뢰 파트너" 조직에만 API·Codex를 통해 제한 프리뷰되며, 수주 내 일반 공개(ChatGPT 미포함)를 계획하고 있다. Sol은 코딩·과학적 추론·장기 에이전트 작업에서 SOTA 성능을 목표로 한다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT, 새 받아쓰기(음성-텍스트) 모델 전 플랜 배포</a></h3>
+    <div class="src">OpenAI Help Center (Release Notes) · 2026-06-말~07월초</div>
+    <p>OpenAI가 ChatGPT 전 요금제에 새로운 음성-텍스트 받아쓰기 모델을 배포했다. 다국어 화자가 언어를 섞어 말하는 경우를 포함해 언어·억양별 인식 정확도가 개선되었으며, 주요 언어에서 단어 오류율(WER)이 기존 대비 최소 10% 낮아졌다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener"><code>Gemini 3.5 Flash</code> 정식 출시(GA), 에이전트·코딩 성능 강화</a></h3>
+    <div class="src">Google 공식 블로그(blog.google) · 2026년 6~7월</div>
+    <p>구글이 <code>Gemini 3.5 Flash</code>를 Gemini 앱, AI Mode, Google AI Studio, Antigravity, Gemini Enterprise 전반에 정식 출시했다. Terminal-Bench 2.1(76.2%), MCP Atlas(83.6%) 등 에이전트·코딩 벤치마크에서 상위 모델인 3.1 Pro를 능가한다. 컴퓨터 사용(computer use) 기능이 내장 도구로 추가되었다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://deepmind.google/models/gemini/flash/" target="_blank" rel="noopener">Gemini Omni Flash, API 퍼블릭 프리뷰로 확장</a></h3>
+    <div class="src">Google DeepMind 공식 블로그 · 2026년 6월 말~7월초</div>
+    <p>네이티브 멀티모달 모델인 Gemini Omni Flash가 기업·개발자용 API 퍼블릭 프리뷰로 제공되기 시작했다. 동적 영상 워크플로우 구축을 지원하며, 자율 에이전트를 격리된 구글 호스팅 리눅스 샌드박스에서 실행하는 Managed Agents 기능도 함께 프리뷰 중이다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/fable-safeguards-jailbreak-framework" target="_blank" rel="noopener">Anthropic, Amazon·Microsoft·Google과 업계 공동 탈옥 위험도 등급(CJS) 제안</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-07-02</div>
+    <p>Anthropic이 자사 Glasswing 연합 파트너인 Amazon, Microsoft, Google과 함께 "Cyber Jailbreak Severity(CJS)" 프레임워크를 발표했다. 공격 능력 향상 정도, 확산 범위, 무기화 난이도, 발견 용이성 등 4개 축으로 CJS-0(정보성)부터 CJS-4(치명적)까지 5단계로 탈옥 위험도를 평가한다. <blockquote>각 등급은 지수적으로 실제 위험도가 커지도록 설계됐다</blockquote></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener"><code>Claude Fable 5</code>·<code>Mythos 5</code>, 수출통제 해제 후 전 세계 재배포</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-07-01</div>
+    <p>미 상무부가 6월 30일 Fable 5·Mythos 5에 부과했던 수출통제를 해제하면서, Anthropic이 7월 1일부터 Claude.ai·API·Claude Code·Claude Cowork 전반에 Fable 5를 전 세계 사용자에게 재배포했다. Mythos 5는 정부 승인을 받은 일부 미국 조직에 한해 복원되었으며, 탈옥 방지를 위한 새 안전 분류기가 함께 적용됐다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener"><code>Claude Sonnet 5</code>, Free·Pro 기본 모델로 전환(연속 이슈)</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-06-30 (48시간 초과, 진행 중인 주요 이슈로 포함)</div>
+    <p>Anthropic이 가장 에이전틱한 Sonnet 모델인 <code>Claude Sonnet 5</code>를 출시하며 Free·Pro 플랜 기본 모델로 전환했다. 네이티브 100만 토큰 컨텍스트를 표준 지원하며, SWE-Bench Pro에서 63.2%(Sonnet 4.6 대비 58.1%에서 상승)를 기록했다. 8월 31일까지 도입 가격(입력 $2/출력 $10, 백만 토큰당)이 적용된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/" target="_blank" rel="noopener">저커버그, 사내 타운홀서 "AI 에이전트 진전 예상보다 느려" 인정</a></h3>
+    <div class="src">TechCrunch · 2026-07-02</div>
+    <p>마크 저커버그 메타 CEO가 목요일 사내 타운홀에서 AI 에이전트 관련 시스템이 예상만큼 빠르게 발전하지 못했다고 인정했다. 대규모 조직 개편과 관련한 한계도 함께 언급한 것으로 로이터가 입수한 녹취에서 확인됐다.</p>
+  </div>
+  <div class="card">
+    <h3><span>메타 차세대 모델 "Watermelon", <code>GPT-5.5</code> 성능 도달 주장</span><span class="unverified">[미확인]</span></h3>
+    <div class="src">Business Insider 보도 인용(원문 유료 구독 필요) · 2026-07-02~03</div>
+    <p>메타 최고AI책임자 알렉산더 왕이 사내 타운홀에서 학습 중인 차세대 모델 "Watermelon"이 <code>GPT-5.5</code> 벤치마크 수준에 도달했다고 밝혔다고 알려졌다. 이전 모델 대비 약 10배 많은 컴퓨팅을 사용 중이나, 구체적 벤치마크나 재현 가능한 결과는 공개되지 않아 단일 소스 주장에 그친다.</p>
+  </div>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.basenor.com/blogs/news/grok-imagine-is-done-xai-completes-image-generation-feature" target="_blank" rel="noopener">일론 머스크 "Grok Imagine 개발 완료" 선언</a></h3>
+    <div class="src">일론 머스크 X 게시글 보도(Basenor) · 2026-07-05</div>
+    <p>일론 머스크가 7월 5일 "Done with Grok Imagine"이라는 짧은 게시글로 xAI의 이미지·영상 생성 기능 핵심 개발 주기가 마무리 단계에 들어섰음을 시사했다. Grok Imagine은 자체 Aurora 모델을 기반으로 텍스트를 이미지로 변환하며, 완전한 종료보다는 활발한 개발 단계에서 안정화 단계로의 전환을 의미하는 것으로 해석된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI, Speech-to-Text API 정식 출시 및 커스텀 음성 기능 추가</a></h3>
+    <div class="src">xAI 공식 개발자 문서(docs.x.ai) · 2026년 6월 말~7월초</div>
+    <p>xAI의 Speech-to-Text API가 25개 언어를 지원하며 배치·스트리밍 모드로 정식 출시됐다. 짧은 오디오 클립으로 음성을 복제해 Text-to-Speech·Voice Agent API에 활용할 수 있는 커스텀 보이스 기능도 추가됐으며, 모든 API 응답에 정확한 비용을 표시하는 <code>cost_in_usd_ticks</code> 필드가 새로 포함됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/ai-now-summit-2026/" target="_blank" rel="noopener">Mistral, Le Chat을 <code>Vibe</code>로 리브랜딩하고 산업용 AI로 확장</a></h3>
+    <div class="src">Mistral AI 공식 뉴스(mistral.ai) · 2026년 7월초(AI Now Summit 2026)</div>
+    <p>Mistral이 'AI Now Summit 2026'에서 Le Chat을 통합 에이전트 <code>Vibe</code>로 리브랜딩했다. 코딩·리서치 등 장시간 작업을 처리하는 Work Mode와 VS Code 통합이 추가됐으며, Airbus·BMW·ASML과 산업 엔지니어링 AI 파트너십을 발표했다. 프랑스 Les Ulis에 10MW 규모의 추론 전용 데이터센터를 2026년 3분기 개소 목표로 신설한다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/" target="_blank" rel="noopener">Mistral, Lean 4 코드 에이전트 모델 <code>Leanstral 1.5</code> 공개</a></h3>
+    <div class="src">MarkTechPost · 2026-07-03</div>
+    <p>Mistral이 Apache-2.0 라이선스로 Lean 4 정리 증명에 특화된 코드 에이전트 모델 <code>Leanstral 1.5</code>를 출시했다. PutnamBench 672개 문제 중 587개를 해결하며 수학 정리 자동증명 분야에서 강력한 성능을 보였다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/" target="_blank" rel="noopener">메타, 잉여 AI 컴퓨팅 판매하는 "Meta Compute" 클라우드 사업 추진</a></h3>
+    <div class="src">TechCrunch (Bloomberg 보도 인용) · 2026-07-01</div>
+    <p>메타가 AWS·Azure·Google Cloud와 경쟁할 클라우드 인프라 사업부 "Meta Compute"를 구축해 여유 AI 컴퓨팅 자원을 외부에 판매할 계획이라고 블룸버그가 보도했다. 해당 소식에 메타 주가는 약 9% 상승했다.</p>
+  </div>
+</div>
+
+<footer>
+  <p>이 브리핑은 자동화된 파이프라인으로 생성되었으며, 아래 출처를 기반으로 합니다.</p>
+  <ol>
+    <li>https://openai.com/index/previewing-gpt-5-6-sol/</li>
+    <li>https://help.openai.com/en/articles/6825453-chatgpt-release-notes</li>
+    <li>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/</li>
+    <li>https://deepmind.google/models/gemini/flash/</li>
+    <li>https://www.anthropic.com/news/fable-safeguards-jailbreak-framework</li>
+    <li>https://www.anthropic.com/news/redeploying-fable-5</li>
+    <li>https://www.anthropic.com/news/claude-sonnet-5</li>
+    <li>https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/</li>
+    <li>Business Insider 보도(원문 유료), 재인용: https://americanbazaaronline.com/2026/07/03/meta-ai-chief-says-watermelon-model-has-caught-up-to-gpt-5-5-484022/</li>
+    <li>https://www.basenor.com/blogs/news/grok-imagine-is-done-xai-completes-image-generation-feature</li>
+    <li>https://docs.x.ai/developers/release-notes</li>
+    <li>https://mistral.ai/news/ai-now-summit-2026/</li>
+    <li>https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/</li>
+    <li>https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
