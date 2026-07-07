@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 — 2026-07-07</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-07 (화) · 최근 24~72시간 · 전기화학/배터리/CO2RR/수전해/바이오매스/플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>Cu-Zn 2D 배위고분자 촉매가 CO2→에탄올 전환에서 패러데이 효율 92.3%, 톤당 에너지비용 56.6GJ로 기존 CO2 전해 시스템 중 최저치를 기록했다.</li>
+    <li>황화물 전고체 배터리는 입자크기 최적화로 4000사이클에서 80% 용량을 유지했고, QuantumScape는 캘리포니아에서 고체배터리 파일럿 생산에 착수했다.</li>
+    <li>IEA는 2025년 전 세계 수전해 설비 용량이 4GW를 돌파(전년比 2배)했지만 2030년까지의 프로젝트 파이프라인은 오히려 27Mt로 위축됐다고 밝혔다.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://consensus.app/papers/details/57cc9c784f8858aba708a3f80ecb09fb/?utm_source=claude_code" target="_blank" rel="noopener">Cu-Zn 2D 배위고분자, CO2→에탄올 전환 FE 92.3% 달성</a></h3>
+    <div class="src">Small (Wiley) · 2026 · <code>CO2RR</code> <code>electrocatalysis</code></div>
+    <p>공간적으로 분리된 Cu/Zn-S4 이중 활성점을 가진 2차원 공액 배위고분자(BHT-Cu0.8-Zn0.2)로 CO2를 에탄올로 선택 전환, 126.7 mA/cm²에서 패러데이 효율 92.3%, 150시간 안정성을 확보했다. 톤당 에탄올 생산 에너지비용 56.6GJ로 기존 보고된 CO2 전해 시스템 중 최저치다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://consensus.app/papers/details/72ed5c88684e59cab764b971b7269e54/?utm_source=claude_code" target="_blank" rel="noopener">황화물 전고체 배터리, 입자크기 최적화로 장수명 구현</a></h3>
+    <div class="src">Advanced Materials · 2026 · <code>solid-state</code> <code>Li-metal battery</code></div>
+    <p>LiPSCl 황화물 고체전해질의 입경 분포(D10/D50/D90 비율)를 정밀 제어해 계층적 이온전도 네트워크를 구성, 0.25C에서 202.2mAh/g의 가역용량과 3C·5C에서 각각 4000사이클 후 81.5%·80% 용량 유지율을 달성했다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://consensus.app/papers/details/6bad3b7b60855321b168422d619b3edc/?utm_source=claude_code" target="_blank" rel="noopener">이중쉘 구조로 음이온교환막(AEM) 수전해 2000시간 안정 구동</a></h3>
+    <div class="src">Science Advances · 2026 · <code>AEM electrolysis</code> <code>green hydrogen</code></div>
+    <p>세륨 유도 이중쉘 CeO2/LaCoO3 촉매가 표면 국소 알칼리도를 높여 부식을 억제, 산업 적용 수준인 3A/cm²·1.88V에서 2000시간 이상의 장기 안정성을 시연했다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://consensus.app/papers/details/98f52b7d859b595bbf33208f7b0cabd3/?utm_source=claude_code" target="_blank" rel="noopener">지속가능 바이오리파이너리를 위한 리그닌 통합 밸로리제이션 리뷰</a></h3>
+    <div class="src">Molecules (MDPI) · 2026 · <code>lignin valorization</code> <code>biorefinery</code></div>
+    <p>리그닌 해중합의 촉매적·산화적·생물학적 접근을 종합하고, 화학-효소 하이브리드 시스템·연속흐름 반응기 등 신기술이 상용화 확장성을 어떻게 개선할 수 있는지 정리한 리뷰다. 리그닌 소스별 선택적 해중합 촉매 설계가 핵심 과제로 제시됐다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://consensus.app/papers/details/c220251d4518537488d53656bf19590e/?utm_source=claude_code" target="_blank" rel="noopener">금속 없는 붕소도핑 탄화질소 촉매로 PET 해중합 90%+ 수율</a></h3>
+    <div class="src">ChemSusChem (Wiley) · 2026 · <code>PET recycling</code> <code>plastics upcycling</code></div>
+    <p>붕소 도핑으로 형성된 프러스트레이티드 루이스 페어(FLP)가 PET의 카르보닐기를 활성화해 글리콜리시스·메탄올리시스 모두에서 BHET·DMT 단량체 수율 90% 이상을 기록했으며, 10회 재사용에도 성능 저하가 없었다.</p>
+  </div>
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.iea.org/reports/breakthrough-agenda-report-2026/hydrogen" target="_blank" rel="noopener">IEA "Breakthrough Agenda" 2026 — 수전해 설비 4GW 돌파, 그러나 파이프라인은 위축</a></h3>
+    <div class="src">IEA · 2026</div>
+    <p>2025년 전 세계 저탄소 수소 생산량이 1Mt에 근접했고 전해조 설비 용량은 전년 대비 2배인 4GW를 넘어섰다. 그러나 2030년까지의 프로젝트 파이프라인은 지연·보류·취소가 겹치며 27Mt로 축소됐다고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/mesc/battery-materials-processing-grants" target="_blank" rel="noopener">美 DOE, 배터리 소재·제조·재활용에 5억 달러 자금지원 공고</a></h3>
+    <div class="src">U.S. Department of Energy · 2026</div>
+    <p>DOE가 국내 배터리 소재 가공·제조·재활용 시설 구축을 위한 최대 5억 달러 규모의 자금지원기회(NOFO)를 개설했다. 초당파적 인프라법에 따라 2022~2026 회계연도에 연 6억 달러가 배정된 배터리 소재 가공 보조금 프로그램의 일환이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://eplca.jrc.ec.europa.eu/EU_BatteryRegulation_Art7.html" target="_blank" rel="noopener">EU, 산업용 배터리 탄소발자국(CFB-IND) 산정방법 시행</a></h3>
+    <div class="src">European Commission JRC · 2026-02-18 시행</div>
+    <p>EU 배터리규정에 따른 산업용 배터리 탄소발자국 산정방법(CFB-IND)이 2월 18일부로 시행되며 기업들은 추정치가 아닌 검증된 데이터 수집 체계로 전환해야 한다. 7월 26일까지는 공급망 실사(due diligence) 공식 가이드라인도 발표될 예정이다.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/07/02/electrolyzer/verde-hydrogen-secures-25mw-electrolyzer-supply-award-for-flagship-off-grid-green-hydrogen-mega-project" target="_blank" rel="noopener">VERDE HYDROGEN, 중국 China Coal Energy Group과 25MW 전해조 공급계약</a></h3>
+    <div class="src">Fuel Cells Works · 2026-07-02</div>
+    <p>오프그리드 대형 그린수소 프로젝트에 25MW급 전해조를 공급하는 계약을 체결했다고 발표했다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://reneweconomy.com.au/australian-green-hydrogen-startup-signs-deal-to-deliver-its-first-large-scale-electrolyser/amp/" target="_blank" rel="noopener">호주 Hysata, 창립 5주년 만에 첫 대형 전해조 수출계약 체결</a></h3>
+    <div class="src">RenewEconomy · 2026-07-04</div>
+    <p>울런공대에서 개발된 전해조 기술로 기존 대비 20% 효율 향상을 내세우는 Hysata가 2027년 상반기 인도를 목표로 첫 대형 전해조 수출 계약을 확보했다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://insideevs.com/news/786661/quantumscape-solid-state-battery-production-eagle-cto-interview-2026/" target="_blank" rel="noopener">QuantumScape, 캘리포니아서 고체배터리 파일럿 생산 개시</a></h3>
+    <div class="src">InsideEVs · 2026</div>
+    <p>새너제이 사무실에서 파일럿 배터리 생산을 시작했다고 밝히며 CEO 시바 시바람은 이를 "키티호크의 순간"이라 표현했다. 상용화를 향한 의미 있는 진전으로 평가된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.prnewswire.com/news-releases/denovia-advances-the-ark-from-launch-to-commercial-scale-up-targeting-the-trillion-dollar-plastic-and-textile-waste-opportunity-302792927.html" target="_blank" rel="noopener">Denovia, 텍스타일 폐기물에서 순도 98.3% 테레프탈산(TPA) 회수</a></h3>
+    <div class="src">PR Newswire (Denovia 공식 보도자료) · 2026</div>
+    <p>저온 해중합 공정으로 오염된 혼합 섬유 폐기물을 수 분 내에 버진급 순도(98.3%)의 TPA 단량체로 전환하는 기술을 상업화 단계로 확장하고 있다고 발표했다.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <p class="quiet">— 검증 가능한 1차 링크(DOI)를 확보한 신규 ChemRxiv/arXiv 프리프린트가 없어 이번 회차는 컷 처리함 —</p>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://consensus.app/papers/details/57cc9c784f8858aba708a3f80ecb09fb/?utm_source=claude_code" target="_blank" rel="noopener">Small — Cu-Zn 2D coordination polymer CO2RR to ethanol</a></li>
+    <li><a href="https://consensus.app/papers/details/72ed5c88684e59cab764b971b7269e54/?utm_source=claude_code" target="_blank" rel="noopener">Advanced Materials — Sulfide particle size for ASSLBs</a></li>
+    <li><a href="https://consensus.app/papers/details/6bad3b7b60855321b168422d619b3edc/?utm_source=claude_code" target="_blank" rel="noopener">Science Advances — Double-shelled AEMWE</a></li>
+    <li><a href="https://consensus.app/papers/details/98f52b7d859b595bbf33208f7b0cabd3/?utm_source=claude_code" target="_blank" rel="noopener">Molecules — Integrated lignin valorization pathways</a></li>
+    <li><a href="https://consensus.app/papers/details/c220251d4518537488d53656bf19590e/?utm_source=claude_code" target="_blank" rel="noopener">ChemSusChem — FLP boron-doped carbon nitride PET depolymerization</a></li>
+    <li><a href="https://www.iea.org/reports/breakthrough-agenda-report-2026/hydrogen" target="_blank" rel="noopener">IEA — Breakthrough Agenda Report 2026: Hydrogen</a></li>
+    <li><a href="https://www.energy.gov/mesc/battery-materials-processing-grants" target="_blank" rel="noopener">U.S. DOE — Battery Materials Processing Grants</a></li>
+    <li><a href="https://eplca.jrc.ec.europa.eu/EU_BatteryRegulation_Art7.html" target="_blank" rel="noopener">European Commission JRC — EU Battery Regulation Art. 7 (CFB-IND)</a></li>
+    <li><a href="https://fuelcellsworks.com/2026/07/02/electrolyzer/verde-hydrogen-secures-25mw-electrolyzer-supply-award-for-flagship-off-grid-green-hydrogen-mega-project" target="_blank" rel="noopener">Fuel Cells Works — VERDE HYDROGEN 25MW electrolyzer deal</a></li>
+    <li><a href="https://reneweconomy.com.au/australian-green-hydrogen-startup-signs-deal-to-deliver-its-first-large-scale-electrolyser/amp/" target="_blank" rel="noopener">RenewEconomy — Hysata first large-scale electrolyser export</a></li>
+    <li><a href="https://insideevs.com/news/786661/quantumscape-solid-state-battery-production-eagle-cto-interview-2026/" target="_blank" rel="noopener">InsideEVs — QuantumScape solid-state pilot production</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/denovia-advances-the-ark-from-launch-to-commercial-scale-up-targeting-the-trillion-dollar-plastic-and-textile-waste-opportunity-302792927.html" target="_blank" rel="noopener">PR Newswire — Denovia textile-to-TPA recycling</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
