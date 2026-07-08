@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-07-08</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-08 (수) · 최근 24~72시간 · 전기화학·배터리·CO2RR·수전해·바이오매스·플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>PET 화학적 재활용에서 금속 촉매 없는 <code>FLP</code>(좌절 루이스쌍) 붕소-탄소질화물 촉매가 90% 이상 단량체 수율을 달성 — 순환경제용 그린 촉매 대안 부상.</li>
+    <li>고체전지 분야는 Li-S 전지용 3층 고분자 전해질(JACS)로 리튬 음극·황 양극 계면을 동시 안정화하는 설계가 발표됨.</li>
+    <li>AEM 수전해(그린수소)에서는 세륨 유도 이중쉘 촉매가 2000시간 이상 산업급 안정성(3 A/cm² @1.88V)을 입증.</li>
+    <li>DOE가 배터리 소재 가공·재활용에 5억 달러 규모 신규 펀딩 공고를 발표해 공급망 강화에 나섬.</li>
+    <li>유럽 배터리 기가팩토리(Eni·Hithium)와 아시아 수전해 장비 수출(Accelera·Guofu)이 동시에 진전되며 공급망 전반이 확장 국면.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cssc.202502554" target="_blank" rel="noopener">Frustrated Lewis Pairs 기반 붕소도핑 탄소질화물 — 금속 없는 PET 해중합 촉매</a></h3>
+    <div class="src">ChemSusChem (Wiley) · Sun et al., 2026-01</div>
+    <p>붕소 도핑 탄소질화물(B-CN)에 형성된 좌절 루이스쌍이 PET의 카르보닐기를 활성화하고 알코올 탈양성자화를 동시에 촉진해, 글리콜분해·메탄올분해에서 BHET·DMT 단량체 수율 90% 이상을 달성했다. 10회 반복 사용에도 성능 저하가 없어 금속 촉매를 대체할 그린 재활용 경로로 주목된다. <code>PET</code> <code>화학적 재활용</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c18042" target="_blank" rel="noopener">3층 고분자 전해질로 전고체 Li-S 전지 다중황화물·리튬음극 동시 안정화</a></h3>
+    <div class="src">Journal of the American Chemical Society · Lyu et al., 2026</div>
+    <p>단일 캐스팅 공정으로 제작한 자기분리형 3층 고분자 전해질이 황 양극에서 다중황화물 셔틀을 억제하는 동시에 리튬 음극의 도금·박리를 안정화한다. 초기 방전용량 1369 mAh/g(이론값의 81.7%)를 달성하고 0.2C에서 50사이클 안정 구동을 확인했다. <code>solid-state</code> <code>Li-S battery</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.science.org/doi/10.1126/sciadv.aeb8831" target="_blank" rel="noopener">세륨 유도 이중쉘 구조로 음이온교환막 수전해(AEMWE) 장시간 안정성 확보</a></h3>
+    <div class="src">Science Advances · Liu et al., 2026</div>
+    <p>CeO2/LaCoO3 이중쉘 촉매가 국소 알칼리도를 높여 양극 부식을 억제, 산업 수준 전류밀도 3 A/cm²를 1.88V에서 구현하고 2000시간 이상 안정적으로 작동했다. 비귀금속 기반 그린수소 생산 상용화에 중요한 진전이다. <code>AEMWE</code> <code>green hydrogen</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.5c19695" target="_blank" rel="noopener">CuI 함량 조절로 CO2 전기환원 에탄올 선택도·전류밀도 동시 향상</a></h3>
+    <div class="src">Journal of the American Chemical Society · N. Wang et al., 2026</div>
+    <p>Cu2O 표면에 배위 착물을 코팅해 CuI 원자비율을 9.7~83.6%로 조절, 에탄올 패러데이 효율을 최대 56.8%(부분전류밀도 439.8 mA/cm²)까지 끌어올렸다. C2+ 전체 패러데이 효율은 87.3%, 110시간 안정 전해가 확인됐다. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy.gov/articles/energy-department-announces-500-million-strengthen-domestic-critical-materials-processing" target="_blank" rel="noopener">美 DOE, 배터리 소재 가공·제조·재활용에 5억 달러 신규 펀딩 공고</a></h3>
+    <div class="src">U.S. Department of Energy (공식) · 2026-03 공고, 이행 진행 중</div>
+    <p>DOE가 국내 핵심광물 가공, 배터리 소재 재활용, 배터리 부품 제조 확대를 위한 최대 5억 달러 규모 자금지원 공고(NOFO)를 냈다. 신규 상업 규모 프로젝트는 최소 1억 달러, 기존 설비 증설·개선은 최소 5000만 달러 지원을 받는다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/061626-south-koreas-clean-hydrogen-plan-to-keep-pace-with-market-development-govt-official" target="_blank" rel="noopener">한국 정부, 2026년 수소발전 입찰시장 물량 확정 절차 진행</a></h3>
+    <div class="src">S&amp;P Global (보도) · 2026-06 <span class="unverified">[2차]</span></div>
+    <p>기후에너지환경부가 청정수소 발전 500GWh/년, 일반수소 발전 930GWh/년 규모의 2026년 입찰시장 물량안을 행정예고했다. 담당 국장은 "산업 육성과 청정수소 전환을 균형 있게 추진하겠다"고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://commission.europa.eu/topics/competitiveness/green-deal-industrial-plan/european-critical-raw-materials-act_en" target="_blank" rel="noopener">EU 배터리 실사(Due Diligence) 지침, 7월 26일로 재연기</a></h3>
+    <div class="src">European Commission (공식 정책 페이지) · 2026-07 <span class="unverified">[2차 종합]</span></div>
+    <p>코발트·천연흑연·리튬·니켈 등 배터리 핵심원료의 책임조달 실사 세부 가이드라인 발표가 당초 2025년 2월에서 2026년 7월 26일로 재차 지연됐다. 실제 의무 적용 시점도 2027년 8월로 미뤄져 기업들의 이행 준비 기간이 늘었다.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.energy-storage.news/european-battery-manufacturing-boost-eni-storage-hithium-lfp-gigafactory-milestones-italy-spain/" target="_blank" rel="noopener">유럽 배터리 제조 탄력 — Eni·Hithium LFP 기가팩토리 이정표 달성</a></h3>
+    <div class="src">Energy-Storage.News · 2026-07</div>
+    <p>Eni Storage Systems가 이탈리아에서 2030년까지 연간 16GWh 규모 LFP 셀 기가팩토리 착공에 들어갔고, 중국 Hithium은 스페인 정부로부터 배터리·ESS 공장용 8100만 유로 보조금을 확보했다(총 투자 4억500만 유로). Eni는 칠레 리튬 프로젝트 지분 25%도 인수하며 공급망 수직계열화에 나섰다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/07/04/clean-energy/fuel-cell-and-hydrogen-news-highlights-from-china-june-29-july-03-2026" target="_blank" rel="noopener">Accelera 35MW PEM 전해조 나이아가라폴스 공급, Guofu 수소장비 모로코 수출</a></h3>
+    <div class="src">Fuel Cells Works · 2026-07-04</div>
+    <p>커민스 자회사 Accelera가 린데그룹의 뉴욕 나이아가라폴스 그린수소 플랜트에 35MW급 PEM 수전해 시스템을 인도했다. 중국 Guofu Hydrogen은 모로코 청정수소 우수센터에 10Nm³/h 수소생산 유닛과 10kW 연료전지 열병합 시스템을 선적하는 등 아시아發 수전해 장비 수출이 이어지고 있다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energydaily.co.kr/news/articleView.html?idxno=200713" target="_blank" rel="noopener">SNE리서치, 7월 16일 'SNE Battery Day 2026' 개최 — 차세대 배터리·ESS 조망</a></h3>
+    <div class="src">에너지데일리 · 2026-07</div>
+    <p>SNE리서치가 서울 EL타워에서 'Next Battery Scenarios: New Market Frontiers &amp; Future of Battery Recycling'을 주제로 컨퍼런스를 연다. 삼성SDI는 로보틱스·휴머노이드·UAM용 차세대 배터리 기술을, REPT BATTERO는 대용량 ESS 셀 양산·글로벌 진출 전략을 발표할 예정이다.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2607.02316" target="_blank" rel="noopener">농축 전해질의 벌크 전기화학 임피던스에 대한 분자 수준 해석 모델</a></h3>
+    <div class="src">arXiv:2607.02316 · 2026-07</div>
+    <p>기존 Debye-Falkenhagen 모델과 달리 전해질 농도에 대한 가정 없이도 임피던스 스펙트럼을 해석할 수 있는 'itinerant oscillator' 모델을 제안, 이온성 액체 분자동역학 시뮬레이션으로 검증했다. 배터리·전기화학 임피던스 분석의 미시적 해석 공백을 메우는 접근이다. <code>electrolyte</code> <code>impedance</code></p>
+  </div>
+</div>
+<p class="quiet">— 그 외 신규 프리프린트는 dedup 검증 결과 과거 브리핑과 중복되거나 발표 시점이 오래되어 제외함 —</p>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Sun, Y. et al. ChemSusChem (2026): https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cssc.202502554</li>
+    <li>Lyu, H. et al. J. Am. Chem. Soc. (2026): https://pubs.acs.org/doi/10.1021/jacs.5c18042</li>
+    <li>Liu, Y. et al. Science Advances (2026): https://www.science.org/doi/10.1126/sciadv.aeb8831</li>
+    <li>Wang, N. et al. J. Am. Chem. Soc. (2026): https://pubs.acs.org/doi/10.1021/jacs.5c19695</li>
+    <li>U.S. DOE — $500M NOFO: https://www.energy.gov/articles/energy-department-announces-500-million-strengthen-domestic-critical-materials-processing</li>
+    <li>S&amp;P Global — Korea clean hydrogen plan: https://www.spglobal.com/energy/en/news-research/latest-news/energy-transition/061626-south-koreas-clean-hydrogen-plan-to-keep-pace-with-market-development-govt-official</li>
+    <li>European Commission — Critical Raw Materials Act: https://commission.europa.eu/topics/competitiveness/green-deal-industrial-plan/european-critical-raw-materials-act_en</li>
+    <li>Energy-Storage.News — Eni/Hithium gigafactory milestones: https://www.energy-storage.news/european-battery-manufacturing-boost-eni-storage-hithium-lfp-gigafactory-milestones-italy-spain/</li>
+    <li>Fuel Cells Works — China hydrogen news June 29–July 3 2026: https://fuelcellsworks.com/2026/07/04/clean-energy/fuel-cell-and-hydrogen-news-highlights-from-china-june-29-july-03-2026</li>
+    <li>에너지데일리 — SNE Battery Day 2026: https://www.energydaily.co.kr/news/articleView.html?idxno=200713</li>
+    <li>arXiv:2607.02316: https://arxiv.org/abs/2607.02316</li>
+  </ol>
+</footer>
+</div>
+</body>
+</html>
