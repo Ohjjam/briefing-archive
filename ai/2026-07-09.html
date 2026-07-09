@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 — 2026-07-09</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026년 7월 9일 (목) · 지난 24~48시간 프론티어 AI 동향</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li><strong>OpenAI</strong>가 차세대 음성 모델 <code>GPT-Live</code>를 공개하고 ChatGPT Voice를 전면 개편, 전 세계 롤아웃을 시작했다 (7/8).</li>
+    <li>OpenAI 연구팀은 코딩 벤치마크 <code>SWE-Bench Pro</code> 감사 결과 과제의 약 30%가 결함이 있다고 밝히고, 앞서 권장했던 채택 권고를 철회했다 (7/8).</li>
+    <li><strong>xAI</strong>는 Grok Voice에 다국어 음성 21종을 추가했다 (7/6).</li>
+    <li><strong>Mistral AI</strong>는 단일 RGB 카메라만으로 로봇을 주행시키는 <code>Robostral Navigate</code>를 공개했다 (7/8).</li>
+    <li>Google·Anthropic·Meta는 지난 24시간 내 공식 발표가 확인되지 않음. <code>Gemini 3.5 Pro</code> 7/17 출시설은 언론 보도일 뿐 Google 공식 확인은 없음 <span class="unverified">[미확인]</span>.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">GPT-Live 공개 — ChatGPT Voice 전면 개편</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-07-08</div>
+    <p>OpenAI가 풀-듀플렉스(동시 듣기·말하기) 아키텍처 기반의 신형 음성 모델 <code>GPT-Live-1</code>과 <code>GPT-Live-1 mini</code>를 공개하고 iOS·Android·웹 전반에 롤아웃을 시작했다. 복잡한 질의는 백그라운드에서 GPT-5.5로 위임 처리하며 대화 흐름은 끊기지 않는다. Go/Plus/Pro는 GPT-Live-1이, 무료 사용자는 mini가 기본값이 된다.</p>
+    <blockquote>"GPT‑Live is built on a full-duplex architecture, meaning it can listen and speak at the same time."</blockquote>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">코딩 벤치마크 SWE-Bench Pro, 과제 30% "결함" 판정</a></h3>
+    <div class="src">OpenAI Research · 2026-07-08</div>
+    <p>OpenAI가 자체 감사를 통해 널리 쓰이는 코딩 벤치마크 SWE-Bench Pro의 731개 공개 과제 중 27~34%가 과도하게 엄격한 테스트, 불완전한 명세 등으로 결함이 있다고 밝혔다. 이전에 채택을 권고했던 입장을 공식 철회했다.</p>
+    <blockquote>"we estimate that ~30% of SWE-bench Pro tasks are broken"</blockquote>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <p class="quiet">— Google DeepMind·blog.google 공식 채널 기준 지난 24시간 내 신규 발표 없음 —</p>
+  <div class="card">
+    <h3><a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm" target="_blank" rel="noopener">Gemini 3.5 Pro 7/17 출시설 <span class="unverified">[미확인]</span></a></h3>
+    <div class="src">Tech Times 등 IT 매체 보도 · 2026-07-08 (Google 공식 확인 없음)</div>
+    <p>복수 IT 매체가 Google이 <code>Gemini 3.5 Pro</code>를 기존 아키텍처를 폐기하고 재설계해 7월 17일 출시할 것이라고 보도했다. 200만 토큰 컨텍스트, 딥싱크 추론 레이어 등이 거론되나 blog.google·deepmind.google 어디에도 해당 발표는 게재되어 있지 않다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <p class="quiet">— anthropic.com/news 기준 지난 24시간 내 신규 발표 없음 (최근 게시물은 7/6 "The Making of Claude Code" 피처 기사) —</p>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid">
+  <p class="quiet">— ai.meta.com/blog 기준 지난 24시간 내 주목할 업데이트 없음 —</p>
+</div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news/new-flagship-voices" target="_blank" rel="noopener">Grok Voice, 다국어 음성 21종 신규 추가</a></h3>
+    <div class="src">x.ai (SpaceXAI) 공식 뉴스 · 2026-07-06</div>
+    <p>xAI가 Grok Voice에 새로운 다국어 음성 21종을 추가하고 기존 5종 음성의 자연스러움도 개선했다고 밝혔다. Voice Agent API, Text to Speech API, Grok Voice Agent Builder 전반에 반영된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral AI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/robostral-navigate" target="_blank" rel="noopener">Robostral Navigate — 단일 카메라 로봇 내비게이션 모델</a></h3>
+    <div class="src">Mistral AI 공식 블로그 · 2026-07-08</div>
+    <p>Mistral이 첫 임바디드 내비게이션 모델 Robostral Navigate(80억 파라미터)를 공개했다. 깊이 센서·라이다 없이 RGB 카메라 하나와 자연어 지시만으로 로봇이 복잡한 환경을 주행하며, R2R-CE 벤치마크에서 76.6%의 성공률로 기존 멀티센서 방식을 능가했다. 전량 시뮬레이션으로 학습됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid">
+  <p class="quiet">— 위 6개사 외 추가로 검증 가능한 1차 출처 기반 동향 없음 —</p>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">OpenAI — Introducing GPT-Live (2026-07-08)</a></li>
+    <li><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/" target="_blank" rel="noopener">OpenAI — Separating signal from noise in coding evaluations (2026-07-08)</a></li>
+    <li><a href="https://x.ai/news/new-flagship-voices" target="_blank" rel="noopener">x.ai — 21 New Flagship Grok Voices (2026-07-06)</a></li>
+    <li><a href="https://mistral.ai/news/robostral-navigate" target="_blank" rel="noopener">Mistral AI — Introducing Robostral Navigate (2026-07-08)</a></li>
+    <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic Newsroom (확인용, 신규 발표 없음)</a></li>
+    <li><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Google DeepMind Blog (확인용, 신규 발표 없음)</a></li>
+    <li><a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm" target="_blank" rel="noopener">Tech Times — Gemini 3.5 Pro 7/17 출시설 보도 [미확인] (2026-07-08)</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
