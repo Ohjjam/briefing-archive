@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 일일 브리핑 - 2026-07-10</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>AI 일일 브리핑</h1>
+  <div class="meta">2026-07-10 · 지난 24시간</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>OpenAI가 <code>gpt-5.6</code>(Sol/Luna/Terra 3종)과 새로운 ChatGPT Work 에이전트를 공개하며 ChatGPT·Codex·API 전반에 순차 배포를 시작했다.</li>
+    <li>Anthropic은 벤 버냉키를 장기수혜신탁(Long-Term Benefit Trust) 이사로 임명하고, 사용 습관을 되돌아보는 "Reflect with Claude" 기능을 선보였다.</li>
+    <li>xAI가 코딩·에이전트 작업에 특화된 <code>grok-4.5</code>를 출시했으며, 일론 머스크는 이를 "Opus-class model"이라 소개했다.</li>
+    <li>Mistral AI가 시뮬레이션만으로 학습된 로봇 내비게이션 모델 Robostral Navigate를 공개했다.</li>
+    <li><span class="unverified">[미확인]</span> 구글이 아키텍처 전면 재설계를 이유로 <code>gemini-3.5-pro</code> 출시를 7월 17일로 연기했다는 보도가 나왔으나, 구글 공식 채널의 확인은 아직 없다.</li>
+  </ul>
+</div>
+
+<h2 class="section">OpenAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">GPT-5.6 공개: 야망에 맞춰 확장되는 프론티어 지능</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-07-09</div>
+    <p>OpenAI가 <code>gpt-5.6</code>을 ChatGPT, Codex, API 전반에 공개했다. 가장 강력한 Sol, 속도에 특화된 Luna, 균형을 맞춘 Terra 세 가지 버전으로 출시되며 향후 24시간에 걸쳐 순차 롤아웃된다. 공식 발표는 <blockquote>"GPT-5.6 delivers a step change in design judgment."</blockquote>라고 설명하며 인터페이스 설계 판단력이 크게 개선됐다고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">ChatGPT, 가장 야심찬 업무의 파트너가 되다</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-07-09</div>
+    <p>OpenAI가 새로운 ChatGPT Work 에이전트, Codex가 내장된 업그레이드 데스크톱 앱, 신규 호스팅 사이트 서비스를 함께 발표했다. Work 에이전트는 <code>gpt-5.6</code> 기반으로 연결된 앱과 파일에서 맥락을 수집해 문서·스프레드시트·프레젠테이션을 작성할 수 있다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">GPT-Live 공개: 완전 양방향 음성 모델</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-07-08</div>
+    <p>OpenAI가 <code>gpt-live-1</code>과 경량형 <code>gpt-live-1-mini</code>를 공개했다. 각각 유료 및 무료 사용자의 기본 음성 모델로 적용되며, 더 자연스러운 억양과 강화된 음성 안전장치를 갖췄다고 밝혔다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/" target="_blank" rel="noopener">GPT-5.6, Microsoft 365 Copilot의 선호 모델로 채택</a></h3>
+    <div class="src">OpenAI 공식 블로그 · 2026-07-09</div>
+    <p>Microsoft 365 Copilot이 <code>gpt-5.6</code>을 선호 모델로 채택했다고 OpenAI가 공식 발표했다. 기업용 생산성 도구 전반에 최신 모델이 확대 적용되는 흐름을 보여준다.</p>
+  </div>
+</div>
+
+<h2 class="section">Google</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm" target="_blank" rel="noopener">구글, Gemini 3.5 Pro 출시를 7월 17일로 연기<span class="unverified">[미확인]</span></a></h3>
+    <div class="src">Tech Times (제3자 매체) · 2026-07-08 <span class="unverified">[미확인]</span></div>
+    <p>복수의 매체 보도에 따르면 구글 딥마인드가 기존 2.5 Pro 기반 아키텍처를 완전히 폐기하고 새로 학습을 진행하면서 <code>gemini-3.5-pro</code> 출시가 7월 17일로 미뤄졌다. 200만 토큰 컨텍스트 창과 Deep Think 추론 레이어가 탑재될 것으로 알려졌으나, 이 내용은 구글 또는 딥마인드 공식 블로그에서는 아직 확인되지 않았다.</p>
+  </div>
+</div>
+
+<h2 class="section">Anthropic</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/hard-questions" target="_blank" rel="noopener">어려운 질문을 초대합니다</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-07-09</div>
+    <p>Anthropic이 AI에 대한 대중의 가장 어려운 질문을 받고, 이를 해결하는 과정을 투명하게 공개하겠다고 발표했다. 회사의 답변 과정을 외부에 보여주겠다는 약속이 핵심이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/ben-bernanke" target="_blank" rel="noopener">벤 버냉키, Anthropic 장기수혜신탁 이사로 임명</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-07-09</div>
+    <p>전 연방준비제도 의장 벤 버냉키가 Anthropic의 Long-Term Benefit Trust 이사로 임명됐다. 이 신탁은 회사의 장기적 사명과 안전 원칙을 감독하는 역할을 한다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.anthropic.com/news/reflect-with-claude" target="_blank" rel="noopener">Claude 사용을 되돌아보는 기능 도입</a></h3>
+    <div class="src">Anthropic 공식 뉴스룸 · 2026-07-09</div>
+    <p>웹과 데스크톱에 월간 리캡 및 포커스 설정 기능이 추가됐다. 휴식 알림, 방해 금지 시간, 주로 사용한 주제와 최고 활동 요일·시간대를 보여주는 사용 인사이트가 포함된다.</p>
+  </div>
+</div>
+
+<h2 class="section">Meta</h2>
+<div class="grid"><p class="quiet">— 지난 24시간 주목할 업데이트 없음 (가장 최근 관련 리서치는 7월 7일 Brain2Qwerty 발표로, 24시간 기준에는 포함되지 않음) —</p></div>
+
+<h2 class="section">xAI</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener">Grok 4.5 공개</a></h3>
+    <div class="src">x.ai (xAI 공식) · 2026-07-08</div>
+    <p>xAI가 코딩과 에이전트 작업에 특화해 처음부터 새로 학습한 <code>grok-4.5</code>를 출시했다. 1.5조 파라미터 규모의 V9 기반 모델로 Cursor와 협업해 다중 저장소에 걸친 장시간 작업과 최소한의 개입으로 수백 회의 도구 호출을 처리하도록 훈련됐다. 일론 머스크는 이를 <blockquote>"an Opus-class model, but faster, more token-efficient and lower cost"</blockquote>라고 설명했으며, 가격은 입력 100만 토큰당 $2, 출력 100만 토큰당 $6으로 Claude Opus 4.8(입력 $5·출력 $25) 대비 크게 저렴하다.</p>
+  </div>
+</div>
+
+<h2 class="section">Mistral</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://mistral.ai/news/robostral-navigate" target="_blank" rel="noopener">Robostral Navigate 공개</a></h3>
+    <div class="src">Mistral AI 공식 블로그 · 2026-07-08</div>
+    <p>Mistral AI가 로봇 내비게이션에 특화된 첫 모델 Robostral Navigate를 발표했다. 단일 카메라와 기본적인 언어 프롬프트만으로 복잡한 환경을 탐색할 수 있으며, 특정 하드웨어에 종속되지 않고 전량 시뮬레이션으로 학습됐다.</p>
+  </div>
+</div>
+
+<h2 class="section">기타 주목할 만한 동향</h2>
+<div class="grid"><p class="quiet">— 지난 24시간 내 검증 가능한 출처를 갖춘 추가 이슈를 확인하지 못함 —</p></div>
+
+<footer>
+  <p>출처 목록</p>
+  <ol>
+    <li>GPT-5.6: Frontier intelligence that scales with your ambition — <a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">https://openai.com/index/gpt-5-6/</a></li>
+    <li>ChatGPT is now a partner for your most ambitious work — <a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">https://openai.com/index/chatgpt-for-your-most-ambitious-work/</a></li>
+    <li>Introducing GPT-Live — <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">https://openai.com/index/introducing-gpt-live/</a></li>
+    <li>GPT-5.6 is now the preferred model in Microsoft 365 Copilot — <a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/" target="_blank" rel="noopener">https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/</a></li>
+    <li>Gemini 3.5 Pro Targets July 17 as DeepSeek's July 24 Deadline Hits Developers Now (Tech Times, 미확인) — <a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm</a></li>
+    <li>Inviting hard questions — <a href="https://www.anthropic.com/news/hard-questions" target="_blank" rel="noopener">https://www.anthropic.com/news/hard-questions</a></li>
+    <li>Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust — <a href="https://www.anthropic.com/news/ben-bernanke" target="_blank" rel="noopener">https://www.anthropic.com/news/ben-bernanke</a></li>
+    <li>Introducing a way to reflect on how you use Claude — <a href="https://www.anthropic.com/news/reflect-with-claude" target="_blank" rel="noopener">https://www.anthropic.com/news/reflect-with-claude</a></li>
+    <li>Introducing Grok 4.5 — <a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener">https://x.ai/news/grok-4-5</a></li>
+    <li>Introducing Robostral Navigate — <a href="https://mistral.ai/news/robostral-navigate" target="_blank" rel="noopener">https://mistral.ai/news/robostral-navigate</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
