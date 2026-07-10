@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>에너지·화학공학 모닝 브리프 — 2026-07-10</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-10 (금요일) · 최근 24~72시간 (논문은 최근 1~2주)</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>JACS 논문에서 AI 기반 베이지안 최적화·LLM·자율 로봇 실험을 결합해 PET 글리콜리시스용 Lewis 산-염기 촉매를 발굴, 20분 만에 BHET 수율 95%를 달성 — 화학적 재활용 촉매 개발 속도를 극적으로 단축.</li>
+    <li>NREL 연구진이 음이온교환막(AEM) 수전해 백금 촉매층의 이오노머·로딩 조건을 체계적으로 규명해, 저백금 조건에서도 성능·내구성을 유지할 설계 지침을 제시.</li>
+    <li>Advanced Materials 연구는 황화물 고체전해질 입자 크기 비율(D10/D50/D90)을 정밀 제어해 전고체 리튬금속전지가 4000사이클 후에도 80% 이상 용량을 유지함을 입증.</li>
+    <li>Bloomberg: Peak Energy가 캘리포니아에 미국 최초 그리드급 나트륨이온 배터리 상업 생산시설을 착공(7/8) — 리튬 대체 기술의 상업화가 실물 투자 단계로 진입.</li>
+    <li>DePoly가 스위스 몽테에 광활성 저온·상압 PET 해중합 쇼케이스 플랜트를 가동(7/6~7) — 버진 PTA 대비 탄소배출 최대 75% 절감을 표방.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1016/j.jcis.2026.140306" target="_blank" rel="noopener">Tuning the CO2 electrocatalytic reduction pathway via oxygen-locking effect in CuCr2O4/CuO heterostructures</a></h3>
+    <div class="src">Journal of Colloid and Interface Science · 2026 · Jing Yang 외 (Cr 도핑 CuO/CuCr2O4 헤테로접합)</div>
+    <p>Cr 도핑으로 형성된 CuCr2O4/CuO 계면이 격자산소를 가둬 구리 원자가 변화를 억제, C2+ 생성물 선택도 50.1%(−0.95V)를 장기 안정적으로 유지. 기존 Cu 기반 CO2RR 촉매의 고질적 비활성화 문제를 구조적으로 해결한 사례. <code>CO2RR</code> <code>electrocatalysis</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/adma.202522525" target="_blank" rel="noopener">Tailoring Sulfide Particle Size for All-Solid-State Lithium Metal Batteries</a></h3>
+    <div class="src">Advanced Materials · 2026 · Ziqi Zhang 외</div>
+    <p>Li6PS5Cl 고체전해질의 입도 분포(D10/D50/D90 비율)를 기계적 분쇄로 정밀 제어해 계층적 이온전도 네트워크를 구현, 4000/5000사이클에서 80% 안팎의 용량 유지율을 확보. 전고체전지 복합양극 설계의 정량 지침 제시. <code>solid-state</code> <code>Li-metal</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1021/acsami.5c20325" target="_blank" rel="noopener">Designing the Platinum Catalyst Layer for Improved Performance and Durability in Anion Exchange Membrane Water Electrolysis</a></h3>
+    <div class="src">ACS Applied Materials & Interfaces · 2026 · Melissa E. Kreider 외 (NREL)</div>
+    <p>AEM 수전해 음극 백금 촉매층에서 이오노머 종류·함량이 잉크 안정성과 계면 균질성을 좌우함을 규명. 0.6mg/cm² 이상에서는 로딩 증가 효과가 미미해, 저백금 PGM 절감 설계의 실질적 근거를 제공. <code>AEM</code> <code>green H2</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1021/jacs.5c20630" target="_blank" rel="noopener">Optimizing toward Discovery: AI-Driven Exploration of Lewis Acid-Base Catalysts for PET Glycolysis</a></h3>
+    <div class="src">Journal of the American Chemical Society · 2026 · Ye Yu 외</div>
+    <p>베이지안 최적화·LLM 임베딩·고속 로봇 실험을 결합한 자율 AI-화학자 플랫폼으로 11,160개 촉매 후보 공간을 탐색, 아연 피발레이트 기반 촉매로 20분 내 BHET 수율 95%를 달성. 폐PET 화학적 재활용 촉매 개발의 자동화 사례. <code>PET</code> <code>recycling</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/cssc.70646" target="_blank" rel="noopener">Selective Reductive Depolymerization of Lignin to Vanillin over a Ni-NiO-MnOx/Graphene Oxide Heterojunction Catalyst</a></h3>
+    <div class="src">ChemSusChem · 2026 · Padariya Mrugesh 외</div>
+    <p>그래핀옥사이드 지지 Ni-Mn 헤테로접합 촉매로 온화한 조건(30bar H2, 180℃)에서 다양한 리그닌 원료로부터 바닐린 수율 18.4wt%(선택도 84%)를 확보, 과수소화 부반응을 억제. 리그닌 발린 고부가화의 촉매 설계 원리 제시. <code>lignin</code> <code>biorefinery</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://doi.org/10.1007/s40820-026-02118-7" target="_blank" rel="noopener">Ligand-Wise Stripping Dictates Metal Ensemble Catalysts for Selective Oxidation of Biomass-Derived 5-Hydroxymethylfurfural</a></h3>
+    <div class="src">Nano-Micro Letters · 2026 · Junkai Li 외</div>
+    <p>리그닌 유래 질소도핑 탄소로 단일원자-클러스터 Co 이중 활성점을 단계적으로 제어, HMF를 FDCA로 산화하는 반응에서 98.76% 수율(55℃)을 달성. 바이오매스 플랫폼 화학물질 전환 촉매의 다중 활성점 설계 개념. <code>HMF</code> <code>FDCA</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.pcccr.go.kr/base/board/read?boardManagementNo=43&boardNo=4167&menuLevel=2&menuNo=92" target="_blank" rel="noopener">이산화탄소 포집·활용(CCU) 메가프로젝트, 실증부지 5곳 선정</a></h3>
+    <div class="src">대통령직속 국가기후위기대응위원회 / 과학기술정보통신부 · 2026-07 (6/19~7/19 공모 진행 중)</div>
+    <p>27개 컨소시엄이 신청한 CCU 실증부지 공모에서 5개 실증부지를 최종 선정, 2030 국가온실가스감축목표(NDC) 달성을 위한 CCU 상용화 기반을 마련. 발전·산업공정 배출 CO2를 유용 물질로 전환하는 국내 실증 규모가 본격 확대되는 단계. <code>CCUS</code> <code>정책</code></p>
+  </div>
+
+</div>
+<p class="quiet">— 그 외 정책·규제 동향은 이번 주기 검증 가능한 신규 발표를 확인하지 못했습니다(IEA·EU·DOE 발표는 대부분 6월 이전 자료의 재인용) —</p>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-08/california-chosen-for-peak-energy-s-sodium-ion-battery-plant" target="_blank" rel="noopener">California Chosen for Peak Energy's Sodium-Ion Battery Plant</a></h3>
+    <div class="src">Bloomberg · 2026-07-08</div>
+    <p>Peak Energy가 새크라멘토에 미국 최초의 그리드급 나트륨이온 에너지저장 상업 생산시설을 착공. AI 데이터센터發 전력수요 급증에 대응하는 대용량 저장장치로 리튬이온 대비 원가·안전성 우위를 내세움. <code>sodium-ion</code> <code>battery-manufacturing</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://asia.nikkei.com/business/energy/hydrogen-combustion-engines-emerge-as-cheap-alternative-to-fuel-cells" target="_blank" rel="noopener">Hydrogen combustion engines emerge as cheap alternative to fuel cells</a></h3>
+    <div class="src">Nikkei Asia · 2026-07-03~06</div>
+    <p>가와사키중공업·도요타 등이 연료전지보다 저렴한 수소 내연기관을 소형 발전기·스포츠카 등으로 확대 적용. 수소 모빌리티 보급의 비용 장벽을 낮추는 대안 경로로 부상. <code>hydrogen</code> <code>mobility</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://www.plasticstoday.com/materials/swiss-startup-depoly-launches-pet-depolymerization-plant" target="_blank" rel="noopener">DePoly Opens Swiss Plant to Recycle Plastic Waste</a></h3>
+    <div class="src">PlasticsToday · 2026-07-06~07</div>
+    <p>스위스 몽테에서 DePoly의 쇼케이스 플랜트가 가동을 시작, 광활성 화학반응으로 60분 이내·상온상압에서 PET를 원래 단량체로 분해. 버진 PTA 생산 대비 최대 75% 낮은 탄소배출을 표방하며 상업화 첫 실증 규모 시설로 주목. <code>PET</code> <code>chemical-recycling</code></p>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://fuelcellsworks.com/2026/07/06/news/taco-van-der-maten-hydrogen-and-ccus-market-to-shift-from-pilot-projects-to-bankable-deployment-in-2026" target="_blank" rel="noopener">Hydrogen and CCUS Market to Shift From Pilot Projects to Bankable Deployment in 2026</a></h3>
+    <div class="src">Fuel Cells Works (업계 전문가 기고) · 2026-07-06</div>
+    <p>업계 전문가 시각에서 2026년을 수소·CCUS 시장이 파일럿 단계에서 은행 대출 가능한(bankable) 상업 프로젝트 단계로 전환하는 분기점으로 진단. 오프테이크 계약·파이낸싱 구조가 향후 성패를 가를 핵심 변수로 지목. <code>CCUS</code> <code>hydrogen</code></p>
+  </div>
+
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3><a href="https://arxiv.org/abs/2606.24480" target="_blank" rel="noopener">Breaking Bottlenecks in Solid Electrolyte Discovery with Large Artificial Intelligence Models</a></h3>
+    <div class="src">arXiv:2606.24480 (cond-mat.mtrl-sci) · 제출 2026-06-23 · Eric Jianfeng Cheng 외 국제 공동연구진</div>
+    <p>차세대 금속전지 핵심소재인 고체전해질 탐색이 파편화된 데이터와 시뮬레이션 전이성 한계로 정체된 문제를, 머신러닝 원자간 포텐셜(MLIP)과 LLM을 결합한 폐루프 자율탐색 아키텍처로 돌파하는 방법론을 제시. <code>solid-state</code> <code>AI-discovery</code></p>
+  </div>
+
+</div>
+<p class="quiet">— 지난 1주 이내 게재된 ChemRxiv/arXiv 신규 프리프린트 중 과거 브리핑과 중복되지 않는 항목이 다수 확인되지 않아, 이번 주기는 프리프린트 1건으로 제한합니다 —</p>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>https://doi.org/10.1016/j.jcis.2026.140306 (Yang et al., J. Colloid Interface Sci., 2026)</li>
+    <li>https://doi.org/10.1002/adma.202522525 (Zhang et al., Advanced Materials, 2026)</li>
+    <li>https://doi.org/10.1021/acsami.5c20325 (Kreider et al., ACS Appl. Mater. Interfaces, 2026)</li>
+    <li>https://doi.org/10.1021/jacs.5c20630 (Yu et al., JACS, 2026)</li>
+    <li>https://doi.org/10.1002/cssc.70646 (Mrugesh et al., ChemSusChem, 2026)</li>
+    <li>https://doi.org/10.1007/s40820-026-02118-7 (Li et al., Nano-Micro Letters, 2026)</li>
+    <li>https://www.pcccr.go.kr/base/board/read?boardManagementNo=43&boardNo=4167&menuLevel=2&menuNo=92 (대통령직속 국가기후위기대응위원회)</li>
+    <li>https://www.bloomberg.com/news/articles/2026-07-08/california-chosen-for-peak-energy-s-sodium-ion-battery-plant</li>
+    <li>https://asia.nikkei.com/business/energy/hydrogen-combustion-engines-emerge-as-cheap-alternative-to-fuel-cells</li>
+    <li>https://www.plasticstoday.com/materials/swiss-startup-depoly-launches-pet-depolymerization-plant</li>
+    <li>https://fuelcellsworks.com/2026/07/06/news/taco-van-der-maten-hydrogen-and-ccus-market-to-shift-from-pilot-projects-to-bankable-deployment-in-2026</li>
+    <li>https://arxiv.org/abs/2606.24480 (Cheng et al., arXiv, 2026)</li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
