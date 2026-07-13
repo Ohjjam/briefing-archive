@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에너지·화학공학 모닝 브리프 · 2026-07-13</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>에너지·화학공학 모닝 브리프</h1>
+  <div class="meta">2026-07-13 (월) · 최근 24~72시간 · 전기화학·배터리·CO2RR·수전해·바이오매스·플라스틱</div>
+</header>
+
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>산과 알칼리를 결합한 탠덤 전해조로 CO2를 에틸렌 등 C2+ 물질로 바꾸는 <code>CO2RR</code> 연구가 Science Advances에 발표돼 400시간 안정성을 입증했다.</li>
+    <li>Nature Nanotechnology에 femtosecond 단위 양성자-전자 비동기화로 저이리듐 PEM 전해조 양극의 부식을 억제하는 메커니즘이 규명돼 <code>green hydrogen</code> 원가 절감에 단서를 제공했다.</li>
+    <li>3층 구조 황화물 전해질 설계로 리튬-유기 전고체전지가 4800사이클·90.2% 용량 유지를 달성해 <code>solid-state</code> 배터리 내구성 난제에 진전이 있었다.</li>
+    <li>INEOS가 노르웨이 Recuro와 열분해 기반 화학적 재활용 시설 건설 MOU를 체결(7/9)하며 유럽 플라스틱 재활용 인프라가 확장되고 있다.</li>
+    <li>한국은 기후에너지환경부로 수소 정책 기능이 이관되며 그린수소 중심 재편 논쟁이, EU는 배터리 핵심원자재 공급망 실사 가이드라인 발표를 앞두고 있다.</li>
+  </ul>
+</div>
+
+<h2 class="section">논문</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://doi.org/10.1126/sciadv.aea2538" target="_blank" rel="noopener">산-알칼리 탠덤 전해조로 CO2를 에틸렌으로, 400시간 안정 구동</a></h3>
+    <div class="src">Science Advances · Xianhui Ma et al. · 2026-05-13</div>
+    <p>금속 활성점 간격을 정밀 제어한 산성 촉매로 일산화탄소 패러데이 효율 99.7%(1.4 A/cm²)를 달성하고, 이를 알칼리 CO 환원과 연계한 산-알칼리 탠덤 시스템에서 10 A 전류에서 에틸렌 효율 75.3%, C2+ 효율 92.5%를 400시간 동안 유지했다. 산성 조건에서 문제였던 탄산염 침적을 회피하면서도 고전류 밀도 안정성을 확보한 점이 핵심이다. <code>CO2RR</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1038/s41565-026-02136-x" target="_blank" rel="noopener">펨토초 단위 양성자-전자 비동기화로 저이리듐 PEM 전해조 부식 억제</a></h3>
+    <div class="src">Nature Nanotechnology · Wei Shen et al. · 2026</div>
+    <p>펨토초(10⁻¹⁵초) 시간분해 전기화학 과도흡수분광으로 양극 부식이 편광 시작 100fs 이내에 양성자-전자 결합에 의해 개시됨을 규명했다. CeO2를 양성자 채널로 도입해 두 입자의 반응 동역학을 비동기화시켜 가용성 Ir6+ 생성을 억제, CeO2-IrO2 촉매가 약 1400시간 연속 구동 안정성을 보였다. <code>green hydrogen</code> <code>PEM</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1002/ange.202524363" target="_blank" rel="noopener">3층 황화물 전해질 설계로 리튬-유기 전고체전지 4800사이클 달성</a></h3>
+    <div class="src">Angewandte Chemie · Wenwen Deng et al. · 2026-01-12</div>
+    <p>Li6PS5Cl-Li10GeP2S12-Li6PS5Cl 3층 전해질과 유기 정극(DTT)·리튬금속 음극을 결합, 계면 응력 축적을 완화해 296 mAh/g(0.1C) 용량과 함께 2C·60℃ 조건에서 4800사이클 후 90.2% 용량 유지율을 기록했다. 저온·고부하 성능도 우수해 전고체전지 계면 열화 문제에 대한 구조적 해법을 제시한다. <code>solid-state</code> 배터리</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1021/acs.jafc.5c17071" target="_blank" rel="noopener">양쪽성 이온성 액체 인몰리브덴산염 촉매로 리그닌을 방향족 화합물로 전환</a></h3>
+    <div class="src">Journal of Agricultural and Food Chemistry · Yu Zhang et al. · 2026</div>
+    <p>ZrO2에 담지한 [Bmim]3PMo 촉매(40wt%)가 리그닌 산화적 해중합에서 리그닌 전환율 88.5%, 페놀류 수율 12.4wt%를 달성했다. 바닐린·시린가알데하이드 등 단량체 페놀을 선택적으로 생성하며 β-O-4 결합을 효과적으로 절단하는 것으로 확인됐다. <code>바이오매스</code> <code>lignin valorization</code></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://doi.org/10.1038/s41467-026-72282-2" target="_blank" rel="noopener">루테늄 촉매의 핵성 제어로 다양한 폴리올레핀 선택적 업사이클링</a></h3>
+    <div class="src">Nature Communications · Jie Sun et al. · 2026</div>
+    <p>Ru/NbOx 촉매에서 루테늄의 핵성(nuclearity)·원자가와 지지체 산성도의 상호작용이 선택성을 좌우한다는 메커니즘을 규명했다. 이를 바탕으로 Ru/NbOx-600은 폴리에틸렌을 C5-35 선형알칸으로 93.1% 전환했고, Ru/NbOx-300은 폴리프로필렌을 90.6% 선택도로 C5-20 분지형 액체연료로 수첨분해했다. <code>플라스틱</code> <code>upcycling</code></p>
+  </div>
+</div>
+
+<h2 class="section">정책·규제</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.itinsight.kr/news/479750" target="_blank" rel="noopener">한국, 기후에너지환경부로 수소정책 이관 — 그린수소 중심 재편 논쟁</a></h3>
+    <div class="src">아이티인사이트 · 2026-07</div>
+    <p>2025년 10월 기후에너지환경부 출범으로 산업통상자원부의 수소정책 기능 상당 부분이 이관되며 그린수소 중심으로 정책이 재정비되고 있다. 한국수소연합은 청정수소 전환 과정에서 시장 불확실성이 커지고 있다고 진단했으며, 올해 확정될 12차 전력수급기본계획에서 암모니아 혼소 축소·그린수소 비중 확대 여부가 향후 5년 수소경제의 방향을 좌우할 전망이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en" target="_blank" rel="noopener">EU, 배터리 핵심원자재 공급망 실사 가이드라인 7월 발표 예정</a></h3>
+    <div class="src">European Commission (환경총국) · 2026-07 예정 <span class="unverified">[2차: Morgan Lewis 법률 분석]</span></div>
+    <p>EU 집행위원회가 리튬·코발트·니켈·천연흑연 등 핵심원자재에 대한 배터리 규정(Battery Regulation)의 공급망 실사 요건 가이드라인을 7월 중 발표할 예정이다. 책임 있는 조달과 공급업체 관리, 리스크 관리 기대사항을 명확히 하는 것이 목표로, 재활용 함량·소재별 회수 목표 등 기존 규정과 연계된다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office-funding-opportunities" target="_blank" rel="noopener">美 DOE, 배터리 핵심광물 가공에 5억 달러 지원 프로그램 3분기 협상 진행</a></h3>
+    <div class="src">U.S. Department of Energy (CMEI) · 공고 2026-03-13, 심사·협상 2026 Q2~Q3</div>
+    <p>DOE 핵심광물·에너지혁신국(CMEI)이 국내 배터리용 핵심광물·소재 가공 및 재활용 확대를 위해 최대 5억 달러 규모 지원공고(NOFO)를 발표했다. 신청 마감(4/24) 이후 2분기 중 선정 통보, 3분기(현재) 수상 협상이 진행 중인 것으로 파악된다.</p>
+  </div>
+</div>
+
+<h2 class="section">산업 뉴스</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://www.ineos.com/news/shared-news/ineos-and-recuro-sign-memorandum-of-understanding-to-construct-advanced-recycling-facility-in-norway/" target="_blank" rel="noopener">INEOS-Recuro, 노르웨이서 열분해 기반 화학적 재활용 시설 MOU 체결</a></h3>
+    <div class="src">INEOS 공식 보도자료 · 2026-07-09</div>
+    <p>INEOS와 노르웨이 리사이클링 기업 Recuro가 Bamble 폴리머 단지에 연산 최대 3만3000톤 규모 첨단 재활용시설("Full Circle")을 건설하는 MOU를 체결했다. 열분해 기술로 플라스틱 폐기물의 오일·가스 성분을 모두 회수하며, 전량 노르웨이산 재생에너지로 가동될 예정이다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://www.solidpowerbattery.com/investor-relations/investor-news/news-details/2026/Solid-Power-Reports-First-Quarter-2026-Results/default.aspx" target="_blank" rel="noopener">Solid Power, 황화물 고체전해질 연속생산 파일럿 라인 연내 가동 목표</a></h3>
+    <div class="src">Solid Power 공식 IR 발표 · 2026-Q1 (2026-05)</div>
+    <p>Solid Power가 황화물 고체전해질 연속생산 파일럿 라인의 핵심 장비 공장인수시험(FAT)을 완료하고 2026년 말 가동을 목표로 하고 있다고 밝혔다. 가동 시 연산 75톤 규모로 생산능력이 확대되며, SK On과의 파일럿 셀 라인도 사이트인수시험(SAT)을 마쳤다.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://carnewschina.com/2026/02/16/china-ignites-solid-state-battery-race-production-expands-in-2026-vehicle-demonstrations-by-2027/" target="_blank" rel="noopener">중국, 전고체 배터리 국가표준(GB/T) 7월 공식 발표</a></h3>
+    <div class="src">CarNewsChina · 2026-07 <span class="unverified">[2차]</span></div>
+    <p>중국이 액체·반고체·전고체 배터리 용어를 최초로 명확히 구분하는 전기차용 전고체전지 국가표준(GB/T)을 7월 공식 발표했다. 이를 계기로 여러 제조사가 파일럿 생산을 가속화하고 있으며, 2027년 차량 실증이 이어질 전망이다.</p>
+  </div>
+</div>
+
+<h2 class="section">프리프린트</h2>
+<div class="grid">
+  <p class="quiet">— 오늘은 지난 1~2주 내 검증 가능한 신규 ChemRxiv/arXiv 프리프린트를 찾지 못했다 (기존 발표 논문 재탕 방지를 위해 억지로 채우지 않음) —</p>
+</div>
+
+<footer>
+  <strong>출처</strong>
+  <ol>
+    <li>Ma, X. et al., "Acidic-alkaline tandem system for durable CO2-CO-C2+", Science Advances (2026) — DOI: <a href="https://doi.org/10.1126/sciadv.aea2538" target="_blank" rel="noopener">10.1126/sciadv.aea2538</a></li>
+    <li>Shen, W. et al., "Proton–electron temporal asynchrony on femtosecond timescales enables anti-corrosive low-iridium anodes for PEM electrolysers", Nature Nanotechnology (2026) — DOI: <a href="https://doi.org/10.1038/s41565-026-02136-x" target="_blank" rel="noopener">10.1038/s41565-026-02136-x</a></li>
+    <li>Deng, W. et al., "Multilayer Sulfide-Electrolyte Engineering Stabilizes Interfaces for Long-Cycling, Wide-Temperature Lithium-Organic Solid-State Batteries", Angewandte Chemie (2026) — DOI: <a href="https://doi.org/10.1002/ange.202524363" target="_blank" rel="noopener">10.1002/ange.202524363</a></li>
+    <li>Zhang, Y. et al., "Supported Amphiphilic Hybrid Ionic Liquid Phosphomolybdates on ZrO2 for Catalytic Conversion of Lignin to Aromatic Compounds", J. Agric. Food Chem. (2026) — DOI: <a href="https://doi.org/10.1021/acs.jafc.5c17071" target="_blank" rel="noopener">10.1021/acs.jafc.5c17071</a></li>
+    <li>Sun, J. et al., "Nuclearity-dependent design principles of ruthenium catalysts for selective hydroconversion of diverse polyolefins", Nature Communications (2026) — DOI: <a href="https://doi.org/10.1038/s41467-026-72282-2" target="_blank" rel="noopener">10.1038/s41467-026-72282-2</a></li>
+    <li>아이티인사이트, "수소 경제의 기로, 정책 일관성이 답인가" — <a href="https://www.itinsight.kr/news/479750" target="_blank" rel="noopener">itinsight.kr</a></li>
+    <li>European Commission, "Batteries" (환경총국) — <a href="https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en" target="_blank" rel="noopener">environment.ec.europa.eu</a></li>
+    <li>Morgan Lewis, "EU and UK Energy Storage Regulation in 2026 and Beyond" — <a href="https://www.morganlewis.com/pubs/2026/03/eu-and-uk-energy-storage-regulation-in-2026-and-beyond" target="_blank" rel="noopener">morganlewis.com</a></li>
+    <li>U.S. Department of Energy, "Hydrogen and Fuel Cell Technologies Office Funding Opportunities" — <a href="https://www.energy.gov/eere/fuelcells/hydrogen-and-fuel-cell-technologies-office-funding-opportunities" target="_blank" rel="noopener">energy.gov</a></li>
+    <li>INEOS, "INEOS and Recuro sign memorandum of understanding..." (공식 보도자료, 2026-07-09) — <a href="https://www.ineos.com/news/shared-news/ineos-and-recuro-sign-memorandum-of-understanding-to-construct-advanced-recycling-facility-in-norway/" target="_blank" rel="noopener">ineos.com</a></li>
+    <li>Solid Power, "Solid Power Reports First Quarter 2026 Results" (공식 IR) — <a href="https://www.solidpowerbattery.com/investor-relations/investor-news/news-details/2026/Solid-Power-Reports-First-Quarter-2026-Results/default.aspx" target="_blank" rel="noopener">solidpowerbattery.com</a></li>
+    <li>CarNewsChina, "China ignites solid-state battery race" — <a href="https://carnewschina.com/2026/02/16/china-ignites-solid-state-battery-race-production-expands-in-2026-vehicle-demonstrations-by-2027/" target="_blank" rel="noopener">carnewschina.com</a></li>
+  </ol>
+</footer>
+
+</div>
+</body>
+</html>
