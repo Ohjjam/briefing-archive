@@ -1,202 +1,30 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 일일 브리핑 · 2026-07-13</title>
-<style>
-:root{
-  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
-  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
-  --card:#ffffff;
-}
-*{box-sizing:border-box}
-body{
-  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
-  line-height:1.6;
-}
-.wrap{max-width:1100px; margin:0 auto;}
-header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
-header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
-header.top .meta{color:var(--muted); font-size:14px;}
-h2.section{
-  font-size:18px; margin:32px 0 12px; padding:8px 12px;
-  border-left:4px solid var(--accent); background:var(--accent-soft);
-  letter-spacing:0.02em;
-}
-.tldr{
-  background:#fff; border:1px solid var(--line); border-radius:8px;
-  padding:16px 20px; margin-bottom:8px;
-}
-.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
-.tldr ul{margin:0; padding-left:20px;}
-.tldr li{margin-bottom:6px;}
-.grid{display:grid; gap:14px; grid-template-columns:1fr;}
-@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
-.card{
-  background:var(--card); border:1px solid var(--line); border-radius:8px;
-  padding:14px 16px;
-}
-.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
-.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
-.card p{margin:0; font-size:14px;}
-a{color:var(--accent); text-decoration:none;}
-a:hover{text-decoration:underline;}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
-.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
-.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
-            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
-blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
-           color:var(--muted); font-size:13.5px; font-style:italic;}
-footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
-       font-size:12.5px; color:var(--muted);}
-footer ol{padding-left:20px;}
-footer li{margin-bottom:3px; word-break:break-all;}
-@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
-</style>
-</head>
-<body>
-<div class="wrap">
-
-<header class="top">
-  <h1>AI 일일 브리핑</h1>
-  <div class="meta">2026-07-13 (월) · 프론티어 AI 모델·기업 최신 동향</div>
-</header>
-
-<div class="tldr">
-  <h2>TL;DR</h2>
-  <ul>
-    <li>OpenAI가 <code>gpt-5.6</code> 패밀리(Sol/Terra/Luna)와 업무 에이전트 "ChatGPT Work"를 출시했고, MS 365 Copilot의 기본 모델로도 채택됐다.</li>
-    <li>Google DeepMind는 아키텍처를 처음부터 재설계한 <code>gemini-3.5-pro</code> 출시를 7월 17일로 연기했다고 밝혔다.</li>
-    <li>Anthropic은 Claude Enterprise 분석 강화, M365 커넥터 쓰기 권한, Cowork 웹/모바일 확장, Claude for Government 베타를 공개했고 <code>claude-fable-5</code> 무료 접근 기한을 7/12로 연장했다.</li>
-    <li>Meta는 에이전틱 코딩 모델 <code>muse-spark-1.1</code>과 이미지 생성 Muse Image를 공개하고, 자체 클라우드 사업 "Meta Compute"에 진출했다.</li>
-    <li>xAI는 코딩·에이전트 특화 <code>grok-4.5</code>를, Mistral은 신규 오픈웨이트 모델의 얼리 액세스와 로보틱스 모델 Robostral Navigate를 발표했다.</li>
-  </ul>
-</div>
-
-<h2 class="section">OpenAI</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://openai.com/chatgpt-work/" target="_blank" rel="noopener">GPT-5.6 패밀리 공개, ChatGPT Work 에이전트 동시 출시</a></h3>
-    <div class="src">openai.com · 2026-07-09</div>
-    <p>OpenAI가 <code>gpt-5.6</code> 모델 패밀리(Sol·Terra·Luna)를 ChatGPT, Codex, API 전반에 순차 배포했다. Sol은 최상위 지능, Terra는 비용 대비 균형, Luna는 대규모·저비용 워크로드용이다. 동시에 연결된 앱과 파일의 맥락을 모아 문서·스프레드시트·프레젠테이션을 만드는 에이전트 "ChatGPT Work"도 출시했다.</p>
-    <blockquote>"Sol is 54% more token efficient on agentic coding tasks" — Sam Altman (CNBC 인터뷰)</blockquote>
-  </div>
-  <div class="card">
-    <h3><a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">GPT-Live 음성 모델 및 MS 365 Copilot 통합</a></h3>
-    <div class="src">help.openai.com (공식 릴리스 노트) · 2026-07-08~09</div>
-    <p>실시간 음성 대화를 자연스럽게 만든 신규 풀듀플렉스 음성 모델 GPT-Live-1 및 mini가 유·무료 사용자 기본 음성으로 적용됐다. 또한 <code>gpt-5.6</code>이 Microsoft 365 Copilot(Word·Excel·PowerPoint·Chat·Cowork)의 새 기본 모델로 채택됐다.</p>
-  </div>
-</div>
-
-<h2 class="section">Google</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Gemini 3.5 Pro 출시 7월 17일로 연기 — 아키텍처 전면 재설계</a></h3>
-    <div class="src">deepmind.google · 2026-07-11 (보도: BigGo Finance) <span class="unverified">[2차]</span></div>
-    <p>Google DeepMind가 기존 <code>gemini-2.5-pro</code> 아키텍처를 버리고 처음부터 다시 설계한 <code>gemini-3.5-pro</code>의 출시를 7월 17일로 연기했다. 200만 토큰 컨텍스트 윈도, "Deep Think" 추론 레이어, 자율 워크플로 기능이 핵심이며 수학적 추론과 이미지 품질 개선을 목표로 GPT-5.6·Fable 5와 경쟁할 계획이다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Nano Banana 2 Lite, Gemini Omni Flash API 프리뷰 공개</a></h3>
-    <div class="src">ai.google.dev (Gemini API 릴리스 노트) · 2026-07 초</div>
-    <p>가장 빠르고 비용 효율적인 이미지 생성 모델 "Nano Banana 2 Lite"가 출시됐고, 네이티브 멀티모달 모델 "Gemini Omni Flash"가 동적 비디오 워크플로 구축을 위해 API 퍼블릭 프리뷰로 제공된다.</p>
-  </div>
-</div>
-
-<h2 class="section">Anthropic</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Claude Enterprise 분석 강화 및 M365 커넥터 쓰기 권한 추가</a></h3>
-    <div class="src">anthropic.com/news · 2026-07</div>
-    <p>Claude Enterprise에 그룹·사용자별 사용량과 비용을 함께 보여주는 관리자 분석 대시보드, 모델별 권한 설정, 지출 알림 기능이 추가됐다. Microsoft 365 커넥터는 검색을 넘어 이메일 작성·발송, 일정 관리, OneDrive/SharePoint 파일 생성·수정까지 가능한 쓰기 도구가 활성화됐다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">Cowork 웹·모바일 확장, Claude for Government 베타 출시</a></h3>
-    <div class="src">support.claude.com (공식 릴리스 노트) · 2026-07</div>
-    <p>Claude Cowork가 웹과 모바일로 확장되어 기기 간 세션·파일을 공유한다. Claude for Government 베타가 오늘부터 제공되며, Anthropic이 계약·과금 주체를 맡아 기관이 별도 클라우드 계약 없이 이용할 수 있다. 설정 메뉴에는 월간 사용 리캡을 보여주는 "Reflect" 대시보드도 신설됐다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Fable 5 무료 포함 접근 기한 7월 12일로 연장</a></h3>
-    <div class="src">anthropic.com · 2026-07-12 마감</div>
-    <p>유료 Claude 플랜에서 추가 비용 없이 제공되던 <code>claude-fable-5</code> 접근 기한이 당초 7월 7일에서 7월 12일 밤 11시59분59초(태평양시)로 연장됐다.</p>
-  </div>
-</div>
-
-<h2 class="section">Meta</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">Muse Spark 1.1 공개 — 에이전틱 코딩 강화</a></h3>
-    <div class="src">ai.meta.com/blog · 2026-07-09</div>
-    <p>Meta Superintelligence Labs가 개인 에이전틱 작업과 다중 앱 오케스트레이션에 최적화된 <code>muse-spark-1.1</code>을 퍼블릭 프리뷰로 공개했다. 100만 토큰 컨텍스트를 능동적으로 관리하며, 대규모 코드베이스의 버그 진단·기능 구현·마이그레이션 성능이 크게 향상됐다. 저커버그는 OpenAI·Anthropic 대비 "공격적인 가격 정책"을 예고했다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://www.bloomberg.com/news/articles/2026-07-07/meta-debuts-new-ai-image-generation-model-inside-chatbot-instagram" target="_blank" rel="noopener">이미지 생성 모델 Muse Image 공개, Meta Compute 클라우드 사업 진출</a></h3>
-    <div class="src">Bloomberg · 2026-07-07</div>
-    <p>Meta AI 챗봇과 Instagram·WhatsApp에 텍스트 기반 이미지 생성·편집 모델 "Muse Image"가 탑재됐다. 또한 Nvidia와 복수 연도·기가와트 규모 칩 공급 계약을 확대하며 잉여 AI 인프라를 판매하는 신규 클라우드 사업 "Meta Compute"를 발표해 AWS·Azure·Google Cloud와 직접 경쟁하게 됐다.</p>
-  </div>
-</div>
-
-<h2 class="section">xAI</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://x.ai/news" target="_blank" rel="noopener">Grok 4.5 출시 — 코딩·에이전트 특화 모델</a></h3>
-    <div class="src">x.ai/news · 2026-07-08</div>
-    <p>xAI가 코딩·앱 빌딩, 사무·서기 업무, 리서치, 글쓰기 등 지식노동 자동화를 겨냥한 <code>grok-4.5</code>를 출시했다. 입력 100만 토큰당 $2, 출력 $6로 가격을 책정했으며, 경쟁 모델 대비 "토큰 효율이 2배"라고 주장했다. 일론 머스크는 "Opus급 모델"이라 평가했다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Grok Voice 신규 음성 21종 추가, Grok Build 세션 UX 개선</a></h3>
-    <div class="src">docs.x.ai (공식 릴리스 노트) · 2026-07</div>
-    <p>기존 5종에 이어 다국어 지원 플래그십 음성 21종이 실시간 Voice Agent API, TTS API, 신규 Grok Voice Agent Builder에 추가됐다. Grok Build는 스크롤·검색 개선과 기본 툴콜 그룹화, 빨라진 Plugins 탭 업데이트 흐름을 도입했다.</p>
-  </div>
-</div>
-
-<h2 class="section">Mistral AI</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">신규 오픈웨이트 모델 얼리 액세스 시작, Robostral Navigate 공개</a></h3>
-    <div class="src">mistral.ai/news · 2026-07</div>
-    <p>Arthur Mensch CEO가 확인한 "fat but sparse" MoE 구조의 신규 오픈웨이트 모델이 연구·정부·산업 파트너 대상 얼리 액세스에 들어갔다. 별도로 단일 카메라와 자연어 프롬프트만으로 로봇이 복잡한 환경을 탐색하게 하는 하드웨어 비종속 로보틱스 모델 "Robostral Navigate"도 발표했다.</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Leanstral 1.5 공개 — Lean 4 정리 증명 모델</a></h3>
-    <div class="src">mistral.ai/news · 2026-07-03</div>
-    <p>Apache-2.0 라이선스의 오픈 모델 Leanstral 1.5가 공개돼 PutnamBench 672문제 중 587문제를 해결하며 형식 검증 벤치마크에서 강세를 보였다. Hugging Face와 무료 API로 제공된다.</p>
-  </div>
-</div>
-
-<h2 class="section">기타 주목할 만한 동향</h2>
-<div class="grid">
-  <div class="card">
-    <h3><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">"최고 모델"에서 "최적 적합"으로 — 업계 경쟁 구도 변화</a></h3>
-    <div class="src">llm-stats.com (업계 동향 트래커) · 2026-07-13</div>
-    <p>7월 9일 OpenAI·xAI·Meta가 같은 날 신모델을 발표하며 경쟁이 격화됐다. 업계 논조는 순수 벤치마크 점수 경쟁에서 가격·속도·접근성·실사용 적합도를 중시하는 "최적 적합" 경쟁으로 이동하고 있다는 평가다. 개발자 생태계에서는 PyTorch 2.13의 Apple Silicon 스파스 어텐션 가속(약 12배)도 주목받았다.</p>
-  </div>
-</div>
-
-<footer>
-  <strong>출처</strong>
-  <ol>
-    <li>OpenAI, "ChatGPT Work with GPT-5.6" — <a href="https://openai.com/chatgpt-work/" target="_blank" rel="noopener">openai.com/chatgpt-work</a></li>
-    <li>OpenAI, "Model Release Notes" — <a href="https://help.openai.com/en/articles/9624314-model-release-notes" target="_blank" rel="noopener">help.openai.com</a></li>
-    <li>CNBC, "OpenAI to publicly release GPT-5.6" (2026-07-08) — <a href="https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release-ending-government-limits.html" target="_blank" rel="noopener">cnbc.com</a></li>
-    <li>Google DeepMind Blog — <a href="https://deepmind.google/blog/" target="_blank" rel="noopener">deepmind.google/blog</a></li>
-    <li>BigGo Finance, "Google Delays Gemini 3.5 Pro Launch" (2026-07-11) — <a href="https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a" target="_blank" rel="noopener">finance.biggo.com</a></li>
-    <li>Google AI for Developers, "Gemini API Release notes" — <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">ai.google.dev</a></li>
-    <li>Anthropic, Newsroom — <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">anthropic.com/news</a></li>
-    <li>Anthropic (Claude Help Center), "Release notes" — <a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">support.claude.com</a></li>
-    <li>Meta AI Blog, "Introducing Muse Spark 1.1" — <a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">ai.meta.com/blog</a></li>
-    <li>Bloomberg, "Meta Debuts New AI Image-Generation Model" (2026-07-07) — <a href="https://www.bloomberg.com/news/articles/2026-07-07/meta-debuts-new-ai-image-generation-model-inside-chatbot-instagram" target="_blank" rel="noopener">bloomberg.com</a></li>
-    <li>xAI, News — <a href="https://x.ai/news" target="_blank" rel="noopener">x.ai/news</a></li>
-    <li>xAI Developers, "Release Notes" — <a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">docs.x.ai</a></li>
-    <li>TechCrunch, "SpaceXAI releases Grok 4.5" (2026-07-08) — <a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank" rel="noopener">techcrunch.com</a></li>
-    <li>Mistral AI, News — <a href="https://mistral.ai/news/" target="_blank" rel="noopener">mistral.ai/news</a></li>
-    <li>Bloomberg, "Mistral AI Releases Robotics Model" (2026-07-08) — <a href="https://www.bloomberg.com/news/articles/2026-07-08/mistral-ai-releases-robotics-model-to-support-physical-ai-push" target="_blank" rel="noopener">bloomberg.com</a></li>
-    <li>llm-stats.com, "AI Updates Today" — <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">llm-stats.com</a></li>
-  </ol>
-</footer>
-
-</div>
-</body>
-</html>
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 일일 브리핑 — 2026-07-13</title><style>
+:root{--bg:#fafaf7;--fg:#1a1a1a;--muted:#5a5a5a;--line:#d8d6cf;--accent:#2a4d7a;--accent-soft:#e8eef6;--warn:#9a4a00;--quiet:#9a9a93;--card:#ffffff}
+*{box-sizing:border-box}body{margin:0;padding:32px 16px;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;line-height:1.6}.wrap{max-width:1100px;margin:0 auto}header.top{border-bottom:2px solid var(--fg);padding-bottom:16px;margin-bottom:24px}header.top h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}header.top .meta{color:var(--muted);font-size:14px}h2.section{font-size:18px;margin:32px 0 12px;padding:8px 12px;border-left:4px solid var(--accent);background:var(--accent-soft);letter-spacing:.02em}.tldr{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:8px}.tldr h2{margin-top:0;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}.tldr ul{margin:0;padding-left:20px}.tldr li{margin-bottom:6px}.grid{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px}.card h3{font-size:15.5px;margin:0 0 6px;line-height:1.35}.card .src{font-size:12.5px;color:var(--muted);margin-bottom:8px}.card p{margin:0;font-size:14px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#eee9df;padding:1px 5px;border-radius:3px;font-size:12.5px}.quiet{color:var(--quiet);font-style:italic;padding:12px 16px}.unverified{color:var(--warn);font-size:11.5px;font-weight:600;margin-left:6px;border:1px solid var(--warn);padding:1px 4px;border-radius:3px}blockquote{border-left:3px solid var(--line);margin:6px 0;padding:2px 10px;color:var(--muted);font-size:13.5px;font-style:italic}footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer ol{padding-left:20px}footer li{margin-bottom:3px;word-break:break-all}@media(max-width:400px){body{padding:16px 10px}header.top h1{font-size:22px}}
+</style></head><body><div class="wrap">
+<header class="top"><h1>AI 일일 브리핑</h1><div class="meta">2026-07-13 (월요일) · 최근 24시간 · 공식 발표 우선</div></header>
+<div class="tldr"><h2>TL;DR</h2><ul>
+<li>공식 뉴스룸·릴리스 노트를 2026-07-13 13시대(KST)에 재확인했으나, 지정 6개사에서 최근 24시간 내 검증 가능한 신규 발표를 찾지 못했다.</li>
+<li>OpenAI 공식 뉴스룸의 최신 확인 항목은 7월 9일 <code>gpt-5.6</code> 발표로, 24시간 기준 밖이라 오늘 카드에서 제외했다.</li>
+<li>Anthropic 공식 뉴스룸의 최신 확인 항목도 7월 9일이며, Google DeepMind·Meta·xAI·Mistral 역시 오늘 날짜의 공식 신규 항목을 확인하지 못했다.</li>
+<li>검색 결과에 나온 커뮤니티 추측과 날짜가 불명확한 2차 요약은 모두 제외했다.</li>
+</ul></div>
+<h2 class="section">OpenAI</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">Google</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">Anthropic</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">Meta</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">xAI</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">Mistral AI</h2><p class="quiet">— 지난 24시간 주목할 업데이트 없음 —</p>
+<h2 class="section">기타 주목할 만한 동향</h2><p class="quiet">— 공식 1차 출처와 신뢰 가능한 1차 보도에서 24시간 내 추가 동향을 확인하지 못함 —</p>
+<blockquote>Verification context only, outside today’s window: <em>“GPT-5.6: Frontier intelligence that scales with your ambition.”</em> — OpenAI, 2026-07-09</blockquote>
+<footer><strong>확인한 1차 출처</strong><ol>
+<li><a href="https://openai.com/news/company-announcements/" target="_blank" rel="noopener">OpenAI Newsroom</a></li>
+<li><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Google DeepMind News</a></li>
+<li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic Newsroom</a></li>
+<li><a href="https://ai.meta.com/blog/" target="_blank" rel="noopener">Meta AI Blog</a></li>
+<li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI News</a></li>
+<li><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral AI News</a></li>
+</ol><p>수집 원칙: URL·발표일을 함께 검증할 수 없는 항목은 싣지 않았다.</p></footer>
+</div></body></html>
