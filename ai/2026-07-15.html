@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-07-15</title>
+<style>
+:root{--bg:#fafaf7;--fg:#1a1a1a;--muted:#5a5a5a;--line:#d8d6cf;--accent:#2a4d7a;--accent-soft:#e8eef6;--warn:#9a4a00;--quiet:#9a9a93;--card:#fff}*{box-sizing:border-box}body{margin:0;padding:32px 16px;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;line-height:1.6}.wrap{max-width:1100px;margin:0 auto}header.top{border-bottom:2px solid var(--fg);padding-bottom:16px;margin-bottom:24px}header.top h1{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}header.top .meta{color:var(--muted);font-size:14px}h2.section{font-size:18px;margin:32px 0 12px;padding:8px 12px;border-left:4px solid var(--accent);background:var(--accent-soft);letter-spacing:.02em}.tldr{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:8px}.tldr h2{margin-top:0;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}.tldr ul{margin:0;padding-left:20px}.tldr li{margin-bottom:6px}.grid{display:grid;gap:14px;grid-template-columns:1fr}@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px}.card h3{font-size:15.5px;margin:0 0 6px;line-height:1.35}.card .src{font-size:12.5px;color:var(--muted);margin-bottom:8px}.card p{margin:0;font-size:14px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#eee9df;padding:1px 5px;border-radius:3px;font-size:12.5px}.quiet{color:var(--quiet);font-style:italic;padding:12px 16px}.unverified{color:var(--warn);font-size:11.5px;font-weight:600;margin-left:6px;border:1px solid var(--warn);padding:1px 4px;border-radius:3px}blockquote{border-left:3px solid var(--line);margin:6px 0;padding:2px 10px;color:var(--muted);font-size:13.5px;font-style:italic}footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}footer ol{padding-left:20px}footer li{margin-bottom:3px;word-break:break-all}@media(max-width:400px){body{padding:16px 10px}header.top h1{font-size:22px}}
+</style>
+</head>
+<body><div class="wrap">
+<header class="top"><h1>프론티어 AI 일일 브리핑</h1><div class="meta">2026-07-15 (수요일) · 최근 24시간 + 공식 7일 진행 이슈 예외</div></header>
+<div class="tldr"><h2>TL;DR</h2><ul>
+<li>OpenAI는 ChatGPT의 EEA WhatsApp 복귀를 7월 13일 공지했고, GPT-Live의 글로벌 롤아웃도 진행 중이다.</li>
+<li>Google DeepMind는 Gemini 기반 인도 교육 파일럿 <code>ATL Saathi</code>를 7월 14일 시작했다.</li>
+<li>Anthropic은 Claude 조직의 HIPAA 설정을 셀프서비스로 전환했다.</li>
+<li>Meta의 Muse 계열과 xAI의 <code>Grok 4.5</code>는 7월 초 발표 후 배포·사용 범위를 넓히는 단계다.</li>
+</ul></div>
+
+<h2 class="section">OpenAI</h2><div class="grid">
+<article class="card"><h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT, EEA에서 WhatsApp으로 복귀</a></h3><div class="src">OpenAI Help Center · 2026-07-13 · 진행 중</div><p>EEA에서 검증된 WhatsApp 연락처를 통해 ChatGPT를 다시 사용할 수 있게 됐다. 이미지·음성·이미지 생성 기능과 계정 연결 선택지가 포함되며, 국가별 단계적 롤아웃이다.<blockquote>“ChatGPT is available again on WhatsApp in the European Economic Area.”</blockquote></p></article>
+<article class="card"><h3><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">ChatGPT Voice를 구동하는 <code>GPT-Live</code></a></h3><div class="src">OpenAI · 2026-07-08 · 진행 중 예외</div><p>전이중(full-duplex) 음성 모델이 듣기와 말하기를 동시에 처리하고, 검색·추론이 필요하면 뒤의 프런티어 모델에 작업을 위임한다. 글로벌 ChatGPT 사용자에게 단계적으로 롤아웃 중이다.<blockquote>“GPT-Live is built on a full-duplex architecture.”</blockquote></p></article>
+</div>
+
+<h2 class="section">Google</h2><div class="grid"><article class="card"><h3><a href="https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/" target="_blank" rel="noopener">Gemini 기반 교육 도우미 <code>ATL Saathi</code> 파일럿</a></h3><div class="src">Google DeepMind · 2026-07-14</div><p>인도 Atal Tinkering Labs 교사를 위한 24시간 계획·훈련 도우미의 라이브 파일럿을 시작했다. 100개 학교에서 초기 롤아웃하며, 커리큘럼 요약·프로젝트 생성·다국어 지원을 제공한다.<blockquote>“Today we are launching a live pilot of ATL Saathi.”</blockquote></p></article></div>
+
+<h2 class="section">Anthropic</h2><div class="grid"><article class="card"><h3><a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">Claude 조직의 HIPAA 설정을 셀프서비스로 전환</a></h3><div class="src">Anthropic Claude Release Notes · 2026-07-14</div><p>Claude Enterprise와 Claude Platform(API) 조직의 관리자가 BAA와 구현 가이드를 검토하고 HIPAA 설정을 한 흐름에서 활성화할 수 있다. 모델 출시가 아닌 기업 관리·규정준수 기능 업데이트다.</p></article></div>
+
+<h2 class="section">Meta</h2><div class="grid">
+<article class="card"><h3><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener"><code>Muse Spark 1.1</code> 공개</a></h3><div class="src">AI at Meta · 2026-07-09 · 진행 중 예외</div><p>Meta Superintelligence Labs의 Muse Spark 1.1 업데이트가 공개됐다. Meta의 개인화·생성형 AI 제품군을 확장하는 후속 릴리스로, 발표 후 제품 적용이 진행 중이다.</p></article>
+<article class="card"><h3><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/" target="_blank" rel="noopener"><code>Muse Image</code> 출시와 <code>Muse Video</code> 프리뷰</a></h3><div class="src">AI at Meta · 2026-07-07 · 진행 중 예외</div><p><code>Muse Image</code>는 지시 따르기·정밀 편집·다중 레퍼런스 합성을 지원하고, <code>Muse Video</code>는 오디오 포함 영상 생성을 프리뷰한다. Meta AI·웹·일부 Instagram/WhatsApp 시장부터 배포된다.</p></article>
+</div>
+
+<h2 class="section">xAI</h2><div class="grid"><article class="card"><h3><a href="https://x.ai/news" target="_blank" rel="noopener"><code>Grok 4.5</code> 공개</a></h3><div class="src">SpaceXAI/xAI News · 2026-07-08 · 진행 중 예외</div><p>코딩·에이전트 작업·지식 업무를 겨냥한 xAI의 새 플래그십 모델이 공개됐다. 공식 뉴스 페이지 기준 7월 초 발표 후 제품·API 적용 범위를 넓히는 단계다.</p></article></div>
+
+<h2 class="section">Mistral</h2><p class="quiet">— 지난 24시간 및 공식 7일 재확인 범위에서 검증된 신규 업데이트 없음 —</p>
+<h2 class="section">기타 주목할 만한 동향</h2><p class="quiet">검색 결과 요약만으로는 추가 항목을 채택하지 않음.</p>
+<footer><strong>검증 메모</strong><ol>
+<li>OpenAI Help Center: <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></li>
+<li>OpenAI: <a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+<li>Google DeepMind: <a href="https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/" target="_blank" rel="noopener">ATL Saathi</a></li>
+<li>Anthropic: <a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank" rel="noopener">Claude release notes</a></li>
+<li>Meta: <a href="https://ai.meta.com/blog/" target="_blank" rel="noopener">AI at Meta blog</a></li>
+<li>xAI: <a href="https://x.ai/news" target="_blank" rel="noopener">News</a></li>
+</ol></footer></div></body></html>
