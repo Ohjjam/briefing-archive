@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-07-20</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>AI 일일 브리핑</h1>
+    <div class="meta">2026-07-20 (월) · 최근 24시간 신규 0건 · 공식 페이지 최근 7일 2차 확인 후 진행 중 이슈 3건 수록</div>
+  </header>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>최근 24시간 안에 확인된 6개 프론티어 AI 회사의 신규 공식 발표는 없었다.</li>
+      <li>OpenAI는 7월 17일 AI 투자 성과를 토큰 가격이 아니라 ‘성공한 업무의 총비용’과 신뢰도로 재자는 기업용 평가 프레임을 제안했다.</li>
+      <li>Anthropic은 미국 K-12 교사 대상 무료 프리미엄 Claude와 캐나다 AI 연구 지원을 7월 14일 발표해 현재 신청·집행 중이다.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">OpenAI</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://openai.com/index/a-scorecard-for-the-ai-age/" target="_blank" rel="noopener">AI 투자의 새 점수표: ‘Useful Intelligence per Dollar’</a></h3>
+      <div class="src">OpenAI 공식 · 2026-07-17 · 진행 중</div>
+      <p>OpenAI는 AI 도입 성과를 좌석 수나 토큰 단가가 아니라 실제로 완료된 유용한 업무, 성공 과업당 총비용, 결과 신뢰도, 규모 확대 시 가치 개선으로 측정하자고 제안했다. <code>gpt-5.6</code>의 Sol·Terra·Luna도 과업 난도와 재시도·검토 비용을 함께 보고 선택해야 한다는 설명이다.</p>
+      <blockquote><em>“What matters is the full cost of producing a successful outcome.”</em></blockquote>
+    </article>
+  </div>
+
+  <h2 class="section">Google</h2>
+  <p class="quiet">— 지난 24시간 및 공식 페이지 최근 7일에서 날짜가 확인된 주목할 모델·제품 업데이트 없음 —</p>
+
+  <h2 class="section">Anthropic</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://www.anthropic.com/news/claude-for-teachers" target="_blank" rel="noopener">미국 K-12 교사에게 Claude 프리미엄 기능 무료 제공</a></h3>
+      <div class="src">Anthropic 공식 · 2026-07-14 · 신청 진행 중</div>
+      <p>검증된 미국 K-12 교사에게 커리큘럼·주 교육표준과 연결되는 Claude, 교육용 스킬, <code>Claude Code</code>와 Cowork를 무료로 제공한다. 2027년 6월 30일까지 가입하면 1년 이용할 수 있으며, 교사가 제공한 데이터는 모델 학습에 쓰지 않는다고 명시했다.</p>
+      <blockquote><em>“Support the craft behind great teaching and protect what teachers value most—time with their students.”</em></blockquote>
+    </article>
+    <article class="card">
+      <h3><a href="https://www.anthropic.com/news/canadian-ai-research" target="_blank" rel="noopener">캐나다 AI 연구에 1,000만 캐나다달러 지원</a></h3>
+      <div class="src">Anthropic 공식 · 2026-07-14 · 지원 집행 중</div>
+      <p>Anthropic은 Amii·Mila·Vector Institute 등 캐나다 기관과 협력해 책임 있는 AI, 보건, 지속가능성, 멀티에이전트, 로보틱스 연구를 지원한다. 현금 지원과 Claude 크레딧을 결합해 연구 및 공공 분야 적용을 넓히는 프로그램이다.</p>
+      <blockquote><em>“We’re committing $10 million CAD to Canadian research institutions.”</em></blockquote>
+    </article>
+  </div>
+
+  <h2 class="section">Meta</h2>
+  <p class="quiet">— 지난 24시간 및 공식 페이지 최근 7일에서 확인된 주목할 Llama·Meta AI 업데이트 없음 —</p>
+
+  <h2 class="section">xAI</h2>
+  <p class="quiet">— 공식 뉴스룸·API 릴리스 노트 최근 7일에서 확인된 신규 업데이트 없음 —</p>
+
+  <h2 class="section">Mistral AI</h2>
+  <p class="quiet">— 공식 뉴스 페이지 최근 7일에서 날짜와 내용을 함께 검증한 신규 업데이트 없음 —</p>
+
+  <h2 class="section">기타 주목할 만한 동향</h2>
+  <p class="quiet">— 범위 밖 2차 보도나 날짜가 불명확한 항목은 포함하지 않음 —</p>
+
+  <footer>
+    <strong>출처</strong>
+    <ol>
+      <li><a href="https://openai.com/index/a-scorecard-for-the-ai-age/" target="_blank" rel="noopener">OpenAI — A scorecard for the AI age</a></li>
+      <li><a href="https://www.anthropic.com/news/claude-for-teachers" target="_blank" rel="noopener">Anthropic — Introducing Claude for Teachers</a></li>
+      <li><a href="https://www.anthropic.com/news/canadian-ai-research" target="_blank" rel="noopener">Anthropic — Canadian AI research commitment</a></li>
+      <li><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Google DeepMind — News</a></li>
+      <li><a href="https://x.ai/news" target="_blank" rel="noopener">xAI — News</a></li>
+      <li><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">xAI — API release notes</a></li>
+      <li><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral AI — Latest news</a></li>
+    </ol>
+  </footer>
+</div>
+</body>
+</html>
