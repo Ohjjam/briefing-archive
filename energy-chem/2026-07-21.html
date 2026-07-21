@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에너지·화학공학 모닝 브리핑 · 2026-07-21</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>에너지·화학공학 모닝 브리핑</h1>
+    <div class="meta">2026-07-21 (화요일) · 최근 24~72시간 · 논문은 DOI 메타데이터와 출판사 원문 검증</div>
+  </header>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>양이온성 2차 배위권을 갖는 Mn 촉매가 물속 CO₂ 환원에서 0.3 V 과전압, 완전한 CO 선택성, 약 10 s⁻¹ 속도를 보였다.</li>
+      <li>Cu–phenolic network는 수소결합으로 *OCHO 경로를 안정화해 CH₄ Faradaic efficiency 75.5%를 기록했다.</li>
+      <li>다중 저농도 불소계 첨가제의 계면 crowding으로 아연 도금·박리 수명이 기준 전해질보다 10배 이상 늘었다.</li>
+      <li>EU는 메탄 규정 이행 권고, V2G 규제 샌드박스 지침, 재생에너지 주민참여 도구를 새로 공개했다.</li>
+      <li>CATL의 유럽 5 GWh 나트륨이온 저장 파트너십과 두 건의 배터리 사업 확장이 확인됐다.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">논문</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://doi.org/10.1021/jacs.6c09864" target="_blank" rel="noopener">Selective Reduction of Carbon Dioxide in Water Using [M(bpy<sup>2+</sup>)(CO)<sub>3</sub>(I)]<sup>2+</sup> Electrocatalysts with Pendent Cations</a></h3>
+      <div class="src">JACS · Brookhaven National Laboratory · 2026-07-20 · 수계 CO₂ 전기환원</div>
+      <p>양이온성 ammonium기를 붙인 수용성 Mn(I)·Re(I) 착물을 비교했다. pH 6.8 bicarbonate에서 Mn은 과전압 0.3 V에서 CO를 완전히 선택적으로 만들며 약 10 s⁻¹로 작동했다. 0.6 V에서는 약 100 s⁻¹ 경로가 열렸지만 비촉매성 저항막이 생겼고, Re는 같은 과전압에서 <code>k<sub>obs</sub> = 440 s⁻¹</code>였다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://doi.org/10.1002/anie.6973257" target="_blank" rel="noopener">Steering CO₂ Electroreduction to Methane and Deuterated Methane via Hydrogen-Bond Engineering on Copper–Phenolic Networks</a></h3>
+      <div class="src">Angewandte Chemie Int. Ed. · Zhejiang University 외 · 2026-07-20 · CO₂-to-methane</div>
+      <p>Cu–O<sub>4</sub> 자리 주변의 tannic-acid hydroxyl기가 <code>*OCHO</code>를 수소결합으로 안정화해 *CO 경로 대신 formate 유래 경로를 유도했다. Cu-PTA는 수계에서 CH₄ Faradaic efficiency 75.5%, 부분전류밀도 302.0 mA cm⁻²를 보였고, 중수계에서는 CD₄ 83.1%와 415.6 mA cm⁻²를 기록했다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://doi.org/10.1002/anie.3251724" target="_blank" rel="noopener">Interfacial Fluorinated Ion Crowding Enables Reversible Zinc Metal Batteries</a></h3>
+      <div class="src">Angewandte Chemie Int. Ed. · Wuhan University/UCL 외 · 2026-07-20 · 수계 아연전지</div>
+      <p>크기가 다른 여러 저농도 불소계 첨가제를 함께 넣어 inner-Helmholtz plane을 조밀하게 채우고 물을 밀어내면서 Zn²⁺ flux를 균일화했다. Zn 도금·박리는 5 mA cm⁻²에서 1,200시간, 10 mA cm⁻²에서 1,800시간 안정했으며 기준 전해질보다 10배 이상 길었다.</p>
+    </article>
+  </div>
+
+  <h2 class="section">정책·규제</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://energy.ec.europa.eu/publications/recommendation-optional-model-clauses-reduction-methane-emissions-energy-sector_en" target="_blank" rel="noopener">EU, 에너지 부문 메탄 감축용 선택적 모델 조항 권고</a></h3>
+      <div class="src">European Commission DG Energy · 2026-07-20 · 메탄 규정</div>
+      <p>EU 집행위가 <code>EU 2024/1787</code> 메탄 규정의 이행을 돕는 선택적 모델 조항 권고를 공개했다. 집행위 설명상 목적은 규정 적용의 예측 가능성을 높이고 에너지 공급망의 메탄 누출 감축을 지원하는 것이다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://energy.ec.europa.eu/publications/staff-working-document-guidance-regulatory-sandboxes-and-living-labs-eu-vehicle-grid-pilots_en" target="_blank" rel="noopener">EU, V2G 파일럿 규제 샌드박스·리빙랩 지침 공개</a></h3>
+      <div class="src">European Commission DG Energy · 2026-07-17 · 차량-전력망 연계</div>
+      <p>집행위가 vehicle-to-grid 파일럿을 위한 규제 샌드박스와 living lab 지침 <code>SWD/2026/595</code>를 공식 게시했다. 이번 브리프에서는 문서명·발표일·공식 PDF 제공을 확인했으며, 세부 의무나 허용 범위는 원문 조문 검토 전까지 확대 해석하지 않았다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://energy.ec.europa.eu/news/commission-publishes-toolbox-increase-public-participation-renewable-energy-projects-2026-07-17_en" target="_blank" rel="noopener">EU, 재생에너지 사업 주민참여 toolbox 발표</a></h3>
+      <div class="src">European Commission DG Energy · 2026-07-17 · 재생에너지 인허가</div>
+      <p>EU 회원국이 지역사회 참여와 수용성을 높이도록 8개 원칙과 회원국 사례를 정리했다. 절차 참여·신뢰 구축뿐 아니라 전기요금 절감, 지역기금, 주민투자 같은 이익 공유 수단을 함께 제시해 인허가 지연을 줄이는 데 초점을 뒀다.</p>
+    </article>
+  </div>
+
+  <h2 class="section">산업 뉴스</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://www.catl.com/en/news/6900.html" target="_blank" rel="noopener">CATL–Alfen, 유럽 5 GWh 나트륨이온 저장 파트너십</a></h3>
+      <div class="src">CATL · 2026-07-16 · 나트륨이온 BESS</div>
+      <p>CATL과 Alfen이 유럽에 총 5 GWh 규모의 나트륨이온 배터리 저장 시스템을 배치하기로 했다. 기존 리튬이온 공급 협력을 나트륨이온으로 넓힌 계약으로, CATL이 공식 발표한 공급 규모와 지역만 반영했다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://nextpower.com/post/press-release/Nextpower-Completes-Acquisition-of-Prevalon" target="_blank" rel="noopener">Nextpower, Prevalon 인수 완료하고 대규모 BESS 사업 신설</a></h3>
+      <div class="src">Nextpower · 2026-07-20 · 에너지저장 인수</div>
+      <p>Nextpower가 대규모 BESS·전력안정화·수명주기 서비스를 제공하는 Prevalon Energy 인수를 완료했다. 회사는 태양광 설계·시공 플랫폼에 저장장치, 에너지관리 소프트웨어와 전력제어 기술을 결합해 계통·하이브리드 발전·데이터센터 전력시장으로 범위를 넓혔다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://saft.com/en/media-resources/press-release/saft-signs-major-contract-naval-group-power-next-generation" target="_blank" rel="noopener">Saft, Naval Group 차세대 잠수함용 Li-ion 시스템 계약</a></h3>
+      <div class="src">Saft · 2026-07-20 · 특수목적 리튬이온전지</div>
+      <p>Saft가 Barracuda·Scorpene 계열 잠수함에 자체 개발·생산 Li-ion 배터리 시스템을 공급하는 계약을 체결했다. 공식 발표는 납축전지 대비 성능·신뢰성 향상과 유럽 내 셀 제조를 강조했으나 계약 금액과 공급 물량은 공개하지 않았다.</p>
+    </article>
+  </div>
+
+  <h2 class="section">프리프린트</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://arxiv.org/abs/2607.17832" target="_blank" rel="noopener">Multisine electrochemical impedance spectroscopy for Li-ion battery characterisation</a></h3>
+      <div class="src">arXiv:2607.17832v1 · University of Oxford 외 · 2026-07-20 · Li-ion 진단</div>
+      <p>20 mHz–1 kHz 범위의 multisine EIS를 상용 potentiostat으로 측정해 single-sine과 비교했다. 충·방전, 휴지, 온도 변화 중에도 broadband impedance를 얻어 실험 시간을 줄이면서 동적 상태를 추적하는 방법을 제시했다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15514" target="_blank" rel="noopener">Exploring the Potential of BX₃ (X = As, P) Monolayers as High-Capacity and Rapid-Diffusion Anodes for Sodium-Ion Batteries</a></h3>
+      <div class="src">arXiv:2607.15514v1 · Chulalongkorn University · 2026-07-16 · 계산 재료</div>
+      <p>DFT 계산에서 BAs₃와 BP₃의 Na 이동 장벽은 각각 0.19, 0.26 eV였고 평균 전압은 0.15, 0.18 V였다. 이론용량은 각각 1,365와 3,875 mAh g⁻¹로 예측됐지만, 실험 검증 전의 계산 후보라는 한계가 있다.</p>
+    </article>
+
+    <article class="card">
+      <h3><a href="https://arxiv.org/abs/2607.15387" target="_blank" rel="noopener">Phase-Field Simulation of Dendrite Evolution in All-Solid-State Sodium Batteries during Cycling</a></h3>
+      <div class="src">arXiv:2607.15387v1 · Ohio State University 외 · 2026-07-16 · 전고체 나트륨전지</div>
+      <p>phase-field 모델은 grain-boundary 형상 때문에 stripping이 plating과 비대칭이고, 남은 고립 Na가 다음 cycle에서 재활성화돼 dendrite 침투를 가속한다고 제안했다. 전압, 고체전해질 미세구조, Na/Na–Sb 음극 효과를 계산으로 비교했다.</p>
+    </article>
+  </div>
+
+  <footer>
+    <strong>출처</strong>
+    <ol>
+      <li><a href="https://doi.org/10.1021/jacs.6c09864" target="_blank" rel="noopener">https://doi.org/10.1021/jacs.6c09864</a></li>
+      <li><a href="https://doi.org/10.1002/anie.6973257" target="_blank" rel="noopener">https://doi.org/10.1002/anie.6973257</a></li>
+      <li><a href="https://doi.org/10.1002/anie.3251724" target="_blank" rel="noopener">https://doi.org/10.1002/anie.3251724</a></li>
+      <li><a href="https://energy.ec.europa.eu/publications/recommendation-optional-model-clauses-reduction-methane-emissions-energy-sector_en" target="_blank" rel="noopener">European Commission — methane recommendation</a></li>
+      <li><a href="https://energy.ec.europa.eu/publications/staff-working-document-guidance-regulatory-sandboxes-and-living-labs-eu-vehicle-grid-pilots_en" target="_blank" rel="noopener">European Commission — V2G sandbox guidance</a></li>
+      <li><a href="https://energy.ec.europa.eu/news/commission-publishes-toolbox-increase-public-participation-renewable-energy-projects-2026-07-17_en" target="_blank" rel="noopener">European Commission — renewables participation toolbox</a></li>
+      <li><a href="https://www.catl.com/en/news/6900.html" target="_blank" rel="noopener">CATL — 5 GWh sodium-ion partnership</a></li>
+      <li><a href="https://nextpower.com/post/press-release/Nextpower-Completes-Acquisition-of-Prevalon" target="_blank" rel="noopener">Nextpower — Prevalon acquisition</a></li>
+      <li><a href="https://saft.com/en/media-resources/press-release/saft-signs-major-contract-naval-group-power-next-generation" target="_blank" rel="noopener">Saft — Naval Group Li-ion contract</a></li>
+      <li><a href="https://arxiv.org/abs/2607.17832" target="_blank" rel="noopener">https://arxiv.org/abs/2607.17832</a></li>
+      <li><a href="https://arxiv.org/abs/2607.15514" target="_blank" rel="noopener">https://arxiv.org/abs/2607.15514</a></li>
+      <li><a href="https://arxiv.org/abs/2607.15387" target="_blank" rel="noopener">https://arxiv.org/abs/2607.15387</a></li>
+    </ol>
+  </footer>
+</div>
+</body>
+</html>
