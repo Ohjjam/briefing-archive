@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 일일 브리핑 · 2026-07-21</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>AI 일일 브리핑</h1>
+    <div class="meta">2026-07-21 (화) · 최근 24시간 공식 신규 1건 · 공식 페이지 최근 7일 2차 확인 후 진행 중 이슈 2건 추가</div>
+  </header>
+
+  <div class="tldr">
+    <h2>TL;DR</h2>
+    <ul>
+      <li>Anthropic이 희귀 유전질환 연구자를 대상으로 최대 5만 달러 상당의 Claude 크레딧을 지원하는 신청을 열었다.</li>
+      <li>SpaceXAI의 <code>grok-4.5</code>는 API·Grok Build·Cursor에서 제공 중이며, 코딩·에이전트 업무와 토큰 효율을 전면에 내세웠다.</li>
+      <li>Grok Automations는 일정 또는 이메일 조건으로 작업을 실행하고 대화 기록과 알림을 남기는 기능을 현재 배포 중이다.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">OpenAI</h2>
+  <p class="quiet">— 지난 24시간 및 공식 페이지 최근 7일에서 날짜가 확인된 신규 모델·제품 발표 없음 —</p>
+
+  <h2 class="section">Google</h2>
+  <p class="quiet">— 지난 24시간 및 공식 페이지 최근 7일에서 날짜가 확인된 주목할 Gemini·DeepMind 업데이트 없음 —</p>
+
+  <h2 class="section">Anthropic</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://www.anthropic.com/news/rare-disease-research-grants" target="_blank" rel="noopener">희귀 유전질환 연구용 Claude 지원 프로그램 모집</a></h3>
+      <div class="src">Anthropic 공식 · 2026-07-20</div>
+      <p>선정된 기초과학 연구자와 초기 바이오텍 기업은 6개월 동안 최대 5만 달러 상당의 Claude 크레딧과 <code>Claude Science</code> 접근을 받는다. 문헌·희귀질환 데이터 통합, 치료 표적 탐색, 규제 문서 작성 등 검증 가능한 과제를 지원하며 신청 마감은 8월 2일이다.</p>
+      <blockquote><em>“Accepted applicants will receive up to $50,000 in Claude credits over six months.”</em></blockquote>
+    </article>
+  </div>
+
+  <h2 class="section">Meta</h2>
+  <p class="quiet">— 공식 AI 블로그 최근 7일에서 확인된 신규 Llama·Meta AI 발표 없음 —</p>
+
+  <h2 class="section">xAI</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener"><code>grok-4.5</code>, 코딩·에이전트 업무용 모델 배포 진행</a></h3>
+      <div class="src">SpaceXAI 공식 · 2026-07-16 · 진행 중</div>
+      <p>SpaceXAI는 <code>grok-4.5</code>를 Grok Build의 기본 모델로 두고 Cursor 전 요금제와 API 콘솔에도 제공하고 있다. 회사 측 수치로 80 tokens/s, 입력 100만 토큰당 2달러·출력 6달러이며, 벤치마크는 외부 독립 검증이 아니라 공식 발표 기준으로 봐야 한다.</p>
+      <blockquote><em>“Grok 4.5 is available today in Grok Build, in Cursor on all plans, and from the SpaceXAI console.”</em></blockquote>
+    </article>
+    <article class="card">
+      <h3><a href="https://x.ai/news/grok-automations" target="_blank" rel="noopener">Grok Automations, 일정·이메일 트리거 작업 배포</a></h3>
+      <div class="src">SpaceXAI 공식 · 2026-07-16 · 진행 중</div>
+      <p>사용자가 지시와 연결 도구를 저장하면 Grok이 일회·일간·평일·주간·월간 일정 또는 이메일 조건으로 새 대화를 실행한다. 실행 이력은 대화로 남고 이메일·앱 알림을 선택할 수 있으며, grok.com과 iOS·Android 앱에서 제공 중이다.</p>
+      <blockquote><em>“Describe a job once and Grok runs it on a schedule or when an email arrives.”</em></blockquote>
+    </article>
+  </div>
+
+  <h2 class="section">Mistral AI</h2>
+  <p class="quiet">— 공식 뉴스 페이지 최근 7일에서 날짜와 내용을 함께 검증한 신규 업데이트 없음 —</p>
+
+  <h2 class="section">기타 주목할 만한 동향</h2>
+  <p class="quiet">— 날짜가 불명확하거나 비공식 재전달에 그친 항목은 포함하지 않음 —</p>
+
+  <footer>
+    <strong>출처</strong>
+    <ol>
+      <li><a href="https://www.anthropic.com/news/rare-disease-research-grants" target="_blank" rel="noopener">Anthropic — AI for Science rare disease research grants</a></li>
+      <li><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener">SpaceXAI — Introducing Grok 4.5</a></li>
+      <li><a href="https://x.ai/news/grok-automations" target="_blank" rel="noopener">SpaceXAI — Automations in Grok</a></li>
+      <li><a href="https://openai.com/news/company-announcements/" target="_blank" rel="noopener">OpenAI — Recent news</a></li>
+      <li><a href="https://deepmind.google/blog/" target="_blank" rel="noopener">Google DeepMind — News</a></li>
+      <li><a href="https://ai.meta.com/blog/" target="_blank" rel="noopener">Meta AI — Blog</a></li>
+      <li><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral AI — Latest news</a></li>
+    </ol>
+  </footer>
+</div>
+</body>
+</html>
