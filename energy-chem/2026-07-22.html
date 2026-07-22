@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Energy/Chem 모닝 브리프 · 2026-07-22</title>
+<style>
+:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top">
+  <h1>Energy/Chem 모닝 브리프</h1>
+  <div class="meta">2026-07-22 (수) · 논문은 대상 저널 ISSN 최신순 조회 후 출판사 DOI 원문 검증 · 정책·산업은 1차 출처 우선</div>
+</header>
+<div class="tldr">
+  <h2>TL;DR</h2>
+  <ul>
+    <li>JACS는 <code>CO₂</code> 수소화를 화학적 트리거로 써 상압 암모니아 합성을 구동하는 질화물 화학루프를 보고했다.</li>
+    <li>ACS Energy Letters의 두 논문은 비활성 리튬 회수용 전해질 첨가제와 저히스테리시스 Mg 금속전지용 NASICON 양극을 제시했다.</li>
+    <li>EU 배터리 DPP 레지스트리가 가동됐고, IEA는 핵심광물 정제 집중과 투자 감소를 공급망 핵심 위험으로 지목했다.</li>
+    <li>산업에서는 유럽 5 GWh 나트륨이온 저장 협력과 미국 3 GWh 리튬이온 공장 증설 계획이 확인됐다.</li>
+  </ul>
+</div>
+
+<h2 class="section">주요 논문</h2>
+<div class="grid">
+  <article class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/jacs.6c11181" target="_blank" rel="noopener">CO₂ 결합 수소화로 상압 암모니아 합성 구동</a></h3>
+    <div class="src">JACS · Article · 2026-07-21 · DOI <code>10.1021/jacs.6c11181</code><br>Kai Feng et al. · Institute of Physics CAS, Tsinghua University, Soochow University 등</div>
+    <p>Co₃Mo₃N 질소 운반체에서 CO₂ 수소화가 표면 산화를 유도해 Mo–N 결합을 약화시키고 격자 질소를 NH₃로 방출한 뒤, 질화 단계가 표면 산소를 제거해 순환을 닫는다. 출판사 초록 기준 500&nbsp;°C·상압에서 NH₃ 최고 농도 약 2.3%, 방출 속도 12.4 mmol·g<sub>cat</sub><sup>−1</sup>·h<sup>−1</sup>를 보고했다. 탄소 활용과 질소 고정을 결합한 메커니즘 제안이 핵심이며, 연속식 공정 실증과는 구분해야 한다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acsenergylett.6c01456" target="_blank" rel="noopener">2-아이오도옥테인으로 비활성 리튬을 다시 전기화학 순환에 투입</a></h3>
+    <div class="src">ACS Energy Letters · Letter · 2026-07-20 · DOI <code>10.1021/acsenergylett.6c01456</code><br>Yaqi Xu et al. · Nankai University, Zhejiang University of Technology, Henan University 등</div>
+    <p>2-아이오도옥테인이 <code>I₃⁻/I⁻</code> 레독스 매개체를 형성해 Li₂O와 비활성 금속 Li를 회수하도록 설계했다. 출판사 초록은 Li||Cu 반쪽전지 쿨롱 효율 99.03%, 2 mA·cm<sup>−2</sup> 대칭전지 730일, 파우치셀 100사이클 후 용량 유지율 88% 이상을 제시한다. 장기 대칭전지 성능은 강점이지만 실제 셀 판단에는 파우치셀의 더 긴 검증이 필요하다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://pubs.acs.org/doi/10.1021/acsenergylett.6c01787" target="_blank" rel="noopener">공공 엔지니어링으로 Mg 금속전지 NASICON 양극의 전압 히스테리시스 축소</a></h3>
+    <div class="src">ACS Energy Letters · Letter · 2026-07-20 · DOI <code>10.1021/acsenergylett.6c01787</code><br>Yiming Zhang et al. · Chongqing University, Politecnico di Milano, Xiamen University 등</div>
+    <p>NaTi₂(PO₄)₃에 Mg를 치환해 양이온 공공을 만들고, Mg₀.₂₅Na₀.₅Ti₂(PO₄)₃ 양극에서 0.05 V 히스테리시스와 500 mA·g<sup>−1</sup>에서 87% 용량 유지, 500사이클 후 81% 유지율을 보고했다. Na⁺가 양극 반응을 주도하고 Mg가 음극에서 석출·용출되는 혼성 저장 메커니즘이며, 파우치 결과는 개념증명 단계다.</p>
+  </article>
+</div>
+
+<h2 class="section">정책·공공 데이터</h2>
+<div class="grid">
+  <article class="card">
+    <h3><a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en" target="_blank" rel="noopener">EU 배터리 디지털 제품 여권 레지스트리 가동</a></h3>
+    <div class="src">European Commission · 2026-07-20</div>
+    <p>EU 집행위는 배터리 DPP 레지스트리가 7월 20일 운영을 시작했다고 명시했다. 완성 배터리를 시장에 내놓는 경제주체가 정보를 유지하며, EV·경량운송·가정용 저장·산업용 배터리의 여권 의무화 시점은 2027년 2월 18일이다. 원재료부터 재사용·재활용까지 데이터 준비 일정이 구체화됐다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk" target="_blank" rel="noopener">IEA, 핵심광물 정제 집중과 투자 감소를 공급 위험으로 경고</a></h3>
+    <div class="src">International Energy Agency · 2026-07-16 · 최근 7일</div>
+    <p>IEA의 2026 전망은 2025년 핵심광물 투자가 9% 줄고 정제 공급 증가가 소수 국가에 더 집중됐다고 분석했다. 반면 정부 공공금융 약정은 2023~2025년 650억 달러로 4배 이상 늘었다. 광산 개발만으로는 부족하며 정제·장비·인력 병목을 함께 다뤄야 한다는 정책 신호다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://www.energy.gov/cmei/fuels/doe-alternative-fuels-and-feedstocks-office-announces-intent-advance-innovative-chemical" target="_blank" rel="noopener">미 DOE, 대체·폐기물 원료 화학기술 스케일업에 최대 5,800만 달러 예고</a></h3>
+    <div class="src">U.S. Department of Energy · 2026-07-14 · 최근 30일 보강</div>
+    <p>ASPECT 자금 공고 사전예고는 대체·폐기물 원료 기반 화학기술을 벤치 및 단위조작 프리파일럿 단계로 올리는 데 최대 5,800만 달러를 제시한다. 정식 NOFO는 2026년 8월 예정이므로 현재는 지원금 확정이 아니라 의향 공고 단계다.</p>
+  </article>
+</div>
+
+<h2 class="section">산업 동향</h2>
+<div class="grid">
+  <article class="card">
+    <h3><a href="https://alfen.com/en-no/news/alfen-and-catl-reach-5-gwh-sodium-ion-battery-storage-partnership-in-europe" target="_blank" rel="noopener">Alfen–CATL, 유럽 5 GWh 나트륨이온 저장 협력</a></h3>
+    <div class="src">Alfen · 2026-07-16 · 회사 공동 발표</div>
+    <p>양사는 CATL 나트륨이온 에너지저장시스템 5 GWh를 유럽에 배치하기로 협력했다. Alfen은 리튬 가격 변동에 대한 포트폴리오 다변화를, CATL은 유럽 계통 규정과 현지 적용 경험 축적을 목표로 한다. 발표는 협력 규모이며 실제 설치 완료 물량은 아니다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://ir.forgenano.com/news/news-details/2026/Forge-Nano-to-Host-Groundbreaking-Event-for-North-Carolina-Lithium-Ion-Battery-Manufacturing-Facility-Expansion-on-August-19th/default.aspx" target="_blank" rel="noopener">Forge Nano, 미국 배터리 공장 3 GWh 증설 착공 일정 공개</a></h3>
+    <div class="src">Forge Nano · 2026-07-16 · 회사 발표</div>
+    <p>노스캐롤라이나 리튬이온 시설 증설 착공 행사를 8월 19일 열고 연 3 GWh 생산능력을 목표로 한다. 회사는 DOE의 최대 1억 달러 비희석성 자금과 Samsung SDI 지원을 언급했으며 가동 예상은 2028년이다. 생산능력·가동 시점은 아직 미래 계획이다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://www.basf.com/global/en/media/news-releases/2026/07/p-26-127" target="_blank" rel="noopener">BASF, 뒤셀도르프 특수 에몰리언트 생산시설 가동</a></h3>
+    <div class="src">BASF · 2026-07-16 · 회사 발표</div>
+    <p>피부·선케어용 특수 에몰리언트 생산시설을 완공했으며, 투자액은 수천만 유로대 중간 수준이라고 밝혔다. 재생 원료 기반 제품의 유럽·글로벌 공급능력 확대가 목적이다. 구체적 연산능력은 공개하지 않아 공급 증가량은 정량화할 수 없다.</p>
+  </article>
+</div>
+
+<h2 class="section">프리프린트 레이더</h2>
+<div class="grid">
+  <article class="card">
+    <h3><a href="https://arxiv.org/abs/2607.18182" target="_blank" rel="noopener">ML 분자동역학으로 MgH₂ 탈수소화 도펀트 탐색</a></h3>
+    <div class="src">arXiv:2607.18182 · 2026-07-20 · preprint, peer review 전</div>
+    <p>22개 도핑 원소를 비교해 Ni를 가장 유효한 후보로 제시하고, 수소 방출과 Miedema 전자밀도 사이의 화산형 관계를 보고했다. 실험 확증이 아니라 ML 포텐셜 기반 원자 시뮬레이션 결과다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://arxiv.org/abs/2607.17463" target="_blank" rel="noopener">질소환원 합금 촉매에서 d-band 너머의 s·p 지표 제안</a></h3>
+    <div class="src">arXiv:2607.17463 · 2026-07-20 · preprint, peer review 전</div>
+    <p>47개 금속간화합물과 약 1,200개 흡착 데이터의 DFT·ML 분석에서 N₂와 N₂H 흡착 예측에 s·p 밴드 특성이 전통적 d-band 중심보다 중요할 수 있다고 보고했다. 계산 스크리닝 지표이므로 촉매 합성·활성 검증이 후속 과제다.</p>
+  </article>
+  <article class="card">
+    <h3><a href="https://arxiv.org/abs/2607.17925" target="_blank" rel="noopener">고유리전이온도 고분자 예측에서 화학 구조와 공정 효과 분리</a></h3>
+    <div class="src">arXiv:2607.17925 · 2026-07-20 · preprint, peer review 전</div>
+    <p>고분자 위상 기술자 기반 Tg 모델에 공정 변수를 더해, 대다수 재료는 화학·구조가 지배하지만 용액 캐스팅과 고온 어닐링처럼 분자간 상호작용이 강한 계는 공정 의존 편차가 커진다고 분석했다.</p>
+  </article>
+</div>
+
+<footer>
+  <strong>검증·수집 기록</strong>
+  <ol>
+    <li>저널 9종을 ISSN 기준 2026-07-19~22로 조회: Nature 15/0, Science 0/0, JACS 51/10, Nature Energy 1/0, Nature Catalysis 0/0, Joule 0/0, ACS Energy Letters 3/3, Energy &amp; Environmental Science 0/0, Angewandte Chemie International Edition 47/12 (날짜 통과/주제 후보).</li>
+    <li>주제 후보 DOI 25개 중 3건을 채택하고 ACS 출판사 페이지에서 제목·유형·온라인 날짜·저자·초록을 확인했다.</li>
+    <li>과거 아카이브 중복 세트: URL 483개, DOI/arXiv ID 144개. 채택한 12개 URL과 6개 DOI/arXiv ID는 기존 세트와 겹치지 않는다.</li>
+    <li>정책·산업은 정부·국제기구·회사 원문만 사용했다. 프리프린트는 arXiv API의 제출일·초록을 확인하고 동료평가 전임을 명시했다.</li>
+  </ol>
+  <p>최종 구성: 논문 3, 정책 3, 산업 3, 프리프린트 3. 최종 확인 2026-07-22 KST.</p>
+</footer>
+</main></body>
+</html>
