@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 브리핑 · 2026-07-24</title><style>:root{
+  --bg:#fafaf7; --fg:#1a1a1a; --muted:#5a5a5a; --line:#d8d6cf;
+  --accent:#2a4d7a; --accent-soft:#e8eef6; --warn:#9a4a00; --quiet:#9a9a93;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:32px 16px; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1100px; margin:0 auto;}
+header.top{border-bottom:2px solid var(--fg); padding-bottom:16px; margin-bottom:24px;}
+header.top h1{font-size:28px; margin:0 0 4px; letter-spacing:-0.01em;}
+header.top .meta{color:var(--muted); font-size:14px;}
+h2.section{
+  font-size:18px; margin:32px 0 12px; padding:8px 12px;
+  border-left:4px solid var(--accent); background:var(--accent-soft);
+  letter-spacing:0.02em;
+}
+.tldr{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:16px 20px; margin-bottom:8px;
+}
+.tldr h2{margin-top:0; font-size:16px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted);}
+.tldr ul{margin:0; padding-left:20px;}
+.tldr li{margin-bottom:6px;}
+.grid{display:grid; gap:14px; grid-template-columns:1fr;}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:14px 16px;
+}
+.card h3{font-size:15.5px; margin:0 0 6px; line-height:1.35;}
+.card .src{font-size:12.5px; color:var(--muted); margin-bottom:8px;}
+.card p{margin:0; font-size:14px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+     background:#eee9df; padding:1px 5px; border-radius:3px; font-size:12.5px;}
+.quiet{color:var(--quiet); font-style:italic; padding:12px 16px;}
+.unverified{color:var(--warn); font-size:11.5px; font-weight:600; margin-left:6px;
+            border:1px solid var(--warn); padding:1px 4px; border-radius:3px;}
+blockquote{border-left:3px solid var(--line); margin:6px 0; padding:2px 10px;
+           color:var(--muted); font-size:13.5px; font-style:italic;}
+footer{margin-top:36px; padding-top:16px; border-top:1px solid var(--line);
+       font-size:12.5px; color:var(--muted);}
+footer ol{padding-left:20px;}
+footer li{margin-bottom:3px; word-break:break-all;}
+@media(max-width:400px){body{padding:16px 10px;} header.top h1{font-size:22px;}}</style></head>
+<body><main class="wrap"><header class="top"><h1>AI 브리핑</h1>
+<div class="meta">2026-07-24 · 최근 24시간 우선, 공식 채널 검증 · 신규 0건 + 과거 참고자료 6건</div></header>
+<div class="tldr"><h2>TL;DR</h2><ul>
+<li>최근 24시간 내 6개 핵심 섹션에서 채택할 수 있는 공식 신규 발표는 확인되지 않았다.</li>
+<li>OpenAI와 Google은 최근 7일, Anthropic·Qwen·NAVER는 최근 30일 공식 자료로 보강했다.</li>
+<li>월드모델은 최근 자료의 30일 아카이브 중복을 피하기 위해 I-JEPA 공식 원문을 과거 참고자료로 사용했다.</li>
+<li>모든 카드는 공식 발표·공식 연구 페이지이며 실제 발표일과 fallback 범위를 표시했다.</li>
+</ul></div>
+<section data-section="openai"><h2 class="section">OpenAI</h2><div class="grid"><article class="card">
+  <h3><a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">기업용 에이전트 운영 제품 OpenAI Presence 공개</a></h3>
+  <div class="src">OpenAI · 2026-07-22 · 최근 7일 fallback</div>
+  <p>OpenAI Presence는 음성·채팅 에이전트에 정책, 승인 규칙, 평가, 사람에게 넘기는 절차를 결합한 기업용 배포 제품이다. 공식 자료는 <code>Codex</code>가 실제 운영 신호를 분석해 수정안을 제안하고, 사람이 테스트·승인한 뒤 통제된 방식으로 배포한다고 설명한다.</p>
+  <blockquote>A proven enterprise product for putting AI agents to work across customer and internal workflows.</blockquote>
+</article></div></section>
+<section data-section="anthropic"><h2 class="section">Anthropic</h2><div class="grid"><article class="card">
+  <h3><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">에이전트 작업에 초점을 맞춘 Claude Sonnet 5</a></h3>
+  <div class="src">Anthropic · 2026-06-30 · 최근 30일 fallback</div>
+  <p><code>claude-sonnet-5</code>는 브라우저·터미널 같은 도구를 쓰며 장시간 계획을 수행하도록 강화된 Sonnet 계열 모델이다. Anthropic은 일부 에이전트 평가에서 Opus 4.8에 근접하면서 더 낮은 가격대를 제공하고, Claude Code와 API를 포함한 전 제품군에서 사용할 수 있다고 밝혔다.</p>
+  <blockquote>Claude Sonnet 5 is built to be the most agentic Sonnet model yet.</blockquote>
+</article></div></section>
+<section data-section="global"><h2 class="section">Global</h2><div class="grid"><article class="card">
+  <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener">Google, Gemini 3.6 Flash·3.5 Flash-Lite·Flash Cyber 동시 공개</a></h3>
+  <div class="src">Google · 2026-07-21 · 최근 7일 fallback</div>
+  <p><code>gemini-3.6-flash</code>는 코딩·지식 작업·멀티모달 성능과 토큰 효율을 높였고, 3.5 Flash-Lite는 초당 350 출력 토큰을 목표로 한 고처리량 모델이다. 보안 특화 3.5 Flash Cyber는 CodeMender와 결합해 취약점을 찾고 패치하며 제한된 신뢰 파트너 파일럿으로 제공된다.</p>
+  <blockquote>Our newest Gemini models deliver the efficiency, latency, and reliability to build AI agents at scale.</blockquote>
+</article></div></section>
+<section data-section="china"><h2 class="section">중국 AI</h2><div class="grid"><article class="card">
+  <h3><a href="https://qwenlm.github.io/qwen-code-docs/en/blog/updates/weekly-update-2026-07-16/" target="_blank" rel="noopener">Qwen Code, 지식을 재사용 가능한 스킬로 바꾸는 /learn 추가</a></h3>
+  <div class="src">Qwen Team · 2026-07-16 · 최근 30일 fallback</div>
+  <p>Qwen Code v0.19.9~0.19.11은 작업 중 얻은 지식을 스킬로 저장하는 <code>/learn</code>, 코드 리뷰 검증·역감사, Web Shell UI 개편과 아티팩트 패널을 추가했다. 공식 주간 업데이트 기준 160개가 넘는 PR이 포함된 도구 체계 개선이다.</p>
+  <blockquote>/learn command creates reusable Skills.</blockquote>
+</article></div></section>
+<section data-section="world-model"><h2 class="section">월드모델</h2><div class="grid"><article class="card">
+  <h3><a href="https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/" target="_blank" rel="noopener">I-JEPA, 픽셀 대신 표현 공간에서 세상을 예측하는 초기 JEPA</a></h3>
+  <div class="src">Meta AI · 2023-06-13 · 과거 참고자료 fallback</div>
+  <p>I-JEPA는 가려진 이미지 픽셀을 복원하는 대신 보이지 않는 영역의 추상 표현을 예측해 의미 정보를 학습한다. Meta는 이 구조를 불필요한 세부를 버리고 공간적 불확실성을 모델링하는 원시적 월드모델로 설명하며, 이후 영상·다중양식 JEPA 연구의 출발점으로 제시했다.</p>
+  <blockquote>I-JEPA learns by creating an internal model of the outside world.</blockquote>
+</article></div></section>
+<section data-section="korea"><h2 class="section">한국 AI</h2><div class="grid"><article class="card">
+  <h3><a href="https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490" target="_blank" rel="noopener">TEAM NAVER·KAI, 국방 특화 파운데이션 모델 공동 개발</a></h3>
+  <div class="src">NAVER · 2026-07-07 · 최근 30일 fallback</div>
+  <p>TEAM NAVER와 KAI는 국산 기술 기반의 국방 특화 파운데이션 모델과 피지컬 AI 전투체계 플랫폼을 공동 개발하기로 했다. 공식 발표는 무인기·AI 조종사와 차세대 공중전투체계로 확장하는 계획을 담지만, 아직 완성 모델 출시가 아니라 공동개발 착수 단계다.</p>
+  <blockquote>Joint development of a defense-specific AI foundation model.</blockquote>
+</article></div></section>
+<section><h2 class="section">기타 주목할 만한 동향</h2><p class="quiet">검증 기준을 통과한 추가 항목 없음.</p></section>
+<footer><strong>수집 기록</strong>: 24시간 0건 → 7일 2건 → 30일 3건 → 90일 0건 → 공식 과거 자료 1건. 최근 30일 URL·제목 재사용 0건, 날짜 탈락 0건, 중복 탈락 7건, 금지 도메인 0건.<ol>
+<li><a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">https://openai.com/index/introducing-openai-presence/</a></li><li><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">https://www.anthropic.com/news/claude-sonnet-5</a></li><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/</a></li><li><a href="https://qwenlm.github.io/qwen-code-docs/en/blog/updates/weekly-update-2026-07-16/" target="_blank" rel="noopener">https://qwenlm.github.io/qwen-code-docs/en/blog/updates/weekly-update-2026-07-16/</a></li><li><a href="https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/" target="_blank" rel="noopener">https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/</a></li><li><a href="https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490" target="_blank" rel="noopener">https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034490</a></li>
+</ol><p>생성: 2026-07-24 KST</p></footer></main></body></html>
