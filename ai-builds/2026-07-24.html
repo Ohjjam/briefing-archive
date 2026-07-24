@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-07-24 AI 제작 사례 digest</title>
+<style>
+:root{--bg:#fafaf7;--fg:#1a1a1a;--muted:#5a5a5a;--line:#d8d6cf;--card:#fff;--accent:#6f4b8b;--soft:#f0eaf5}
+*{box-sizing:border-box}
+body{margin:0;padding:32px 16px;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo",Helvetica,Arial,sans-serif;line-height:1.65}
+.wrap{max-width:1100px;margin:0 auto}
+header{border-bottom:2px solid var(--fg);padding-bottom:16px;margin-bottom:22px}
+h1{font-size:29px;line-height:1.25;margin:0 0 8px;letter-spacing:-.02em}
+.intro{background:var(--soft);border-left:4px solid var(--accent);padding:14px 18px;margin-bottom:24px}
+.intro p{margin:5px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:17px 18px}
+.card h2{font-size:17px;line-height:1.4;margin:0 0 11px;border-bottom:1px solid var(--line);padding-bottom:9px}
+.card p{font-size:14px;margin:9px 0}
+.card .how{background:#f8f6fa;padding:9px 11px;border-radius:6px}
+.card .links{font-weight:650}
+.card .tip{color:var(--muted)}
+.notes{margin-top:28px;border-top:2px solid var(--fg);padding-top:12px}
+.notes h2{font-size:18px}
+.notes p,.notes li{font-size:13px;color:var(--muted)}
+a{color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
+a:hover{text-decoration:underline}
+code{background:#eee9df;padding:1px 5px;border-radius:3px;font-size:.9em}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body><main class="wrap">
+<header><h1>2026-07-24 AI 제작 사례 digest</h1></header>
+<section class="intro"><p>오늘은 “AI 기능을 붙인 제품”보다 <strong>사람이 방향을 잡고 AI가 코드·콘텐츠·반복 작업을 맡은 과정이 공개된 사례</strong>가 좋았다. 마지막 실행 뒤 공개된 Show HN 7개와 7월 23일 Reddit 사례 1개를 선별했다. 라이브·영상·소스·제작 원문이 실제로 열리는지 확인했고, 제작 도구나 검증 과정이 공개되지 않은 후보는 뺐다.</p></section>
+<section class="grid"><article class="card"><h2>1. Built by Magnus — Codex로 구현한 별자리형 포트폴리오</h2><p>뭘 만들었나: 화면의 별을 탐색해 프로젝트와 작업 철학을 발견하는 인터랙티브 포트폴리오다. “소프트웨어를 시각적으로 실험한다”는 성격이라 첫 화면 자체가 구경거리다.</p>
+<p class="how">🛠️ 어떻게: 제작자는 디자인과 UX 방향은 직접 정하고 Codex가 그 비전을 코딩했다고 밝혔다. 공개 피드백에서 Firefox·모바일·문구 문제를 확인한 뒤, 댓글 전체를 다시 Codex 작업 흐름에 넣어 핫픽스하는 과정도 공개했다. AI가 디자인 결정을 대신했다기보다 <strong>사람의 의도 → Codex 구현 → 실제 사용자 비판 → Codex 수정</strong> 루프에 가깝다.</p>
+<p class="links">🔗 <a href="https://builtbymagnus.com/" target="_blank" rel="noopener">라이브 사이트</a> · <a href="https://www.reddit.com/r/vibecoding/comments/1v4ir6s/does_my_website_look_vibe_coded/" target="_blank" rel="noopener">Reddit 제작·피드백 원문</a></p>
+<p class="tip">💡 팁: “예쁘게 만들어줘”보다 디자인 결정권을 사람이 쥐고, 공개 피드백을 다음 에이전트 입력으로 구조화하는 편이 재현하기 좋다.</p></article>
+<article class="card"><h2>2. WatchMachineGo — 로컬 LLM 추론을 하드웨어 안에서 보여주는 시뮬레이터</h2><p>뭘 만들었나: 모델 로딩, prefill, 추론 단계가 CPU·GPU·메모리 대역폭과 멀티 GPU 구성에 따라 어떻게 달라지는지 움직이는 그림으로 보여주는 explorable simulator다.</p>
+<p class="how">🛠️ 어떻게: 제작자는 Claude Fable이 프런트엔드 코드 상당 부분과 브레인스토밍을 도왔지만, UX·강조점·전체 아키텍처는 직접 정했다고 밝혔다. 대화형 타임라인만 2~3개 버전을 AI와 함께 비교했고, Nix/NixOS·Hetzner 배포의 “어떻게”를 AI로 보완했다.</p>
+<p class="links">🔗 <a href="https://watchmachinego.com/llm-inference" target="_blank" rel="noopener">라이브 시뮬레이터</a> · <a href="https://hn.algolia.com/api/v1/items/49022761" target="_blank" rel="noopener">제작 과정 원문</a> · <a href="https://www.reddit.com/r/vibecoding/comments/1v4ir6s/comment/ozbs3bp/" target="_blank" rel="noopener">상세 AI 사용 공개 댓글</a></p>
+<p class="tip">💡 팁: AI가 만든 부분을 “프런트엔드”로 뭉개지 말고, UX·아키텍처·배포 중 어디까지 사람이 결정했는지 나눠 기록하면 결과를 평가하기 쉽다.</p></article>
+<article class="card"><h2>3. HN Quick Scan — Claude Code로 만들고 Gemini Nano로 분류하는 브라우저 확장</h2><p>뭘 만들었나: Hacker News 글을 하드웨어·시스템·인프라·앱 같은 소프트웨어 스택 순서로 재분류해 빨리 훑게 해 주는 Chrome 확장이다.</p>
+<p class="how">🛠️ 어떻게: 확장 코드는 Claude Code CLI로 만들었고, 분류는 로컬 Gemini Nano가 맡는다. 제작자는 MacBook Pro에서 모델 로딩 약 11초, 기본 분류 약 5초, 하위 분류를 켜면 약 6초가 더 걸리며 30초 미사용 시 모델을 내린다고 공개했다. “작동하지만 아직 충분히 빠르지 않다”는 한계도 함께 적었다.</p>
+<p class="links">🔗 <a href="https://github.com/prabhic/hn-quick-scan" target="_blank" rel="noopener">소스·설치 안내</a> · <a href="https://hn.algolia.com/api/v1/items/49023036" target="_blank" rel="noopener">제작 과정 원문</a></p>
+<p class="tip">💡 팁: 로컬 모델을 붙일 때는 정확도뿐 아니라 로딩·추론·언로드 시간을 따로 재야 UX 병목이 바로 보인다.</p></article>
+<article class="card"><h2>4. Palmier Pro — Claude·Codex가 타임라인을 만지는 오픈소스 영상 편집기 [도구]</h2><p>뭘 만들었나: macOS용 네이티브 영상 편집기 안에서 Claude나 Codex가 미디어 정리, 클립·트랙·키프레임 편집, 이미지·영상·음악 생성, 자막, 내보내기까지 수행한다.</p>
+<p class="how">🛠️ 어떻게: AI 영상 생성기와 편집기 사이의 다운로드·가져오기 반복을 없애려 내부 도구로 시작했다. Swift로 MVP를 만들고, 에이전트는 로컬 MCP 또는 인앱 채팅으로 같은 도구/API를 쓴다. SpeechAnalyzer 전사, SigLIP2 프레임 임베딩, beat_this 비트 감지, Silero VAD 무음 감지는 로컬에서 돌린다. 제작진은 AI가 창의적 편집에는 약하지만 패턴이 정해진 rough cut에는 쓸 만하다고 선을 그었다.</p>
+<p class="links">🔗 <a href="https://github.com/palmier-io/palmier-pro" target="_blank" rel="noopener">소스</a> · <a href="https://www.youtube.com/watch?v=SjS2q2LT1q8" target="_blank" rel="noopener">Codex 멀티캠 편집 영상</a> · <a href="https://www.youtube.com/watch?v=hbM_-eR1GX4" target="_blank" rel="noopener">AI 전환 효과 영상</a> · <a href="https://hn.algolia.com/api/v1/items/49022911" target="_blank" rel="noopener">제작 과정 원문</a></p>
+<p class="tip">💡 팁: “창의적으로 편집해”보다 기존 편집 패턴과 타임라인 연산을 도구로 고정해 주는 방식이 훨씬 안정적이다.</p></article>
+<article class="card"><h2>5. Setoku — Claude가 회사 데이터를 읽고 살아 있는 대시보드를 발행하는 지식 서버 [도구]</h2><p>뭘 만들었나: ClickHouse 데이터 레이크와 조직 지식을 MCP로 Claude에 노출하고, 분석 중 발견한 주의점과 정의를 다시 기록하게 하는 self-hosted company brain이다. 정적 차트뿐 아니라 라이브 데이터에 연결된 대시보드 앱도 발행한다.</p>
+<p class="how">🛠️ 어떻게: Setoku 자체는 추론하지 않고 데이터·기억·감사 인터페이스를 제공하며, Claude 구독이 분석을 담당한다. Docker 이미지와 Claude Code 스킬로 초기 설정·커넥터 추가를 묶었고, 최소 관리 화면에서 AI가 남긴 지식을 사람이 정리한다. 제작자는 실제 팀 데이터와 가족 재무 인스턴스를 VPS에서 운영한 경험도 공개했다.</p>
+<p class="links">🔗 <a href="https://setoku.com/" target="_blank" rel="noopener">프로젝트 홈</a> · <a href="https://demo.setoku.com/" target="_blank" rel="noopener">라이브 데모</a> · <a href="https://hn.algolia.com/api/v1/items/49024975" target="_blank" rel="noopener">제작 과정 원문</a></p>
+<p class="tip">💡 팁: 모델 안에 기억을 기대하기보다 데이터, 조직 정의, AI가 발견한 함정을 별도 감사 가능한 층으로 두는 설계가 실무적이다.</p></article>
+<article class="card"><h2>6. Bike Broker — 중고 자전거의 숨은 가치를 찾는 멀티모달 가격 예측</h2><p>뭘 만들었나: 중고 자전거 광고의 모델·연식·커스텀 부품을 보고 예상 가격을 제시해 상대적으로 저평가된 매물을 찾게 해 주는 채팅형 서비스다.</p>
+<p class="how">🛠️ 어떻게: 웹에서 판매 완료 광고를 모으고 BERT와 표형 특성을 결합한 모델을 학습·검증했다. 제작자는 8만 건이 넘는 테스트 표본에서 약 18% MAPE를 보고했다. 연식이 빠진 광고의 과대평가, 자전거 상태 지표 부족, 코로나 이후 신품 재고·할인 미반영 같은 실패 조건도 공개했다.</p>
+<p class="links">🔗 <a href="https://bike.broker/" target="_blank" rel="noopener">라이브 서비스</a> · <a href="https://hn.algolia.com/api/v1/items/49022946" target="_blank" rel="noopener">데이터·모델·한계 원문</a></p>
+<p class="tip">💡 팁: AI 가격 추천은 숫자 하나보다 데이터 범위와 실패 조건을 같이 노출해야 실제 구매 판단에 쓸 수 있다.</p></article>
+<article class="card"><h2>7. ArXivMax — 논문 한 편을 Manim 영상 해설로</h2><p>뭘 만들었나: arXiv 논문을 넣으면 3Blue1Brown 스타일의 영상 설명으로 바꿔 주는 서비스다. DDPM 논문을 변환한 공개 샘플을 바로 볼 수 있다.</p>
+<p class="how">🛠️ 어떻게: 시각화 엔진은 오픈소스 Manim이고, 제작자는 Codex 토큰 플랜을 사용한다고 밝혔다. 다만 어떤 모델이 논문 해석·대본·장면 설계를 맡는지, 사람이 사실 검토를 하는지는 원문에 공개하지 않았다. 따라서 “완전 자동 검증된 논문 해설”로 보기는 이르다.</p>
+<p class="links">🔗 <a href="https://www.arxivmax.com/" target="_blank" rel="noopener">라이브 서비스</a> · <a href="https://www.arxivmax.com/papers/2006.11239" target="_blank" rel="noopener">DDPM 영상 샘플</a> · <a href="https://github.com/ManimCommunity/manim" target="_blank" rel="noopener">Manim 소스</a> · <a href="https://hn.algolia.com/api/v1/items/49022010" target="_blank" rel="noopener">제작 과정 원문</a></p>
+<p class="tip">💡 팁: 따라 만들 때는 논문 요약과 장면 렌더링 사이에 식·그림·인용을 원문과 대조하는 검수 단계를 따로 두는 게 안전하다.</p></article>
+<article class="card"><h2>8. Mumble Dictation — 내 단어를 배우는 온디바이스 받아쓰기</h2><p>뭘 만들었나: Mac에서 음성 인식과 문장 정리를 로컬로 처리하고, 사용자가 자주 쓰는 라이브러리명·동료명·프로젝트명을 개인 사전으로 학습하는 받아쓰기 앱이다.</p>
+<p class="how">🛠️ 어떻게: 화면과 타이핑에서 hot word 후보를 로컬로 모은 뒤 디코딩할 때 해당 용어의 확률을 높인다. ASR과 기본 transcript cleanup은 기기에서 돌고, 원하면 OpenAI·Anthropic·Ollama 등 자기 키로 다른 정리 모델을 붙인다. 음성 명령으로 검색이나 Claude 질문까지 넘기는 흐름도 제공한다.</p>
+<p class="links">🔗 <a href="https://heymumble.com/dictation" target="_blank" rel="noopener">앱·다운로드</a> · <a href="https://www.youtube.com/watch?v=Bma59TrR62c" target="_blank" rel="noopener">작동 영상</a> · <a href="https://hn.algolia.com/api/v1/items/49028737" target="_blank" rel="noopener">제작 과정 원문</a></p>
+<p class="tip">💡 팁: 범용 음성 모델을 다시 학습하기 전에 개인 용어 수집과 디코딩 bias만으로 얼마나 개선되는지 먼저 시험해 볼 만하다.</p></article></section>
+<section class="notes"><h2>출처·검증 메모</h2><ul><li><a href="https://hn.algolia.com/api/v1/items/49023036" target="_blank" rel="noopener">HN Quick Scan 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49022761" target="_blank" rel="noopener">WatchMachineGo 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49022911" target="_blank" rel="noopener">Palmier Pro 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49022010" target="_blank" rel="noopener">ArXivMax 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49024975" target="_blank" rel="noopener">Setoku 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49022946" target="_blank" rel="noopener">Bike Broker 원문</a>, <a href="https://hn.algolia.com/api/v1/items/49028737" target="_blank" rel="noopener">Mumble Dictation 원문</a></li><li>Show HN 7개는 2026-07-23 14:16~22:10 UTC, 즉 2026-07-23 23:16~2026-07-24 07:10 KST에 게시됐다. 모두 직전 자동화 실행 뒤의 새 항목이다.</li><li>최종 카드의 라이브 앱, 저장소, 영상, 데모, 제작 원문 URL은 리다이렉트 후 HTTP 200 응답을 확인했다.</li><li>Reddit 5개 대상 커뮤니티의 공개 JSON은 모두 HTTP 403이었다. Built by Magnus만 공개 Reddit HTML에서 게시물·라이브 URL·제작자 후속 답변을 직접 읽을 수 있어 채택했다.</li><li>Product Hunt·X·블로그 보강 검색에서는 같은 시간대에 라이브 결과물과 구체 제작 과정이 함께 확인되는 추가 항목을 찾지 못했다. 수를 채우기 위한 스니펫 전용 항목은 넣지 않았다.</li></ul></section>
+<footer>AI 제작 사례 아카이브 · 검증된 라이브·소스·제작 과정 링크만 수록</footer>
+</main></body>
+</html>
